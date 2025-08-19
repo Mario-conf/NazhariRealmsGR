@@ -84,6 +84,10 @@ export function TrailFilters({
     setSortOrder(order);
   }, [setSortKey, setSortOrder]);
 
+  const handleDurationChange = React.useCallback((value: [number, number]) => {
+    setDurationRange(value);
+  }, [setDurationRange]);
+
   const isFiltered = searchQuery || selectedDifficulties.size > 0 || durationRange[0] !== 0 || durationRange[1] !== 24 || selectedTerrains.size > 0 || showHistorical;
 
   return (
@@ -116,7 +120,7 @@ export function TrailFilters({
       <Accordion type="single" collapsible className="w-full mt-2">
         <AccordionItem value="filters">
           <div className="flex justify-between items-center">
-            <AccordionTrigger>
+             <AccordionTrigger>
                 <div className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground py-2 px-3 rounded-md">
                     <SlidersHorizontal className="h-4 w-4" />
                     <span>Advanced Filters</span>
@@ -183,7 +187,7 @@ export function TrailFilters({
                 <div>
                   <Label className="font-semibold">Duration (hours)</Label>
                   <div className="mt-2">
-                    <Slider value={durationRange} onValueChange={(val) => setDurationRange(val as [number, number])} max={24} step={1} />
+                    <Slider value={durationRange} onValueChange={handleDurationChange} max={24} step={1} />
                     <div className="flex justify-between text-sm text-muted-foreground mt-1">
                       <span>{durationRange[0]}h</span>
                       <span>{durationRange[1]}h</span>
