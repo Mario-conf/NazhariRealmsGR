@@ -8,21 +8,21 @@ body {
 
 @layer base {
   :root {
-    --background: 47 28% 95%;
+    --background: 47 33% 95%; /* #F5F2EC - Lighter earthy tone */
     --foreground: 24 10% 15%;
     --card: 0 0% 100%;
     --card-foreground: 24 10% 15%;
     --popover: 0 0% 100%;
     --popover-foreground: 24 10% 15%;
-    --primary: 120 27% 24%;
+    --primary: 120 27% 24%; /* #2E4F2E */
     --primary-foreground: 0 0% 98%;
     --secondary: 47 20% 90%;
     --secondary-foreground: 120 27% 24%;
     --muted: 47 20% 90%;
     --muted-foreground: 47 10% 45%;
-    --accent: 20 29% 28%;
+    --accent: 20 29% 28%; /* #5C4033 */
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 72% 51%; /* Brighter red */
     --destructive-foreground: 0 0% 98%;
     --border: 47 20% 85%;
     --input: 47 20% 88%;
@@ -35,25 +35,25 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 24 10% 10%;
-    --foreground: 47 28% 95%;
-    --card: 24 10% 15%;
-    --card-foreground: 47 28% 95%;
-    --popover: 24 10% 10%;
-    --popover-foreground: 47 28% 95%;
-    --primary: 120 27% 34%;
+    --background: 40 43% 94%; /* #F2EFE8 - Earthy off-white */
+    --foreground: 24 10% 10%; /* Darker Text */
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 24 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 10%;
+    --primary: 120 27% 24%; /* #2E4F2E */
     --primary-foreground: 0 0% 98%;
-    --secondary: 24 10% 20%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 24 10% 20%;
-    --muted-foreground: 47 10% 60%;
-    --accent: 47 28% 63%;
-    --accent-foreground: 24 10% 10%;
-    --destructive: 0 62.8% 30.6%;
+    --secondary: 120 10% 88%; /* Lighter Green/Gray */
+    --secondary-foreground: 24 10% 10%;
+    --muted: 120 10% 88%;
+    --muted-foreground: 24 10% 40%;
+    --accent: 20 29% 28%; /* #5C4033 */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72% 51%; /* Brighter red */
     --destructive-foreground: 0 0% 98%;
-    --border: 24 10% 25%;
-    --input: 24 10% 25%;
-    --ring: 120 27% 34%;
+    --border: 120 10% 80%; /* Softer border */
+    --input: 120 10% 84%;
+    --ring: 120 27% 24%;
     --chart-1: 120 27% 34%;
     --chart-2: 47 28% 63%;
     --chart-3: 20 29% 38%;

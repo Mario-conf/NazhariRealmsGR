@@ -111,10 +111,10 @@ export function TrailFilters({
           <div className="flex justify-between items-center">
              <div className="flex items-center gap-4">
                 <AccordionTrigger>
-                  <Button variant="ghost" size="sm">
-                    <SlidersHorizontal className="mr-2 h-4 w-4" />
-                    Advanced Filters
-                  </Button>
+                    <div className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground py-2 px-3 rounded-md">
+                        <SlidersHorizontal className="h-4 w-4" />
+                        <span>Advanced Filters</span>
+                    </div>
                 </AccordionTrigger>
                 {isFiltered && (
                     <Button variant="ghost" size="sm" onClick={onClearFilters} className="text-muted-foreground hover:text-foreground">
