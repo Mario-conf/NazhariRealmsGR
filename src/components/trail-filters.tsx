@@ -117,10 +117,10 @@ export function TrailFilters({
         <AccordionItem value="filters">
           <div className="flex justify-between items-center">
             <AccordionTrigger>
-              <div className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground py-2 px-3 rounded-md">
-                  <SlidersHorizontal className="h-4 w-4" />
-                  <span>Advanced Filters</span>
-              </div>
+                <div className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground py-2 px-3 rounded-md">
+                    <SlidersHorizontal className="h-4 w-4" />
+                    <span>Advanced Filters</span>
+                </div>
             </AccordionTrigger>
             
             <div className="flex items-center gap-4">
@@ -204,5 +204,3 @@ export function TrailFilters({
     </div>
   );
 }
-
-    
