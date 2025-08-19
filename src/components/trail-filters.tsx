@@ -77,6 +77,12 @@ export function TrailFilters({
     });
   };
 
+  const handleSortChange = React.useCallback((value: string) => {
+    const [key, order] = value.split("-") as [SortKey, "asc" | "desc"];
+    setSortKey(key);
+    setSortOrder(order);
+  }, [setSortKey, setSortOrder]);
+
   const isFiltered = searchQuery || selectedDifficulties.size > 0 || durationRange[0] !== 0 || durationRange[1] !== 24 || selectedTerrains.size > 0 || showHistorical;
 
   return (
@@ -129,11 +135,7 @@ export function TrailFilters({
                 <ArrowUpDown className="h-4 w-4"/>
                 Sort by:
               </Label>
-              <Select value={`${sortKey}-${sortOrder}`} onValueChange={(value) => {
-                const [key, order] = value.split("-") as [SortKey, "asc" | "desc"];
-                setSortKey(key);
-                setSortOrder(order);
-              }}>
+              <Select value={`${sortKey}-${sortOrder}`} onValueChange={handleSortChange}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Sort by" />
                 </SelectTrigger>
