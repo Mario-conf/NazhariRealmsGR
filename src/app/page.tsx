@@ -25,7 +25,6 @@ export default function Home() {
   const [durationRange, setDurationRange] = React.useState<[number, number]>([0, 24]);
   const [selectedTerrains, setSelectedTerrains] = React.useState<Set<Terrain>>(new Set());
   const [showHistorical, setShowHistorical] = React.useState(false);
-  const [date, setDate] = React.useState<Date | undefined>(undefined);
   
   const [sortKey, setSortKey] = React.useState<SortKey>("name");
   const [sortOrder, setSortOrder] = React.useState<"asc" | "desc">("asc");
@@ -71,35 +70,37 @@ export default function Home() {
     return sorted;
   }, [trailsWithReviews, searchQuery, selectedDifficulties, durationRange, selectedTerrains, showHistorical, sortKey, sortOrder]);
 
-  const handleClearFilters = () => {
+  const handleClearFilters = React.useCallback(() => {
     setSearchQuery("");
     setSelectedDifficulties(new Set());
     setDurationRange([0, 24]);
     setSelectedTerrains(new Set());
     setShowHistorical(false);
-  };
+    setSortKey("name");
+    setSortOrder("asc");
+  }, []);
 
-  const handleAddReview = (reviewData: Omit<Review, "id" | "date">) => {
+  const handleAddReview = React.useCallback((reviewData: Omit<Review, "id" | "date">) => {
     const newReview: Review = {
       ...reviewData,
       id: crypto.randomUUID(),
       date: new Date().toISOString(),
     };
     setReviews(prevReviews => [...prevReviews, newReview]);
-  };
+  }, [setReviews]);
 
-  const toggleFavorite = (trailId: string) => {
+  const toggleFavorite = React.useCallback((trailId: string) => {
     setFavorites(prev => 
       prev.includes(trailId) 
         ? prev.filter(id => id !== trailId) 
         : [...prev, trailId]
     );
-  };
+  }, [setFavorites]);
   
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main className="flex-1 container mx-auto px-4 py-6">
         <TrailFilters
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
@@ -116,12 +117,10 @@ export default function Home() {
           sortOrder={sortOrder}
           setSortOrder={setSortOrder}
           onClearFilters={handleClearFilters}
-          date={date}
-          setDate={setDate}
         />
         
         {filteredAndSortedTrails.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {filteredAndSortedTrails.map(trail => (
               <TrailCard 
                 key={trail.id}
@@ -134,8 +133,8 @@ export default function Home() {
           </div>
         ) : (
           <div className="text-center py-16">
-            <h2 className="text-2xl font-headline font-semibold">No Trails Found</h2>
-            <p className="text-muted-foreground mt-2">Try adjusting your filters to find your next adventure.</p>
+            <h2 className="text-2xl font-semibold">No Trails Found</h2>
+            <p className="text-muted-foreground mt-2">Try adjusting your filters.</p>
             <Button onClick={handleClearFilters} className="mt-4">Clear Filters</Button>
           </div>
         )}
