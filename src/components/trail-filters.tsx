@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -53,7 +54,7 @@ export function TrailFilters({
   setDate
 }: TrailFiltersProps) {
   
-  const handleDifficultyToggle = (difficulty: Difficulty) => {
+  const handleDifficultyToggle = React.useCallback((difficulty: Difficulty) => {
     setSelectedDifficulties(prev => {
       const newSet = new Set(prev);
       if (newSet.has(difficulty)) {
@@ -63,9 +64,9 @@ export function TrailFilters({
       }
       return newSet;
     });
-  };
+  }, [setSelectedDifficulties]);
 
-  const handleTerrainToggle = (terrain: Terrain) => {
+  const handleTerrainToggle = React.useCallback((terrain: Terrain) => {
     setSelectedTerrains(prev => {
       const newSet = new Set(prev);
       if (newSet.has(terrain)) {
@@ -75,7 +76,7 @@ export function TrailFilters({
       }
       return newSet;
     });
-  };
+  }, [setSelectedTerrains]);
 
   const handleSortChange = React.useCallback((value: string) => {
     const [key, order] = value.split("-") as [SortKey, "asc" | "desc"];
@@ -115,43 +116,43 @@ export function TrailFilters({
       <Accordion type="single" collapsible className="w-full mt-2">
         <AccordionItem value="filters">
           <div className="flex justify-between items-center">
-             <div className="flex items-center gap-4">
-                <AccordionTrigger>
-                    <div className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground py-2 px-3 rounded-md">
-                        <SlidersHorizontal className="h-4 w-4" />
-                        <span>Advanced Filters</span>
-                    </div>
-                </AccordionTrigger>
-                {isFiltered && (
-                    <Button variant="ghost" size="sm" onClick={onClearFilters} className="text-muted-foreground hover:text-foreground">
-                        <X className="mr-2 h-4 w-4" />
-                        Clear Filters
-                    </Button>
-                )}
-             </div>
-
-            <div className="flex items-center gap-2 pr-4">
-              <Label htmlFor="sort" className="flex items-center gap-2 text-sm text-muted-foreground">
-                <ArrowUpDown className="h-4 w-4"/>
-                Sort by:
-              </Label>
-              <Select value={`${sortKey}-${sortOrder}`} onValueChange={handleSortChange}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Sort by" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="name-asc">Name (A-Z)</SelectItem>
-                  <SelectItem value="name-desc">Name (Z-A)</SelectItem>
-                  <SelectItem value="distance-asc">Distance (Shortest)</SelectItem>
-                  <SelectItem value="distance-desc">Distance (Longest)</SelectItem>
-                  <SelectItem value="duration-asc">Duration (Quickest)</SelectItem>
-                  <SelectItem value="duration-desc">Duration (Longest)</SelectItem>
-                  <SelectItem value="difficulty-asc">Difficulty (Easiest)</SelectItem>
-                  <SelectItem value="difficulty-desc">Difficulty (Hardest)</SelectItem>
-                  <SelectItem value="averageRating-desc">Rating (Highest)</SelectItem>
-                  <SelectItem value="averageRating-asc">Rating (Lowest)</SelectItem>
-                </SelectContent>
-              </Select>
+            <AccordionTrigger>
+              <div className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground py-2 px-3 rounded-md">
+                  <SlidersHorizontal className="h-4 w-4" />
+                  <span>Advanced Filters</span>
+              </div>
+            </AccordionTrigger>
+            
+            <div className="flex items-center gap-4">
+              {isFiltered && (
+                  <Button variant="ghost" size="sm" onClick={onClearFilters} className="text-muted-foreground hover:text-foreground">
+                      <X className="mr-2 h-4 w-4" />
+                      Clear Filters
+                  </Button>
+              )}
+              <div className="flex items-center gap-2 pr-4">
+                <Label htmlFor="sort" className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <ArrowUpDown className="h-4 w-4"/>
+                  Sort by:
+                </Label>
+                <Select value={`${sortKey}-${sortOrder}`} onValueChange={handleSortChange}>
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Sort by" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="name-asc">Name (A-Z)</SelectItem>
+                    <SelectItem value="name-desc">Name (Z-A)</SelectItem>
+                    <SelectItem value="distance-asc">Distance (Shortest)</SelectItem>
+                    <SelectItem value="distance-desc">Distance (Longest)</SelectItem>
+                    <SelectItem value="duration-asc">Duration (Quickest)</SelectItem>
+                    <SelectItem value="duration-desc">Duration (Longest)</SelectItem>
+                    <SelectItem value="difficulty-asc">Difficulty (Easiest)</SelectItem>
+                    <SelectItem value="difficulty-desc">Difficulty (Hardest)</SelectItem>
+                    <SelectItem value="averageRating-desc">Rating (Highest)</SelectItem>
+                    <SelectItem value="averageRating-asc">Rating (Lowest)</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
           </div>
           <AccordionContent className="pt-4">
@@ -203,3 +204,5 @@ export function TrailFilters({
     </div>
   );
 }
+
+    
