@@ -9,7 +9,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import type { Trail } from '@/lib/trail-data';
-import { Star, Mountain, Forest, Waves, Sun, Clock, Milestone, Heart } from 'lucide-react';
+import { Star, Mountain, Trees, Waves, Sun, Clock, Milestone, Heart } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 interface TrailCardProps {
@@ -21,7 +21,7 @@ interface TrailCardProps {
 
 const terrainIcons = {
   Mountain: <Mountain className="h-4 w-4" />,
-  Forest: <Forest className="h-4 w-4" />,
+  Forest: <Trees className="h-4 w-4" />,
   Coastal: <Waves className="h-4 w-4" />,
   Desert: <Sun className="h-4 w-4" />,
 };

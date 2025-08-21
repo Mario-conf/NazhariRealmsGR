@@ -12,7 +12,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import type { Trail, Review } from '@/lib/trail-data';
-import { Star, Mountain, Forest, Waves, Sun, Clock, Milestone, Map, Download, X, Heart } from 'lucide-react';
+import { Star, Mountain, Trees, Waves, Sun, Clock, Milestone, Map, Download, X, Heart } from 'lucide-react';
 import useReviews from '@/hooks/use-reviews';
 import { ReviewForm } from './review-form';
 import { ReviewList } from './review-list';
@@ -27,7 +27,7 @@ interface TrailDetailsDialogProps {
 
 const terrainIcons = {
   Mountain: <Mountain className="h-5 w-5" />,
-  Forest: <Forest className="h-5 w-5" />,
+  Forest: <Trees className="h-5 w-5" />,
   Coastal: <Waves className="h-5 w-5" />,
   Desert: <Sun className="h-5 w-5" />,
 };
