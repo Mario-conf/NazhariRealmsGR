@@ -9,7 +9,14 @@
 
 import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
-import { getAemetWeatherData, AemetMunicipality } from '@/services/aemet';
+import { getAemetWeatherData } from '@/services/aemet';
+
+// Zod Schema for data validation, moved from aemet.ts to avoid 'use server' export issues.
+const AemetMunicipality = z.object({
+  id: z.string(),
+  nombre: z.string(),
+});
+
 
 // Input and Output Schemas
 const WeatherInputSchema = z.object({

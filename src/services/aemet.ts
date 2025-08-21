@@ -13,7 +13,7 @@ if (!API_KEY) {
 }
 
 // Zod Schemas for data validation
-export const AemetMunicipality = z.object({
+const AemetMunicipalitySchema = z.object({
   id: z.string(),
   nombre: z.string(),
 });
@@ -42,7 +42,7 @@ const AemetWeatherPredictionSchema = z.object({
 });
 
 // Main function to get formatted weather data
-export async function getAemetWeatherData(municipality: z.infer<typeof AemetMunicipality>) {
+export async function getAemetWeatherData(municipality: z.infer<typeof AemetMunicipalitySchema>) {
   try {
     const predictionUrl = `${API_URL}/prediccion/especifica/municipio/diaria/${municipality.id.substring(2)}`;
     const weatherData = await fetchData(predictionUrl);
