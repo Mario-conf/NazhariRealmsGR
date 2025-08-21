@@ -1,22 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { getWeather, WeatherData } from '@/ai/flows/weather';
-import { CloudIcon, SunIcon, ThermometerIcon, WindIcon, Droplets } from 'lucide-react';
+import { SunIcon, ThermometerIcon, WindIcon, Droplets } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function WeatherPage() {
   const t = useTranslations('WeatherPage');
-  const [location, setLocation] = useState('Sierra Nevada, Granada');
+  const [location, setLocation] = useState('Sierra Nevada');
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSearch = async () => {
-    if (!location) {
+  const handleSearch = async (searchLocation: string) => {
+    if (!searchLocation) {
       setError(t('error_location'));
       return;
     }
@@ -24,7 +25,7 @@ export default function WeatherPage() {
     setError(null);
     setWeatherData(null);
     try {
-      const data = await getWeather({ location });
+      const data = await getWeather({ location: searchLocation });
       setWeatherData(data);
     } catch (err) {
       setError(t('error_fetch'));
@@ -35,10 +36,9 @@ export default function WeatherPage() {
   };
   
   // Fetch weather for default location on initial render
-  useState(() => {
-    handleSearch();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  });
+  useEffect(() => {
+    handleSearch('Sierra Nevada');
+  }, []);
 
 
   return (
@@ -59,10 +59,10 @@ export default function WeatherPage() {
             placeholder={t('search_placeholder')}
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            onKeyUp={(e) => e.key === 'Enter' && handleSearch()}
+            onKeyUp={(e) => e.key === 'Enter' && handleSearch(location)}
             className="flex-1"
           />
-          <Button onClick={handleSearch} disabled={loading}>
+          <Button onClick={() => handleSearch(location)} disabled={loading}>
             {loading ? t('search_button_loading') : t('search_button')}
           </Button>
         </div>
@@ -146,10 +146,12 @@ export default function WeatherPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted">
-                    <img
-                      src={`data:image/png;base64,${weatherData.maps.cloud}`}
+                    <Image
+                      src={weatherData.maps.cloud}
                       alt={t('cloud_radar_alt')}
                       className="h-full w-full object-cover"
+                      width={600}
+                      height={400}
                     />
                   </div>
                 </CardContent>
@@ -160,10 +162,12 @@ export default function WeatherPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted">
-                    <img
-                      src={`data:image/png;base64,${weatherData.maps.heat}`}
+                     <Image
+                      src={weatherData.maps.heat}
                       alt={t('heat_map_alt')}
                       className="h-full w-full object-cover"
+                      width={600}
+                      height={400}
                     />
                   </div>
                 </CardContent>
