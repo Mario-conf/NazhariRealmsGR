@@ -33,19 +33,15 @@ export default function RulesPage() {
           <CardContent className="space-y-4 text-muted-foreground">
             <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
-              <p dangerouslySetInnerHTML={{ __html: t.raw('safety1') }} />
+              <p><strong>{t('safety1_title')}:</strong> {t('safety1_content')}</p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
-              <p dangerouslySetInnerHTML={{ __html: t.raw('safety2') }} />
+               <p><strong>{t('safety2_title')}:</strong> {t('safety2_content')}</p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
-              <p dangerouslySetInnerHTML={{ __html: t.raw('safety3') }} />
-            </div>
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
-              <p dangerouslySetInnerHTML={{ __html: t.raw('safety4') }} />
+              <p><strong>{t('safety3_title')}:</strong> {t('safety3_content')}</p>
             </div>
           </CardContent>
         </Card>
@@ -61,49 +57,19 @@ export default function RulesPage() {
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>{t('lnt1_trigger')}</AccordionTrigger>
-                <AccordionContent>
-                  {t('lnt1_content')}
-                </AccordionContent>
+                <AccordionContent>{t('lnt1_content')}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>
-                  {t('lnt2_trigger')}
-                </AccordionTrigger>
-                <AccordionContent>
-                  {t('lnt2_content')}
-                </AccordionContent>
+                <AccordionTrigger>{t('lnt2_trigger')}</AccordionTrigger>
+                <AccordionContent>{t('lnt2_content')}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
                 <AccordionTrigger>{t('lnt3_trigger')}</AccordionTrigger>
-                <AccordionContent>
-                  {t('lnt3_content')}
-                </AccordionContent>
+                <AccordionContent>{t('lnt3_content')}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
                 <AccordionTrigger>{t('lnt4_trigger')}</AccordionTrigger>
-                <AccordionContent>
-                  {t('lnt4_content')}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-5">
-                <AccordionTrigger>{t('lnt5_trigger')}</AccordionTrigger>
-                <AccordionContent>
-                  {t('lnt5_content')}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-6">
-                <AccordionTrigger>{t('lnt6_trigger')}</AccordionTrigger>
-                <AccordionContent>
-                  {t('lnt6_content')}
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-7">
-                <AccordionTrigger>
-                  {t('lnt7_trigger')}
-                </AccordionTrigger>
-                <AccordionContent>
-                  {t('lnt7_content')}
-                </AccordionContent>
+                <AccordionContent>{t('lnt4_content')}</AccordionContent>
               </AccordionItem>
             </Accordion>
           </CardContent>
@@ -119,15 +85,15 @@ export default function RulesPage() {
           <CardContent className="space-y-4 text-muted-foreground">
              <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
-              <p dangerouslySetInnerHTML={{ __html: t.raw('etiquette1') }} />
+              <p><strong>{t('etiquette1_title')}:</strong> {t('etiquette1_content')}</p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
-              <p dangerouslySetInnerHTML={{ __html: t.raw('etiquette2') }} />
+              <p><strong>{t('etiquette2_title')}:</strong> {t('etiquette2_content')}</p>
             </div>
              <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
-              <p dangerouslySetInnerHTML={{ __html: t.raw('etiquette3') }} />
+               <p><strong>{t('etiquette3_title')}:</strong> {t('etiquette3_content')}</p>
             </div>
           </CardContent>
         </Card>
