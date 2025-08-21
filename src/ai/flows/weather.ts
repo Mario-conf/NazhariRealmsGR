@@ -69,7 +69,7 @@ const getRealWeatherData = ai.defineTool(
 
 // Main exported function that clients will call
 export async function getWeather(input: WeatherInput): Promise<WeatherData> {
-  const result = await weatherFlow(input);
+  const result = await weatherFlow(input.location);
   return result;
 }
 
@@ -78,7 +78,7 @@ export async function getWeather(input: WeatherInput): Promise<WeatherData> {
 const weatherFlow = ai.defineFlow(
   {
     name: 'weatherFlow',
-    inputSchema: WeatherInputSchema,
+    inputSchema: z.string(),
     outputSchema: WeatherDataSchema,
     system: `
       You are a helpful weather assistant for a hiking club in Spain.
@@ -89,10 +89,9 @@ const weatherFlow = ai.defineFlow(
     `,
     tools: [getRealWeatherData],
   },
-  async (input) => {
-
+  async (prompt) => {
     const llmResponse = await ai.generate({
-      prompt: `Get the weather for ${input.location}`,
+      prompt: prompt,
       model: 'googleai/gemini-1.5-flash-latest',
       tools: [getRealWeatherData],
       toolChoice: 'required',
@@ -100,13 +99,10 @@ const weatherFlow = ai.defineFlow(
 
     const toolRequest = llmResponse.toolRequest();
     if (!toolRequest) {
-        throw new Error("Expected the model to call the weather tool.");
+      throw new Error('Expected the model to call the weather tool.');
     }
-    
-    // Extract the municipality from the tool request and call the tool
-    const municipality = toolRequest.input.municipality as z.infer<typeof AemetMunicipality>;
-    const toolResponse = await getRealWeatherData( {municipality} );
 
+    const toolResponse = await getRealWeatherData(toolRequest.input);
     return toolResponse;
   }
 );
