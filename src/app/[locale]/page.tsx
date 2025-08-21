@@ -14,28 +14,28 @@ export default function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-background">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <div className="flex flex-col justify-center space-y-4">
+            <img
+              alt={t('hero_alt')}
+              className="mx-auto aspect-[3/4] sm:aspect-video overflow-hidden rounded-xl object-cover lg:order-last"
+              data-ai-hint="senderismo montaña"
+              src="https://placehold.co/600x800.png"
+            />
+            <div className="flex flex-col justify-center space-y-4 text-center lg:text-left">
               <div className="space-y-2">
                 <h1 className="font-serif text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                   {t('title')}
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
                   {t('subtitle')}
                 </p>
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center lg:justify-start">
                 <Button size="lg">{t('explore_routes')}</Button>
                 <Button size="lg" variant="outline">
                   {t('join_now')}
                 </Button>
               </div>
             </div>
-            <img
-              alt={t('hero_alt')}
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
-              data-ai-hint="paisaje de montaña"
-              src="https://placehold.co/600x600.png"
-            />
           </div>
         </div>
       </section>

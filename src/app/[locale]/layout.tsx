@@ -3,7 +3,7 @@ import '../globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getLocale } from 'next-intl/server';
 
 const ptSans = PT_Sans({
   subsets: ['latin'],
@@ -17,15 +17,16 @@ const playfair = Playfair_Display({
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  const locale = await getLocale();
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale}>
       <body className={`${ptSans.variable} ${playfair.variable} font-sans`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="relative flex min-h-dvh flex-col bg-background">

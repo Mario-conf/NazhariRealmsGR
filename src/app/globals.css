@@ -4,14 +4,14 @@
 
 @layer base {
   :root {
-    --background: 42 100% 98%; /* Cream: #FFFDD0 */
+    --background: 0 0% 97.3%; /* Off-white: #F8F8F8 */
     --foreground: 0 0% 7%; /* Gray: #121212 */
-    --card: 45 100% 91%; /* Lighter Cream */
-    --card-foreground: 0 0% 7%; /* Gray: #121212 */
-    --popover: 0 0% 97.3%; /* Off-white: #F8F8F8 */
-    --popover-foreground: 0 0% 7%; /* Gray: #121212 */
+    --card: 57 100% 91%; /* Cream: #FFFDD0 */
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 97.3%;
+    --popover-foreground: 0 0% 7%;
     --primary: 6 100% 67%; /* Intense Papaya Orange: #FF715B */
-    --primary-foreground: 0 0% 7%; /* Gray: #121212 */
+    --primary-foreground: 0 0% 7%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
@@ -25,20 +25,22 @@
     --ring: 6 100% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
-    --background: 0 0% 7%; /* Gray: #121212 */
-    --foreground: 0 0% 97.3%; /* Off-white: #F8F8F8 */
-    --card: 0 0% 12%; /* Darker Gray */
-    --card-foreground: 0 0% 97.3%; /* Off-white: #F8F8F8 */
-    --popover: 0 0% 7%; /* Gray: #121212 */
-    --popover-foreground: 0 0% 97.3%; /* Off-white: #F8F8F8 */
-    --primary: 6 100% 67%; /* Intense Papaya Orange: #FF715B */
-    --primary-foreground: 0 0% 7%; /* Gray: #121212 */
+    /* Keeping dark mode vars for reference, but light will be default */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 97.3%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 97.3%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 97.3%;
+    --primary: 6 100% 67%;
+    --primary-foreground: 0 0% 7%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 6 100% 67%; /* Intense Papaya Orange: #FF715B */
+    --accent: 6 100% 67%;
     --accent-foreground: 0 0% 7%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
