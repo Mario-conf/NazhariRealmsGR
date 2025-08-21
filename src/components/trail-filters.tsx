@@ -136,13 +136,26 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
     setSortOrder('rating-desc');
     setShowOnlyFavorites(false);
   };
+  
+  const difficultyLabels = {
+    'Easy': 'Fácil',
+    'Moderate': 'Moderada',
+    'Hard': 'Difícil'
+  }
+
+  const terrainLabels = {
+    'Mountain': 'Montaña',
+    'Forest': 'Bosque',
+    'Coastal': 'Costa',
+    'Desert': 'Desierto'
+  }
 
   return (
     <div className="space-y-8">
        <div className="flex items-center justify-between">
         <Label htmlFor="favorites-only" className="flex items-center gap-2 text-base">
           <Heart className="h-5 w-5 text-red-500" />
-          My Favorites
+          Mis Favoritas
         </Label>
         <Switch
           id="favorites-only"
@@ -151,17 +164,17 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
         />
       </div>
       <div>
-        <Label htmlFor="search">Search by name or location</Label>
+        <Label htmlFor="search">Buscar por nombre o lugar</Label>
         <Input
           id="search"
-          placeholder="e.g., Eagle Peak"
+          placeholder="Ej: Veleta, Monachil..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
 
       <div>
-        <Label>Difficulty</Label>
+        <Label>Dificultad</Label>
         <div className="space-y-2 mt-2">
           {DIFFICULTIES.map((d) => (
             <div key={d} className="flex items-center space-x-2">
@@ -171,7 +184,7 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
                 onCheckedChange={() => handleDifficultyToggle(d)}
               />
               <Label htmlFor={`diff-${d}`} className="font-normal">
-                {d}
+                {difficultyLabels[d]}
               </Label>
             </div>
           ))}
@@ -179,7 +192,7 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
       </div>
 
       <div>
-        <Label>Terrain</Label>
+        <Label>Terreno</Label>
         <div className="space-y-2 mt-2">
           {TERRAINS.map((t) => (
             <div key={t} className="flex items-center space-x-2">
@@ -189,7 +202,7 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
                 onCheckedChange={() => handleTerrainToggle(t)}
               />
               <Label htmlFor={`terrain-${t}`} className="font-normal">
-                {t}
+                {terrainLabels[t]}
               </Label>
             </div>
           ))}
@@ -197,7 +210,7 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
       </div>
 
       <div>
-        <Label>Duration (hours)</Label>
+        <Label>Duración (horas)</Label>
         <Slider
           min={0}
           max={MAX_DURATION}
@@ -213,25 +226,25 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
       </div>
 
       <div>
-        <Label htmlFor="sort">Sort by</Label>
+        <Label htmlFor="sort">Ordenar por</Label>
         <Select value={sortOrder} onValueChange={setSortOrder}>
           <SelectTrigger id="sort">
-            <SelectValue placeholder="Select..." />
+            <SelectValue placeholder="Seleccionar..." />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="rating-desc">Rating: High to Low</SelectItem>
-            <SelectItem value="rating-asc">Rating: Low to High</SelectItem>
-            <SelectItem value="length-desc">Length: Long to Short</SelectItem>
-            <SelectItem value="length-asc">Length: Short to Long</SelectItem>
-            <SelectItem value="duration-desc">Duration: Long to Short</SelectItem>
-            <SelectItem value="duration-asc">Duration: Short to Long</SelectItem>
+            <SelectItem value="rating-desc">Valoración: Alta a Baja</SelectItem>
+            <SelectItem value="rating-asc">Valoración: Baja a Alta</SelectItem>
+            <SelectItem value="length-desc">Distancia: Larga a Corta</SelectItem>
+            <SelectItem value="length-asc">Distancia: Corta a Larga</SelectItem>
+            <SelectItem value="duration-desc">Duración: Larga a Corta</SelectItem>
+            <SelectItem value="duration-asc">Duración: Corta a Larga</SelectItem>
           </SelectContent>
         </Select>
       </div>
       
       <Button variant="outline" className="w-full" onClick={handleResetFilters}>
         <ListRestart className="mr-2 h-4 w-4" />
-        Reset Filters
+        Reiniciar Filtros
       </Button>
     </div>
   );

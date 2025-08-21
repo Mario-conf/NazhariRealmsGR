@@ -16,10 +16,10 @@ export default function BlogPage() {
     <div className="container mx-auto px-4 py-8 md:py-12">
       <div className="mx-auto max-w-3xl text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-          The Alpine-Hike Blog
+          El Blog de Alpine-Hike
         </h1>
         <p className="mt-4 text-muted-foreground md:text-xl">
-          Stories, reviews, and guides from our community of adventurers.
+          Historias, análisis y guías de nuestra comunidad de aventureros.
         </p>
       </div>
 
@@ -39,7 +39,7 @@ export default function BlogPage() {
                 </Link>
               </CardTitle>
               <CardDescription>
-                {post.date} by {post.author}
+                {post.date} por {post.author}
               </CardDescription>
             </CardHeader>
             <CardContent className="flex-grow">
@@ -50,7 +50,7 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="font-semibold text-primary hover:underline"
               >
-                Read More &rarr;
+                Leer Más &rarr;
               </Link>
             </CardFooter>
           </Card>

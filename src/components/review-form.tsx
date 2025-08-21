@@ -21,7 +21,7 @@ export function ReviewForm({ onSubmit }: ReviewFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!author || rating === 0 || !comment) {
-      setError('Please fill out all fields and provide a rating.');
+      setError('Por favor, rellena todos los campos y selecciona una valoración.');
       return;
     }
     onSubmit({ author, rating, comment });
@@ -34,16 +34,16 @@ export function ReviewForm({ onSubmit }: ReviewFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-2">
-        <Label htmlFor="author">Your Name</Label>
+        <Label htmlFor="author">Tu Nombre</Label>
         <Input
           id="author"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
-          placeholder="e.g. John Doe"
+          placeholder="Ej: Juan Pérez"
         />
       </div>
       <div className="space-y-2">
-        <Label>Rating</Label>
+        <Label>Valoración</Label>
         <div className="flex items-center gap-1">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
@@ -61,17 +61,17 @@ export function ReviewForm({ onSubmit }: ReviewFormProps) {
         </div>
       </div>
       <div className="space-y-2">
-        <Label htmlFor="comment">Comment</Label>
+        <Label htmlFor="comment">Comentario</Label>
         <Textarea
           id="comment"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-          placeholder="Share your experience on the trail..."
+          placeholder="Comparte tu experiencia en la ruta..."
           rows={4}
         />
       </div>
       {error && <p className="text-sm text-destructive">{error}</p>}
-      <Button type="submit" className="w-full">Submit Review</Button>
+      <Button type="submit" className="w-full">Enviar Reseña</Button>
     </form>
   );
 }

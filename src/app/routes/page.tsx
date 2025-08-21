@@ -30,11 +30,10 @@ export default function RoutesPage() {
       <div className="container mx-auto px-4 py-8">
         <header className="mb-12 text-center">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl">
-            Explore Our Trails
+            Explora Nuestras Rutas
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
-            Find your next adventure. Use the filters below to discover the
-            perfect trail for you.
+            Encuentra tu próxima aventura. Usa los filtros para descubrir la ruta perfecta para ti.
           </p>
         </header>
 
@@ -58,10 +57,10 @@ export default function RoutesPage() {
             ) : (
               <div className="flex flex-col items-center justify-center h-96 border-2 border-dashed rounded-lg">
                 <p className="text-xl font-semibold text-muted-foreground">
-                  No trails match your filters.
+                  No hay rutas que coincidan con tus filtros.
                 </p>
                 <p className="text-muted-foreground">
-                  Try adjusting your search criteria.
+                  Prueba a ajustar los criterios de búsqueda.
                 </p>
               </div>
             )}

@@ -9,64 +9,64 @@ export interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    slug: 'top-5-beginner-hikes',
-    title: 'Top 5 Hikes for Beginners in the Alps',
-    author: 'Jane Doe',
-    date: 'October 26, 2023',
+    slug: 'top-5-rutas-sierra-nevada',
+    title: 'Top 5 Rutas para Principiantes en Sierra Nevada',
+    author: 'Ana García',
+    date: '26 de Octubre, 2023',
     excerpt:
-      'Just starting your hiking journey? Here are five breathtaking yet manageable trails in the Alps to get you started.',
+      '¿Acabas de empezar en el mundo del senderismo? Aquí tienes cinco rutas impresionantes y asequibles en Sierra Nevada para empezar con buen pie.',
     content: `
-      <h2>Introduction</h2>
-      <p>The Alps can be intimidating, but there are plenty of trails perfect for those new to hiking. This guide will walk you through five of our favorites.</p>
-      <h3>1. The Eibsee Loop, Germany</h3>
-      <p>A stunning walk around a crystal-clear lake with the Zugspitze as a backdrop. It's mostly flat and offers incredible photo opportunities.</p>
-      <h3>2. Oeschinensee, Switzerland</h3>
-      <p>A panoramic trail that provides stunning views of the turquoise Oeschinen Lake. The path is well-maintained and suitable for all skill levels.</p>
-      <h3>3. Tre Cime di Lavaredo Loop, Italy</h3>
-      <p>This trail in the Dolomites offers iconic views of the "Three Peaks." While it has some elevation gain, it's a rewarding experience for any beginner.</p>
-      <h3>4. Lac Blanc, France</h3>
-      <p>Located near Chamonix, this hike offers some of the best views of the Mont Blanc massif. It's a popular trail, and for good reason.</p>
-      <h3>5. The Almenwelt Lofer, Austria</h3>
-      <p>A family-friendly area with a variety of easy trails through alpine pastures. Perfect for a relaxed day in the mountains.</p>
+      <h2>Introducción</h2>
+      <p>Sierra Nevada puede ser imponente, pero está llena de senderos perfectos para quienes se inician en el senderismo. Esta guía te mostrará cinco de nuestros favoritos en la zona de Granada.</p>
+      <h3>1. Ruta del Colesterol, Monachil</h3>
+      <p>Un paseo impresionante junto al río Monachil, famoso por sus puentes colgantes. Es mayormente llano y ofrece oportunidades fotográficas increíbles. Ideal para familias.</p>
+      <h3>2. Hoya de la Mora - Posiciones del Veleta</h3>
+      <p>Una ruta panorámica que ofrece vistas espectaculares de las altas cumbres. El camino está bien señalizado y es apto para la mayoría de los niveles, aunque la altitud puede ser un factor.</p>
+      <h3>3. Vereda de la Estrella, Güéjar Sierra</h3>
+      <p>Este sendero histórico en el corazón de Sierra Nevada ofrece vistas icónicas de las caras norte del Mulhacén y el Alcazaba. Es una experiencia gratificante para cualquier principiante con ganas de un reto.</p>
+      <h3>4. Lavaderos de la Reina, Güéjar Sierra</h3>
+      <p>Una de las rutas más bonitas en primavera, cuando los "borreguiles" (prados de alta montaña) están en su máximo esplendor y el agua del deshielo corre por todas partes.</p>
+      <h3>5. Fuente del Avellano y Silla del Moro, Granada</h3>
+      <p>Una ruta periurbana, perfecta para una escapada rápida desde Granada. Ofrece vistas espectaculares de la Alhambra y la ciudad, mezclando naturaleza e historia.</p>
     `,
   },
   {
-    slug: 'review-osprey-atmos-ag-65',
-    title: 'Product Review: Osprey Atmos AG 65 Backpack',
-    author: 'John Smith',
-    date: 'November 2, 2023',
+    slug: 'review-forclaz-trek-100',
+    title: 'Análisis: Zapatillas de Trekking Forclaz Trek 100',
+    author: 'Juan Pérez',
+    date: '2 de Noviembre, 2023',
     excerpt:
-      "Is the Osprey Atmos AG 65 the king of backpacking packs? We took it on a 5-day trek to find out.",
+      "¿Son las Forclaz Trek 100 de Decathlon una buena opción para nuestras rutas por Andalucía? Las hemos puesto a prueba en una travesía de 3 días.",
     content: `
-      <h2>First Impressions</h2>
-      <p>The Osprey Atmos AG 65 has a reputation for comfort, and it doesn't disappoint. The Anti-Gravity suspension system feels like it's hugging your back.</p>
-      <h3>Comfort and Fit</h3>
-      <p>The fit is highly adjustable, and once dialed in, the pack distributes weight exceptionally well. We experienced no sore spots even after long days on the trail.</p>
-      <h3>Storage and Organization</h3>
-      <p>With a 65-liter capacity, there's plenty of room. The pocket layout is intuitive, with a large main compartment, a sleeping bag compartment, and several external pockets.</p>
-      <h2>The Verdict</h2>
-      <p>This backpack lives up to the hype. It's an investment, but for serious backpackers who prioritize comfort and functionality, it's worth every penny.</p>
+      <h2>Primeras Impresiones</h2>
+      <p>Las Forclaz Trek 100 tienen fama de ser duraderas y asequibles. El agarre de la suela CrossContact parece prometedor para los terrenos de nuestra sierra.</p>
+      <h3>Comodidad y Ajuste</h3>
+      <p>El ajuste es bueno desde el primer momento. Tras largas jornadas en la montaña, no hemos experimentado rozaduras ni molestias significativas. El sistema de lazada es sencillo pero efectivo.</p>
+      <h3>Rendimiento y Durabilidad</h3>
+      <p>Con una capacidad de resistencia notable, se han comportado bien en terreno seco y rocoso. La impermeabilidad es suficiente para lluvias ligeras, pero pueden no ser la mejor opción para condiciones muy húmedas.</p>
+      <h2>El Veredicto</h2>
+      <p>Estas zapatillas cumplen lo que prometen. Son una inversión excelente para senderistas que busquen una opción fiable y económica para la mayoría de condiciones que encontramos en España.</p>
     `,
   },
   {
-    slug: 'leave-no-trace',
-    title: 'The 7 Principles of Leave No Trace',
-    author: 'Eco Warriors',
-    date: 'November 10, 2023',
+    slug: 'decalogo-montanero',
+    title: 'El Decálogo del Buen Montañero',
+    author: 'Club Alpine-Hike',
+    date: '10 de Noviembre, 2023',
     excerpt:
-      'Responsible hiking means protecting our natural spaces. Learn the seven core principles of Leave No Trace to minimize your impact.',
+      'El senderismo responsable significa proteger nuestros espacios naturales. Conoce las reglas básicas para minimizar tu impacto en la montaña.',
     content: `
-      <h2>Why It Matters</h2>
-      <p>As more people discover the joy of the outdoors, our collective impact grows. Following Leave No Trace principles is crucial for preserving wilderness for future generations.</p>
-      <h3>The Principles</h3>
+      <h2>Por Qué Es Importante</h2>
+      <p>A medida que más gente descubre el placer de la naturaleza, nuestro impacto colectivo crece. Seguir unos principios básicos es crucial para preservar la naturaleza para futuras generaciones.</p>
+      <h3>Los Principios</h3>
       <ol>
-        <li><strong>Plan Ahead and Prepare:</strong> Know the regulations and special concerns for the area you'll visit.</li>
-        <li><strong>Travel and Camp on Durable Surfaces:</strong> Use established trails and campsites.</li>
-        <li><strong>Dispose of Waste Properly:</strong> Pack it in, pack it out.</li>
-        <li><strong>Leave What You Find:</strong> Preserve the past: examine, but do not touch, cultural or historic structures and artifacts.</li>
-        <li><strong>Minimize Campfire Impacts:</strong> Use a lightweight stove for cooking and enjoy a candle lantern for light.</li>
-        <li><strong>Respect Wildlife:</strong> Observe wildlife from a distance. Do not follow or approach them.</li>
-        <li><strong>Be Considerate of Other Visitors:</strong> Respect other visitors and protect the quality of their experience.</li>
+        <li><strong>Planifica tu actividad:</strong> Infórmate sobre la ruta, la méteo y tus propias capacidades.</li>
+        <li><strong>Viaja y acampa en superficies resistentes:</strong> Usa los senderos y zonas de acampada habilitadas.</li>
+        <li><strong>Gestiona tus residuos adecuadamente:</strong> Lo que lleves a la montaña, debe volver contigo.</li>
+        <li><strong>Deja lo que encuentres:</strong> Permite que otros disfruten de la belleza de la naturaleza tal como la encontraste. No te lleves piedras, plantas ni otros "recuerdos".</li>
+        <li><strong>Minimiza el impacto de las hogueras:</strong> Usa un hornillo. Si haces fuego, que sea en lugares permitidos y de forma segura.</li>
+        <li><strong>Respeta la fauna salvaje:</strong> Obsérvala desde la distancia. No alimentes a los animales.</li>
+        <li><strong>Sé considerado con otros visitantes:</strong> Respeta a los demás y protege la calidad de su experiencia en la naturaleza.</li>
       </ol>
     `,
   },

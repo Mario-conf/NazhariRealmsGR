@@ -7,8 +7,8 @@ import { Footer } from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Alpine-Hike Club",
-  description: "Your adventure starts here.",
+  title: "Club de Senderismo Alpine-Hike",
+  description: "Tu aventura comienza aquí.",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="es" className="dark">
       <body className={inter.className}>
         <div className="relative flex min-h-dvh flex-col bg-background">
           <Header />

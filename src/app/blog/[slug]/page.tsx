@@ -17,14 +17,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         className="mb-8 inline-flex items-center gap-2 text-primary hover:underline"
       >
         <ArrowLeft className="h-4 w-4" />
-        Back to Blog
+        Volver al Blog
       </Link>
       <header className="mb-8">
         <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
           {post.title}
         </h1>
         <p className="mt-2 text-lg text-muted-foreground">
-          Posted on {post.date} by {post.author}
+          Publicado el {post.date} por {post.author}
         </p>
       </header>
       <div

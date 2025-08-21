@@ -12,11 +12,10 @@ export default function RulesPage() {
     <div className="container mx-auto px-4 py-8 md:py-12">
       <div className="mx-auto max-w-3xl text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-          Club Rules & Safety Guidelines
+          Reglas del Club y Guías de Seguridad
         </h1>
         <p className="mt-4 text-muted-foreground md:text-xl">
-          Our principles for safe, respectful, and unforgettable adventures.
-          Please read carefully before your first trip.
+          Nuestros principios para aventuras seguras, respetuosas e inolvidables. Por favor, lee con atención antes de tu primera salida.
         </p>
       </div>
 
@@ -25,40 +24,32 @@ export default function RulesPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-3">
               <Shield className="h-6 w-6 text-primary" />
-              Safety First: Your Responsibilities
+              La Seguridad es lo Primero: Tus Responsabilidades
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-muted-foreground">
             <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
               <p>
-                <strong>Know Your Limits:</strong> Always choose hikes that
-                match your fitness level and experience. It's okay to turn back.
+                <strong>Conoce Tus Límites:</strong> Elige siempre rutas que se ajusten a tu nivel de forma física y experiencia. No pasa nada por dar la vuelta.
               </p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
               <p>
-                <strong>The Ten Essentials:</strong> Always carry navigation,
-                sun protection, insulation, illumination, first-aid, fire
-                starter, repair tools, nutrition, hydration, and an emergency
-                shelter.
+                <strong>Los Diez Esenciales:</strong> Lleva siempre navegación, protección solar, ropa de abrigo, iluminación, botiquín, iniciador de fuego, herramientas de reparación, nutrición, hidratación y un refugio de emergencia.
               </p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
               <p>
-                <strong>Check the Weather:</strong> Always check the forecast
-                before you leave. Be prepared for sudden changes, especially at
-                high altitudes. Use our Weather Center!
+                <strong>Consulta el Tiempo:</strong> Siempre revisa el pronóstico antes de salir. Prepárate para cambios repentinos, especialmente en altitudes elevadas. ¡Usa nuestro Centro Meteorológico!
               </p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
               <p>
-                <strong>Communicate:</strong> Inform someone of your hiking
-                plan, including your route and expected return time. Stick to
-                the plan.
+                <strong>Comunica tu Plan:</strong> Informa a alguien de tu plan de ruta, incluyendo el itinerario y la hora prevista de regreso. Cíñete al plan.
               </p>
             </div>
           </CardContent>
@@ -68,67 +59,55 @@ export default function RulesPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-3">
               <Mountain className="h-6 w-6 text-primary" />
-              Leave No Trace: 7 Core Principles
+              No Dejes Rastro: 7 Principios Fundamentales
             </CardTitle>
           </CardHeader>
           <CardContent>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger>1. Plan Ahead and Prepare</AccordionTrigger>
+                <AccordionTrigger>1. Planifica y Prepárate con Antelación</AccordionTrigger>
                 <AccordionContent>
-                  Know the regulations and special concerns for the area you'll
-                  visit. Travel in small groups and repackage food to minimize
-                  waste.
+                  Conoce la normativa y las particularidades de la zona que vas a visitar. Viaja en grupos pequeños y reempaqueta la comida para minimizar residuos.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
                 <AccordionTrigger>
-                  2. Travel and Camp on Durable Surfaces
+                  2. Camina y Acampa en Superficies Resistentes
                 </AccordionTrigger>
                 <AccordionContent>
-                  Stay on established trails and campsites. Avoid creating new
-                  paths. Good campsites are found, not made.
+                  Mantente en los senderos y campings establecidos. Evita crear nuevos caminos. Los buenos campamentos se encuentran, no se hacen.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>3. Dispose of Waste Properly</AccordionTrigger>
+                <AccordionTrigger>3. Desecha los Residuos Apropiadamente</AccordionTrigger>
                 <AccordionContent>
-                  Pack it in, pack it out. This includes all trash, leftover
-                  food, and litter.
+                  Todo lo que va, vuelve. Esto incluye toda la basura, restos de comida y desperdicios.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger>4. Leave What You Find</AccordionTrigger>
+                <AccordionTrigger>4. Deja lo que Encuentres</AccordionTrigger>
                 <AccordionContent>
-                  Preserve the past: observe, but do not touch, cultural or
-                  historic structures and artifacts. Leave rocks, plants, and
-                  other natural objects as you find them.
+                  Preserva el pasado: observa, pero no toques, estructuras y artefactos culturales o históricos. Deja las rocas, plantas y otros objetos naturales tal como los encuentres.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
-                <AccordionTrigger>5. Minimize Campfire Impacts</AccordionTrigger>
+                <AccordionTrigger>5. Minimiza el Impacto de las Hogueras</AccordionTrigger>
                 <AccordionContent>
-                  Use a lightweight stove for cooking. Where fires are
-                  permitted, use established fire rings, and keep fires small.
-                  Burn all wood and coals to ash, put out campfires completely,
-                  then scatter cool ashes.
+                  Usa un hornillo ligero para cocinar. Donde los fuegos estén permitidos, usa los anillos de fuego establecidos y mantén los fuegos pequeños. Quema toda la madera y carbones hasta que sean cenizas, apaga completamente las hogueras y luego esparce las cenizas frías.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-6">
-                <AccordionTrigger>6. Respect Wildlife</AccordionTrigger>
+                <AccordionTrigger>6. Respeta la Fauna</AccordionTrigger>
                 <AccordionContent>
-                  Observe wildlife from a distance. Never feed animals. Store
-                  food and trash securely.
+                  Observa la fauna desde la distancia. Nunca alimentes a los animales. Guarda la comida y la basura de forma segura.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-7">
                 <AccordionTrigger>
-                  7. Be Considerate of Other Visitors
+                  7. Sé Considerado con Otros Visitantes
                 </AccordionTrigger>
                 <AccordionContent>
-                  Yield to other users on the trail. Take breaks and camp away
-                  from trails and other visitors. Let nature's sounds prevail;
-                  avoid loud voices and noises.
+                  Cede el paso a otros usuarios en el sendero. Toma los descansos y acampa lejos de los senderos y otros visitantes. Deja que prevalezcan los sonidos de la naturaleza; evita las voces y los ruidos fuertes.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -139,26 +118,26 @@ export default function RulesPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-3">
               <Heart className="h-6 w-6 text-primary" />
-              Group Etiquette & Club Conduct
+              Etiqueta de Grupo y Conducta del Club
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4 text-muted-foreground">
              <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
               <p>
-                <strong>Be Punctual:</strong> Respect the trip leader and other members by arriving on time for all meetups.
+                <strong>Sé Puntual:</strong> Respeta al líder de la excursión y a los demás miembros llegando a tiempo a todos los puntos de encuentro.
               </p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
               <p>
-                <strong>Stay Together:</strong> Hike at a pace the whole group can manage. Keep the person behind you in sight and don't get too far ahead of the group.
+                <strong>Manteneos Juntos:</strong> Camina a un ritmo que todo el grupo pueda gestionar. Mantén a la persona detrás de ti a la vista y no te adelantes demasiado al grupo.
               </p>
             </div>
              <div className="flex items-start gap-4">
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
               <p>
-                <strong>Inclusive Community:</strong> We are committed to fostering a welcoming and inclusive environment for everyone. Harassment and exclusionary behavior will not be tolerated.
+                <strong>Comunidad Inclusiva:</strong> Estamos comprometidos a fomentar un ambiente acogedor e inclusivo para todos. El acoso y el comportamiento excluyente no serán tolerados.
               </p>
             </div>
           </CardContent>

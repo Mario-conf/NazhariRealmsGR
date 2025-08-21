@@ -10,8 +10,8 @@ export function ReviewList({ reviews }: ReviewListProps) {
   if (reviews.length === 0) {
     return (
       <div className="text-center text-muted-foreground py-8">
-        <p>No reviews yet.</p>
-        <p>Be the first to share your experience!</p>
+        <p>Aún no hay reseñas.</p>
+        <p>¡Sé el primero en compartir tu experiencia!</p>
       </div>
     );
   }
@@ -35,7 +35,7 @@ export function ReviewList({ reviews }: ReviewListProps) {
                 </div>
             </div>
             <CardDescription className="text-xs pt-1">
-              {new Date(review.date).toLocaleDateString()}
+              {new Date(review.date).toLocaleDateString('es-ES')}
             </CardDescription>
           </CardHeader>
           <CardContent className="p-4 pt-0">
