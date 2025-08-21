@@ -1,17 +1,21 @@
 import type { Review } from '@/lib/trail-data';
 import { Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './ui/card';
+import { useLocale, useTranslations } from 'next-intl';
 
 interface ReviewListProps {
   reviews: Review[];
 }
 
 export function ReviewList({ reviews }: ReviewListProps) {
+  const t = useTranslations('ReviewList');
+  const locale = useLocale();
+
   if (reviews.length === 0) {
     return (
       <div className="text-center text-muted-foreground py-8">
-        <p>Aún no hay reseñas.</p>
-        <p>¡Sé el primero en compartir tu experiencia!</p>
+        <p>{t('no_reviews_1')}</p>
+        <p>{t('no_reviews_2')}</p>
       </div>
     );
   }
@@ -35,7 +39,7 @@ export function ReviewList({ reviews }: ReviewListProps) {
                 </div>
             </div>
             <CardDescription className="text-xs pt-1">
-              {new Date(review.date).toLocaleDateString('es-ES')}
+              {new Date(review.date).toLocaleDateString(locale)}
             </CardDescription>
           </CardHeader>
           <CardContent className="p-4 pt-0">

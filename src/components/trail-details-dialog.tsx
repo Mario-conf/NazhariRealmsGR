@@ -16,6 +16,7 @@ import { Star, Mountain, Forest, Waves, Sun, Clock, Milestone, Map, Download, X,
 import useReviews from '@/hooks/use-reviews';
 import { ReviewForm } from './review-form';
 import { ReviewList } from './review-list';
+import { useTranslations } from 'next-intl';
 
 interface TrailDetailsDialogProps {
   trail: Trail;
@@ -31,27 +32,27 @@ const terrainIcons = {
   Desert: <Sun className="h-5 w-5" />,
 };
 
-const difficultyLabels = {
-    'Easy': 'Fácil',
-    'Moderate': 'Moderada',
-    'Hard': 'Difícil'
-};
-
-const terrainLabels = {
-    'Mountain': 'Montaña',
-    'Forest': 'Bosque',
-    'Coastal': 'Costa',
-    'Desert': 'Desierto'
-};
-
-
 export function TrailDetailsDialog({
   trail,
   onClose,
   isFavorite,
   onToggleFavorite,
 }: TrailDetailsDialogProps) {
+  const t = useTranslations('TrailDetailsDialog');
   const { reviews, addReview } = useReviews(trail.id);
+
+  const difficultyLabels = {
+    'Easy': t('difficulties.Easy'),
+    'Moderate': t('difficulties.Moderate'),
+    'Hard': t('difficulties.Hard')
+  };
+  
+  const terrainLabels = {
+      'Mountain': t('terrains.Mountain'),
+      'Forest': t('terrains.Forest'),
+      'Coastal': t('terrains.Coastal'),
+      'Desert': t('terrains.Desert')
+  };
 
   return (
     <Dialog open={true} onOpenChange={onClose}>
@@ -65,11 +66,11 @@ export function TrailDetailsDialog({
           />
            <Button variant="ghost" size="icon" className="absolute top-2 right-14 bg-background/70 hover:bg-background rounded-full h-9 w-9" onClick={onToggleFavorite}>
             <Heart className={`h-5 w-5 ${isFavorite ? 'text-red-500 fill-red-500' : 'text-primary'}`} />
-            <span className="sr-only">Añadir a favoritos</span>
+            <span className="sr-only">{t('add_favorite')}</span>
           </Button>
            <Button variant="ghost" size="icon" className="absolute top-2 right-2 bg-background/70 hover:bg-background rounded-full h-9 w-9" onClick={onClose}>
             <X className="h-5 w-5" />
-            <span className="sr-only">Cerrar</span>
+            <span className="sr-only">{t('close')}</span>
           </Button>
           <div className="p-6">
             <DialogTitle className="text-3xl font-bold mb-2">{trail.name}</DialogTitle>
@@ -81,12 +82,12 @@ export function TrailDetailsDialog({
           {/* Left Column */}
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-lg mb-4 border-b pb-2">Estadísticas de la ruta</h3>
+              <h3 className="font-semibold text-lg mb-4 border-b pb-2">{t('stats_title')}</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-3">
                   <Star className="h-5 w-5 text-amber-400" />
                   <div>
-                    <p className="text-muted-foreground">Valoración</p>
+                    <p className="text-muted-foreground">{t('rating')}</p>
                     <p className="font-semibold">{trail.rating.toFixed(1)} / 5.0</p>
                   </div>
                 </div>
@@ -98,56 +99,56 @@ export function TrailDetailsDialog({
                  <div className="flex items-center gap-3">
                   <Milestone className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="text-muted-foreground">Distancia</p>
+                    <p className="text-muted-foreground">{t('distance')}</p>
                     <p className="font-semibold">{trail.length} km</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="text-muted-foreground">Duración</p>
+                    <p className="text-muted-foreground">{t('duration')}</p>
                     <p className="font-semibold">{trail.duration} horas</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   {terrainIcons[trail.terrain]}
                   <div>
-                    <p className="text-muted-foreground">Terreno</p>
+                    <p className="text-muted-foreground">{t('terrain')}</p>
                     <p className="font-semibold">{terrainLabels[trail.terrain]}</p>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <h3 className="font-semibold text-lg mb-2 border-b pb-2">Descripción</h3>
+              <h3 className="font-semibold text-lg mb-2 border-b pb-2">{t('description_title')}</h3>
               <p className="text-muted-foreground">{trail.description}</p>
             </div>
              <div>
-              <h3 className="font-semibold text-lg mb-4 border-b pb-2">Reseñas ({reviews.length})</h3>
+              <h3 className="font-semibold text-lg mb-4 border-b pb-2">{t('reviews_title', {count: reviews.length})}</h3>
               <ReviewList reviews={reviews} />
             </div>
           </div>
           {/* Right Column */}
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-lg mb-4 border-b pb-2">Mapa de la Ruta</h3>
+              <h3 className="font-semibold text-lg mb-4 border-b pb-2">{t('map_title')}</h3>
               <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center">
                   <Map className="w-16 h-16 text-muted-foreground/50" />
-                  <p className="sr-only">Un mapa de la ruta.</p>
+                  <p className="sr-only">{t('map_alt')}</p>
               </div>
                <Button className="w-full mt-4">
                   <Download className="mr-2 h-4 w-4" />
-                  Descargar archivo GPX
+                  {t('gpx_button')}
               </Button>
             </div>
             <div>
-               <h3 className="font-semibold text-lg mb-4 border-b pb-2">Dejar una reseña</h3>
+               <h3 className="font-semibold text-lg mb-4 border-b pb-2">{t('leave_review_title')}</h3>
                <ReviewForm onSubmit={addReview} />
             </div>
           </div>
         </div>
          <DialogFooter className="px-6 pb-6 pt-2">
-          <Button variant="outline" onClick={onClose}>Cerrar</Button>
+          <Button variant="outline" onClick={onClose}>{t('close')}</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

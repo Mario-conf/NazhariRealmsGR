@@ -1,0 +1,189 @@
+
+{
+  "Header": {
+    "weather": "Weather",
+    "blog": "Blog",
+    "routes": "Routes",
+    "rules": "Rules",
+    "contact": "Contact",
+    "selectLanguage": "Select language"
+  },
+  "Footer": {
+    "copyright": "© 2024 Alpine-Hike Club. All rights reserved.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy"
+  },
+  "HomePage": {
+    "title": "Join the Adventure with Alpine-Hike Club",
+    "subtitle": "Discover breathtaking trails, connect with fellow adventurers, and create unforgettable memories. Your next adventure in Granada and Andalusia starts here.",
+    "explore_routes": "Explore Routes",
+    "join_now": "Join Now",
+    "hero_alt": "Hero",
+    "reviews_title": "What our members are saying",
+    "review1_text": "\"The best hiking club I've ever been a part of! The community is amazing and the planned routes are always spectacular.\"",
+    "review1_author": "- Alejandro García",
+    "review2_text": "\"An incredible experience. From mountaineering to relaxed camping trips, there's something for everyone. Highly recommended.\"",
+    "review2_author": "- María Fernández",
+    "review3_text": "\"The guides are experts and the community is very welcoming. I've learned a lot and seen beautiful places in Sierra Nevada.\"",
+    "review3_author": "- Samuel López",
+    "sponsors_title": "Our valued sponsors",
+    "contact_title": "Get in touch",
+    "contact_subtitle": "Have questions or want to join? Send us a message!",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_message": "Message",
+    "form_submit": "Send message"
+  },
+  "WeatherPage": {
+    "title": "Weather Center",
+    "subtitle": "Get real-time weather forecasts and radar maps for any location. Plan your adventures with confidence.",
+    "search_placeholder": "Enter a city or zip code",
+    "search_button": "Search",
+    "search_button_loading": "Searching...",
+    "error_location": "Please enter a location.",
+    "error_fetch": "Could not fetch weather data. Please try again.",
+    "loading_text": "Loading data for {location}...",
+    "current_weather_title": "Current weather in {city}, {country}",
+    "temperature": "Temperature",
+    "condition": "Condition",
+    "wind": "Wind",
+    "humidity": "Humidity",
+    "forecast_title": "5-Day Forecast",
+    "radar_maps_title": "Radar Maps",
+    "cloud_radar": "Cloud Radar",
+    "cloud_radar_alt": "Cloud Radar Map",
+    "heat_map": "Heat Map",
+    "heat_map_alt": "Heat Map"
+  },
+  "BlogIndexPage": {
+    "title": "The Alpine-Hike Blog",
+    "subtitle": "Stories, analysis, and guides from our community of adventurers.",
+    "read_more": "Read More →"
+  },
+  "BlogPostPage": {
+    "back_to_blog": "Back to Blog",
+    "published_on": "Published on {date} by {author}"
+  },
+  "RoutesPage": {
+    "title": "Explore Our Routes",
+    "subtitle": "Find your next adventure. Use the filters to discover the perfect trail for you.",
+    "no_results_title": "No routes match your filters.",
+    "no_results_subtitle": "Try adjusting your search criteria."
+  },
+  "RulesPage": {
+    "title": "Club Rules and Safety Guides",
+    "subtitle": "Our principles for safe, respectful, and unforgettable adventures. Please read carefully before your first outing.",
+    "safety_title": "Safety First: Your Responsibilities",
+    "safety1": "<strong>Know Your Limits:</strong> Always choose routes that match your fitness level and experience. It's okay to turn back.",
+    "safety2": "<strong>The Ten Essentials:</strong> Always carry navigation, sun protection, insulation, illumination, first-aid supplies, a fire starter, repair kit & tools, nutrition, hydration, and an emergency shelter.",
+    "safety3": "<strong>Check the Weather:</strong> Always check the forecast before you leave. Be prepared for sudden changes, especially at high altitudes. Use our Weather Center!",
+    "safety4": "<strong>Communicate Your Plan:</strong> Tell someone your route plan, including your itinerary and expected return time. Stick to the plan.",
+    "lnt_title": "Leave No Trace: 7 Core Principles",
+    "lnt1_trigger": "1. Plan Ahead and Prepare",
+    "lnt1_content": "Know the regulations and special concerns for the area you'll visit. Travel in small groups and repackage food to minimize waste.",
+    "lnt2_trigger": "2. Travel and Camp on Durable Surfaces",
+    "lnt2_content": "Stay on established trails and campsites. Avoid creating new trails. Good campsites are found, not made.",
+    "lnt3_trigger": "3. Dispose of Waste Properly",
+    "lnt3_content": "Pack it in, pack it out. This includes all trash, leftover food, and litter.",
+    "lnt4_trigger": "4. Leave What You Find",
+    "lnt4_content": "Preserve the past: observe, but do not touch, cultural or historic structures and artifacts. Leave rocks, plants, and other natural objects as you find them.",
+    "lnt5_trigger": "5. Minimize Campfire Impacts",
+    "lnt5_content": "Use a lightweight stove for cooking. Where fires are permitted, use established fire rings and keep fires small. Burn all wood and coals to ash, put out campfires completely, then scatter cool ashes.",
+    "lnt6_trigger": "6. Respect Wildlife",
+    "lnt6_content": "Observe wildlife from a distance. Never feed animals. Store food and trash securely.",
+    "lnt7_trigger": "7. Be Considerate of Other Visitors",
+    "lnt7_content": "Yield to other users on the trail. Take breaks and camp away from trails and other visitors. Let nature's sounds prevail; avoid loud voices and noises.",
+    "etiquette_title": "Group Etiquette and Club Conduct",
+    "etiquette1": "<strong>Be Punctual:</strong> Respect the trip leader and fellow members by arriving on time for all meetups.",
+    "etiquette2": "<strong>Stay Together:</strong> Hike at a pace the whole group can manage. Keep the person behind you in sight and don't get too far ahead of the group.",
+    "etiquette3": "<strong>Inclusive Community:</strong> We are committed to fostering a welcoming and inclusive environment for everyone. Harassment and exclusionary behavior will not be tolerated."
+  },
+  "TrailCard": {
+    "rating_title": "Rating",
+    "terrain_title": "Terrain",
+    "distance_title": "Distance",
+    "duration_title": "Duration",
+    "view_details": "View Details",
+    "add_favorite": "Add to favorites",
+    "remove_favorite": "Remove from favorites",
+    "difficulties": {
+      "Easy": "Easy",
+      "Moderate": "Moderate",
+      "Hard": "Hard"
+    },
+    "terrains": {
+      "Mountain": "Mountain",
+      "Forest": "Forest",
+      "Coastal": "Coastal",
+      "Desert": "Desert"
+    }
+  },
+  "TrailDetailsDialog": {
+    "close": "Close",
+    "add_favorite": "Add to favorites",
+    "stats_title": "Trail Stats",
+    "rating": "Rating",
+    "difficulty": "Difficulty",
+    "distance": "Distance",
+    "duration": "Duration",
+    "terrain": "Terrain",
+    "description_title": "Description",
+    "reviews_title": "Reviews ({count})",
+    "map_title": "Route Map",
+    "gpx_button": "Download GPX File",
+    "leave_review_title": "Leave a Review",
+    "map_alt": "A map of the trail.",
+    "difficulties": {
+      "Easy": "Easy",
+      "Moderate": "Moderate",
+      "Hard": "Hard"
+    },
+    "terrains": {
+      "Mountain": "Mountain",
+      "Forest": "Forest",
+      "Coastal": "Coastal",
+      "Desert": "Desert"
+    }
+  },
+  "TrailFilters": {
+    "favorites_label": "My Favorites",
+    "search_label": "Search by name or place",
+    "search_placeholder": "E.g. Veleta, Monachil...",
+    "difficulty_label": "Difficulty",
+    "terrain_label": "Terrain",
+    "duration_label": "Duration (hours)",
+    "sort_label": "Sort by",
+    "sort_placeholder": "Select...",
+    "sort_rating_desc": "Rating: High to Low",
+    "sort_rating_asc": "Rating: Low to High",
+    "sort_length_desc": "Distance: Long to Short",
+    "sort_length_asc": "Distance: Short to Long",
+    "sort_duration_desc": "Duration: Long to Short",
+    "sort_duration_asc": "Duration: Short to Long",
+    "reset_button": "Reset Filters",
+    "difficulties": {
+      "Easy": "Easy",
+      "Moderate": "Moderate",
+      "Hard": "Hard"
+    },
+    "terrains": {
+      "Mountain": "Mountain",
+      "Forest": "Forest",
+      "Coastal": "Coastal",
+      "Desert": "Desert"
+    }
+  },
+  "ReviewForm": {
+    "name_label": "Your Name",
+    "name_placeholder": "E.g. John Smith",
+    "rating_label": "Rating",
+    "comment_label": "Comment",
+    "comment_placeholder": "Share your experience on the trail...",
+    "error_message": "Please fill all fields and select a rating.",
+    "submit_button": "Submit Review"
+  },
+  "ReviewList": {
+    "no_reviews_1": "No reviews yet.",
+    "no_reviews_2": "Be the first to share your experience!"
+  }
+}

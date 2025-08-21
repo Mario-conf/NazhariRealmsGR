@@ -16,6 +16,7 @@ import { Slider } from '@/components/ui/slider';
 import { trails, Trail } from '@/lib/trail-data';
 import { ListRestart, Heart } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
+import { useTranslations } from 'next-intl';
 
 interface TrailFiltersProps {
   onFilterChange: (filteredTrails: Trail[]) => void;
@@ -32,6 +33,7 @@ const TERRAINS: Trail['terrain'][] = [
 const MAX_DURATION = Math.ceil(Math.max(...trails.map((t) => t.duration)));
 
 export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
+  const t = useTranslations('TrailFilters');
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedDifficulties, setSelectedDifficulties] = React.useState<
     string[]
@@ -138,24 +140,24 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
   };
   
   const difficultyLabels = {
-    'Easy': 'Fácil',
-    'Moderate': 'Moderada',
-    'Hard': 'Difícil'
-  }
+    'Easy': t('difficulties.Easy'),
+    'Moderate': t('difficulties.Moderate'),
+    'Hard': t('difficulties.Hard')
+  };
 
   const terrainLabels = {
-    'Mountain': 'Montaña',
-    'Forest': 'Bosque',
-    'Coastal': 'Costa',
-    'Desert': 'Desierto'
-  }
+    'Mountain': t('terrains.Mountain'),
+    'Forest': t('terrains.Forest'),
+    'Coastal': t('terrains.Coastal'),
+    'Desert': t('terrains.Desert')
+  };
 
   return (
     <div className="space-y-8">
        <div className="flex items-center justify-between">
         <Label htmlFor="favorites-only" className="flex items-center gap-2 text-base">
           <Heart className="h-5 w-5 text-red-500" />
-          Mis Favoritas
+          {t('favorites_label')}
         </Label>
         <Switch
           id="favorites-only"
@@ -164,17 +166,17 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
         />
       </div>
       <div>
-        <Label htmlFor="search">Buscar por nombre o lugar</Label>
+        <Label htmlFor="search">{t('search_label')}</Label>
         <Input
           id="search"
-          placeholder="Ej: Veleta, Monachil..."
+          placeholder={t('search_placeholder')}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
 
       <div>
-        <Label>Dificultad</Label>
+        <Label>{t('difficulty_label')}</Label>
         <div className="space-y-2 mt-2">
           {DIFFICULTIES.map((d) => (
             <div key={d} className="flex items-center space-x-2">
@@ -192,7 +194,7 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
       </div>
 
       <div>
-        <Label>Terreno</Label>
+        <Label>{t('terrain_label')}</Label>
         <div className="space-y-2 mt-2">
           {TERRAINS.map((t) => (
             <div key={t} className="flex items-center space-x-2">
@@ -210,7 +212,7 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
       </div>
 
       <div>
-        <Label>Duración (horas)</Label>
+        <Label>{t('duration_label')}</Label>
         <Slider
           min={0}
           max={MAX_DURATION}
@@ -226,25 +228,25 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
       </div>
 
       <div>
-        <Label htmlFor="sort">Ordenar por</Label>
+        <Label htmlFor="sort">{t('sort_label')}</Label>
         <Select value={sortOrder} onValueChange={setSortOrder}>
           <SelectTrigger id="sort">
-            <SelectValue placeholder="Seleccionar..." />
+            <SelectValue placeholder={t('sort_placeholder')} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="rating-desc">Valoración: Alta a Baja</SelectItem>
-            <SelectItem value="rating-asc">Valoración: Baja a Alta</SelectItem>
-            <SelectItem value="length-desc">Distancia: Larga a Corta</SelectItem>
-            <SelectItem value="length-asc">Distancia: Corta a Larga</SelectItem>
-            <SelectItem value="duration-desc">Duración: Larga a Corta</SelectItem>
-            <SelectItem value="duration-asc">Duración: Corta a Larga</SelectItem>
+            <SelectItem value="rating-desc">{t('sort_rating_desc')}</SelectItem>
+            <SelectItem value="rating-asc">{t('sort_rating_asc')}</SelectItem>
+            <SelectItem value="length-desc">{t('sort_length_desc')}</SelectItem>
+            <SelectItem value="length-asc">{t('sort_length_asc')}</SelectItem>
+            <SelectItem value="duration-desc">{t('sort_duration_desc')}</SelectItem>
+            <SelectItem value="duration-asc">{t('sort_duration_asc')}</SelectItem>
           </SelectContent>
         </Select>
       </div>
       
       <Button variant="outline" className="w-full" onClick={handleResetFilters}>
         <ListRestart className="mr-2 h-4 w-4" />
-        Reiniciar Filtros
+        {t('reset_button')}
       </Button>
     </div>
   );

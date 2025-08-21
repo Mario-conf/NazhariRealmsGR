@@ -1,15 +1,12 @@
-import { Globe, MountainIcon } from 'lucide-react';
-import Link from 'next/link';
+import { MountainIcon } from 'lucide-react';
 import { Button } from './ui/button';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
+import { LanguageSwitcher } from './language-switcher';
 
 export function Header() {
+  const t = useTranslations('Header');
+
   return (
     <header className="px-4 lg:px-6 h-14 flex items-center bg-background shadow-sm">
       <Link className="flex items-center justify-center" href="/">
@@ -21,40 +18,28 @@ export function Header() {
           className="text-sm font-medium hover:underline underline-offset-4"
           href="/weather"
         >
-          El Tiempo
+          {t('weather')}
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
           href="/blog"
         >
-          Blog
+          {t('blog')}
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
           href="/routes"
         >
-          Rutas
+          {t('routes')}
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
           href="/rules"
         >
-          Reglas
+          {t('rules')}
         </Link>
-        <Button>Contacto</Button>
-        <Select defaultValue="es">
-          <SelectTrigger className="w-auto h-9 bg-transparent border-0 gap-2">
-            <Globe className="h-4 w-4" />
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="es">Español</SelectItem>
-            <SelectItem value="en">English</SelectItem>
-            <SelectItem value="de">Deutsch</SelectItem>
-            <SelectItem value="it">Italiano</SelectItem>
-            <SelectItem value="fr">Français</SelectItem>
-          </SelectContent>
-        </Select>
+        <Button>{t('contact')}</Button>
+        <LanguageSwitcher />
       </nav>
     </header>
   );

@@ -6,12 +6,14 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Star } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface ReviewFormProps {
   onSubmit: (data: { author: string; rating: number; comment: string }) => void;
 }
 
 export function ReviewForm({ onSubmit }: ReviewFormProps) {
+  const t = useTranslations('ReviewForm');
   const [author, setAuthor] = React.useState('');
   const [rating, setRating] = React.useState(0);
   const [hoverRating, setHoverRating] = React.useState(0);
@@ -21,7 +23,7 @@ export function ReviewForm({ onSubmit }: ReviewFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!author || rating === 0 || !comment) {
-      setError('Por favor, rellena todos los campos y selecciona una valoración.');
+      setError(t('error_message'));
       return;
     }
     onSubmit({ author, rating, comment });
@@ -34,16 +36,16 @@ export function ReviewForm({ onSubmit }: ReviewFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-2">
-        <Label htmlFor="author">Tu Nombre</Label>
+        <Label htmlFor="author">{t('name_label')}</Label>
         <Input
           id="author"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
-          placeholder="Ej: Juan Pérez"
+          placeholder={t('name_placeholder')}
         />
       </div>
       <div className="space-y-2">
-        <Label>Valoración</Label>
+        <Label>{t('rating_label')}</Label>
         <div className="flex items-center gap-1">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
@@ -61,17 +63,17 @@ export function ReviewForm({ onSubmit }: ReviewFormProps) {
         </div>
       </div>
       <div className="space-y-2">
-        <Label htmlFor="comment">Comentario</Label>
+        <Label htmlFor="comment">{t('comment_label')}</Label>
         <Textarea
           id="comment"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-          placeholder="Comparte tu experiencia en la ruta..."
+          placeholder={t('comment_placeholder')}
           rows={4}
         />
       </div>
       {error && <p className="text-sm text-destructive">{error}</p>}
-      <Button type="submit" className="w-full">Enviar Reseña</Button>
+      <Button type="submit" className="w-full">{t('submit_button')}</Button>
     </form>
   );
 }

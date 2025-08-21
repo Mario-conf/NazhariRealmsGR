@@ -1,0 +1,189 @@
+
+{
+  "Header": {
+    "weather": "El Tiempo",
+    "blog": "Blog",
+    "routes": "Rutas",
+    "rules": "Reglas",
+    "contact": "Contacto",
+    "selectLanguage": "Seleccionar idioma"
+  },
+  "Footer": {
+    "copyright": "© 2024 Alpine-Hike Club. Todos los derechos reservados.",
+    "terms": "Términos de Servicio",
+    "privacy": "Privacidad"
+  },
+  "HomePage": {
+    "title": "Únete a la Aventura con Alpine-Hike Club",
+    "subtitle": "Descubre rutas impresionantes, conecta con otros aventureros y crea recuerdos inolvidables. Tu próxima aventura en Granada y Andalucía comienza aquí.",
+    "explore_routes": "Explorar Rutas",
+    "join_now": "Únete Ahora",
+    "hero_alt": "Héroe",
+    "reviews_title": "Lo que dicen nuestros miembros",
+    "review1_text": "¡El mejor club de senderismo del que he formado parte! La comunidad es increíble y las rutas planificadas siempre son espectaculares.",
+    "review1_author": "- Alejandro García",
+    "review2_text": "Una experiencia increíble. Desde montañismo hasta relajadas acampadas, hay algo para todos. Muy recomendado.",
+    "review2_author": "- María Fernández",
+    "review3_text": "Los guías son expertos y la comunidad muy acogedora. He aprendido mucho y he visto lugares preciosos en Sierra Nevada.",
+    "review3_author": "- Samuel López",
+    "sponsors_title": "Nuestros valiosos patrocinadores",
+    "contact_title": "Ponte en contacto",
+    "contact_subtitle": "¿Tienes preguntas o quieres unirte? ¡Envíanos un mensaje!",
+    "form_name": "Nombre",
+    "form_email": "Correo electrónico",
+    "form_message": "Mensaje",
+    "form_submit": "Enviar mensaje"
+  },
+  "WeatherPage": {
+    "title": "Centro Meteorológico",
+    "subtitle": "Obtén pronósticos del tiempo en tiempo real y mapas de radar para cualquier ubicación. Planifica tus aventuras con confianza.",
+    "search_placeholder": "Introduce una ciudad o código postal",
+    "search_button": "Buscar",
+    "search_button_loading": "Buscando...",
+    "error_location": "Por favor, introduce una ubicación.",
+    "error_fetch": "No se pudieron obtener los datos del tiempo. Por favor, inténtalo de nuevo.",
+    "loading_text": "Cargando datos para {location}...",
+    "current_weather_title": "Tiempo actual en {city}, {country}",
+    "temperature": "Temperatura",
+    "condition": "Condición",
+    "wind": "Viento",
+    "humidity": "Humedad",
+    "forecast_title": "Pronóstico para 5 días",
+    "radar_maps_title": "Mapas de Radar",
+    "cloud_radar": "Radar de Nubes",
+    "cloud_radar_alt": "Mapa de Radar de Nubes",
+    "heat_map": "Mapa de Calor",
+    "heat_map_alt": "Mapa de Calor"
+  },
+  "BlogIndexPage": {
+    "title": "El Blog de Alpine-Hike",
+    "subtitle": "Historias, análisis y guías de nuestra comunidad de aventureros.",
+    "read_more": "Leer Más →"
+  },
+  "BlogPostPage": {
+    "back_to_blog": "Volver al Blog",
+    "published_on": "Publicado el {date} por {author}"
+  },
+  "RoutesPage": {
+    "title": "Explora Nuestras Rutas",
+    "subtitle": "Encuentra tu próxima aventura. Usa los filtros para descubrir la ruta perfecta para ti.",
+    "no_results_title": "No hay rutas que coincidan con tus filtros.",
+    "no_results_subtitle": "Prueba a ajustar los criterios de búsqueda."
+  },
+  "RulesPage": {
+    "title": "Reglas del Club y Guías de Seguridad",
+    "subtitle": "Nuestros principios para aventuras seguras, respetuosas e inolvidables. Por favor, lee con atención antes de tu primera salida.",
+    "safety_title": "La Seguridad es lo Primero: Tus Responsabilidades",
+    "safety1": "<strong>Conoce Tus Límites:</strong> Elige siempre rutas que se ajusten a tu nivel de forma física y experiencia. No pasa nada por dar la vuelta.",
+    "safety2": "<strong>Los Diez Esenciales:</strong> Lleva siempre navegación, protección solar, ropa de abrigo, iluminación, botiquín, iniciador de fuego, herramientas de reparación, nutrición, hidratación y un refugio de emergencia.",
+    "safety3": "<strong>Consulta el Tiempo:</strong> Siempre revisa el pronóstico antes de salir. Prepárate para cambios repentinos, especialmente en altitudes elevadas. ¡Usa nuestro Centro Meteorológico!",
+    "safety4": "<strong>Comunica tu Plan:</strong> Informa a alguien de tu plan de ruta, incluyendo el itinerario y la hora prevista de regreso. Cíñete al plan.",
+    "lnt_title": "No Dejes Rastro: 7 Principios Fundamentales",
+    "lnt1_trigger": "1. Planifica y Prepárate con Antelación",
+    "lnt1_content": "Conoce la normativa y las particularidades de la zona que vas a visitar. Viaja en grupos pequeños y reempaqueta la comida para minimizar residuos.",
+    "lnt2_trigger": "2. Camina y Acampa en Superficies Resistentes",
+    "lnt2_content": "Mantente en los senderos y campings establecidos. Evita crear nuevos caminos. Los buenos campamentos se encuentran, no se hacen.",
+    "lnt3_trigger": "3. Desecha los Residuos Apropiadamente",
+    "lnt3_content": "Todo lo que va, vuelve. Esto incluye toda la basura, restos de comida y desperdicios.",
+    "lnt4_trigger": "4. Deja lo que Encuentres",
+    "lnt4_content": "Preserva el pasado: observa, pero no toques, estructuras y artefactos culturales o históricos. Deja las rocas, plantas y otros objetos naturales tal como los encuentres.",
+    "lnt5_trigger": "5. Minimiza el Impacto de las Hogueras",
+    "lnt5_content": "Usa un hornillo ligero para cocinar. Donde los fuegos estén permitidos, usa los anillos de fuego establecidos y mantén los fuegos pequeños. Quema toda la madera y carbones hasta que sean cenizas, apaga completamente las hogueras y luego esparce las cenizas frías.",
+    "lnt6_trigger": "6. Respeta la Fauna",
+    "lnt6_content": "Observa la fauna desde la distancia. Nunca alimentes a los animales. Guarda la comida y la basura de forma segura.",
+    "lnt7_trigger": "7. Sé Considerado con Otros Visitantes",
+    "lnt7_content": "Cede el paso a otros usuarios en el sendero. Toma los descansos y acampa lejos de los senderos y otros visitantes. Deja que prevalezcan los sonidos de la naturaleza; evita las voces y los ruidos fuertes.",
+    "etiquette_title": "Etiqueta de Grupo y Conducta del Club",
+    "etiquette1": "<strong>Sé Puntual:</strong> Respeta al líder de la excursión y a los demás miembros llegando a tiempo a todos los puntos de encuentro.",
+    "etiquette2": "<strong>Manteneos Juntos:</strong> Camina a un ritmo que todo el grupo pueda gestionar. Mantén a la persona detrás de ti a la vista y no te adelantes demasiado al grupo.",
+    "etiquette3": "<strong>Comunidad Inclusiva:</strong> Estamos comprometidos a fomentar un ambiente acogedor e inclusivo para todos. El acoso y el comportamiento excluyente no serán tolerados."
+  },
+  "TrailCard": {
+    "rating_title": "Valoración",
+    "terrain_title": "Terreno",
+    "distance_title": "Distancia",
+    "duration_title": "Duración",
+    "view_details": "Ver Detalles",
+    "add_favorite": "Añadir a favoritos",
+    "remove_favorite": "Quitar de favoritos",
+    "difficulties": {
+      "Easy": "Fácil",
+      "Moderate": "Moderada",
+      "Hard": "Difícil"
+    },
+    "terrains": {
+      "Mountain": "Montaña",
+      "Forest": "Bosque",
+      "Coastal": "Costa",
+      "Desert": "Desierto"
+    }
+  },
+  "TrailDetailsDialog": {
+    "close": "Cerrar",
+    "add_favorite": "Añadir a favoritos",
+    "stats_title": "Estadísticas de la ruta",
+    "rating": "Valoración",
+    "difficulty": "Dificultad",
+    "distance": "Distancia",
+    "duration": "Duración",
+    "terrain": "Terreno",
+    "description_title": "Descripción",
+    "reviews_title": "Reseñas ({count})",
+    "map_title": "Mapa de la Ruta",
+    "gpx_button": "Descargar archivo GPX",
+    "leave_review_title": "Dejar una reseña",
+    "map_alt": "Un mapa de la ruta.",
+    "difficulties": {
+      "Easy": "Fácil",
+      "Moderate": "Moderada",
+      "Hard": "Difícil"
+    },
+    "terrains": {
+      "Mountain": "Montaña",
+      "Forest": "Bosque",
+      "Coastal": "Costa",
+      "Desert": "Desierto"
+    }
+  },
+  "TrailFilters": {
+    "favorites_label": "Mis Favoritas",
+    "search_label": "Buscar por nombre o lugar",
+    "search_placeholder": "Ej: Veleta, Monachil...",
+    "difficulty_label": "Dificultad",
+    "terrain_label": "Terreno",
+    "duration_label": "Duración (horas)",
+    "sort_label": "Ordenar por",
+    "sort_placeholder": "Seleccionar...",
+    "sort_rating_desc": "Valoración: Alta a Baja",
+    "sort_rating_asc": "Valoración: Baja a Alta",
+    "sort_length_desc": "Distancia: Larga a Corta",
+    "sort_length_asc": "Distancia: Corta a Larga",
+    "sort_duration_desc": "Duración: Larga a Corta",
+    "sort_duration_asc": "Duración: Corta a Larga",
+    "reset_button": "Reiniciar Filtros",
+    "difficulties": {
+      "Easy": "Fácil",
+      "Moderate": "Moderada",
+      "Hard": "Difícil"
+    },
+    "terrains": {
+      "Mountain": "Montaña",
+      "Forest": "Bosque",
+      "Coastal": "Costa",
+      "Desert": "Desierto"
+    }
+  },
+  "ReviewForm": {
+    "name_label": "Tu Nombre",
+    "name_placeholder": "Ej: Juan Pérez",
+    "rating_label": "Valoración",
+    "comment_label": "Comentario",
+    "comment_placeholder": "Comparte tu experiencia en la ruta...",
+    "error_message": "Por favor, rellena todos los campos y selecciona una valoración.",
+    "submit_button": "Enviar Reseña"
+  },
+  "ReviewList": {
+    "no_reviews_1": "Aún no hay reseñas.",
+    "no_reviews_2": "¡Sé el primero en compartir tu experiencia!"
+  }
+}

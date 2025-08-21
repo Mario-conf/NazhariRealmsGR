@@ -1,0 +1,11 @@
+
+{
+  "Header": {
+    "weather": "Wetter",
+    "blog": "Blog",
+    "routes": "Routen",
+    "rules": "Regeln",
+    "contact": "Kontakt",
+    "selectLanguage": "Sprache auswählen"
+  }
+}
