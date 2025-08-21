@@ -93,7 +93,7 @@ const weatherFlow = ai.defineFlow(
 
     const llmResponse = await ai.generate({
       prompt: `Get the weather for ${input.location}`,
-      model: 'googleai/gemini-2.0-flash',
+      model: 'googleai/gemini-1.5-flash-latest',
       tools: [getRealWeatherData],
       toolChoice: 'required',
     });
