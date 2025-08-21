@@ -22,7 +22,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         {t('back_to_blog')}
       </Link>
       <header className="mb-8">
-        <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
+        <h1 className="font-serif text-4xl font-extrabold tracking-tight lg:text-5xl">
           {post.title}
         </h1>
         <p className="mt-2 text-lg text-muted-foreground">

@@ -31,7 +31,7 @@ export default function RoutesPage() {
     <>
       <div className="container mx-auto px-4 py-8">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl">
+          <h1 className="font-serif text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl">
             {t('title')}
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">

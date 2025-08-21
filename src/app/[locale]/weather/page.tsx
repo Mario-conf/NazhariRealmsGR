@@ -44,7 +44,7 @@ export default function WeatherPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mx-auto max-w-2xl text-center">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
+        <h1 className="font-serif text-4xl font-bold tracking-tighter sm:text-5xl">
           {t('title')}
         </h1>
         <p className="mt-4 text-muted-foreground md:text-xl">
@@ -79,7 +79,7 @@ export default function WeatherPage() {
         <div className="mt-12 animate-in fade-in duration-500">
           <Card>
             <CardHeader>
-              <CardTitle className="text-center text-3xl">
+              <CardTitle className="font-serif text-center text-3xl">
                 {t('current_weather_title', {city: weatherData.location.city, country: weatherData.location.country})}
               </CardTitle>
             </CardHeader>
@@ -116,7 +116,7 @@ export default function WeatherPage() {
           </Card>
 
           <div className="mt-8">
-            <h2 className="text-2xl font-bold tracking-tighter text-center">
+            <h2 className="font-serif text-2xl font-bold tracking-tighter text-center">
               {t('forecast_title')}
             </h2>
             <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
@@ -136,13 +136,13 @@ export default function WeatherPage() {
           </div>
 
           <div className="mt-8">
-            <h2 className="text-2xl font-bold tracking-tighter text-center">
+            <h2 className="font-serif text-2xl font-bold tracking-tighter text-center">
               {t('radar_maps_title')}
             </h2>
             <div className="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
               <Card>
                 <CardHeader>
-                  <CardTitle>{t('cloud_radar')}</CardTitle>
+                  <CardTitle className="font-serif">{t('cloud_radar')}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted">
@@ -156,7 +156,7 @@ export default function WeatherPage() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>{t('heat_map')}</CardTitle>
+                  <CardTitle className="font-serif">{t('heat_map')}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted">

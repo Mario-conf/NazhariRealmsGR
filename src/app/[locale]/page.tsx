@@ -16,7 +16,7 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                <h1 className="font-serif text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                   {t('title')}
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -42,7 +42,7 @@ export default function Home() {
 
       <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
+          <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
             {t('reviews_title')}
           </h2>
           <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12">
@@ -103,7 +103,7 @@ export default function Home() {
 
       <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
+          <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
             {t('sponsors_title')}
           </h2>
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
@@ -123,7 +123,7 @@ export default function Home() {
       <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+            <h2 className="font-serif text-3xl font-bold tracking-tighter md:text-4xl/tight">
               {t('contact_title')}
             </h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">

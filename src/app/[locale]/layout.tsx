@@ -1,10 +1,18 @@
-import { Inter } from 'next/font/google';
+import { PT_Sans, Playfair_Display } from 'next/font/google';
 import '../globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-const inter = Inter({ subsets: ['latin'] });
+const ptSans = PT_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-pt-sans',
+});
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+});
 
 export default function LocaleLayout({
   children,
@@ -17,7 +25,7 @@ export default function LocaleLayout({
 
   return (
     <html lang={locale} className="dark">
-      <body className={inter.className}>
+      <body className={`${ptSans.variable} ${playfair.variable} font-sans`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="relative flex min-h-dvh flex-col bg-background">
             <Header />

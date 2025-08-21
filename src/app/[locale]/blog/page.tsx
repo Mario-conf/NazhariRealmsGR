@@ -17,7 +17,7 @@ export default function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-8 md:py-12">
       <div className="mx-auto max-w-3xl text-center">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
+        <h1 className="font-serif text-4xl font-bold tracking-tighter sm:text-5xl">
           {t('title')}
         </h1>
         <p className="mt-4 text-muted-foreground md:text-xl">
@@ -32,7 +32,7 @@ export default function BlogPage() {
             className="flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl"
           >
             <CardHeader>
-              <CardTitle className="text-xl">
+              <CardTitle className="font-serif text-xl">
                 <Link
                   href={`/blog/${post.slug}`}
                   className="hover:text-primary"

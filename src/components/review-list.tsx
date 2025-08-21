@@ -26,7 +26,7 @@ export function ReviewList({ reviews }: ReviewListProps) {
         <Card key={review.id} className="bg-muted/50">
           <CardHeader className="p-4">
              <div className="flex items-center justify-between">
-                <CardTitle className="text-base">{review.author}</CardTitle>
+                <CardTitle className="text-base font-semibold">{review.author}</CardTitle>
                 <div className="flex items-center gap-0.5">
                 {[...Array(5)].map((_, i) => (
                     <Star

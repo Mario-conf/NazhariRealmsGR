@@ -73,7 +73,7 @@ export function TrailDetailsDialog({
             <span className="sr-only">{t('close')}</span>
           </Button>
           <div className="p-6">
-            <DialogTitle className="text-3xl font-bold mb-2">{trail.name}</DialogTitle>
+            <DialogTitle className="font-serif text-3xl font-bold mb-2">{trail.name}</DialogTitle>
             <DialogDescription className="text-lg text-muted-foreground">{trail.location}</DialogDescription>
           </div>
         </DialogHeader>
@@ -82,7 +82,7 @@ export function TrailDetailsDialog({
           {/* Left Column */}
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-lg mb-4 border-b pb-2">{t('stats_title')}</h3>
+              <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('stats_title')}</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-3">
                   <Star className="h-5 w-5 text-amber-400" />
@@ -120,18 +120,18 @@ export function TrailDetailsDialog({
               </div>
             </div>
             <div>
-              <h3 className="font-semibold text-lg mb-2 border-b pb-2">{t('description_title')}</h3>
+              <h3 className="font-serif font-semibold text-lg mb-2 border-b pb-2">{t('description_title')}</h3>
               <p className="text-muted-foreground">{trail.description}</p>
             </div>
              <div>
-              <h3 className="font-semibold text-lg mb-4 border-b pb-2">{t('reviews_title', {count: reviews.length})}</h3>
+              <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('reviews_title', {count: reviews.length})}</h3>
               <ReviewList reviews={reviews} />
             </div>
           </div>
           {/* Right Column */}
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-lg mb-4 border-b pb-2">{t('map_title')}</h3>
+              <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('map_title')}</h3>
               <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center">
                   <Map className="w-16 h-16 text-muted-foreground/50" />
                   <p className="sr-only">{t('map_alt')}</p>
@@ -142,7 +142,7 @@ export function TrailDetailsDialog({
               </Button>
             </div>
             <div>
-               <h3 className="font-semibold text-lg mb-4 border-b pb-2">{t('leave_review_title')}</h3>
+               <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('leave_review_title')}</h3>
                <ReviewForm onSubmit={addReview} />
             </div>
           </div>

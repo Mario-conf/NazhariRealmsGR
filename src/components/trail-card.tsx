@@ -69,7 +69,7 @@ export function TrailCard({ trail, onSelect, isFavorite, onToggleFavorite }: Tra
           </Badge>
         </div>
         <div className="p-6">
-          <CardTitle className="text-xl mb-1">{trail.name}</CardTitle>
+          <CardTitle className="font-serif text-xl mb-1">{trail.name}</CardTitle>
           <CardDescription>{trail.location}</CardDescription>
         </div>
       </CardHeader>

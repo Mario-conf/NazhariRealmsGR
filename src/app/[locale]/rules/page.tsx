@@ -14,7 +14,7 @@ export default function RulesPage() {
   return (
     <div className="container mx-auto px-4 py-8 md:py-12">
       <div className="mx-auto max-w-3xl text-center">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
+        <h1 className="font-serif text-4xl font-bold tracking-tighter sm:text-5xl">
           {t('title')}
         </h1>
         <p className="mt-4 text-muted-foreground md:text-xl">
@@ -25,7 +25,7 @@ export default function RulesPage() {
       <div className="mt-12 max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-3">
+            <CardTitle className="flex items-center gap-3 font-serif">
               <Shield className="h-6 w-6 text-primary" />
               {t('safety_title')}
             </CardTitle>
@@ -52,7 +52,7 @@ export default function RulesPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-3">
+            <CardTitle className="flex items-center gap-3 font-serif">
               <Mountain className="h-6 w-6 text-primary" />
               {t('lnt_title')}
             </CardTitle>
@@ -111,7 +111,7 @@ export default function RulesPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-3">
+            <CardTitle className="flex items-center gap-3 font-serif">
               <Heart className="h-6 w-6 text-primary" />
               {t('etiquette_title')}
             </CardTitle>
