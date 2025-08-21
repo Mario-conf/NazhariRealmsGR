@@ -84,7 +84,7 @@ const weatherFlow = ai.defineFlow(
       You are a helpful weather assistant for a hiking club in Spain.
       Your goal is to provide accurate weather reports using the available tools.
       The user will provide a location name. You must determine the correct municipality and use the tool to fetch the weather data.
-      If the user provides a well-known location like "Sierra Nevada", "Granada", or "Picos de Europa", you should choose the most representative municipality. For "Sierra Nevada", use "Monachil".
+      If the user provides a well-known location like "Sierra Nevada", you should choose the most representative municipality. For "Sierra Nevada", use "Monachil". For "Granada", use "Granada".
       Present the data clearly to the user.
     `,
     tools: [getRealWeatherData],
@@ -95,7 +95,7 @@ const weatherFlow = ai.defineFlow(
       prompt: `Get the weather for ${input.location}`,
       model: 'googleai/gemini-2.0-flash',
       tools: [getRealWeatherData],
-      toolChoice: "tool",
+      toolChoice: 'required',
     });
 
     const toolRequest = llmResponse.toolRequest();
@@ -103,13 +103,8 @@ const weatherFlow = ai.defineFlow(
         throw new Error("Expected the model to call the weather tool.");
     }
     
-    // We can't actually execute the tool call from the model, because we can't look up municipalities from here.
-    // So we will just call the tool ourselves with a fixed location for now.
-    // In a real app, you would use the response from the LLM to determine which municipality to use.
-    const municipality : z.infer<typeof AemetMunicipality> = {
-        id: 'id18087',
-        nombre: input.location
-    }
+    // Extract the municipality from the tool request and call the tool
+    const municipality = toolRequest.input.municipality as z.infer<typeof AemetMunicipality>;
     const toolResponse = await getRealWeatherData( {municipality} );
 
     return toolResponse;
