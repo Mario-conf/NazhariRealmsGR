@@ -11,12 +11,17 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import type { Trail } from '@/lib/trail-data';
-import { Star, Mountain, Forest, Waves, Sun, Clock, Milestone, Map, Download, X } from 'lucide-react';
+import type { Trail, Review } from '@/lib/trail-data';
+import { Star, Mountain, Forest, Waves, Sun, Clock, Milestone, Map, Download, X, Heart } from 'lucide-react';
+import useReviews from '@/hooks/use-reviews';
+import { ReviewForm } from './review-form';
+import { ReviewList } from './review-list';
 
 interface TrailDetailsDialogProps {
   trail: Trail;
   onClose: () => void;
+  isFavorite: boolean;
+  onToggleFavorite: () => void;
 }
 
 const terrainIcons = {
@@ -29,19 +34,27 @@ const terrainIcons = {
 export function TrailDetailsDialog({
   trail,
   onClose,
+  isFavorite,
+  onToggleFavorite,
 }: TrailDetailsDialogProps) {
+  const { reviews, addReview } = useReviews(trail.id);
+
   return (
     <Dialog open={true} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] flex flex-col">
-        <DialogHeader className="relative">
+        <DialogHeader className="relative p-0">
           <img
             src={trail.image}
             alt={trail.name}
             data-ai-hint={trail.imageHint}
             className="w-full h-64 object-cover rounded-t-lg"
           />
-           <Button variant="ghost" size="icon" className="absolute top-2 right-2 bg-background/70 hover:bg-background rounded-full h-8 w-8" onClick={onClose}>
-            <X className="h-4 w-4" />
+           <Button variant="ghost" size="icon" className="absolute top-2 right-14 bg-background/70 hover:bg-background rounded-full h-9 w-9" onClick={onToggleFavorite}>
+            <Heart className={`h-5 w-5 ${isFavorite ? 'text-red-500 fill-red-500' : 'text-primary'}`} />
+            <span className="sr-only">Toggle Favorite</span>
+          </Button>
+           <Button variant="ghost" size="icon" className="absolute top-2 right-2 bg-background/70 hover:bg-background rounded-full h-9 w-9" onClick={onClose}>
+            <X className="h-5 w-5" />
             <span className="sr-only">Close</span>
           </Button>
           <div className="p-6">
@@ -50,10 +63,11 @@ export function TrailDetailsDialog({
           </div>
         </DialogHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 pb-6 overflow-y-auto flex-grow">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 px-6 pb-6 overflow-y-auto flex-grow">
+          {/* Left Column */}
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold text-lg mb-2">Trail Stats</h3>
+              <h3 className="font-semibold text-lg mb-4 border-b pb-2">Trail Stats</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-3">
                   <Star className="h-5 w-5 text-amber-400" />
@@ -62,14 +76,10 @@ export function TrailDetailsDialog({
                     <p className="font-semibold">{trail.rating.toFixed(1)} / 5.0</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
+                 <div className="flex items-center gap-3">
                   <Badge variant={trail.difficulty === 'Hard' ? 'destructive' : 'secondary'}>
                     {trail.difficulty}
                   </Badge>
-                  <div>
-                    <p className="text-muted-foreground">Difficulty</p>
-                    <p className="font-semibold">{trail.difficulty}</p>
-                  </div>
                 </div>
                  <div className="flex items-center gap-3">
                   <Milestone className="h-5 w-5 text-primary" />
@@ -95,23 +105,34 @@ export function TrailDetailsDialog({
               </div>
             </div>
             <div>
-              <h3 className="font-semibold text-lg mb-2">Description</h3>
+              <h3 className="font-semibold text-lg mb-2 border-b pb-2">Description</h3>
               <p className="text-muted-foreground">{trail.description}</p>
             </div>
-          </div>
-          <div className="space-y-4">
-             <h3 className="font-semibold text-lg mb-2">Route Map</h3>
-            <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center">
-                <Map className="w-16 h-16 text-muted-foreground/50" />
-                <p className="sr-only">A map of the trail route.</p>
+             <div>
+              <h3 className="font-semibold text-lg mb-4 border-b pb-2">Reviews ({reviews.length})</h3>
+              <ReviewList reviews={reviews} />
             </div>
-             <Button className="w-full">
-                <Download className="mr-2 h-4 w-4" />
-                Download GPX File
-            </Button>
+          </div>
+          {/* Right Column */}
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-lg mb-4 border-b pb-2">Route Map</h3>
+              <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center">
+                  <Map className="w-16 h-16 text-muted-foreground/50" />
+                  <p className="sr-only">A map of the trail route.</p>
+              </div>
+               <Button className="w-full mt-4">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download GPX File
+              </Button>
+            </div>
+            <div>
+               <h3 className="font-semibold text-lg mb-4 border-b pb-2">Leave a Review</h3>
+               <ReviewForm onSubmit={addReview} />
+            </div>
           </div>
         </div>
-         <DialogFooter className="px-6 pb-6 pt-0 mt-auto">
+         <DialogFooter className="px-6 pb-6 pt-2">
           <Button variant="outline" onClick={onClose}>Close</Button>
         </DialogFooter>
       </DialogContent>

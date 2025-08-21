@@ -14,10 +14,12 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { trails, Trail } from '@/lib/trail-data';
-import { ListRestart } from 'lucide-react';
+import { ListRestart, Heart } from 'lucide-react';
+import { Switch } from '@/components/ui/switch';
 
 interface TrailFiltersProps {
   onFilterChange: (filteredTrails: Trail[]) => void;
+  favorites: number[];
 }
 
 const DIFFICULTIES: Trail['difficulty'][] = ['Easy', 'Moderate', 'Hard'];
@@ -29,7 +31,7 @@ const TERRAINS: Trail['terrain'][] = [
 ];
 const MAX_DURATION = Math.ceil(Math.max(...trails.map((t) => t.duration)));
 
-export function TrailFilters({ onFilterChange }: TrailFiltersProps) {
+export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedDifficulties, setSelectedDifficulties] = React.useState<
     string[]
@@ -37,9 +39,14 @@ export function TrailFilters({ onFilterChange }: TrailFiltersProps) {
   const [selectedTerrains, setSelectedTerrains] = React.useState<string[]>([]);
   const [durationRange, setDurationRange] = React.useState([0, MAX_DURATION]);
   const [sortOrder, setSortOrder] = React.useState('rating-desc');
+  const [showOnlyFavorites, setShowOnlyFavorites] = React.useState(false);
 
   const filterAndSortTrails = React.useCallback(() => {
     let filtered = trails;
+
+    if (showOnlyFavorites) {
+      filtered = filtered.filter((trail) => favorites.includes(trail.id));
+    }
 
     if (searchTerm) {
       filtered = filtered.filter(
@@ -96,6 +103,8 @@ export function TrailFilters({ onFilterChange }: TrailFiltersProps) {
     selectedTerrains,
     durationRange,
     sortOrder,
+    showOnlyFavorites,
+    favorites,
     onFilterChange,
   ]);
 
@@ -125,10 +134,22 @@ export function TrailFilters({ onFilterChange }: TrailFiltersProps) {
     setSelectedTerrains([]);
     setDurationRange([0, MAX_DURATION]);
     setSortOrder('rating-desc');
+    setShowOnlyFavorites(false);
   };
 
   return (
     <div className="space-y-8">
+       <div className="flex items-center justify-between">
+        <Label htmlFor="favorites-only" className="flex items-center gap-2 text-base">
+          <Heart className="h-5 w-5 text-red-500" />
+          My Favorites
+        </Label>
+        <Switch
+          id="favorites-only"
+          checked={showOnlyFavorites}
+          onCheckedChange={setShowOnlyFavorites}
+        />
+      </div>
       <div>
         <Label htmlFor="search">Search by name or location</Label>
         <Input

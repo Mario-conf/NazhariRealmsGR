@@ -13,6 +13,16 @@ export type Trail = {
   gpxFile: string; // mock path
 };
 
+export type Review = {
+  id: string;
+  trailId: number;
+  author: string;
+  rating: number;
+  comment: string;
+  date: string;
+};
+
+
 export const trails: Trail[] = [
   {
     id: 1,
@@ -24,7 +34,7 @@ export const trails: Trail[] = [
     terrain: 'Mountain',
     length: 19.3,
     duration: 8,
-    rating: 5,
+    rating: 4.8,
     description:
       'A strenuous but rewarding climb to the top of Eagle Peak, offering unparalleled views of Yosemite Valley. Not for the faint of heart, this trail involves significant elevation gain and some scrambling near the summit.',
     gpxFile: '/gpx/eagle-peak.gpx',
@@ -39,7 +49,7 @@ export const trails: Trail[] = [
     terrain: 'Forest',
     length: 8.0,
     duration: 2.5,
-    rating: 4,
+    rating: 4.5,
     description:
       'A gentle, family-friendly walk through the dense and mystical Black Forest. The trail is well-marked and relatively flat, making it perfect for a relaxing day out.',
     gpxFile: '/gpx/whispering-pines.gpx',
@@ -54,7 +64,7 @@ export const trails: Trail[] = [
     terrain: 'Coastal',
     length: 12.9,
     duration: 4,
-    rating: 5,
+    rating: 4.9,
     description:
       'Experience the raw beauty of the Irish coast with this stunning cliffside walk. The trail can be exposed and windy, so be prepared for changing weather conditions.',
     gpxFile: '/gpx/cliffs-of-moher.gpx',
@@ -69,7 +79,7 @@ export const trails: Trail[] = [
     terrain: 'Desert',
     length: 6.4,
     duration: 3,
-    rating: 4,
+    rating: 4.6,
     description:
       'Explore vibrant red Aztec sandstone outcrops and ancient, petrified trees in this otherworldly landscape. Best hiked in the cooler months, as summer temperatures can be extreme.',
     gpxFile: '/gpx/valley-of-fire.gpx',
@@ -84,7 +94,7 @@ export const trails: Trail[] = [
     terrain: 'Mountain',
     length: 170.0,
     duration: 110, // ~11 days
-    rating: 5,
+    rating: 5.0,
     description:
       'The legendary Tour du Mont Blanc is a multi-day trek through France, Italy, and Switzerland. This is a serious undertaking requiring significant planning and physical fitness.',
     gpxFile: '/gpx/mont-blanc.gpx',
@@ -99,7 +109,7 @@ export const trails: Trail[] = [
     terrain: 'Forest',
     length: 4.8,
     duration: 1.5,
-    rating: 4,
+    rating: 4.4,
     description:
       'Wander among the tallest trees on Earth in this awe-inspiring old-growth redwood forest. The trail is mostly flat and accessible to hikers of all ages and abilities.',
     gpxFile: '/gpx/redwood-creek.gpx',
@@ -114,7 +124,7 @@ export const trails: Trail[] = [
     terrain: 'Coastal',
     length: 7.7,
     duration: 3.5,
-    rating: 5,
+    rating: 4.9,
     description:
       'Il Sentiero degli Dei offers divine views of the Amalfi Coast and the island of Capri. The trail runs high above the sea, from the village of Bomerano to Nocelle.',
     gpxFile: '/gpx/path-of-gods.gpx',
@@ -129,7 +139,7 @@ export const trails: Trail[] = [
     terrain: 'Desert',
     length: 15.1,
     duration: 8,
-    rating: 5,
+    rating: 4.8,
     description:
       'Hike through the Virgin River in one of the most iconic slot canyons in the world. Requires walking in water, so appropriate footwear is essential. A truly unique desert experience.',
     gpxFile: '/gpx/the-narrows.gpx',

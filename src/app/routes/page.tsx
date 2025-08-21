@@ -5,10 +5,12 @@ import { trails, Trail } from '@/lib/trail-data';
 import { TrailCard } from '@/components/trail-card';
 import { TrailFilters } from '@/components/trail-filters';
 import { TrailDetailsDialog } from '@/components/trail-details-dialog';
+import useFavorites from '@/hooks/use-favorites';
 
 export default function RoutesPage() {
   const [filteredTrails, setFilteredTrails] = React.useState<Trail[]>(trails);
   const [selectedTrail, setSelectedTrail] = React.useState<Trail | null>(null);
+  const { favorites, toggleFavorite } = useFavorites();
 
   const handleSelectTrail = (trail: Trail) => {
     setSelectedTrail(trail);
@@ -17,6 +19,11 @@ export default function RoutesPage() {
   const handleCloseDialog = () => {
     setSelectedTrail(null);
   };
+
+  const handleToggleFavorite = (e: React.MouseEvent, trailId: number) => {
+    e.stopPropagation();
+    toggleFavorite(trailId);
+  }
 
   return (
     <>
@@ -33,7 +40,7 @@ export default function RoutesPage() {
 
         <main className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12">
           <aside className="sticky top-20 h-fit">
-            <TrailFilters onFilterChange={setFilteredTrails} />
+            <TrailFilters onFilterChange={setFilteredTrails} favorites={favorites} />
           </aside>
           <section>
             {filteredTrails.length > 0 ? (
@@ -43,6 +50,8 @@ export default function RoutesPage() {
                     key={trail.id}
                     trail={trail}
                     onSelect={() => handleSelectTrail(trail)}
+                    isFavorite={favorites.includes(trail.id)}
+                    onToggleFavorite={(e) => handleToggleFavorite(e, trail.id)}
                   />
                 ))}
               </div>
@@ -63,6 +72,8 @@ export default function RoutesPage() {
         <TrailDetailsDialog
           trail={selectedTrail}
           onClose={handleCloseDialog}
+          isFavorite={favorites.includes(selectedTrail.id)}
+          onToggleFavorite={() => toggleFavorite(selectedTrail.id)}
         />
       )}
     </>

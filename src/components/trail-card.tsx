@@ -9,11 +9,13 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import type { Trail } from '@/lib/trail-data';
-import { Star, Mountain, Forest, Waves, Sun, Clock, Milestone } from 'lucide-react';
+import { Star, Mountain, Forest, Waves, Sun, Clock, Milestone, Heart } from 'lucide-react';
 
 interface TrailCardProps {
   trail: Trail;
   onSelect: () => void;
+  isFavorite: boolean;
+  onToggleFavorite: (e: React.MouseEvent) => void;
 }
 
 const terrainIcons = {
@@ -23,7 +25,7 @@ const terrainIcons = {
   Desert: <Sun className="h-4 w-4" />,
 };
 
-export function TrailCard({ trail, onSelect }: TrailCardProps) {
+export function TrailCard({ trail, onSelect, isFavorite, onToggleFavorite }: TrailCardProps) {
   return (
     <Card className="flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl">
       <CardHeader className="p-0">
@@ -34,9 +36,18 @@ export function TrailCard({ trail, onSelect }: TrailCardProps) {
             data-ai-hint={trail.imageHint}
             className="w-full h-48 object-cover"
           />
+           <Button
+            size="icon"
+            variant="ghost"
+            className="absolute top-2 right-2 rounded-full bg-background/70 hover:bg-background/90 h-9 w-9"
+            onClick={onToggleFavorite}
+            aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+          >
+            <Heart className={`h-5 w-5 ${isFavorite ? 'text-red-500 fill-red-500' : 'text-white'}`} />
+          </Button>
           <Badge
             variant={trail.difficulty === 'Hard' ? 'destructive' : 'secondary'}
-            className="absolute top-2 right-2"
+            className="absolute top-2 left-2"
           >
             {trail.difficulty}
           </Badge>
