@@ -7,5 +7,184 @@
     "rules": "Regeln",
     "contact": "Kontakt",
     "selectLanguage": "Sprache auswählen"
+  },
+  "Footer": {
+    "copyright": "© 2024 Alpine-Hike Club. Alle Rechte vorbehalten.",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutz"
+  },
+  "HomePage": {
+    "title": "Nehmen Sie am Abenteuer mit dem Alpine-Hike Club teil",
+    "subtitle": "Entdecken Sie atemberaubende Wege, vernetzen Sie sich mit anderen Abenteurern und schaffen Sie unvergessliche Erinnerungen. Ihr nächstes Abenteuer in Granada und Andalusien beginnt hier.",
+    "explore_routes": "Routen erkunden",
+    "join_now": "Jetzt beitreten",
+    "hero_alt": "Held",
+    "reviews_title": "Was unsere Mitglieder sagen",
+    "review1_text": "\"Der beste Wanderclub, in dem ich je war! Die Gemeinschaft ist unglaublich und die geplanten Routen sind immer spektakulär.\"",
+    "review1_author": "- Alejandro García",
+    "review2_text": "\"Eine unglaubliche Erfahrung. Vom Bergsteigen bis zu entspannten Campingausflügen ist für jeden etwas dabei. Sehr zu empfehlen.\"",
+    "review2_author": "- María Fernández",
+    "review3_text": "\"Die Führer sind Experten und die Gemeinschaft ist sehr herzlich. Ich habe viel gelernt und wunderschöne Orte in der Sierra Nevada gesehen.\"",
+    "review3_author": "- Samuel López",
+    "sponsors_title": "Unsere geschätzten Sponsoren",
+    "contact_title": "Nehmen Sie Kontakt auf",
+    "contact_subtitle": "Haben Sie Fragen oder möchten Sie beitreten? Senden Sie uns eine Nachricht!",
+    "form_name": "Name",
+    "form_email": "E-Mail",
+    "form_message": "Nachricht",
+    "form_submit": "Nachricht senden"
+  },
+  "WeatherPage": {
+    "title": "Wetterzentrum",
+    "subtitle": "Erhalten Sie Echtzeit-Wettervorhersagen und Radarkarten für jeden Ort. Planen Sie Ihre Abenteuer mit Zuversicht.",
+    "search_placeholder": "Geben Sie eine Stadt oder Postleitzahl ein",
+    "search_button": "Suchen",
+    "search_button_loading": "Suchen...",
+    "error_location": "Bitte geben Sie einen Ort ein.",
+    "error_fetch": "Wetterdaten konnten nicht abgerufen werden. Bitte versuchen Sie es erneut.",
+    "loading_text": "Lade Daten für {location}...",
+    "current_weather_title": "Aktuelles Wetter in {city}, {country}",
+    "temperature": "Temperatur",
+    "condition": "Zustand",
+    "wind": "Wind",
+    "humidity": "Luftfeuchtigkeit",
+    "forecast_title": "5-Tage-Vorhersage",
+    "radar_maps_title": "Radarkarten",
+    "cloud_radar": "Wolkenradar",
+    "cloud_radar_alt": "Wolkenradarkarte",
+    "heat_map": "Wärmekarte",
+    "heat_map_alt": "Wärmekarte"
+  },
+  "BlogIndexPage": {
+    "title": "Der Alpine-Hike Blog",
+    "subtitle": "Geschichten, Analysen und Anleitungen aus unserer Abenteurer-Community.",
+    "read_more": "Weiterlesen →"
+  },
+  "BlogPostPage": {
+    "back_to_blog": "Zurück zum Blog",
+    "published_on": "Veröffentlicht am {date} von {author}"
+  },
+  "RoutesPage": {
+    "title": "Entdecken Sie unsere Routen",
+    "subtitle": "Finden Sie Ihr nächstes Abenteuer. Nutzen Sie die Filter, um den perfekten Weg für Sie zu entdecken.",
+    "no_results_title": "Keine Routen entsprechen Ihren Filtern.",
+    "no_results_subtitle": "Versuchen Sie, Ihre Suchkriterien anzupassen."
+  },
+  "RulesPage": {
+    "title": "Clubregeln und Sicherheitsleitfäden",
+    "subtitle": "Unsere Prinzipien für sichere, respektvolle und unvergessliche Abenteuer. Bitte vor dem ersten Ausflug sorgfältig lesen.",
+    "safety_title": "Sicherheit zuerst: Ihre Verantwortlichkeiten",
+    "safety1_title": "Wesentliche Ausrüstung",
+    "safety1_content": "Tragen Sie immer die 'zehn Wesentlichen', angepasst an die andalusische Umgebung. Dazu gehören Navigation (Karte, Kompass oder GPS), Beleuchtung (Stirnlampe und Ersatzbatterien), ein grundlegendes Erste-Hilfe-Set, Sonnenschutz (Sonnenbrille, Hut und Sonnencreme) und angemessene Schichtkleidung (wasserdichte und warme Schichten) für plötzliche Temperaturänderungen. Weitere wichtige Gegenstände sind Wasser- und Nahrungsreserven, eine Pfeife, ein Multifunktionsmesser und feste Wanderschuhe und -socken. Kurz gesagt, packen Sie Ihren Rucksack mit allem, was Sie brauchen, um sicher und bequem in der Sierra Nevada oder auf jeder andalusischen Route unterwegs zu sein.",
+    "safety2_title": "Planung und Meteorologie",
+    "safety2_content": "Konsultieren Sie immer offizielle Wettervorhersagequellen (z. B. die AEMET-Website/App), bevor Sie losfahren, und verschieben Sie die Reise, wenn sich das Wetter ändert. In Andalusien und im Hochgebirge kann sich das Wetter schnell verschlechtern, also bleiben Sie über Schauer, Nebel oder Stürme informiert. Planen Sie die Route detailliert (Kilometer, Höhenmeter, Wasserstellen, Schutzhütten) und tragen Sie Karten oder eine Wander-App bei sich. Es ist ratsam, ein Familienmitglied oder einen Freund über Ihren Routenplan und die voraussichtliche Rückkehrzeit zu informieren, damit diese im Notfall die Rettungsdienste alarmieren können, wenn Sie nicht zurückkehren. Für zusätzliche Sicherheit können Sie auch mobile Apps zur Berghilfe verwenden (z. B. Alpify, das Ihre Position an Rettungsteams sendet).",
+    "safety3_title": "Notfallverfahren",
+    "safety3_content": "Im Falle eines Unfalls oder wenn Sie sich verlaufen, wählen Sie sofort die 112 (die einheitliche Notrufnummer). Der Operator wird nach Ihrem Namen, einer Beschreibung des Unfalls (Art der Verletzung und Anzahl der Verletzten) und dem genauen Standort (Route, Orientierungspunkte und Koordinaten, falls möglich) fragen. Wenden Sie das PAS-Protokoll (Schützen, Alarmieren, Helfen) an: Sichern Sie zuerst den Bereich, um weitere Unfälle zu vermeiden, und alarmieren Sie dann die 112. Wenn es Verletzungen gibt, leisten Sie grundlegende Erste Hilfe, ohne schwere Brüche zu bewegen. Wenn Sie sich verlaufen haben, ist es am besten, an einem sichtbaren Ort zu bleiben, mit einer Pfeife oder Lichtern zu signalisieren und wenn möglich erneut den Rettungsdienst anzurufen.",
+    "lnt_title": "Umweltvorschriften und Ethik (Leave No Trace Prinzipien)",
+    "lnt1_trigger": "Allgemeine Vorschriften in Spanien",
+    "lnt1_content": "Wildcampen ist stark eingeschränkt: Laut Gesetz 42/2007 ist das Übernachten nur an ausgewiesenen Orten (Campingplätze, autorisierte Bereiche) erlaubt. Im Allgemeinen ist das Aufstellen eines Zeltes oder das Übernachten ohne Genehmigung außerhalb dieser Bereiche verboten. In Nationalparks (wie der Sierra Nevada) ist das Campen ohne Genehmigung nicht gestattet. Die Nutzung von Drohnen erfordert eine Lizenz und ist in geschützten Naturgebieten ohne besondere Genehmigung verboten. Darüber hinaus schützen spanische Gesetze die wilde Flora und Fauna: Sie dürfen keine einheimischen Pflanzen beschädigen oder sammeln oder geschützte Tiere stören. Jagen, Fischen oder das Entnehmen von Mineralien und Felsen ist in Parks verboten.",
+    "lnt2_trigger": "Spezifische Vorschriften in Andalusien",
+    "lnt2_content": "Andalusien wendet strenge Beschränkungen gegen Waldbrände an. Eine Anordnung der Regionalregierung verbietet vom 1. Juni bis 15. Oktober in allen andalusischen Wäldern die Verwendung von Feuer (Lagerfeuer, Grillen, landwirtschaftliches Verbrennen). Während dieses Zeitraums ist auch der Fahrzeugverkehr abseits asphaltierter Wege verboten. In andalusischen Naturparks wird darauf hingewiesen, markierte Wege nicht zu verlassen, um empfindliche Vegetation zu schützen (z. B. rät die Sierra Nevada, „die Wege nicht zu verlassen oder Abkürzungen zu nehmen“). Das andalusische Gesetz 8/2003 schützt Flora und Fauna: Es verbietet das Ausreißen, Schneiden oder Zerstören von Wildpflanzen und ihren Lebensräumen. Zusammenfassend lässt sich sagen, dass Sie in Andalusien niemals Pflanzen sammeln oder Ökosysteme zerstören und alle lokalen Umweltschilder respektieren sollten.",
+    "lnt3_trigger": "Regeln des Nationalparks Sierra Nevada",
+    "lnt3_content": "Wildcampen ist in diesem Nationalpark nicht gestattet. Das einzige erlaubte Biwakieren ist über Nacht mit vorheriger schriftlicher Benachrichtigung an den Direktor des Parks (maximal 15 Personen und 3 Zelte). Es ist verboten, in Umweltschutzgebieten (z. B. 'borreguiles' oder in der Nähe von Lagunen) sowie innerhalb von 500 m von bewachten Schutzhütten, Straßen oder Bächen zu übernachten. Darüber hinaus ist zwischen dem 1. Juni und 15. Oktober das Campen oder Biwakieren in bewaldeten Gebieten wegen hoher Brandgefahr nicht erlaubt. In jedem Fall ist es innerhalb des Parks verboten, Feuer zu machen oder Müll in Quellen, Flüssen oder der Umwelt zu entsorgen.",
+    "lnt4_trigger": "Leave No Trace Prinzipien",
+    "lnt4_content": "Passen Sie die sieben internationalen Prinzipien an: (1) Planen Sie im Voraus und minimieren Sie Abfall: Tragen Sie Ihren Müll (einschließlich Toilettenpapier) zu einem Behälter und vermeiden Sie die Abfallerzeugung. (2) Reisen und campen Sie auf langlebigen Oberflächen: Bleiben Sie immer auf markierten Wegen oder hartem Fels; treten Sie nicht auf empfindliche Wiesen oder 'borreguiles'. (3) Entsorgen Sie Abfall ordnungsgemäß: Vergraben Sie organische Abfälle (mehr als 60 m von Wasserquellen entfernt) und nutzen Sie verfügbare Dienste, falls vorhanden. (4) Lassen Sie, was Sie finden: Hinterlassen Sie keine neuen Spuren oder Schilder; respektieren Sie Ruinen, Landschaften und Gebäude. (5) Minimieren Sie die Auswirkungen von Lagerfeuern: Wenn Feuer nicht ausdrücklich erlaubt ist, verwenden Sie es nur in ausgewiesenen Bereichen (Feuerstellen) und niemals im Sommer; bevorzugen Sie tragbare Kocher. (6) Respektieren Sie die Tierwelt: Reißen Sie keine Pflanzen aus und vertreiben Sie keine Tiere aus ihren Lebensräumen. (7) Seien Sie rücksichtsvoll gegenüber anderen Besuchern: Kontrollieren Sie den Lärm und Ihren Durchgang, um andere Wanderer und die Umwelt nicht zu stören (z. B. leise sprechen und auf schmalen Wegen den Weg freimachen).",
+    "etiquette_title": "Gruppenetikette und Clubverhalten",
+    "etiquette1_title": "Respekt in der Gruppe",
+    "etiquette1_content": "Seien Sie pünktlich und gut ausgerüstet für jeden Ausflug. Passen Sie während der Wanderung Ihr Tempo dem des Führers an (weder vorauseilen noch zurückfallen). Befolgen Sie jederzeit die Anweisungen des Leiters zur Sicherheit aller. Jedes Mitglied sollte kooperieren: zum Beispiel Verantwortlichkeiten aufteilen (Gruppenleiter, 'Fahnenträger' usw.) und aufeinander achten. Respektvolles Verhalten unter Wanderern beinhaltet, denen zu helfen, die es brauchen, und eine unterstützende Haltung auf schwierigem Gelände beizubehalten.",
+    "etiquette2_title": "Zusammenleben mit anderen Bergsteigern",
+    "etiquette2_content": "Auf schmalen Wegen den Aufsteigenden den Vortritt lassen und auf überfüllten Wegen immer rechts gehen. Lärm auf ein Minimum reduzieren (leises Geplauder, Stille in sensiblen Bereichen) und in Schutzhütten und an Aussichtspunkten Platz lassen. In Unterkünften oder Rastplätzen die Reihenfolge bei der Nutzung von Einrichtungen (Küche, Duschen) respektieren und vor dem Verlassen gründlich aufräumen. Im Allgemeinen freundlich zu allen sein: die Route mit Höflichkeit teilen und eine gute Beziehung zu anderen Bergsteigern und der lokalen Umgebung pflegen.",
+    "etiquette3_title": "Verpflichtung des Clubs",
+    "etiquette3_content": "Unser Club fördert eine inklusive, sichere und respektvolle Umgebung. Wir heißen alle Personen willkommen, unabhängig von Geschlecht, Rasse, Religion oder Orientierung. Wir fördern die Zusammenarbeit und gegenseitige Unterstützung bei jedem Ausflug. Darüber hinaus verpflichten wir uns, die Berge zu pflegen: Unsere Aktivitäten zielen auf eine nachhaltige Integration in die Natur ab, wobei Sicherheit und Umweltschutz immer Vorrang haben, damit jeder die Wege unter gleichen Bedingungen genießen kann."
+  },
+  "TrailCard": {
+    "rating_title": "Bewertung",
+    "terrain_title": "Gelände",
+    "distance_title": "Distanz",
+    "duration_title": "Dauer",
+    "view_details": "Details anzeigen",
+    "add_favorite": "Zu Favoriten hinzufügen",
+    "remove_favorite": "Aus Favoriten entfernen",
+    "difficulties": {
+      "Easy": "Leicht",
+      "Moderate": "Mittel",
+      "Hard": "Schwer"
+    },
+    "terrains": {
+      "Mountain": "Berg",
+      "Forest": "Wald",
+      "Coastal": "Küste",
+      "Desert": "Wüste"
+    }
+  },
+  "TrailDetailsDialog": {
+    "close": "Schließen",
+    "add_favorite": "Zu Favoriten hinzufügen",
+    "stats_title": "Wegstatistik",
+    "rating": "Bewertung",
+    "difficulty": "Schwierigkeit",
+    "distance": "Distanz",
+    "duration": "Dauer",
+    "terrain": "Gelände",
+    "description_title": "Beschreibung",
+    "reviews_title": "Bewertungen ({count})",
+    "map_title": "Routenkarte",
+    "gpx_button": "GPX-Datei herunterladen",
+    "leave_review_title": "Eine Bewertung hinterlassen",
+    "map_alt": "Eine Karte des Weges.",
+    "difficulties": {
+      "Easy": "Leicht",
+      "Moderate": "Mittel",
+      "Hard": "Schwer"
+    },
+    "terrains": {
+      "Mountain": "Berg",
+      "Forest": "Wald",
+      "Coastal": "Küste",
+      "Desert": "Wüste"
+    }
+  },
+  "TrailFilters": {
+    "favorites_label": "Meine Favoriten",
+    "search_label": "Suche nach Name oder Ort",
+    "search_placeholder": "Z.B. Veleta, Monachil...",
+    "difficulty_label": "Schwierigkeit",
+    "terrain_label": "Gelände",
+    "duration_label": "Dauer (Stunden)",
+    "sort_label": "Sortieren nach",
+    "sort_placeholder": "Auswählen...",
+    "sort_rating_desc": "Bewertung: Hoch zu Niedrig",
+    "sort_rating_asc": "Bewertung: Niedrig zu Hoch",
+    "sort_length_desc": "Distanz: Lang zu Kurz",
+    "sort_length_asc": "Distanz: Kurz zu Lang",
+    "sort_duration_desc": "Dauer: Lang zu Kurz",
+    "sort_duration_asc": "Dauer: Kurz zu Lang",
+    "reset_button": "Filter zurücksetzen",
+    "difficulties": {
+      "Easy": "Leicht",
+      "Moderate": "Mittel",
+      "Hard": "Schwer"
+    },
+    "terrains": {
+      "Mountain": "Berg",
+      "Forest": "Wald",
+      "Coastal": "Küste",
+      "Desert": "Wüste"
+    }
+  },
+  "ReviewForm": {
+    "name_label": "Ihr Name",
+    "name_placeholder": "Z.B. Max Mustermann",
+    "rating_label": "Bewertung",
+    "comment_label": "Kommentar",
+    "comment_placeholder": "Teilen Sie Ihre Erfahrungen auf dem Weg...",
+    "error_message": "Bitte füllen Sie alle Felder aus und wählen Sie eine Bewertung.",
+    "submit_button": "Bewertung abgeben"
+  },
+  "ReviewList": {
+    "no_reviews_1": "Noch keine Bewertungen.",
+    "no_reviews_2": "Seien Sie der Erste, der Ihre Erfahrungen teilt!"
   }
 }
+
+    
