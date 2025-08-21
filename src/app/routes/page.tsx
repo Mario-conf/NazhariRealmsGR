@@ -1,0 +1,70 @@
+'use client';
+
+import * as React from 'react';
+import { trails, Trail } from '@/lib/trail-data';
+import { TrailCard } from '@/components/trail-card';
+import { TrailFilters } from '@/components/trail-filters';
+import { TrailDetailsDialog } from '@/components/trail-details-dialog';
+
+export default function RoutesPage() {
+  const [filteredTrails, setFilteredTrails] = React.useState<Trail[]>(trails);
+  const [selectedTrail, setSelectedTrail] = React.useState<Trail | null>(null);
+
+  const handleSelectTrail = (trail: Trail) => {
+    setSelectedTrail(trail);
+  };
+
+  const handleCloseDialog = () => {
+    setSelectedTrail(null);
+  };
+
+  return (
+    <>
+      <div className="container mx-auto px-4 py-8">
+        <header className="mb-12 text-center">
+          <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl">
+            Explore Our Trails
+          </h1>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
+            Find your next adventure. Use the filters below to discover the
+            perfect trail for you.
+          </p>
+        </header>
+
+        <main className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12">
+          <aside className="sticky top-20 h-fit">
+            <TrailFilters onFilterChange={setFilteredTrails} />
+          </aside>
+          <section>
+            {filteredTrails.length > 0 ? (
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                {filteredTrails.map((trail) => (
+                  <TrailCard
+                    key={trail.id}
+                    trail={trail}
+                    onSelect={() => handleSelectTrail(trail)}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center h-96 border-2 border-dashed rounded-lg">
+                <p className="text-xl font-semibold text-muted-foreground">
+                  No trails match your filters.
+                </p>
+                <p className="text-muted-foreground">
+                  Try adjusting your search criteria.
+                </p>
+              </div>
+            )}
+          </section>
+        </main>
+      </div>
+      {selectedTrail && (
+        <TrailDetailsDialog
+          trail={selectedTrail}
+          onClose={handleCloseDialog}
+        />
+      )}
+    </>
+  );
+}
