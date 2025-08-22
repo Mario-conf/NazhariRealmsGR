@@ -80,7 +80,7 @@ export function Footer() {
 
       {/* Copyright section */}
       <div className="text-center p-4 text-gray-400 text-xs bg-black/40">
-        {t('copyright')}
+        <div>© 2025 Creado por <a href='https://www.albaidex.com' className='hover:text-yellow-400 transition-colors'>Albaidex</a></div>
       </div>
     </footer>
   );
