@@ -23,17 +23,17 @@ export default function Home() {
   
   const features = [
     {
-      icon: <Mountain className="w-8 h-8 text-primary" />,
+      icon: <Mountain className="w-8 h-8 text-black" />,
       title: t('features.feature1_title'),
       description: t('features.feature1_description')
     },
     {
-      icon: <Users className="w-8 h-8 text-primary" />,
+      icon: <Users className="w-8 h-8 text-black" />,
       title: t('features.feature2_title'),
       description: t('features.feature2_description')
     },
     {
-      icon: <ShieldCheck className="w-8 h-8 text-primary" />,
+      icon: <ShieldCheck className="w-8 h-8 text-black" />,
       title: t('features.feature3_title'),
       description: t('features.feature3_description')
     }
@@ -44,52 +44,52 @@ export default function Home() {
       "nombre": "Laura Gómez",
       "estrellas": 5,
       "texto": "Una experiencia increíble, los guías transmiten mucha seguridad y el ambiente del grupo es muy acogedor. Ideal para iniciarse en el senderismo y conocer gente nueva.",
-      "avatar": "https://placehold.co/56x56.png",
+      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",
       "avatarHint": "mujer sonriendo"
     },
     {
       "nombre": "Carlos Martín",
       "estrellas": 3,
       "texto": "Las rutas están bien organizadas, aunque a veces se hacen un poco largas para principiantes. Me hubiera gustado más pausas para descansar.",
-      "avatar": "https://placehold.co/56x56.png",
+      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",
       "avatarHint": "hombre con barba"
     },
     {
       "nombre": "Ana Rodríguez",
       "estrellas": 5,
       "texto": "Excelente club, muy responsables con la seguridad en montaña. Se nota la pasión por la naturaleza. Repetiré sin duda en la próxima salida.",
-      "avatar": "https://placehold.co/56x56.png",
+      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",
       "avatarHint": "mujer con gafas"
     },
     {
       "nombre": "Miguel Torres",
       "estrellas": 2,
       "texto": "El recorrido fue bonito pero había demasiada gente en la excursión y eso dificultó el ritmo. Sería mejor limitar un poco los grupos.",
-      "avatar": "https://placehold.co/56x56.png",
+      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",
       "avatarHint": "hombre joven"
     },
     {
       "nombre": "Sofía Hernández",
       "estrellas": 4,
       "texto": "Gran variedad de rutas, desde fáciles hasta de alta montaña. Los organizadores siempre están atentos a todos los detalles. Muy recomendable para quien busque aprender y disfrutar.",
-      "avatar": "https://placehold.co/56x56.png",
+      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",
       "avatarHint": "mujer pelo rizado"
     },
     {
       "nombre": "David López",
       "estrellas": 4,
       "texto": "Me gustó la caminata, aunque esperaba algo más de información cultural sobre la zona. Aun así, el grupo fue muy agradable y los paisajes espectaculares.",
-      "avatar": "https://placehold.co/56x56.png",
+      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",  
       "avatarHint": "hombre con gorra"
     }
   ];
   
   const galleryImages = [
-    { src: 'https://placehold.co/600x600.png', hint: 'senderista cumbre', className: 'md:col-span-2 md:row-span-2' },
-    { src: 'https://placehold.co/300x300.png', hint: 'lago montaña' },
-    { src: 'https://placehold.co/300x300.png', hint: 'bosque niebla' },
-    { src: 'https://placehold.co/300x300.png', hint: 'mapa brújula' },
-    { src: 'https://placehold.co/300x300.png', hint: 'grupo amigos sendero' },
+    { src: 'https://elviajerofeliz.com/wp-content/uploads/2020/12/sierra-nevada-y-sus-encantos-0.jpg', hint: 'senderista cumbre', className: 'md:col-span-2 md:row-span-2' },
+    { src: 'https://cdn.e-konomista.pt/uploads/2023/03/nervion1.jpg', hint: 'lago montaña' },
+    { src: 'https://i.pinimg.com/originals/b9/b1/96/b9b196ec42dc8cc8cf5fe2a9c70ae7f1.jpg', hint: 'bosque niebla' },
+    { src: 'https://s1.it.atcdn.net/wp-content/uploads/2014/09/shutterstock_1405952592.jpg', hint: 'mapa brújula' },
+    { src: 'https://www.escapadarural.com/blog/wp-content/uploads/2020/05/gaztelugatxe-landscape-basque-country-spain-stockpack-adobe-stock-scaled.jpg', hint: 'grupo amigos sendero' },
   ];
 
 
