@@ -42,7 +42,7 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
       },
       current: {
         temperature: Math.round((today.temperatura.maxima + today.temperatura.minima) / 2),
-        condition: conditionToday.descripcion,
+        conditionCode: conditionToday.value,
         windSpeed: Math.round(averageWindSpeed),
         humidity: Math.round((today.humedadRelativa.maxima + today.humedadRelativa.minima) / 2),
       },
@@ -51,7 +51,7 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
         return {
          day: day.fecha, // Return the full date string
          temperature: Math.round((day.temperatura.maxima + day.temperatura.minima) / 2),
-         condition: conditionForecast.descripcion,
+         conditionCode: conditionForecast.value,
         }
       }),
     };

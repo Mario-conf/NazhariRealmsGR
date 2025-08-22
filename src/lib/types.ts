@@ -38,15 +38,15 @@ export const WeatherDataSchema = z.object({
   }),
   current: z.object({
     temperature: z.number().describe('The current temperature in Celsius.'),
-    condition: z.string().describe('The current weather condition.'),
+    conditionCode: z.string().describe('The weather condition code from AEMET.'),
     windSpeed: z.number().describe('The wind speed in km/h.'),
     humidity: z.number().describe('The humidity percentage.'),
   }),
   forecast: z.array(
     z.object({
-      day: z.string().describe('The day of the week.'),
+      day: z.string().describe('The date string.'),
       temperature: z.number().describe('The forecasted temperature in Celsius.'),
-      condition: z.string().describe('The forecasted weather condition.'),
+      conditionCode: z.string().describe('The forecasted weather condition code.'),
     })
   ).describe('A weather forecast for the next few days.'),
 });

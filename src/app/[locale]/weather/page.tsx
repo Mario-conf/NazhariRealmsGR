@@ -11,6 +11,7 @@ import Image from 'next/image';
 
 export default function WeatherPage() {
   const t = useTranslations('WeatherPage');
+  const tConditions = useTranslations('WeatherConditions');
   const locale = useLocale();
   const [location, setLocation] = useState('Sierra Nevada');
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
@@ -55,6 +56,13 @@ export default function WeatherPage() {
 
   const getDayOfWeek = (dateString: string) => {
     return new Date(dateString).toLocaleDateString(locale, { weekday: 'long' });
+  }
+
+  // AEMET condition codes can be complex (e.g., '12_g' for cloudy with light rain).
+  // We extract the base code (e.g., '12') to get the main condition.
+  const getConditionTranslation = (code: string) => {
+    const baseCode = code.slice(0, 2);
+    return tConditions(baseCode);
   }
 
   // Fetch weather for default location on initial render
@@ -117,7 +125,7 @@ export default function WeatherPage() {
               <div className="flex flex-col items-center gap-2 text-center">
                 <SunIcon className="h-10 w-10 text-primary" />
                 <p className="text-xl font-semibold capitalize">
-                  {weatherData.current.condition}
+                  {getConditionTranslation(weatherData.current.conditionCode)}
                 </p>
                 <p className="text-muted-foreground">{t('condition')}</p>
               </div>
@@ -151,7 +159,7 @@ export default function WeatherPage() {
                   <CardContent className="flex flex-col items-center gap-2">
                     <SunIcon className="h-8 w-8 text-amber-400" />
                     <p className="text-2xl font-bold">{day.temperature}°C</p>
-                    <p className="text-muted-foreground capitalize">{day.condition}</p>
+                    <p className="text-muted-foreground capitalize">{getConditionTranslation(day.conditionCode)}</p>
                   </CardContent>
                 </Card>
               ))}
