@@ -2,8 +2,7 @@ import { PT_Sans, Playfair_Display } from 'next/font/google';
 import '../globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getLocale } from 'next-intl/server';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { BottomNav } from '@/components/bottom-nav';
 
 const ptSans = PT_Sans({
@@ -16,15 +15,14 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
 });
 
-export default async function LocaleLayout({
+export default function LocaleLayout({
   children,
-  params,
+  params: { locale },
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const locale = await getLocale();
-  const messages = await getMessages();
+  const messages = useMessages();
 
   return (
     <html lang={locale}>

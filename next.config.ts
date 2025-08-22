@@ -1,7 +1,7 @@
 import type {NextConfig} from 'next';
-require('dotenv').config();
-
-const withNextIntl = require('next-intl/plugin')();
+import createNextIntlPlugin from 'next-intl/plugin';
+ 
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   /* config options here */
