@@ -2,10 +2,10 @@
 
 import * as React from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { StarIcon, ShieldCheck, Mountain, Users } from 'lucide-react';
+import { StarIcon, ShieldCheck, Mountain, Users, MapPin, Mail, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/navigation';
@@ -122,7 +122,7 @@ export default function Home() {
           </h2>
           <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12">
             {reviews.map((review, index) => (
-              <Card key={index}>
+              <Card key={index} className="bg-card/80 backdrop-blur-sm">
                 <CardHeader className="flex flex-row items-center gap-4">
                     <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
                     <div>
@@ -173,32 +173,37 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 relative">
-            <Image 
-                src="https://placehold.co/1920x1080.png"
-                alt={t('contact.background_alt')}
-                data-ai-hint="mapa topográfico textura"
-                fill
-                className="object-cover -z-10 brightness-50"
-            />
-            <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 relative">
-            <div className="space-y-3">
-                <h2 className="font-serif text-3xl font-bold tracking-tighter md:text-4xl/tight text-white">
-                {t('contact_title')}
-                </h2>
-                <p className="mx-auto max-w-[600px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                {t('contact_subtitle')}
-                </p>
-            </div>
-            <div className="mx-auto w-full max-w-sm space-y-2">
-                <form className="grid gap-4">
-                <Input placeholder={t('form_name')} type="text" className="bg-white/90 text-foreground" />
-                <Input placeholder={t('form_email')} type="email" className="bg-white/90 text-foreground" />
-                <Textarea placeholder={t('form_message')} className="bg-white/90 text-foreground" />
-                <Button type="submit">{t('form_submit')}</Button>
-                </form>
-            </div>
-            </div>
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 text-white">
+          <div className="container px-4 md:px-6">
+              <div className="text-center mb-12">
+                  <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t('contact.title')}</h2>
+                  <p className="mt-4 max-w-3xl mx-auto text-gray-300 md:text-xl">{t('contact.subtitle')}</p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <div className="h-96 md:h-full w-full rounded-lg overflow-hidden">
+                     <Image
+                          src="https://placehold.co/800x600.png"
+                          data-ai-hint="mapa ubicación granada"
+                          alt={t('contact.map_alt')}
+                          width={800}
+                          height={600}
+                          className="w-full h-full object-cover"
+                      />
+                  </div>
+                  <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-lg shadow-2xl">
+                      <h3 className="font-serif text-2xl font-bold mb-6">{t('contact.form_title')}</h3>
+                      <form className="space-y-4">
+                          <div className="grid sm:grid-cols-2 gap-4">
+                            <Input placeholder={t('form_name')} type="text" className="bg-gray-900/80 border-gray-700 text-white placeholder:text-gray-400" />
+                            <Input placeholder={t('form_email')} type="email" className="bg-gray-900/80 border-gray-700 text-white placeholder:text-gray-400" />
+                          </div>
+                          <Textarea placeholder={t('form_message')} rows={5} className="bg-gray-900/80 border-gray-700 text-white placeholder:text-gray-400" />
+                          <Button type="submit" className="w-full" size="lg">{t('form_submit')}</Button>
+                      </form>
+                  </div>
+              </div>
+          </div>
       </section>
     </div>
   );

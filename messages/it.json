@@ -28,12 +28,10 @@
     "review3_text": "\"Le guide sono esperte e la community è molto accogliente. Ho imparato molto e ho visto posti meravigliosi nella Sierra Nevada.\"",
     "review3_author": "- Samuel López",
     "sponsors_title": "I nostri preziosi sponsor",
-    "contact_title": "Mettiti in contatto",
-    "contact_subtitle": "Hai domande o vuoi iscriverti? Inviaci un messaggio!",
-    "form_name": "Nome",
-    "form_email": "Email",
-    "form_message": "Messaggio",
-    "form_submit": "Invia messaggio",
+    "form_name": "Nome e Cognome",
+    "form_email": "Indirizzo Email",
+    "form_message": "Il tuo messaggio...",
+    "form_submit": "Invia Messaggio",
     "features": {
       "feature1_title": "Percorsi per tutti",
       "feature1_description": "Dalle facili passeggiate in famiglia alle impegnative escursioni in alta montagna per i più esperti. C'è sempre un'avventura che ti aspetta.",
@@ -44,7 +42,10 @@
       "image_alt": "Escursionista che guarda una mappa"
     },
     "contact": {
-      "background_alt": "Texture della mappa topografica"
+      "title": "Mettiti in Contatto",
+      "subtitle": "Hai domande o vuoi unirti? Inviaci un messaggio o trovaci a Granada!",
+      "form_title": "Inviaci un Messaggio",
+      "map_alt": "Mappa che mostra la posizione del nostro club a Granada."
     }
   },
   "WeatherPage": {

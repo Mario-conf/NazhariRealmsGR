@@ -28,11 +28,9 @@
     "review3_text": "\"Die Führer sind Experten und die Gemeinschaft ist sehr herzlich. Ich habe viel gelernt und wunderschöne Orte in der Sierra Nevada gesehen.\"",
     "review3_author": "- Samuel López",
     "sponsors_title": "Unsere geschätzten Sponsoren",
-    "contact_title": "Nehmen Sie Kontakt auf",
-    "contact_subtitle": "Haben Sie Fragen oder möchten Sie beitreten? Senden Sie uns eine Nachricht!",
-    "form_name": "Name",
-    "form_email": "E-Mail",
-    "form_message": "Nachricht",
+    "form_name": "Vollständiger Name",
+    "form_email": "E-Mail-Adresse",
+    "form_message": "Ihre Nachricht...",
     "form_submit": "Nachricht senden",
     "features": {
       "feature1_title": "Routen für alle",
@@ -44,7 +42,10 @@
       "image_alt": "Wanderer schaut auf eine Karte"
     },
     "contact": {
-      "background_alt": "Topografische Kartentextur"
+      "title": "Nehmen Sie Kontakt auf",
+      "subtitle": "Haben Sie Fragen oder möchten Sie beitreten? Senden Sie uns eine Nachricht oder finden Sie uns in Granada!",
+      "form_title": "Senden Sie uns eine Nachricht",
+      "map_alt": "Karte, die den Standort unseres Clubs in Granada zeigt."
     }
   },
   "WeatherPage": {

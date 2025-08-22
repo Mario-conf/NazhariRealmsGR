@@ -28,11 +28,9 @@
     "review3_text": "\"Les guides sont des experts et la communauté est très accueillante. J'ai beaucoup appris et j'ai vu des endroits magnifiques dans la Sierra Nevada.\"",
     "review3_author": "- Samuel López",
     "sponsors_title": "Nos précieux sponsors",
-    "contact_title": "Contactez-nous",
-    "contact_subtitle": "Vous avez des questions ou vous voulez nous rejoindre ? Envoyez-nous un message !",
-    "form_name": "Nom",
-    "form_email": "Email",
-    "form_message": "Message",
+    "form_name": "Nom complet",
+    "form_email": "Adresse e-mail",
+    "form_message": "Votre message...",
     "form_submit": "Envoyer le message",
     "features": {
       "feature1_title": "Des itinéraires pour tous",
@@ -44,7 +42,10 @@
       "image_alt": "Randonneur regardant une carte"
     },
     "contact": {
-      "background_alt": "Texture de carte topographique"
+      "title": "Contactez-nous",
+      "subtitle": "Vous avez des questions ou souhaitez nous rejoindre ? Envoyez-nous un message ou retrouvez-nous à Grenade !",
+      "form_title": "Envoyez-nous un message",
+      "map_alt": "Carte indiquant l'emplacement de notre club à Grenade."
     }
   },
   "WeatherPage": {

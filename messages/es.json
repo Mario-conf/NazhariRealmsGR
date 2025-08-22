@@ -28,12 +28,10 @@
     "review3_text": "Los guías son expertos y la comunidad muy acogedora. He aprendido mucho y he visto lugares preciosos en Sierra Nevada.",
     "review3_author": "- Samuel López",
     "sponsors_title": "Nuestros valiosos patrocinadores",
-    "contact_title": "Ponte en contacto",
-    "contact_subtitle": "¿Tienes preguntas o quieres unirte? ¡Envíanos un mensaje!",
-    "form_name": "Nombre",
+    "form_name": "Nombre y Apellidos",
     "form_email": "Correo electrónico",
-    "form_message": "Mensaje",
-    "form_submit": "Enviar mensaje",
+    "form_message": "Tu mensaje...",
+    "form_submit": "Enviar Mensaje",
     "features": {
       "feature1_title": "Rutas para todos",
       "feature1_description": "Desde paseos sencillos para familias hasta desafíos de alta montaña para los más experimentados. Siempre hay una aventura esperándote.",
@@ -44,7 +42,10 @@
       "image_alt": "Senderista mirando un mapa"
     },
     "contact": {
-      "background_alt": "Textura de mapa topográfico"
+      "title": "Ponte en Contacto",
+      "subtitle": "¿Tienes preguntas o quieres unirte? ¡Envíanos un mensaje o encuéntranos en Granada!",
+      "form_title": "Envíanos un Mensaje",
+      "map_alt": "Mapa mostrando la ubicación de nuestro club en Granada."
     }
   },
   "WeatherPage": {

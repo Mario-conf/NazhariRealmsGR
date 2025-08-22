@@ -28,12 +28,10 @@
     "review3_text": "\"The guides are experts and the community is very welcoming. I've learned a lot and seen beautiful places in Sierra Nevada.\"",
     "review3_author": "- Samuel López",
     "sponsors_title": "Our valued sponsors",
-    "contact_title": "Get in touch",
-    "contact_subtitle": "Have questions or want to join? Send us a message!",
-    "form_name": "Name",
-    "form_email": "Email",
-    "form_message": "Message",
-    "form_submit": "Send message",
+    "form_name": "Full Name",
+    "form_email": "Email Address",
+    "form_message": "Your message...",
+    "form_submit": "Send Message",
     "features": {
       "feature1_title": "Routes for Everyone",
       "feature1_description": "From easy family walks to challenging high-mountain treks for the most experienced. There's always an adventure waiting for you.",
@@ -44,7 +42,10 @@
       "image_alt": "Hiker looking at a map"
     },
     "contact": {
-      "background_alt": "Topographic map texture"
+      "title": "Get in Touch",
+      "subtitle": "Have questions or want to join? Send us a message or find us in Granada!",
+      "form_title": "Send us a Message",
+      "map_alt": "Map showing our club's location in Granada."
     }
   },
   "WeatherPage": {
