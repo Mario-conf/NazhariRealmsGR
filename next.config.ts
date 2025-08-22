@@ -24,6 +24,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.aemet.es',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.simpleicons.org',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
