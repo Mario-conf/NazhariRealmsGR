@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { StarIcon, ShieldCheck, Mountain, Users, Send, MessageCircle } from 'lucide-react';
+import { StarIcon, ShieldCheck, Mountain, Users, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/navigation';
@@ -196,14 +196,7 @@ export default function Home() {
                 {/* Formulario */}
                 <div>
                   <h3 className="mb-4 text-xl font-semibold">
-                    {t('contact.form_title')}{" "}
-                    <a
-                      href="#"
-                      target="_blank"
-                      className="inline-flex items-center text-green-400 hover:text-green-300"
-                    >
-                      <MessageCircle className="ml-1 h-5 w-5" />
-                    </a>
+                    {t('contact.form_title')}
                   </h3>
 
                   <form className="space-y-4">
