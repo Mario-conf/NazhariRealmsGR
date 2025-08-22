@@ -1,16 +1,17 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
-import { Home, Mail, Phone } from 'lucide-react';
+import { Home, Mail } from 'lucide-react';
 import Image from 'next/image';
+import { FaWhatsapp, FaSpotify, FaStrava, FaInstagram } from "react-icons/fa";
 
 export function Footer() {
   const t = useTranslations('Footer');
 
   const socialLinks = [
-    { name: 'WhatsApp', href: '#!', src: 'https://cdn.simpleicons.org/whatsapp/25D366' },
-    { name: 'Spotify', href: '#!', src: 'https://cdn.simpleicons.org/spotify/1DB954' },
-    { name: 'Strava', href: '#!', src: 'https://cdn.simpleicons.org/strava/FC4C02' },
-    { name: 'Instagram', href: '#!', src: 'https://cdn.simpleicons.org/instagram/E4405F' },
+    { name: 'WhatsApp', href: '#!', Icon: FaWhatsapp, colorClass: 'hover:text-[#25D366]' },
+    { name: 'Spotify', href: '#!', Icon: FaSpotify, colorClass: 'hover:text-[#1DB954]' },
+    { name: 'Strava', href: '#!', Icon: FaStrava, colorClass: 'hover:text-[#FC4C02]' },
+    { name: 'Instagram', href: '#!', Icon: FaInstagram, colorClass: 'hover:text-[#E4405F]' },
   ];
 
   return (
@@ -21,15 +22,16 @@ export function Footer() {
           <span>{t('social_connect')}</span>
         </div>
         <div className="flex justify-center items-center gap-6">
-          {socialLinks.map((link) => (
-            <a href={link.href} key={link.name} className="text-gray-400 hover:opacity-80 transition-opacity">
-              <Image 
-                src={link.src}
-                alt={link.name}
-                width={24}
-                height={24}
-                className="h-6 w-6"
-              />
+          {socialLinks.map(({ name, href, Icon, colorClass }) => (
+            <a 
+              href={href} 
+              key={name} 
+              aria-label={name}
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={`text-gray-400 transition-colors ${colorClass}`}
+            >
+              <Icon size={24} />
             </a>
           ))}
         </div>
@@ -81,9 +83,6 @@ export function Footer() {
             </p>
             <p className="flex items-center justify-center md:justify-start mb-2 text-gray-400 text-sm">
               <Mail className="mr-3 h-5 w-5 flex-shrink-0"/> info@nazharirealms.com
-            </p>
-            <p className="flex items-center justify-center md:justify-start text-gray-400 text-sm">
-              <Phone className="mr-3 h-5 w-5 flex-shrink-0"/> +34 123 456 789
             </p>
           </div>
         </div>
