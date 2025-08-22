@@ -20,7 +20,7 @@ export default function Home() {
   }));
 
   return (
-    <div className="flex-1 bg-gradient-to-b from-orange-50 via-background to-gray-800">
+    <div className="flex-1 bg-gradient-to-b from-orange-100 via-background to-gray-800">
       <section className="w-full py-12 md:py-20 lg:py-24">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-3">
