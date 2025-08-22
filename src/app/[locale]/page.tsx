@@ -15,11 +15,16 @@ import { siteConfig } from '@/lib/site-config';
 export default function Home() {
   const t = useTranslations('HomePage');
 
-  const sponsors = Array.from({ length: 8 }).map((_, index) => ({
-    id: index,
-    src: `https://placehold.co/300x150.png`,
-    alt: `Sponsor Logo ${index + 1}`,
-  }));
+  const sponsors = [
+    { id: 1, src: 'https://cdn.worldvectorlogo.com/logos/the-north-face-1.svg', alt: 'The North Face Logo'},
+    { id: 2, src: 'https://cdn.worldvectorlogo.com/logos/salomon-1.svg', alt: 'Salomon Logo' },
+    { id: 3, src: 'https://cdn.worldvectorlogo.com/logos/garmin.svg', alt: 'Garmin Logo' },
+    { id: 4, src: 'https://logovector.net/wp-content/uploads/2023/07/decathlon-logo-logovector.png', alt: 'Decathlon Logo' },
+    { id: 5, src: 'https://cdn.worldvectorlogo.com/logos/deuter-sport.svg', alt: 'Deuter Logo' },
+    { id: 6, src: 'https://cdn.worldvectorlogo.com/logos/patagonia.svg', alt: 'Patagonia Logo' },
+    { id: 7, src: 'https://cdn.worldvectorlogo.com/logos/columbia-sportswear-company.svg', alt: 'Columbia Sportswear Logo' },
+    { id: 8, src: 'https://www.actualidadiphone.com/wp-content/uploads/2013/03/strava-logo.png', alt: 'Strava Logo' }
+  ];
   
   const features = [
     {
@@ -219,8 +224,8 @@ export default function Home() {
                                 src={sponsor.src}
                                 alt={sponsor.alt}
                                 data-ai-hint="logo empresa"
-                                width={300}
-                                height={150}
+                                width={150}
+                                height={75}
                                 className="object-contain"
                             />
                         </div>
@@ -300,5 +305,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

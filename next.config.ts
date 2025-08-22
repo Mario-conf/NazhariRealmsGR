@@ -61,6 +61,18 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'images.ecestaticos.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.actualidadiphone.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.worldvectorlogo.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'logovector.net',
       }
     ],
   },
