@@ -55,13 +55,16 @@ export async function getWeatherForLocation(
     const municipality = await findMunicipality(parsedInput.data.location);
 
     if (!municipality) {
-      return { error: `Location '${parsedInput.data.location}' not found.` };
+      return { error: `Location '${parsedInput.data.location}' not found. Please try being more specific.` };
     }
 
     const weatherData = await getAemetWeatherData(municipality);
     return weatherData;
   } catch (error) {
     console.error(`Failed to get weather for ${input.location}:`, error);
+    if (error instanceof Error && error.message.includes('socket hang up')) {
+      return { error: 'Could not connect to the weather service. Please try again later.' };
+    }
     const message =
       error instanceof Error ? error.message : 'An unknown error occurred.';
     return { error: message };
