@@ -12,7 +12,16 @@
   "Footer": {
     "copyright": "© 2024 Alpine-Hike Club. Tutti i diritti riservati.",
     "terms": "Termini di servizio",
-    "privacy": "Privacy"
+    "privacy": "Informativa sulla privacy",
+    "social_connect": "Connettiti con noi sui social network:",
+    "company_description": "La tua avventura sulle montagne di Granada e dell'Andalusia inizia qui. Unisciti a una community che vive per la natura.",
+    "useful_links_title": "Link Utili",
+    "legal_title": "Legale",
+    "routes_link": "Percorsi",
+    "rules_link": "Regole del club",
+    "blog_link": "Blog",
+    "reviews_link": "Recensioni attrezzatura",
+    "contact_title": "Contatto"
   },
   "HomePage": {
     "title": "ESPLORA. SOGNA. SCOPRI.",
