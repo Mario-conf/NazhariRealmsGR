@@ -121,6 +121,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'encuestas.juntadeandalucia.es',
+      },
+      {
+        protocol: 'https',
+        hostname: 'latestlogo.com',
       }
     ],
   },
