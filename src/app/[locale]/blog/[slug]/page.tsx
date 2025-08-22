@@ -3,19 +3,34 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User } from 'lucide-react';
+import { notFound } from 'next/navigation';
+import { translateText } from '@/ai/flows/translate-flow';
 
 // This function generates the static paths for each blog post
 export async function generateStaticParams() {
   const { getBlogPosts } = await import('@/lib/blog-data');
   const posts = await getBlogPosts();
- 
+
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string, locale: string } }) {
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { slug: string; locale: string };
+}) {
   const post = await getBlogPost(params.slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  const { translatedText } = await translateText({
+    text: post.content,
+    targetLanguage: params.locale,
+  });
 
   return (
     <article className="container mx-auto max-w-3xl py-8 md:py-12">
@@ -63,7 +78,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string,
           {/* HTML Content */}
           <div
             className="prose prose-lg max-w-none prose-p:text-muted-foreground prose-headings:font-serif prose-headings:text-foreground prose-strong:text-foreground"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: translatedText }}
           />
         </CardContent>
       </Card>
