@@ -117,6 +117,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.fundacionaccesible.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'encuestas.juntadeandalucia.es',
       }
     ],
   },
