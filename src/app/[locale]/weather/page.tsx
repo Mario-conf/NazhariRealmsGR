@@ -8,6 +8,12 @@ import { Input } from '@/components/ui/input';
 import { getWeatherForLocation, WeatherData, WeatherResult } from '@/actions/weather';
 import { SunIcon, ThermometerIcon, WindIcon, Droplets } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
+import type { Metadata } from 'next';
+
+
+// No se puede exportar Metadata en un client component.
+// Esto debe hacerse en el layout o en un server component padre si fuera necesario.
+// Por ahora, el SEO se manejará globalmente en el layout.tsx principal.
 
 export default function WeatherPage() {
   const t = useTranslations('WeatherPage');

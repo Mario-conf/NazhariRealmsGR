@@ -8,6 +8,11 @@ import { TrailDetailsDialog } from '@/components/trail-details-dialog';
 import useFavorites from '@/hooks/use-favorites';
 import { useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+// No se puede exportar Metadata en un client component
+// Esto debe hacerse en el layout o en un server component padre si fuera necesario.
+// Por ahora, el SEO se manejará globalmente en el layout.tsx principal.
 
 export default function RoutesPage() {
   const t = useTranslations('RoutesPage');

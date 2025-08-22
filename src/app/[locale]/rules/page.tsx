@@ -8,6 +8,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle2, Shield, Mountain, Heart } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Reglas y Seguridad',
+  description: 'Nuestras reglas y guías de seguridad para garantizar aventuras seguras y respetuosas con el medio ambiente en la montaña.',
+};
+
 export default function RulesPage() {
   const t = useTranslations('RulesPage');
 
