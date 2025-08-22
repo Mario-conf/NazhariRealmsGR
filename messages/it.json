@@ -9,6 +9,7 @@
   },
   "Footer": {
     "copyright": "© 2024 Nazhari Realms GR. Tutti i diritti riservati.",
+    "copyright_extended": "© 2025 {companyName}. Tutti i diritti riservati. Sviluppato da <developerLink>Albaidex</developerLink>",
     "terms": "Termini di servizio",
     "privacy": "Informativa sulla privacy",
     "social_connect": "Connettiti con noi sui social network:",
@@ -123,7 +124,7 @@
     "lnt4_content": "Adatta i sette principi internazionali: (1) Pianifica in anticipo e minimizza i rifiuti: porta i tuoi rifiuti (inclusa la carta igienica) in un contenitore, evitando di generare rifiuti. (2) Viaggia e accampati su superfici durevoli: rimani sempre sui sentieri segnalati o sulla roccia dura; non calpestare prati sensibili o 'borreguiles'. (3) Smaltisci correttamente i rifiuti: seppellisci i rifiuti organici (a più di 60 m da fonti d'acqua) e usa i servizi disponibili, se presenti. (4) Lascia ciò che trovi: non lasciare nuovi segni o segnali; rispetta rovine, paesaggi ed edifici. (5) Minimizza l'impatto dei falò: se il fuoco non è strettamente consentito, usalo solo nelle aree designate (focolari) e mai in estate; preferisci i fornelli portatili. (6) Rispetta la fauna selvatica: non sradicare piante o allontanare gli animali dai loro habitat. (7) Sii rispettoso degli altri visitatori: controlla il rumore e il tuo passaggio per non disturbare gli altri escursionisti e l'ambiente (ad esempio, parla a bassa voce e cedi il passo sui sentieri stretti).",
     "etiquette_title": "Etichetta di gruppo e condotta del club",
     "etiquette1_title": "Rispetto nel gruppo",
-    "etiquette1_content": "Sii puntuale e ben equipaggiato per ogni uscita. Durante l'escursione, adatta il tuo passo a quello impostato dalla guida (né affrettarti né rimanere indietro). Segui sempre le istruzioni del leader per la sicurezza di tutti. Ogni membro dovrebbe collaborare: ad esempio, dividere le responsabilità (capogruppo, 'portabandiera', ecc.) e prendersi cura l'uno dell'altro. Il comportamento rispettoso tra gli escursionisti include l'aiutare chi ne ha bisogno e mantenere un atteggiamento di supporto su terreni difficili.",
+    "etiquette1_content": "Sii puntuale e ben equipaggiato for ogni uscita. Durante l'escursione, adatta il tuo passo a quello impostato dalla guida (né affrettarti né rimanere indietro). Segui sempre le istruzioni del leader per la sicurezza di tutti. Ogni membro dovrebbe collaborare: ad esempio, dividere le responsabilità (capogruppo, 'portabandiera', ecc.) e prendersi cura l'uno dell'altro. Il comportamento rispettoso tra gli escursionisti include l'aiutare chi ne ha bisogno e mantenere un atteggiamento di supporto su terreni difficili.",
     "etiquette2_title": "Convivenza con altri alpinisti",
     "etiquette2_content": "Sui sentieri stretti, cedi il passo a chi sale e cammina sempre sulla destra sui sentieri affollati. Riduci al minimo il rumore (chiacchiere a bassa voce, silenzio nelle aree sensibili) e lascia spazio nei rifugi e nei punti panoramici. Negli alloggi o nelle aree di sosta, rispetta i turni per l'uso delle strutture (cucina, docce) e pulisci accuratamente prima di partire. In generale, sii gentile con tutti: condividi il percorso con cortesia e preserva un buon rapporto con gli altri alpinisti e l'ambiente locale.",
     "etiquette3_title": "Impegno del club",

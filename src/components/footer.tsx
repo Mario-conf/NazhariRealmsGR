@@ -83,7 +83,12 @@ export function Footer() {
 
       {/* Copyright section */}
       <div className="text-center p-4 text-gray-400 text-xs bg-black/40">
-        <div>© 2025 {siteConfig.name}. Todos los derechos reservados. Desarrollado por <a href='https://www.albaidex.com' className='hover:text-yellow-400 transition-colors'>Albaidex</a></div>
+        <div>
+           {t.rich('copyright_extended', {
+                companyName: siteConfig.name,
+                developerLink: (chunks) => <a href='https://www.albaidex.com' className='hover:text-yellow-400 transition-colors'>{chunks}</a>
+            })}
+        </div>
       </div>
     </footer>
   );

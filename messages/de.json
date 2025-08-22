@@ -9,6 +9,7 @@
   },
   "Footer": {
     "copyright": "© 2024 Nazhari Realms GR. Alle Rechte vorbehalten.",
+    "copyright_extended": "© 2025 {companyName}. Alle Rechte vorbehalten. Entwickelt von <developerLink>Albaidex</developerLink>",
     "terms": "Nutzungsbedingungen",
     "privacy": "Datenschutzrichtlinie",
     "social_connect": "Verbinden Sie sich mit uns in den sozialen Netzwerken:",
