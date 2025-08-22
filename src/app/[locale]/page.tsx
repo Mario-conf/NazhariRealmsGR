@@ -2,13 +2,13 @@
 
 import * as React from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { StarIcon, ShieldCheck, Mountain, Users, MapPin, Mail, Phone, Send, MessageCircle } from 'lucide-react';
+import { StarIcon, ShieldCheck, Mountain, Users, Send, MessageCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/navigation';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 export default function Home() {
   const t = useTranslations('HomePage');
@@ -180,71 +180,71 @@ export default function Home() {
             <p className="mt-4 max-w-3xl mx-auto text-gray-300 md:text-xl">{t('contact.subtitle')}</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Mapa */}
-            <div className="overflow-hidden rounded-2xl border border-white/20 bg-black/30 shadow-lg backdrop-blur-sm h-full">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15901.6678030832!2d-3.603804679672174!3d37.17648795197474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fca43f5de6db%3A0x2c90f854d215b20!2sGranada%2C%20Spain!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-                width="100%"
-                height="100%"
-                loading="lazy"
-                className="min-h-[400px]"
-              ></iframe>
-            </div>
-
-            {/* Formulario */}
-            <div className="rounded-2xl border border-white/20 bg-black/30 p-8 shadow-lg backdrop-blur-sm">
-              <h3 className="mb-4 text-xl font-semibold">
-                {t('contact.form_title')}{" "}
-                <a
-                  href="#"
-                  target="_blank"
-                  className="inline-flex items-center text-green-400 hover:text-green-300"
-                >
-                  <MessageCircle className="ml-1 h-5 w-5" />
-                </a>
-              </h3>
-
-              <form className="space-y-4">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <Input
-                    type="text"
-                    name="fullname"
-                    placeholder={t('form_name')}
-                    required
-                    className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
-                  />
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder={t('form_email')}
-                    required
-                    className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
-                  />
+          <div className="max-w-4xl mx-auto rounded-2xl border border-white/20 bg-black/30 p-6 shadow-lg backdrop-blur-sm">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Mapa */}
+                <div className="overflow-hidden rounded-2xl h-full w-full min-h-[400px]">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15901.6678030832!2d-3.603804679672174!3d37.17648795197474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fca43f5de6db%3A0x2c90f854d215b20!2sGranada%2C%20Spain!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                    width="100%"
+                    height="100%"
+                    loading="lazy"
+                    className="rounded-xl"
+                  ></iframe>
                 </div>
 
-                <Textarea
-                  name="message"
-                  placeholder={t('form_message')}
-                  required
-                  className="h-28 w-full resize-none rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
-                ></Textarea>
+                {/* Formulario */}
+                <div>
+                  <h3 className="mb-4 text-xl font-semibold">
+                    {t('contact.form_title')}{" "}
+                    <a
+                      href="#"
+                      target="_blank"
+                      className="inline-flex items-center text-green-400 hover:text-green-300"
+                    >
+                      <MessageCircle className="ml-1 h-5 w-5" />
+                    </a>
+                  </h3>
 
-                <Button
-                  type="submit"
-                  className="w-full gap-2 rounded-xl"
-                  size="lg"
-                >
-                  <Send className="h-4 w-4" />
-                  {t('form_submit')}
-                </Button>
-              </form>
-            </div>
+                  <form className="space-y-4">
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <Input
+                        type="text"
+                        name="fullname"
+                        placeholder={t('form_name')}
+                        required
+                        className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
+                      />
+                      <Input
+                        type="email"
+                        name="email"
+                        placeholder={t('form_email')}
+                        required
+                        className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
+                      />
+                    </div>
+
+                    <Textarea
+                      name="message"
+                      placeholder={t('form_message')}
+                      required
+                      className="h-28 w-full resize-none rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
+                    ></Textarea>
+
+                    <Button
+                      type="submit"
+                      className="w-full gap-2 rounded-xl"
+                      size="lg"
+                    >
+                      <Send className="h-4 w-4" />
+                      {t('form_submit')}
+                    </Button>
+                  </form>
+                </div>
+              </div>
           </div>
         </div>
       </section>
     </div>
   );
 }
-
-    
