@@ -73,9 +73,43 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'logovector.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.iessansebastian.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse3.mm.bing.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.actu.fr',
+      },
+      {
+        protocol: 'https',
+        hostname: 'thinkmarketingmagazine.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'seekvectorlogo.com',
+      },
+       {
+        protocol: 'https',
+        hostname: 'www.twice.com',
+      },
+       {
+        protocol: 'https',
+        hostname: 'ulefonepty.com',
+      },
+       {
+        protocol: 'https',
+        hostname: 'www.liblogo.com',
       }
     ],
   },
 };
 
 export default withNextIntl(nextConfig);
+
+    
