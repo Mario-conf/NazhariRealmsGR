@@ -97,16 +97,6 @@ export default function RulesPage() {
             </div>
           </CardContent>
         </Card>
-
-        <Card>
-          <CardHeader>
-             <CardTitle className="flex items-center gap-3 font-serif">
-                <Image src="https://www.transparentpng.com/thumb/image/internet-image-transparent-png-a16087.png" alt="Internet Icon" width={24} height={24} className="text-primary" />
-              {t('internet_title')}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4 text-muted-foreground">{t('internet_content')}</CardContent>
-        </Card>
       </div>
     </div>
   );
