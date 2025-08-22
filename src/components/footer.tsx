@@ -84,7 +84,7 @@ export function Footer() {
       </div>
 
       {/* Copyright section */}
-      <div className="text-center p-4 text-gray-400 text-xs">
+      <div className="text-center p-4 text-gray-400 text-xs bg-black/40">
         {t('copyright')}
       </div>
     </footer>
