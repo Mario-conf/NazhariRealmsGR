@@ -15,6 +15,7 @@ export default function LocaleLayout({
   return (
     <NextIntlClientProvider locale={params.locale} messages={messages}>
       <div className="relative flex min-h-dvh flex-col bg-background">
+      <meta name="google-site-verification" content="gREbj8AXK3TcCFaAhaseH8DV__xhBbSP8B9eGgzTiZ4" />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
