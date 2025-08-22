@@ -95,8 +95,8 @@ export default function Home() {
                         <div key={index} className="flex items-start gap-4">
                             <div className="flex-shrink-0">{feature.icon}</div>
                             <div>
-                                <h3 className="text-xl font-bold font-serif text-white">{feature.title}</h3>
-                                <p className="text-gray-300 mt-1">{feature.description}</p>
+                                <h3 className="text-xl font-bold font-serif text-black">{feature.title}</h3>
+                                <p className="text-[#121212] mt-1">{feature.description}</p>
                             </div>
                         </div>
                     ))}
@@ -194,7 +194,7 @@ export default function Home() {
                 </div>
 
                 {/* Formulario */}
-                <div>
+                <div className="flex flex-col justify-center h-full">
                   <h3 className="mb-4 text-2xl font-semibold text-center text-white">
                     {t('contact.form_title')}
                   </h3>
