@@ -189,7 +189,7 @@ export default function Home() {
                     width="100%"
                     height="100%"
                     loading="lazy"
-                    className="rounded-xl"
+                    className="w-full h-full rounded-xl filter grayscale invert transition-all duration-300"
                   ></iframe>
                 </div>
 
