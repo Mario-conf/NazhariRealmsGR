@@ -195,7 +195,7 @@ export default function Home() {
 
                 {/* Formulario */}
                 <div>
-                  <h3 className="mb-4 text-xl font-semibold">
+                  <h3 className="mb-4 text-2xl font-semibold text-center">
                     {t('contact.form_title')}
                   </h3>
 
@@ -241,3 +241,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
