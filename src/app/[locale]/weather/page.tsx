@@ -39,19 +39,17 @@ export default function WeatherPage() {
     setLoading(true);
     setError(null);
     setWeatherData(null);
-    try {
-      const data: WeatherResult = await getWeatherForLocation({ location: searchLocation });
-      if ('error' in data) {
-        setError(getErrorMessage(data));
-      } else {
-        setWeatherData(data);
-      }
-    } catch (err) {
-      setError(t('errors.unknown_error'));
-      console.error(err);
-    } finally {
-      setLoading(false);
+    
+    const data: WeatherResult = await getWeatherForLocation({ location: searchLocation });
+    
+    if ('error' in data) {
+      setError(getErrorMessage(data));
+      setWeatherData(null);
+    } else {
+      setWeatherData(data);
+      setError(null);
     }
+    setLoading(false);
   };
 
   const getDayOfWeek = (dateString: string) => {
@@ -99,76 +97,84 @@ export default function WeatherPage() {
             {loading ? t('search_button_loading') : t('search_button')}
           </Button>
         </div>
-        {error && <p className="mt-2 text-center text-destructive">{error}</p>}
       </div>
 
-      {loading && !weatherData && (
-         <div className="text-center py-12">
-          <p className="text-lg">{t('loading_text', {location})}</p>
-        </div>
-      )}
-
-      {weatherData && (
-        <div className="mt-12 animate-in fade-in duration-500">
-          <Card>
-            <CardHeader>
-              <CardTitle className="font-serif text-center text-3xl">
-                {t('current_weather_title', {city: weatherData.location.city, country: weatherData.location.country})}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="grid grid-cols-2 gap-8 md:grid-cols-4">
-              <div className="flex flex-col items-center gap-2">
-                <ThermometerIcon className="h-10 w-10 text-primary" />
-                <p className="text-4xl font-bold">
-                  {weatherData.current.temperature}°C
-                </p>
-                <p className="text-muted-foreground">{t('temperature')}</p>
-              </div>
-              <div className="flex flex-col items-center gap-2 text-center">
-                <SunIcon className="h-10 w-10 text-primary" />
-                <p className="text-xl font-semibold capitalize">
-                  {getConditionTranslation(weatherData.current.conditionCode)}
-                </p>
-                <p className="text-muted-foreground">{t('condition')}</p>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <WindIcon className="h-10 w-10 text-primary" />
-                <p className="text-2xl font-semibold">
-                  {weatherData.current.windSpeed} km/h
-                </p>
-                <p className="text-muted-foreground">{t('wind')}</p>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <Droplets className="h-10 w-10 text-primary" />
-                <p className="text-2xl font-semibold">
-                  {weatherData.current.humidity}%
-                </p>
-                <p className="text-muted-foreground">{t('humidity')}</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <div className="mt-8">
-            <h2 className="font-serif text-2xl font-bold tracking-tighter text-center">
-              {t('forecast_title')}
-            </h2>
-            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
-              {weatherData.forecast.map((day, index) => (
-                <Card key={index} className="text-center">
-                  <CardHeader>
-                    <CardTitle className="text-lg capitalize">{getDayOfWeek(day.day)}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex flex-col items-center gap-2">
-                    <SunIcon className="h-8 w-8 text-amber-400" />
-                    <p className="text-2xl font-bold">{day.temperature}°C</p>
-                    <p className="text-sm text-muted-foreground capitalize break-words">{getConditionTranslation(day.conditionCode)}</p>
-                  </CardContent>
-                </Card>
-              ))}
+      <div className="mt-12">
+        {loading && (
+            <div className="text-center py-12">
+                <p className="text-lg">{t('loading_text', {location})}</p>
             </div>
-          </div>
-        </div>
-      )}
+        )}
+
+        {error && !loading && (
+            <div className="text-center py-12">
+                 <p className="mt-2 text-center text-destructive text-lg">{error}</p>
+            </div>
+        )}
+
+        {weatherData && !loading && (
+            <div className="animate-in fade-in duration-500">
+            <Card>
+                <CardHeader>
+                <CardTitle className="font-serif text-center text-3xl">
+                    {t('current_weather_title', {city: weatherData.location.city, country: weatherData.location.country})}
+                </CardTitle>
+                </CardHeader>
+                <CardContent className="grid grid-cols-2 gap-8 md:grid-cols-4">
+                <div className="flex flex-col items-center gap-2">
+                    <ThermometerIcon className="h-10 w-10 text-primary" />
+                    <p className="text-4xl font-bold">
+                    {weatherData.current.temperature}°C
+                    </p>
+                    <p className="text-muted-foreground">{t('temperature')}</p>
+                </div>
+                <div className="flex flex-col items-center gap-2 text-center">
+                    <SunIcon className="h-10 w-10 text-primary" />
+                    <p className="text-xl font-semibold capitalize">
+                    {getConditionTranslation(weatherData.current.conditionCode)}
+                    </p>
+                    <p className="text-muted-foreground">{t('condition')}</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                    <WindIcon className="h-10 w-10 text-primary" />
+                    <p className="text-2xl font-semibold">
+                    {weatherData.current.windSpeed} km/h
+                    </p>
+                    <p className="text-muted-foreground">{t('wind')}</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                    <Droplets className="h-10 w-10 text-primary" />
+                    <p className="text-2xl font-semibold">
+                    {weatherData.current.humidity}%
+                    </p>
+                    <p className="text-muted-foreground">{t('humidity')}</p>
+                </div>
+                </CardContent>
+            </Card>
+
+            <div className="mt-8">
+                <h2 className="font-serif text-2xl font-bold tracking-tighter text-center">
+                {t('forecast_title')}
+                </h2>
+                <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
+                {weatherData.forecast.map((day, index) => (
+                    <Card key={index} className="text-center">
+                    <CardHeader>
+                        <CardTitle className="text-lg capitalize">{getDayOfWeek(day.day)}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col items-center gap-2">
+                        <SunIcon className="h-8 w-8 text-amber-400" />
+                        <p className="text-2xl font-bold">{day.temperature}°C</p>
+                        <p className="text-sm text-muted-foreground capitalize break-words">{getConditionTranslation(day.conditionCode)}</p>
+                    </CardContent>
+                    </Card>
+                ))}
+                </div>
+            </div>
+            </div>
+        )}
+      </div>
+
     </div>
   );
 }
