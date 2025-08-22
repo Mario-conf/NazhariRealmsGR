@@ -82,12 +82,16 @@ export default function Home() {
     }
   ];
   const galleryImages = [
-    { src: 'https://placehold.co/600x400.png', hint: 'montaña amanecer', className: 'md:col-span-2' },
-    { src: 'https://placehold.co/400x600.png', hint: 'bosque niebla', className: 'md:row-span-2' },
-    { src: 'https://placehold.co/600x400.png', hint: 'senderista acantilado' },
-    { src: 'https://placehold.co/600x400.png', hint: 'lago reflejo montaña' },
-    { src: 'https://placehold.co/600x400.png', hint: 'equipo senderismo' },
+    { src: 'https://placehold.co/600x800.png', hint: 'senderista cumbre', className: 'md:col-span-2 md:row-span-2' },
+    { src: 'https://placehold.co/600x400.png', hint: 'lago montaña' },
+    { src: 'https://placehold.co/600x400.png', hint: 'bosque niebla' },
+    { src: 'https://placehold.co/600x400.png', hint: 'mapa brújula' },
+    { src: 'https://placehold.co/600x400.png', hint: 'grupo amigos sendero' },
+    { src: 'https://placehold.co/600x800.png', hint: 'cascada selva', className: 'md:col-span-2 md:row-span-2' },
+    { src: 'https://placehold.co/600x400.png', hint: 'tienda campaña noche' },
+    { src: 'https://placehold.co/600x400.png', hint: 'amanecer montañas' },
   ];
+
 
   return (
     <div className="flex-1 bg-gradient-to-b from-papaya-start via-off-white to-footer-dark">
@@ -184,9 +188,9 @@ export default function Home() {
                 <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
                     {t('gallery_title')}
                 </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4 h-[600px]">
                     {galleryImages.map((image, index) => (
-                        <div key={index} className={`relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg group ${image.className}`}>
+                        <div key={index} className={`relative rounded-lg overflow-hidden shadow-lg group ${image.className || ''}`}>
                             <Image
                                 src={image.src}
                                 alt={image.hint}
@@ -296,3 +300,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
