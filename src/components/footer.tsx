@@ -62,9 +62,6 @@ export function Footer() {
           <div>
             <h6 className="uppercase font-bold mb-4">{t('useful_links_title')}</h6>
             <p className="mb-2">
-              <Link href="/routes" className="text-gray-400 hover:text-white text-sm">{t('routes_link')}</Link>
-            </p>
-            <p className="mb-2">
               <Link href="/rules" className="text-gray-400 hover:text-white text-sm">{t('rules_link')}</Link>
             </p>
             <p className="mb-2">
