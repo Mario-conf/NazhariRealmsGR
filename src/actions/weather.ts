@@ -16,6 +16,9 @@ const WeatherInputSchema = z.object({
   location: z.string(),
 });
 
+export type WeatherResult = WeatherData | { error: 'invalid_input' | 'location_not_found' | 'service_unavailable' | 'unknown_error', location?: string };
+
+
 const SPECIAL_CASES: Record<string, string> = {
   'sierra nevada': 'Monachil',
 };
@@ -45,28 +48,28 @@ async function findMunicipality(
 
 export async function getWeatherForLocation(
   input: z.infer<typeof WeatherInputSchema>
-): Promise<WeatherData | { error: string }> {
+): Promise<WeatherResult> {
   const parsedInput = WeatherInputSchema.safeParse(input);
   if (!parsedInput.success) {
-    return { error: 'Invalid input.' };
+    return { error: 'invalid_input' };
   }
 
+  const location = parsedInput.data.location;
+
   try {
-    const municipality = await findMunicipality(parsedInput.data.location);
+    const municipality = await findMunicipality(location);
 
     if (!municipality) {
-      return { error: `Location '${parsedInput.data.location}' not found. Please try being more specific.` };
+      return { error: 'location_not_found', location };
     }
 
     const weatherData = await getAemetWeatherData(municipality);
     return weatherData;
   } catch (error) {
-    console.error(`Failed to get weather for ${input.location}:`, error);
+    console.error(`Failed to get weather for ${location}:`, error);
     if (error instanceof Error && error.message.includes('socket hang up')) {
-      return { error: 'Could not connect to the weather service. Please try again later.' };
+      return { error: 'service_unavailable' };
     }
-    const message =
-      error instanceof Error ? error.message : 'An unknown error occurred.';
-    return { error: message };
+    return { error: 'unknown_error' };
   }
 }

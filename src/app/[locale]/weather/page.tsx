@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { getWeatherForLocation, WeatherData } from '@/actions/weather';
+import { getWeatherForLocation, WeatherData, WeatherResult } from '@/actions/weather';
 import { SunIcon, ThermometerIcon, WindIcon, Droplets } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -16,6 +16,19 @@ export default function WeatherPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const getErrorMessage = (errorResult: { error: string, location?: string }) => {
+    switch (errorResult.error) {
+      case 'location_not_found':
+        return t('errors.location_not_found', { location: errorResult.location });
+      case 'service_unavailable':
+        return t('errors.service_unavailable');
+      case 'unknown_error':
+        return t('errors.unknown_error');
+      default:
+        return t('errors.unknown_error');
+    }
+  }
+
   const handleSearch = async (searchLocation: string) => {
     if (!searchLocation) {
       setError(t('error_location'));
@@ -25,15 +38,14 @@ export default function WeatherPage() {
     setError(null);
     setWeatherData(null);
     try {
-      const data = await getWeatherForLocation({ location: searchLocation });
+      const data: WeatherResult = await getWeatherForLocation({ location: searchLocation });
       if ('error' in data) {
-        setError(data.error);
+        setError(getErrorMessage(data));
       } else {
         setWeatherData(data);
       }
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : t('error_fetch');
-      setError(errorMessage);
+      setError(t('errors.unknown_error'));
       console.error(err);
     } finally {
       setLoading(false);
@@ -72,7 +84,7 @@ export default function WeatherPage() {
             {loading ? t('search_button_loading') : t('search_button')}
           </Button>
         </div>
-        {error && <p className="mt-2 text-center text-red-500">{error}</p>}
+        {error && <p className="mt-2 text-center text-destructive">{error}</p>}
       </div>
 
       {loading && !weatherData && (

@@ -41,7 +41,6 @@
     "search_button": "Rechercher",
     "search_button_loading": "Recherche...",
     "error_location": "Veuillez entrer un lieu.",
-    "error_fetch": "Impossible de récupérer les données météo. Veuillez réessayer.",
     "loading_text": "Chargement des données pour {location}...",
     "current_weather_title": "Météo actuelle à {city}, {country}",
     "temperature": "Température",
@@ -49,7 +48,12 @@
     "wind": "Vent",
     "humidity": "Humidité",
     "forecast_title": "Prévisions à 5 jours",
-    "radar_maps_title": "Cartes Radar"
+    "radar_maps_title": "Cartes Radar",
+    "errors": {
+      "location_not_found": "Lieu '{location}' non trouvé. Veuillez essayer d'être plus précis.",
+      "service_unavailable": "Le service météo est actuellement indisponible. Veuillez réessayer plus tard.",
+      "unknown_error": "Impossible de récupérer les données météo. Veuillez réessayer."
+    }
   },
   "BlogIndexPage": {
     "title": "Le Blog Alpine-Hike",

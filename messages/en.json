@@ -41,7 +41,6 @@
     "search_button": "Search",
     "search_button_loading": "Searching...",
     "error_location": "Please enter a location.",
-    "error_fetch": "Could not fetch weather data. Please try again.",
     "loading_text": "Loading data for {location}...",
     "current_weather_title": "Current weather in {city}, {country}",
     "temperature": "Temperature",
@@ -49,7 +48,12 @@
     "wind": "Wind",
     "humidity": "Humidity",
     "forecast_title": "5-Day Forecast",
-    "radar_maps_title": "Radar Maps"
+    "radar_maps_title": "Radar Maps",
+    "errors": {
+      "location_not_found": "Location '{location}' not found. Please try being more specific.",
+      "service_unavailable": "The weather service is currently unavailable. Please try again later.",
+      "unknown_error": "Could not fetch weather data. Please try again."
+    }
   },
   "BlogIndexPage": {
     "title": "The Alpine-Hike Blog",
