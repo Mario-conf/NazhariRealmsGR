@@ -38,25 +38,49 @@ export default function Home() {
   ];
 
   const reviews = [
-      {
-          text: t('review1_text'),
-          author: t('review1_author'),
-          avatar: 'https://placehold.co/100x100.png',
-          avatarHint: 'hombre sonriendo'
-      },
-      {
-          text: t('review2_text'),
-          author: t('review2_author'),
-          avatar: 'https://placehold.co/100x100.png',
-          avatarHint: 'mujer con mochila'
-      },
-      {
-          text: t('review3_text'),
-          author: t('review3_author'),
-          avatar: 'https://placehold.co/100x100.png',
-          avatarHint: 'hombre en una cumbre'
-      }
-  ]
+    {
+      "nombre": "Laura Gómez",
+      "estrellas": 5,
+      "texto": "Una experiencia increíble, los guías transmiten mucha seguridad y el ambiente del grupo es muy acogedor. Ideal para iniciarse en el senderismo y conocer gente nueva.",
+      "avatar": "/avatar.svg",
+      "avatarHint": "icono de usuario"
+    },
+    {
+      "nombre": "Carlos Martín",
+      "estrellas": 3,
+      "texto": "Las rutas están bien organizadas, aunque a veces se hacen un poco largas para principiantes. Me hubiera gustado más pausas para descansar.",
+      "avatar": "/avatar.svg",
+      "avatarHint": "icono de usuario"
+    },
+    {
+      "nombre": "Ana Rodríguez",
+      "estrellas": 5,
+      "texto": "Excelente club, muy responsables con la seguridad en montaña. Se nota la pasión por la naturaleza. Repetiré sin duda en la próxima salida.",
+      "avatar": "/avatar.svg",
+      "avatarHint": "icono de usuario"
+    },
+    {
+      "nombre": "Miguel Torres",
+      "estrellas": 2,
+      "texto": "El recorrido fue bonito pero había demasiada gente en la excursión y eso dificultó el ritmo. Sería mejor limitar un poco los grupos.",
+      "avatar": "/avatar.svg",
+      "avatarHint": "icono de usuario"
+    },
+    {
+      "nombre": "Sofía Hernández",
+      "estrellas": 4,
+      "texto": "Gran variedad de rutas, desde fáciles hasta de alta montaña. Los organizadores siempre están atentos a todos los detalles. Muy recomendable para quien busque aprender y disfrutar.",
+      "avatar": "/avatar.svg",
+      "avatarHint": "icono de usuario"
+    },
+    {
+      "nombre": "David López",
+      "estrellas": 4,
+      "texto": "Me gustó la caminata, aunque esperaba algo más de información cultural sobre la zona. Aun así, el grupo fue muy agradable y los paisajes espectaculares.",
+      "avatar": "/avatar.svg",
+      "avatarHint": "icono de usuario"
+    }
+  ];
   const galleryImages = [
     { src: 'https://placehold.co/600x400.png', hint: 'montaña amanecer', className: 'md:col-span-2' },
     { src: 'https://placehold.co/400x600.png', hint: 'bosque niebla', className: 'md:row-span-2' },
@@ -136,18 +160,16 @@ export default function Home() {
                                 <CardHeader className="flex flex-row items-center gap-4">
                                     <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
                                     <div>
-                                        <p className="font-semibold text-foreground">{review.author}</p>
+                                        <p className="font-semibold text-foreground">{review.nombre}</p>
                                         <div className="flex items-center gap-0.5">
-                                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
-                                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
-                                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
-                                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
-                                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                                            {[...Array(5)].map((_, i) => (
+                                              <StarIcon key={i} className={`h-5 w-5 ${i < review.estrellas ? 'fill-primary text-primary' : 'fill-muted text-muted-foreground'}`} />
+                                            ))}
                                         </div>
                                     </div>
                                 </CardHeader>
                                 <CardContent>
-                                <p className="text-muted-foreground italic">"{review.text}"</p>
+                                <p className="text-muted-foreground italic">"{review.texto}"</p>
                                 </CardContent>
                             </Card>
                         </div>
