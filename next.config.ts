@@ -1,3 +1,4 @@
+
 import type {NextConfig} from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
  
@@ -52,6 +53,14 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.svgrepo.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'granadanatural.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.ecestaticos.com',
       }
     ],
   },

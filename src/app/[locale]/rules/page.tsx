@@ -7,7 +7,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle2, Shield, Mountain, Heart } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-
+import Image from 'next/image';
 export default function RulesPage() {
   const t = useTranslations('RulesPage');
 
@@ -96,6 +96,16 @@ export default function RulesPage() {
                <p><strong>{t('etiquette3_title')}:</strong> {t('etiquette3_content')}</p>
             </div>
           </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+             <CardTitle className="flex items-center gap-3 font-serif">
+                <Image src="https://www.transparentpng.com/thumb/image/internet-image-transparent-png-a16087.png" alt="Internet Icon" width={24} height={24} className="text-primary" />
+              {t('internet_title')}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 text-muted-foreground">{t('internet_content')}</CardContent>
         </Card>
       </div>
     </div>

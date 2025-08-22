@@ -99,7 +99,7 @@ export default function Home() {
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden bg-transparent">
          <Image
             alt={t('hero_alt')}
-            src="https://placehold.co/1920x1080.png"
+            src="https://granadanatural.com/imagenes/paisajes_fichas/sierra-lujar-desde-la-contraviesa-wl1dsc_1047.jpg"
             data-ai-hint="paisaje montaña épico amanecer"
             fill
             className="object-cover -z-10 brightness-75"
@@ -139,7 +139,7 @@ export default function Home() {
                 <div className="relative aspect-square md:aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
                      <Image
                         alt={t('features.image_alt')}
-                        src="https://placehold.co/600x750.png"
+                        src="https://images.ecestaticos.com/37BtC2qV7E7188eeiimvgqmNdrc=/0x139:2710x1667/1600x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F251%2Fa33%2Ffa4%2F251a33fa465096ed19fe8ba0d7719a77.jpg"
                         data-ai-hint="senderista mapa brújula"
                         fill
                         className="object-cover"
