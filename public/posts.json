@@ -1,35 +1,36 @@
 
 [
   {
-    "slug": "analisis-zapatillas-forclaz-trek-100",
-    "title": "Análisis: Zapatillas de Trekking Forclaz Trek 100",
-    "author": "Juan Pérez",
-    "date": "2023-11-02",
-    "excerpt": "Ponemos a prueba las populares zapatillas Forclaz Trek 100 de Decathlon en los exigentes terrenos de la Sierra de Gredos. ¿Son tan buenas como dicen?",
-    "image": "https://placehold.co/1200/675.png",
-    "imageHint": "zapatillas de trekking en roca",
-    "content": "<h3>Primeras Impresiones</h3><p>Las Forclaz Trek 100 tienen fama de ser duraderas y asequibles. El agarre de la suela CrossContact parece prometedor para los terrenos de nuestra sierra.</p><h3>Comodidad y Ajuste</h3><p>El ajuste es bueno desde el primer momento. Tras largas jornadas en la montaña, no hemos experimentado rozaduras ni molestias significativas. El sistema de lazada es sencillo pero efectivo.</p><h3>Rendimiento y Durabilidad</h3><p>Con una capacidad de resistencia notable, se han comportado bien en terreno seco y rocoso. La impermeabilidad es suficiente para lluvias ligeras, pero pueden no ser la mejor opción para condiciones muy húmedas.</p><h3>El Veredicto</h3><p>Estas zapatillas cumplen lo que prometen. Son una inversión excelente para senderistas que busquen una opción fiable y económica para la mayoría de condiciones que encontramos en España.</p>"
+    "id": 1,
+    "slug": "guia-para-elegir-botas-de-senderismo",
+    "title": "La Guía Definitiva para Elegir tus Próximas Botas de Senderismo",
+    "author": "Elena montañista",
+    "date": "2024-05-10",
+    "image": "https://placehold.co/800x600.png",
+    "imageHint": "fila de botas de senderismo",
+    "tags": ["Equipamiento", "Consejos", "Principiantes"],
+    "content": "<p>Elegir las botas de senderismo adecuadas es el primer paso para cualquier aventura en la montaña. Una mala elección puede arruinar tu día, mientras que el par correcto te llevará a cumbres inimaginables. En este artículo, desglosamos todo lo que necesitas saber: desde el tipo de material hasta el ajuste perfecto.</p><h3>Tipos de Botas</h3><p>Existen principalmente tres categorías: zapatillas de trail running, botas de día y botas de mochilero. Las primeras son ligeras y flexibles, ideales para senderos fáciles. Las botas de día ofrecen más soporte en el tobillo y son perfectas para caminatas moderadas. Finalmente, las botas de mochilero son rígidas y duraderas, diseñadas para terrenos difíciles y cargas pesadas.</p><h3>Claves para un Buen Ajuste</h3><p>Asegúrate de probarte las botas al final del día, cuando tus pies estén ligeramente hinchados. Usa los mismos calcetines que usarías en una caminata y comprueba que haya un espacio del ancho de un pulgar entre tu dedo más largo y la punta de la bota. ¡No debe haber ningún punto de presión!</p>"
   },
   {
-    "slug": "guia-mochila-senderismo",
-    "title": "Guía Esencial para tu Mochila de Senderismo (Los 10 Imprescindibles)",
-    "author": "Equipo Alpine-Hike",
-    "date": "2023-11-15",
-    "excerpt": "Nunca subestimes la importancia de una mochila bien preparada. Te contamos los diez elementos esenciales que no pueden faltar en tus salidas a la montaña para garantizar seguridad y comodidad.",
-    "image": "https://placehold.co/1200/675.png",
-    "imageHint": "mochila senderismo montaña",
-    "content": "<h4>Introducción</h4><p>Preparar la mochila adecuadamente es el primer paso para una jornada de senderismo exitosa y segura. A menudo, el peso y la elección del material pueden marcar la diferencia entre una experiencia inolvidable y un mal día. Aquí te presentamos los diez elementos esenciales que siempre deberían acompañarte.</p><h4>Los 10 Esenciales</h4><ol><li><strong>Navegación:</strong> Un mapa físico de la zona y una brújula son fundamentales. No dependas exclusivamente de tu teléfono; un GPS o un reloj con altímetro son excelentes complementos.</li><li><strong>Protección Solar:</strong> Gafas de sol, crema de alta protección y un gorro o sombrero son cruciales, incluso en días nublados. La altitud intensifica la radiación UV.</li><li><strong>Aislamiento extra:</strong> El tiempo en la montaña es impredecible. Lleva siempre una capa de abrigo adicional (forro polar, chaqueta de plumas ligera) y un impermeable/cortavientos.</li><li><strong>Iluminación:</strong> Un frontal con pilas de repuesto es vital. Puede que planees volver de día, pero un imprevisto puede hacer que la noche se te eche encima.</li><li><strong>Botiquín de Primeros Auxilios:</strong> Prepara un pequeño kit con lo básico: tiritas, desinfectante, gasas, esparadrapo, analgésicos y cualquier medicación personal.</li><li><strong>Fuego:</strong> Un mechero, cerillas impermeables o un pedernal pueden ser vitales en una situación de emergencia para calentarte o hacer señales.</li><li><strong>Herramientas y Reparaciones:</strong> Una navaja multiusos y cinta americana pueden solucionar desde una ampolla hasta la rotura de un bastón.</li><li><strong>Nutrición Extra:</strong> Lleva más comida de la que planeas consumir. Barritas energéticas, frutos secos o geles son opciones ligeras y nutritivas.</li><li><strong>Hidratación Extra:</strong> Calcula al menos 1.5 litros de agua para una jornada de medio día y lleva siempre más de la cuenta. Un sistema de purificación de agua es una gran idea para rutas largas.</li><li><strong>Refugio de Emergencia:</strong> Una manta térmica o un saco de vivac son increíblemente ligeros y pueden salvarte la vida si tienes que pasar una noche a la intemperie.</li></ol><h4>Conclusión</h4><p>Revisa siempre tu mochila antes de salir y adapta estos elementos a la dificultad, duración y meteorología de tu ruta. ¡Una buena preparación es la clave para disfrutar de la montaña con tranquilidad!</p>"
+    "id": 2,
+    "slug": "los-10-imprescindibles-en-tu-mochila",
+    "title": "Los 10 Imprescindibles que No Pueden Faltar en tu Mochila",
+    "author": "Carlos Aventura",
+    "date": "2024-05-22",
+    "image": "https://placehold.co/800x600.png",
+    "imageHint": "mochila de senderismo abierta con equipo",
+    "tags": ["Seguridad", "Equipamiento", "Planificación"],
+    "content": "<p>Preparar la mochila correctamente es un arte y una ciencia. No se trata de llevar de todo, sino de llevar lo correcto. Basado en años de experiencia y alguna que otra situación complicada, he compilado la lista definitiva de los 10 esenciales que siempre deben acompañarte.</p><ol><li><strong>Navegación:</strong> Mapa, brújula y/o GPS.</li><li><strong>Protección solar:</strong> Gafas de sol, gorra y crema solar.</li><li><strong>Aislamiento:</strong> Ropa de abrigo extra, incluso en verano.</li><li><strong>Iluminación:</strong> Linterna frontal y pilas de repuesto.</li><li><strong>Primeros auxilios:</strong> Un kit básico pero completo.</li><li><strong>Fuego:</strong> Mechero, cerillas o un pedernal.</li><li><strong>Herramientas:</strong> Navaja multiusos.</li><li><strong>Nutrición:</strong> Comida extra, más de la que planeas necesitar.</li><li><strong>Hidratación:</strong> Agua extra o un sistema de purificación.</li><li><strong>Refugio de emergencia:</strong> Una manta térmica o un saco de vivac.</li></ol><p>Con estos diez elementos, estarás preparado para casi cualquier eventualidad que la montaña te presente.</p>"
   },
   {
-    "slug": "ruta-pueblos-blancos-cadiz",
-    "title": "Ruta en coche y a pie: Los Pueblos Blancos de Cádiz",
-    "author": "Ana Torres",
-    "date": "2023-10-28",
-    "excerpt": "Descubre la magia de la Sierra de Cádiz a través de sus icónicos Pueblos Blancos. Un viaje que combina cultura, gastronomía y senderos con vistas que te dejarán sin aliento.",
-    "image": "https://placehold.co/1200/675.png",
-    "imageHint": "pueblo blanco andaluz",
-    "content": "<h4>Un viaje al corazón de Andalucía</h4><p>La ruta de los Pueblos Blancos es una de las escapadas más famosas de Andalucía. Estos pueblos, llamados así por la costumbre de sus habitantes de encalar las fachadas, salpican las colinas de la Sierra de Cádiz creando un paisaje de postal. Aunque la ruta se puede hacer en coche, cada pueblo ofrece senderos y paseos que merecen la pena explorar.</p><h4>Pueblos Imprescindibles</h4><ul><li><strong>Arcos de la Frontera:</strong> Considerado la puerta de entrada a la ruta, este pueblo se asienta sobre una peña con vistas espectaculares. Callejear por su casco antiguo es como viajar en el tiempo.</li><li><strong>Grazalema:</strong> Ubicado en el corazón del Parque Natural Sierra de Grazalema, es el lugar más lluvioso de España. Desde aquí parten numerosas rutas de senderismo, como la del Pinsapar.</li><li><strong>Zahara de la Sierra:</strong> Coronado por un castillo nazarí, ofrece una de las vistas más icónicas con su embalse de aguas turquesas. El sendero hasta la torre del castillo es corto pero intenso.</li><li><strong>Setenil de las Bodegas:</strong> Famoso por sus casas-cueva, construidas directamente bajo las rocas. Pasear por las calles 'Cuevas del Sol' y 'Cuevas de la Sombra' es una experiencia única.</li></ul><h4>Gastronomía y Consejos</h4><p>No te vayas sin probar el queso payoyo de Grazalema, el aceite de oliva de Zahara o los dulces de Setenil. La mejor época para hacer la ruta es en primavera u otoño, para evitar el calor del verano y disfrutar de un paisaje vibrante. Planifica al menos 2 o 3 días para poder disfrutar de cada pueblo y de alguna ruta de senderismo sin prisas.</p>"
+    "id": 3,
+    "slug": "fotografia-de-paisajes-en-la-montana",
+    "title": "Consejos para Capturar Fotografías de Paisajes Asombrosas",
+    "author": "Laura Visión",
+    "date": "2024-06-05",
+    "image": "https://placehold.co/800x600.png",
+    "imageHint": "cámara en un trípode frente a un paisaje montañoso",
+    "tags": ["Fotografía", "Hobby", "Naturaleza"],
+    "content": "<p>La montaña ofrece algunos de los paisajes más espectaculares del planeta, y capturarlos en una fotografía es una forma maravillosa de revivir la experiencia. Pero lograr una foto que haga justicia a la vista requiere algo más que apuntar y disparar.</p><h3>La Hora Dorada es tu Mejor Amiga</h3><p>La luz es el ingrediente más importante en la fotografía. Las horas justo después del amanecer y antes del atardecer, conocidas como la 'hora dorada', proporcionan una luz suave y cálida que baña el paisaje en tonos mágicos. Evita las horas centrales del día, cuando la luz es dura y crea sombras poco favorecedoras.</p><h3>Usa un Trípode</h3><p>Para obtener la máxima nitidez, especialmente con poca luz, un trípode es esencial. Te permite usar velocidades de obturación más lentas sin preocuparte por el movimiento de la cámara, capturando detalles increíbles en las sombras y las luces.</p>"
   }
 ]
-
-    

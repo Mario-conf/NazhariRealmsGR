@@ -8,8 +8,19 @@ import { Badge } from '@/components/ui/badge';
 import { Calendar } from 'lucide-react';
 
 export default async function BlogPage() {
-  const t = useTranslations('Blog');
+  const t = useTranslations('BlogPage');
   const posts = await getBlogPosts();
+
+  // Helper to strip HTML for plain text preview
+  const stripHtml = (html: string) => {
+    if (typeof window === 'undefined') {
+        // Cheating on the server side - this is not robust
+        return html.replace(/<[^>]*>?/gm, '');
+    }
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    return doc.body.textContent || "";
+  }
+
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -62,7 +73,7 @@ export default async function BlogPage() {
                 </div>
               </CardHeader>
               <CardContent className="flex-grow p-6 pt-0">
-                <div className="line-clamp-3 text-muted-foreground" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+                <p className="line-clamp-3 text-muted-foreground">{stripHtml(post.content)}</p>
               </CardContent>
               <CardFooter className="p-6 pt-0">
                 <Button asChild className="w-full">
