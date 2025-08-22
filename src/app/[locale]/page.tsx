@@ -57,6 +57,13 @@ export default function Home() {
           avatarHint: 'hombre en una cumbre'
       }
   ]
+  const galleryImages = [
+    { src: 'https://placehold.co/600x400.png', hint: 'montaña amanecer', className: 'md:col-span-2' },
+    { src: 'https://placehold.co/400x600.png', hint: 'bosque niebla', className: 'md:row-span-2' },
+    { src: 'https://placehold.co/600x400.png', hint: 'senderista acantilado' },
+    { src: 'https://placehold.co/600x400.png', hint: 'lago reflejo montaña' },
+    { src: 'https://placehold.co/600x400.png', hint: 'equipo senderismo' },
+  ];
 
   return (
     <div className="flex-1 bg-gradient-to-b from-papaya-start via-off-white to-footer-dark">
@@ -115,35 +122,61 @@ export default function Home() {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl text-foreground">
-            {t('reviews_title')}
-          </h2>
-          <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12">
-            {reviews.map((review, index) => (
-              <Card key={index}>
-                <CardHeader className="flex flex-row items-center gap-4">
-                    <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
-                    <div>
-                        <p className="font-semibold text-foreground">{review.author}</p>
-                         <div className="flex items-center gap-0.5">
-                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
-                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
-                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
-                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
-                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+        <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 overflow-hidden">
+            <div className="container px-4 md:px-6 text-center">
+                 <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground mb-12">
+                    {t('reviews_title')}
+                </h2>
+            </div>
+             <div className="relative w-full max-w-7xl mx-auto">
+                 <div className="flex animate-scroll-infinite-reverse">
+                    {[...reviews, ...reviews, ...reviews].map((review, index) => (
+                         <div key={index} className="flex-shrink-0 w-full max-w-sm p-4">
+                            <Card className="h-full">
+                                <CardHeader className="flex flex-row items-center gap-4">
+                                    <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
+                                    <div>
+                                        <p className="font-semibold text-foreground">{review.author}</p>
+                                        <div className="flex items-center gap-0.5">
+                                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                                        </div>
+                                    </div>
+                                </CardHeader>
+                                <CardContent>
+                                <p className="text-muted-foreground italic">"{review.text}"</p>
+                                </CardContent>
+                            </Card>
                         </div>
-                    </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground italic">"{review.text}"</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+                    ))}
+                 </div>
+             </div>
+        </section>
+
+        {/* Gallery Section */}
+        <section id="gallery" className="w-full py-12 md:py-24 lg:py-32">
+            <div className="container px-4 md:px-6">
+                <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
+                    {t('gallery_title')}
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {galleryImages.map((image, index) => (
+                        <div key={index} className={`relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg group ${image.className}`}>
+                            <Image
+                                src={image.src}
+                                alt={image.hint}
+                                data-ai-hint={image.hint}
+                                fill
+                                className="object-cover transform transition-transform duration-300 group-hover:scale-110"
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
 
       {/* Sponsors Section */}
       <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32">

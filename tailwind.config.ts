@@ -77,12 +77,17 @@ const config = {
         "scroll-infinite": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
+        },
+        "scroll-infinite-reverse": {
+            from: { transform: "translateX(-50%)" },
+            to: { transform: "translateX(0)" },
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "scroll-infinite": "scroll-infinite 40s linear infinite",
+        "scroll-infinite-reverse": "scroll-infinite-reverse 40s linear infinite",
       },
       typography: ({ theme }: { theme: any }) => ({
         DEFAULT: {

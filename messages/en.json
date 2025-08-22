@@ -6,11 +6,10 @@
     "routes": "Routes",
     "rules": "Rules",
     "contact": "Contact",
-    "reviews": "Reviews",
     "selectLanguage": "Select language"
   },
   "Footer": {
-    "copyright": "© 2024 Alpine-Hike Club. All rights reserved.",
+    "copyright": "© 2024 Nazhari Realms GR. All rights reserved.",
     "terms": "Terms of Service",
     "privacy": "Privacy Policy",
     "social_connect": "Get connected with us on social networks:",
@@ -19,7 +18,6 @@
     "routes_link": "Routes",
     "rules_link": "Club Rules",
     "blog_link": "Blog",
-    "reviews_link": "Gear Reviews",
     "contact_title": "Contact"
   },
   "HomePage": {
@@ -36,6 +34,7 @@
     "review3_text": "\"The guides are experts and the community is very welcoming. I've learned a lot and seen beautiful places in Sierra Nevada.\"",
     "review3_author": "- Samuel López",
     "sponsors_title": "Our valued sponsors",
+    "gallery_title": "Moments from Our Adventures",
     "form_name": "Full Name",
     "form_email": "Email Address",
     "form_message": "Your message...",
@@ -232,17 +231,5 @@
     "read_more": "Read More",
     "no_posts_title": "No Posts Yet",
     "no_posts_subtitle": "Check back soon for updates!"
-  },
-  "ReviewsPage": {
-    "title": "Product Reviews",
-    "subtitle": "Honest analysis of gear and equipment from our community.",
-    "read_more": "Read Full Review",
-    "no_reviews_title": "No Reviews Yet",
-    "no_reviews_subtitle": "Check back soon for updates!"
-  },
-  "ReviewDetailsPage": {
-    "summary_title": "Summary",
-    "pros_title": "Pros",
-    "cons_title": "Cons"
   }
 }

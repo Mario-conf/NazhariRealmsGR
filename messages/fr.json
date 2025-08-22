@@ -6,11 +6,10 @@
     "routes": "Itinéraires",
     "rules": "Règles",
     "contact": "Contact",
-    "reviews": "Avis",
     "selectLanguage": "Sélectionner la langue"
   },
   "Footer": {
-    "copyright": "© 2024 Alpine-Hike Club. Tous droits réservés.",
+    "copyright": "© 2024 Nazhari Realms GR. Tous droits réservés.",
     "terms": "Conditions d'utilisation",
     "privacy": "Politique de confidentialité",
     "social_connect": "Connectez-vous avec nous sur les réseaux sociaux:",
@@ -19,7 +18,6 @@
     "routes_link": "Itinéraires",
     "rules_link": "Règles du club",
     "blog_link": "Blog",
-    "reviews_link": "Avis sur l'équipement",
     "contact_title": "Contact"
   },
   "HomePage": {
@@ -36,6 +34,7 @@
     "review3_text": "\"Les guides sont des experts et la communauté est très accueillante. J'ai beaucoup appris et j'ai vu des endroits magnifiques dans la Sierra Nevada.\"",
     "review3_author": "- Samuel López",
     "sponsors_title": "Nos précieux sponsors",
+    "gallery_title": "Moments de nos aventures",
     "form_name": "Nom complet",
     "form_email": "Adresse e-mail",
     "form_message": "Votre message...",
@@ -232,17 +231,5 @@
     "read_more": "Lire la suite",
     "no_posts_title": "Aucun article pour le moment",
     "no_posts_subtitle": "Revenez bientôt pour des mises à jour !"
-  },
-  "ReviewsPage": {
-    "title": "Avis sur les produits",
-    "subtitle": "Analyses honnêtes de matériel et d'équipement par notre communauté.",
-    "read_more": "Lire l'avis complet",
-    "no_reviews_title": "Aucun avis pour le moment",
-    "no_reviews_subtitle": "Revenez bientôt pour des mises à jour !"
-  },
-  "ReviewDetailsPage": {
-    "summary_title": "Résumé",
-    "pros_title": "Avantages",
-    "cons_title": "Inconvénients"
   }
 }

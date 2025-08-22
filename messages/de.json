@@ -6,11 +6,10 @@
     "routes": "Routen",
     "rules": "Regeln",
     "contact": "Kontakt",
-    "reviews": "Bewertungen",
     "selectLanguage": "Sprache auswählen"
   },
   "Footer": {
-    "copyright": "© 2024 Alpine-Hike Club. Alle Rechte vorbehalten.",
+    "copyright": "© 2024 Nazhari Realms GR. Alle Rechte vorbehalten.",
     "terms": "Nutzungsbedingungen",
     "privacy": "Datenschutzrichtlinie",
     "social_connect": "Verbinden Sie sich mit uns in den sozialen Netzwerken:",
@@ -19,7 +18,6 @@
     "routes_link": "Routen",
     "rules_link": "Clubregeln",
     "blog_link": "Blog",
-    "reviews_link": "Ausrüstungsbewertungen",
     "contact_title": "Kontakt"
   },
   "HomePage": {
@@ -36,6 +34,7 @@
     "review3_text": "\"Die Führer sind Experten und die Gemeinschaft ist sehr herzlich. Ich habe viel gelernt und wunderschöne Orte in der Sierra Nevada gesehen.\"",
     "review3_author": "- Samuel López",
     "sponsors_title": "Unsere geschätzten Sponsoren",
+    "gallery_title": "Momente unserer Abenteuer",
     "form_name": "Vollständiger Name",
     "form_email": "E-Mail-Adresse",
     "form_message": "Ihre Nachricht...",
@@ -232,17 +231,5 @@
     "read_more": "Weiterlesen",
     "no_posts_title": "Noch keine Beiträge",
     "no_posts_subtitle": "Schauen Sie bald wieder vorbei für Updates!"
-  },
-  "ReviewsPage": {
-    "title": "Produktbewertungen",
-    "subtitle": "Ehrliche Analysen von Ausrüstung und Material aus unserer Community.",
-    "read_more": "Ganze Bewertung lesen",
-    "no_reviews_title": "Noch keine Bewertungen",
-    "no_reviews_subtitle": "Schauen Sie bald wieder vorbei für Updates!"
-  },
-  "ReviewDetailsPage": {
-    "summary_title": "Zusammenfassung",
-    "pros_title": "Vorteile",
-    "cons_title": "Nachteile"
   }
 }
