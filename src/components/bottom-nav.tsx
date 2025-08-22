@@ -8,8 +8,8 @@ import { useTranslations } from 'next-intl';
 const navItems = [
   { href: '/', icon: Home, label: 'Home' },
   { href: '/routes', icon: Map, label: 'Routes' },
-  { href: '/reviews', icon: Star, label: 'Reviews'},
   { href: '/rules', icon: ScrollText, label: 'Rules' },
+  { href: '/blog', icon: CloudSun, label: 'Blog' },
 ];
 
 export function BottomNav() {
@@ -22,10 +22,8 @@ export function BottomNav() {
         return 'Inicio'; // Or a key like t('nav.home')
       case 'Routes':
         return t('routes');
-      case 'Reviews':
-        return t('reviews');
-      case 'Weather':
-        return t('weather');
+      case 'Blog':
+        return t('blog');
       case 'Rules':
         return t('rules');
       default:

@@ -16,7 +16,7 @@ export function Header() {
       >
         <MountainIcon className="h-6 w-6" />
         <span className="font-semibold hidden sm:inline-block">
-          Alpine-Hike Club
+          Nazhari Realms GR
         </span>
       </Link>
       <nav className="ml-auto hidden md:flex items-center gap-4 lg:gap-6">
@@ -31,12 +31,6 @@ export function Header() {
           href="/blog"
         >
           {t('blog')}
-        </Link>
-        <Link
-          className="text-sm font-medium hover:underline underline-offset-4"
-          href="/reviews"
-        >
-          {t('reviews')}
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"

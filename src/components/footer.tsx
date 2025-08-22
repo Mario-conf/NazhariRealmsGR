@@ -35,7 +35,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <h6 className="uppercase font-bold mb-4 flex items-center justify-center md:justify-start gap-2">
               <MountainIcon />
-              Alpine-Hike Club
+              Nazhari Realms GR
             </h6>
             <p className="text-gray-400 text-sm">
               {t('company_description')}
@@ -53,9 +53,6 @@ export function Footer() {
             </p>
             <p className="mb-2">
               <Link href="/blog" className="text-gray-400 hover:text-white text-sm">{t('blog_link')}</Link>
-            </p>
-             <p className="mb-2">
-              <Link href="/reviews" className="text-gray-400 hover:text-white text-sm">{t('reviews_link')}</Link>
             </p>
             <p className="mb-2">
               <a href="#!" className="text-gray-400 hover:text-white text-sm">{t('privacy')}</a>
