@@ -97,9 +97,9 @@ export default function WeatherPage() {
                 </p>
                 <p className="text-muted-foreground">{t('temperature')}</p>
               </div>
-              <div className="flex flex-col items-center gap-2">
+              <div className="flex flex-col items-center gap-2 text-center">
                 <SunIcon className="h-10 w-10 text-primary" />
-                <p className="text-2xl font-semibold text-center">
+                <p className="text-xl font-semibold capitalize">
                   {weatherData.current.condition}
                 </p>
                 <p className="text-muted-foreground">{t('condition')}</p>
@@ -129,12 +129,12 @@ export default function WeatherPage() {
               {weatherData.forecast.map((day, index) => (
                 <Card key={index} className="text-center">
                   <CardHeader>
-                    <CardTitle className="text-lg">{day.day}</CardTitle>
+                    <CardTitle className="text-lg capitalize">{day.day}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col items-center gap-2">
                     <SunIcon className="h-8 w-8 text-amber-400" />
                     <p className="text-2xl font-bold">{day.temperature}°C</p>
-                    <p className="text-muted-foreground">{day.condition}</p>
+                    <p className="text-muted-foreground capitalize">{day.condition}</p>
                   </CardContent>
                 </Card>
               ))}

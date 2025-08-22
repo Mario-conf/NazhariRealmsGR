@@ -28,10 +28,13 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
     const today = validatedWeather.prediccion.dia[0];
     const forecastDays = validatedWeather.prediccion.dia.slice(1, 6);
 
-    const dayOfWeek = (dateString: string) => new Date(dateString).toLocaleDateString('es-ES', { weekday: 'long' });
+    const dayOfWeek = (dateString: string, locale: string = 'es-ES') => new Date(dateString).toLocaleDateString(locale, { weekday: 'long' });
 
     // Find the wind data for the whole day if available, otherwise take the first available period
     const windToday = today.viento.find(v => !v.periodo || v.periodo.length === 0) || today.viento[0];
+    
+    // Find the weather condition for the main part of the day, or fallback to the first available.
+    const conditionToday = today.estadoCielo.find(e => e.periodo === "12-24") ?? today.estadoCielo.find(e => e.periodo === "00-24") ?? today.estadoCielo[0];
 
     return {
       location: {
@@ -40,15 +43,18 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
       },
       current: {
         temperature: Math.round((today.temperatura.maxima + today.temperatura.minima) / 2),
-        condition: today.estadoCielo.find(e => e.periodo === "00-24")?.descripcion ?? today.estadoCielo[0].descripcion,
+        condition: conditionToday.descripcion,
         windSpeed: windToday.velocidad,
         humidity: Math.round((today.humedadRelativa.maxima + today.humedadRelativa.minima) / 2),
       },
-      forecast: forecastDays.map((day) => ({
-        day: dayOfWeek(day.fecha),
-        temperature: Math.round((day.temperatura.maxima + day.temperatura.minima) / 2),
-        condition: day.estadoCielo.find(e => e.periodo === "00-24")?.descripcion ?? day.estadoCielo[0].descripcion,
-      })),
+      forecast: forecastDays.map((day) => {
+        const conditionForecast = day.estadoCielo.find(e => e.periodo === "12-24") ?? day.estadoCielo.find(e => e.periodo === "00-24") ?? day.estadoCielo[0];
+        return {
+         day: dayOfWeek(day.fecha),
+         temperature: Math.round((day.temperatura.maxima + day.temperatura.minima) / 2),
+         condition: conditionForecast.descripcion,
+        }
+      }),
     };
   } catch (error) {
     console.error('Error processing AEMET data:', error);
