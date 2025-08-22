@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/navigation';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { siteConfig } from '@/lib/site-config';
 
 export default function Home() {
   const t = useTranslations('HomePage');
@@ -42,52 +43,52 @@ export default function Home() {
       "nombre": "Laura Gómez",
       "estrellas": 5,
       "texto": "Una experiencia increíble, los guías transmiten mucha seguridad y el ambiente del grupo es muy acogedor. Ideal para iniciarse en el senderismo y conocer gente nueva.",
-      "avatar": "/avatar.svg",
-      "avatarHint": "icono de usuario"
+      "avatar": "https://placehold.co/56x56.png",
+      "avatarHint": "mujer sonriendo"
     },
     {
       "nombre": "Carlos Martín",
       "estrellas": 3,
       "texto": "Las rutas están bien organizadas, aunque a veces se hacen un poco largas para principiantes. Me hubiera gustado más pausas para descansar.",
-      "avatar": "/avatar.svg",
-      "avatarHint": "icono de usuario"
+      "avatar": "https://placehold.co/56x56.png",
+      "avatarHint": "hombre con barba"
     },
     {
       "nombre": "Ana Rodríguez",
       "estrellas": 5,
       "texto": "Excelente club, muy responsables con la seguridad en montaña. Se nota la pasión por la naturaleza. Repetiré sin duda en la próxima salida.",
-      "avatar": "/avatar.svg",
-      "avatarHint": "icono de usuario"
+      "avatar": "https://placehold.co/56x56.png",
+      "avatarHint": "mujer con gafas"
     },
     {
       "nombre": "Miguel Torres",
       "estrellas": 2,
       "texto": "El recorrido fue bonito pero había demasiada gente en la excursión y eso dificultó el ritmo. Sería mejor limitar un poco los grupos.",
-      "avatar": "/avatar.svg",
-      "avatarHint": "icono de usuario"
+      "avatar": "https://placehold.co/56x56.png",
+      "avatarHint": "hombre joven"
     },
     {
       "nombre": "Sofía Hernández",
       "estrellas": 4,
       "texto": "Gran variedad de rutas, desde fáciles hasta de alta montaña. Los organizadores siempre están atentos a todos los detalles. Muy recomendable para quien busque aprender y disfrutar.",
-      "avatar": "/avatar.svg",
-      "avatarHint": "icono de usuario"
+      "avatar": "https://placehold.co/56x56.png",
+      "avatarHint": "mujer pelo rizado"
     },
     {
       "nombre": "David López",
       "estrellas": 4,
       "texto": "Me gustó la caminata, aunque esperaba algo más de información cultural sobre la zona. Aun así, el grupo fue muy agradable y los paisajes espectaculares.",
-      "avatar": "/avatar.svg",
-      "avatarHint": "icono de usuario"
+      "avatar": "https://placehold.co/56x56.png",
+      "avatarHint": "hombre con gorra"
     }
   ];
   
   const galleryImages = [
-    { src: 'https://placehold.co/600x800.png', hint: 'senderista cumbre', className: 'md:col-span-2 md:row-span-2' },
-    { src: 'https://placehold.co/600x400.png', hint: 'lago montaña' },
-    { src: 'https://placehold.co/600x400.png', hint: 'bosque niebla' },
-    { src: 'https://placehold.co/600x400.png', hint: 'mapa brújula' },
-    { src: 'https://placehold.co/600x400.png', hint: 'grupo amigos sendero' },
+    { src: 'https://placehold.co/600x600.png', hint: 'senderista cumbre', className: 'md:col-span-2 md:row-span-2' },
+    { src: 'https://placehold.co/300x300.png', hint: 'lago montaña' },
+    { src: 'https://placehold.co/300x300.png', hint: 'bosque niebla' },
+    { src: 'https://placehold.co/300x300.png', hint: 'mapa brújula' },
+    { src: 'https://placehold.co/300x300.png', hint: 'grupo amigos sendero' },
   ];
 
 
@@ -137,7 +138,7 @@ export default function Home() {
                 <div className="relative aspect-square md:aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
                      <Image
                         alt={t('features.image_alt')}
-                        src="https://placehold.co/600x800.png"
+                        src="https://placehold.co/600x750.png"
                         data-ai-hint="senderista mapa brújula"
                         fill
                         className="object-cover"

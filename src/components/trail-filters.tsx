@@ -11,7 +11,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
-import { trails, Trail } from '@/lib/trail-data';
+import type { Trail } from '@/lib/trail-data';
 import { ListRestart, Heart, Search, SlidersHorizontal } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 import { useTranslations } from 'next-intl';
@@ -25,6 +25,7 @@ import { Checkbox } from './ui/checkbox';
 import { Slider } from './ui/slider';
 
 interface TrailFiltersProps {
+  allTrails: Trail[];
   onFilterChange: (filteredTrails: Trail[]) => void;
   favorites: number[];
 }
@@ -36,21 +37,30 @@ const TERRAINS: Trail['terrain'][] = [
  'Coastal',
   'Desert',
 ];
-const MAX_DURATION = Math.ceil(Math.max(...trails.map((t) => t.duration)));
 
-export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
+export function TrailFilters({ allTrails, onFilterChange, favorites }: TrailFiltersProps) {
   const t = useTranslations('TrailFilters');
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedDifficulties, setSelectedDifficulties] = React.useState<
     string[]
   >([]);
   const [selectedTerrains, setSelectedTerrains] = React.useState<string[]>([]);
-  const [durationRange, setDurationRange] = React.useState([0, MAX_DURATION]);
+  const [durationRange, setDurationRange] = React.useState([0, 100]);
   const [sortOrder, setSortOrder] = React.useState('rating-desc');
   const [showOnlyFavorites, setShowOnlyFavorites] = React.useState(false);
 
+  const maxDuration = React.useMemo(() => {
+    if (allTrails.length === 0) return 100;
+    return Math.ceil(Math.max(...allTrails.map((t) => t.duration)));
+  }, [allTrails]);
+
+  React.useEffect(() => {
+    // Initialize duration range once trails are loaded
+    setDurationRange([0, maxDuration]);
+  }, [maxDuration]);
+
   const filterAndSortTrails = React.useCallback(() => {
-    let filtered = trails;
+    let filtered = allTrails;
 
     if (showOnlyFavorites) {
       filtered = filtered.filter((trail) => favorites.includes(trail.id));
@@ -83,7 +93,7 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
     );
 
     const [sortBy, order] = sortOrder.split('-');
-    filtered.sort((a, b) => {
+    const sorted = [...filtered].sort((a, b) => {
       let valA, valB;
       switch (sortBy) {
         case 'rating':
@@ -104,8 +114,9 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
       return order === 'asc' ? valA - valB : valB - valA;
     });
 
-    onFilterChange(filtered);
+    onFilterChange(sorted);
   }, [
+    allTrails,
     searchTerm,
     selectedDifficulties,
     selectedTerrains,
@@ -140,7 +151,7 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
     setSearchTerm('');
     setSelectedDifficulties([]);
     setSelectedTerrains([]);
-    setDurationRange([0, MAX_DURATION]);
+    setDurationRange([0, maxDuration]);
     setSortOrder('rating-desc');
     setShowOnlyFavorites(false);
   };
@@ -235,7 +246,7 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
                         <Label className="text-base">{t('duration_label')}</Label>
                         <Slider
                         min={0}
-                        max={MAX_DURATION}
+                        max={maxDuration}
                         step={1}
                         value={durationRange}
                         onValueChange={setDurationRange}

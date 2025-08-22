@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { trails, Trail } from '@/lib/trail-data';
+import type { Trail } from '@/lib/trail-data';
 import { TrailCard } from '@/components/trail-card';
 import { TrailFilters } from '@/components/trail-filters';
 import { TrailDetailsDialog } from '@/components/trail-details-dialog';
@@ -11,9 +11,20 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export default function RoutesPage() {
   const t = useTranslations('RoutesPage');
-  const [filteredTrails, setFilteredTrails] = React.useState<Trail[]>(trails);
+  const [allTrails, setAllTrails] = React.useState<Trail[]>([]);
+  const [filteredTrails, setFilteredTrails] = React.useState<Trail[]>([]);
   const [selectedTrail, setSelectedTrail] = React.useState<Trail | null>(null);
   const { favorites, toggleFavorite } = useFavorites();
+
+  React.useEffect(() => {
+    fetch('/data/trails.json')
+      .then((res) => res.json())
+      .then((data) => {
+        // The json file has a root "trails" property
+        setAllTrails(data.trails);
+        setFilteredTrails(data.trails);
+      });
+  }, []);
 
   const handleSelectTrail = (trail: Trail) => {
     setSelectedTrail(trail);
@@ -26,6 +37,11 @@ export default function RoutesPage() {
   const handleToggleFavorite = (e: React.MouseEvent, trailId: number) => {
     e.stopPropagation();
     toggleFavorite(trailId);
+  }
+
+  if (allTrails.length === 0) {
+    // Optional: add a loading skeleton here
+    return <div className="container mx-auto px-4 py-8 text-center">Cargando rutas...</div>
   }
 
   return (
@@ -44,7 +60,7 @@ export default function RoutesPage() {
           <div className="container mx-auto p-0">
              <Card>
                 <CardContent className="p-4 md:p-6">
-                    <TrailFilters onFilterChange={setFilteredTrails} favorites={favorites} />
+                    <TrailFilters allTrails={allTrails} onFilterChange={setFilteredTrails} favorites={favorites} />
                 </CardContent>
             </Card>
           </div>

@@ -2,17 +2,10 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import { Home, Mail } from 'lucide-react';
 import Image from 'next/image';
-import { FaWhatsapp, FaSpotify, FaStrava, FaInstagram } from "react-icons/fa6";
+import { siteConfig } from '@/lib/site-config';
 
 export function Footer() {
   const t = useTranslations('Footer');
-
-  const socialLinks = [
-    { name: 'WhatsApp', href: '#!', Icon: FaWhatsapp, colorClass: 'hover:text-[#25D366]' },
-    { name: 'Spotify', href: '#!', Icon: FaSpotify, colorClass: 'hover:text-[#1DB954]' },
-    { name: 'Strava', href: '#!', Icon: FaStrava, colorClass: 'hover:text-[#FC4C02]' },
-    { name: 'Instagram', href: '#!', Icon: FaInstagram, colorClass: 'hover:text-[#E4405F]' },
-  ];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -22,7 +15,7 @@ export function Footer() {
           <span>{t('social_connect')}</span>
         </div>
         <div className="flex justify-center items-center gap-6">
-          {socialLinks.map(({ name, href, Icon, colorClass }) => (
+          {siteConfig.socialLinks.map(({ name, href, Icon, colorClass }) => (
             <a 
               href={href} 
               key={name} 
@@ -44,14 +37,14 @@ export function Footer() {
           <div className="md:col-span-1">
             <h6 className="uppercase font-bold mb-4 flex items-center justify-center md:justify-start gap-2">
               <Image 
-                src="https://placehold.co/100x100.png" 
+                src={siteConfig.logo} 
                 alt="Club Logo"
                 width={24}
                 height={24}
                 className="h-6 w-6 rounded-full"
-                data-ai-hint="logo club"
+                data-ai-hint={siteConfig.logoHint}
               />
-              Nazhari Realms GR
+              {siteConfig.name}
             </h6>
             <p className="text-gray-400 text-sm">
               {t('company_description')}

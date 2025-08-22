@@ -5,6 +5,7 @@ import { Link } from '@/navigation';
 import { LanguageSwitcher } from './language-switcher';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import Image from 'next/image';
+import { siteConfig } from '@/lib/site-config';
 
 export function Header() {
   const t = useTranslations('Header');
@@ -22,15 +23,15 @@ export function Header() {
         href="/"
       >
         <Image 
-          src="https://placehold.co/100x100.png" 
+          src={siteConfig.logo}
           alt="Club Logo"
           width={40}
           height={40}
           className="h-10 w-10 rounded-full"
-          data-ai-hint="logo club"
+          data-ai-hint={siteConfig.logoHint}
         />
         <span className="font-semibold hidden sm:inline-block">
-          Nazhari Realms GR
+          {siteConfig.name}
         </span>
       </Link>
       
@@ -68,14 +69,14 @@ export function Header() {
                     className="flex items-center gap-2 text-lg font-semibold mb-4"
                 >
                     <Image 
-                      src="https://placehold.co/100x100.png" 
+                      src={siteConfig.logo} 
                       alt="Club Logo"
                       width={40}
                       height={40}
                       className="h-10 w-10 rounded-full"
-                      data-ai-hint="logo club"
+                      data-ai-hint={siteConfig.logoHint}
                     />
-                    <span>Nazhari Realms GR</span>
+                    <span>{siteConfig.name}</span>
                 </Link>
                 {navLinks.map((link) => (
                     <SheetClose asChild key={link.href}>
