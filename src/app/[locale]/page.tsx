@@ -17,7 +17,7 @@ export default function Home() {
 
   const sponsors = [
     { id: 1, src: 'https://i0.wp.com/tc-waalwijk.nl/wp-content/uploads/2018/01/Strava-Logo.png?w=600&ssl=1', alt: 'Logo'},
-    { id: 2, src: 'https://www.iessansebastian.com/web/wp-content/uploads/2021/07/ced_horizontal-300x75.png', alt: 'Logo' },
+    { id: 2, src: 'https://www.fundacionaccesible.org/wp-content/uploads/2021/05/logo-junta-andalucia-educacion-y-deporte-rectangulo.png', alt: 'Logo' },
     { id: 3, src: 'https://tse3.mm.bing.net/th/id/OIP.gitPYpYsWGJUecokH3jNDQHaCh?rs=1&pid=ImgDetMain&o=7&rm=3', alt: 'Logo' },
     { id: 4, src: 'https://logos-world.net/wp-content/uploads/2020/01/Decathlon-Logo.png', alt: ' Logo' },
     { id: 5, src: 'https://thinkmarketingmagazine.com/wp-content/uploads/2022/08/Amazon_logo.svg.png', alt: ' Logo' },
