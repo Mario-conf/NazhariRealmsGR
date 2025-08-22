@@ -7,7 +7,7 @@ export function Footer() {
   const t = useTranslations('Footer');
 
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Social media section */}
       <div className="flex justify-center items-center lg:justify-between p-4 border-b border-gray-700">
         <div className="mr-12 hidden lg:block">
