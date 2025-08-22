@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { StarIcon, ShieldCheck, Mountain, Users, MapPin, Mail, Phone } from 'lucide-react';
+import { StarIcon, ShieldCheck, Mountain, Users, MapPin, Mail, Phone, Send, MessageCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/navigation';
@@ -122,7 +122,7 @@ export default function Home() {
           </h2>
           <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12">
             {reviews.map((review, index) => (
-              <Card key={index} className="bg-card/80 backdrop-blur-sm">
+              <Card key={index}>
                 <CardHeader className="flex flex-row items-center gap-4">
                     <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
                     <div>
@@ -173,38 +173,78 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 text-white">
-          <div className="container px-4 md:px-6">
-              <div className="text-center mb-12">
-                  <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t('contact.title')}</h2>
-                  <p className="mt-4 max-w-3xl mx-auto text-gray-300 md:text-xl">{t('contact.subtitle')}</p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                  <div className="h-96 md:h-full w-full rounded-lg overflow-hidden">
-                     <Image
-                          src="https://placehold.co/800x600.png"
-                          data-ai-hint="mapa ubicación granada"
-                          alt={t('contact.map_alt')}
-                          width={800}
-                          height={600}
-                          className="w-full h-full object-cover"
-                      />
-                  </div>
-                  <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-lg shadow-2xl">
-                      <h3 className="font-serif text-2xl font-bold mb-6">{t('contact.form_title')}</h3>
-                      <form className="space-y-4">
-                          <div className="grid sm:grid-cols-2 gap-4">
-                            <Input placeholder={t('form_name')} type="text" className="bg-gray-900/80 border-gray-700 text-white placeholder:text-gray-400" />
-                            <Input placeholder={t('form_email')} type="email" className="bg-gray-900/80 border-gray-700 text-white placeholder:text-gray-400" />
-                          </div>
-                          <Textarea placeholder={t('form_message')} rows={5} className="bg-gray-900/80 border-gray-700 text-white placeholder:text-gray-400" />
-                          <Button type="submit" className="w-full" size="lg">{t('form_submit')}</Button>
-                      </form>
-                  </div>
-              </div>
+      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 text-white">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t('contact.title')}</h2>
+            <p className="mt-4 max-w-3xl mx-auto text-gray-300 md:text-xl">{t('contact.subtitle')}</p>
           </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Mapa */}
+            <div className="overflow-hidden rounded-2xl border border-white/20 bg-black/30 shadow-lg backdrop-blur-sm h-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15901.6678030832!2d-3.603804679672174!3d37.17648795197474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fca43f5de6db%3A0x2c90f854d215b20!2sGranada%2C%20Spain!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                width="100%"
+                height="100%"
+                loading="lazy"
+                className="min-h-[400px]"
+              ></iframe>
+            </div>
+
+            {/* Formulario */}
+            <div className="rounded-2xl border border-white/20 bg-black/30 p-8 shadow-lg backdrop-blur-sm">
+              <h3 className="mb-4 text-xl font-semibold">
+                {t('contact.form_title')}{" "}
+                <a
+                  href="#"
+                  target="_blank"
+                  className="inline-flex items-center text-green-400 hover:text-green-300"
+                >
+                  <MessageCircle className="ml-1 h-5 w-5" />
+                </a>
+              </h3>
+
+              <form className="space-y-4">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <Input
+                    type="text"
+                    name="fullname"
+                    placeholder={t('form_name')}
+                    required
+                    className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
+                  />
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder={t('form_email')}
+                    required
+                    className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
+                  />
+                </div>
+
+                <Textarea
+                  name="message"
+                  placeholder={t('form_message')}
+                  required
+                  className="h-28 w-full resize-none rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
+                ></Textarea>
+
+                <Button
+                  type="submit"
+                  className="w-full gap-2 rounded-xl"
+                  size="lg"
+                >
+                  <Send className="h-4 w-4" />
+                  {t('form_submit')}
+                </Button>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
 }
+
+    
