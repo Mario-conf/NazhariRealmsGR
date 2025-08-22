@@ -83,15 +83,6 @@
     "72": "Schneeregen",
     "73": "Starker Schneeregen"
   },
-  "BlogIndexPage": {
-    "title": "Der Alpine-Hike Blog",
-    "subtitle": "Geschichten, Analysen und Anleitungen aus unserer Abenteurer-Community.",
-    "read_more": "Weiterlesen →"
-  },
-  "BlogPostPage": {
-    "back_to_blog": "Zurück zum Blog",
-    "published_on": "Veröffentlicht am {date} von {author}"
-  },
   "RoutesPage": {
     "title": "Entdecken Sie unsere Routen",
     "subtitle": "Finden Sie Ihr nächstes Abenteuer. Nutzen Sie die Filter, um den perfekten Weg für Sie zu entdecken.",

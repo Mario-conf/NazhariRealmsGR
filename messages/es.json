@@ -83,15 +83,6 @@
     "72": "Nuboso con lluvia y nieve",
     "73": "Muy nuboso con lluvia y nieve"
   },
-  "BlogIndexPage": {
-    "title": "El Blog de Alpine-Hike",
-    "subtitle": "Historias, análisis y guías de nuestra comunidad de aventureros.",
-    "read_more": "Leer Más →"
-  },
-  "BlogPostPage": {
-    "back_to_blog": "Volver al Blog",
-    "published_on": "Publicado el {date} por {author}"
-  },
   "RoutesPage": {
     "title": "Explora Nuestras Rutas",
     "subtitle": "Encuentra tu próxima aventura. Usa los filtros para descubrir la ruta perfecta para ti.",

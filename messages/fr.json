@@ -83,15 +83,6 @@
     "72": "Giboulées",
     "73": "Fortes giboulées"
   },
-  "BlogIndexPage": {
-    "title": "Le Blog Alpine-Hike",
-    "subtitle": "Histoires, analyses et guides de notre communauté d'aventuriers.",
-    "read_more": "Lire la suite →"
-  },
-  "BlogPostPage": {
-    "back_to_blog": "Retour au blog",
-    "published_on": "Publié le {date} par {author}"
-  },
   "RoutesPage": {
     "title": "Explorez nos itinéraires",
     "subtitle": "Trouvez votre prochaine aventure. Utilisez les filtres pour découvrir le sentier parfait pour vous.",

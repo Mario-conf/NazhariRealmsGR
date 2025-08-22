@@ -83,15 +83,6 @@
     "72": "Nevischio",
     "73": "Forte nevischio"
   },
-  "BlogIndexPage": {
-    "title": "Il Blog di Alpine-Hike",
-    "subtitle": "Storie, analisi e guide dalla nostra comunità di avventurieri.",
-    "read_more": "Leggi di più →"
-  },
-  "BlogPostPage": {
-    "back_to_blog": "Torna al Blog",
-    "published_on": "Pubblicato il {date} da {author}"
-  },
   "RoutesPage": {
     "title": "Esplora i nostri percorsi",
     "subtitle": "Trova la tua prossima avventura. Usa i filtri per scoprire il sentiero perfetto per te.",

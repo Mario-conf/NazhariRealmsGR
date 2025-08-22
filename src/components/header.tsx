@@ -23,12 +23,6 @@ export function Header() {
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="/blog"
-        >
-          {t('blog')}
-        </Link>
-        <Link
-          className="text-sm font-medium hover:underline underline-offset-4"
           href="/routes"
         >
           {t('routes')}

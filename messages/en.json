@@ -83,15 +83,6 @@
     "72": "Sleet",
     "73": "Heavy Sleet"
   },
-  "BlogIndexPage": {
-    "title": "The Alpine-Hike Blog",
-    "subtitle": "Stories, analysis, and guides from our community of adventurers.",
-    "read_more": "Read More →"
-  },
-  "BlogPostPage": {
-    "back_to_blog": "Back to Blog",
-    "published_on": "Published on {date} by {author}"
-  },
   "RoutesPage": {
     "title": "Explore Our Routes",
     "subtitle": "Find your next adventure. Use the filters to discover the perfect trail for you.",
