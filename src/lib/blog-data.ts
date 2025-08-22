@@ -44,14 +44,42 @@ const blogPosts: BlogPost[] = [
     image: 'https://placehold.co/1200x675.png',
     imageHint: 'botas senderismo roca',
     content: `
-      <h2>Primeras Impresiones</h2>
-      <p>Las Forclaz Trek 100 tienen fama de ser duraderas y asequibles. El agarre de la suela CrossContact parece prometedor para los terrenos de nuestra sierra.</p>
+      <h2>Análisis a Fondo de las Forclaz Trek 100</h2>
+      <p>En el mundo del senderismo, encontrar un calzado que equilibre calidad, durabilidad y precio es el santo grial. Las zapatillas de trekking <strong>Forclaz Trek 100 de Decathlon</strong> han generado mucho interés por su promesa de ser una opción robusta y económica. Para comprobar si están a la altura de su fama, las hemos sometido a una prueba intensiva de tres días por los variados terrenos de la Sierra de Huétor, en Granada.</p>
+      
+      <h3>Especificaciones Técnicas</h3>
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr>
+            <th class="border-b-2 p-2">Característica</th>
+            <th class="border-b-2 p-2">Detalle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border-b p-2">Tipo de Caña</td><td class="border-b p-2">Media-Alta</td></tr>
+          <tr><td class="border-b p-2">Impermeabilidad</td><td class="border-b p-2">Membrana impermeable y transpirable (hasta 8 km de marcha bajo la lluvia)</td></tr>
+          <tr><td class="border-b p-2">Suela</td><td class="border-b p-2">Goma CrossContact con tacos de 4 mm</td></tr>
+          <tr><td class="border-b p-2">Peso</td><td class="border-b p-2">Aproximadamente 480 g por zapatilla (talla 43)</td></tr>
+          <tr><td class="border-b p-2">Protección</td><td class="border-b p-2">Refuerzo de goma en la puntera para protección contra piedras</td></tr>
+        </tbody>
+      </table>
+
       <h3>Comodidad y Ajuste</h3>
-      <p>El ajuste es bueno desde el primer momento. Tras largas jornadas en la montaña, no hemos experimentado rozaduras ni molestias significativas. El sistema de lazada es sencillo pero efectivo.</p>
-      <h3>Rendimiento y Durabilidad</h3>
-      <p>Con una capacidad de resistencia notable, se han comportado bien en terreno seco y rocoso. La impermeabilidad es suficiente para lluvias ligeras, pero pueden no ser la mejor opción para condiciones muy húmedas.</p>
-      <h2>El Veredicto</h2>
-      <p>Estas zapatillas cumplen lo que prometen. Son una inversión excelente para senderistas que busquen una opción fiable y económica para la mayoría de condiciones que encontramos en España.</p>
+      <p>Una de las mayores sorpresas fue la comodidad desde el primer uso. A diferencia de otras botas más rígidas, las Forclaz Trek 100 requieren muy poco tiempo de adaptación. El interior es acolchado y el sistema de lazada, aunque sencillo, permite un ajuste seguro y firme que sujeta bien el tobillo, un aspecto crucial para prevenir torceduras en terrenos irregulares. Tras una jornada de 20 km, no aparecieron ampollas ni puntos de presión molestos.</p>
+      
+      <h3>Rendimiento en Terreno</h3>
+      <p>El comportamiento de la suela <strong>CrossContact</strong> es, sin duda, uno de sus puntos fuertes. </p>
+      <ul>
+        <li><strong>Terreno Seco y Rocoso:</strong> El agarre es excelente. En las subidas y bajadas por los senderos calizos de la sierra, la tracción fue fiable y dio mucha seguridad.</li>
+        <li><strong>Zonas de Barro y Humedad:</strong> Aquí mostraron un rendimiento decente, aunque los tacos de 4 mm pueden acumular algo de barro si es muy denso. La membrana impermeable, sin embargo, cumplió su función a la perfección al cruzar pequeños arroyos, manteniendo los pies completamente secos.</li>
+        <li><strong>Transpirabilidad:</strong> A pesar de ser impermeables, la transpirabilidad es aceptable. En un clima como el de Andalucía, en días de calor moderado, el pie no se sintió excesivamente sudado.</li>
+      </ul>
+      
+      <h3>Durabilidad y Veredicto Final</h3>
+      <p>Tras la travesía, las zapatillas apenas mostraban signos de desgaste, más allá de la suciedad esperable. El refuerzo de la puntera aguantó bien los inevitables golpes con rocas. En resumen, las Forclaz Trek 100 no son solo unas zapatillas para principiantes; son una opción increíblemente sólida para cualquier senderista de nivel intermedio que busque un calzado fiable para rutas de varios días sin tener que hacer un gran desembolso.</p>
+      <p><strong>Lo mejor:</strong> Su increíble relación calidad-precio, la comodidad inmediata y la fiabilidad de la suela en la mayoría de terrenos.</p>
+      <p><strong>A mejorar:</strong> Podrían tener problemas en condiciones de barro muy extremo y, para los puristas, pueden ser un poco pesadas en comparación con modelos de gama alta.</p>
+      <p>Sin duda, una recomendación del club para quienes quieren explorar las montañas andaluzas con confianza y sin vaciar la cartera.</p>
     `,
   },
   {
