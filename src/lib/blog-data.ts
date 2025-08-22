@@ -5,6 +5,8 @@ export interface BlogPost {
   date: string;
   excerpt: string;
   content: string;
+  image: string;
+  imageHint: string;
 }
 
 const blogPosts: BlogPost[] = [
@@ -15,6 +17,8 @@ const blogPosts: BlogPost[] = [
     date: '26 de Octubre, 2023',
     excerpt:
       '¿Acabas de empezar en el mundo del senderismo? Aquí tienes cinco rutas impresionantes y asequibles en Sierra Nevada para empezar con buen pie.',
+    image: 'https://placehold.co/1200x675.png',
+    imageHint: 'paisaje montaña sendero',
     content: `
       <h2>Introducción</h2>
       <p>Sierra Nevada puede ser imponente, pero está llena de senderos perfectos para quienes se inician en el senderismo. Esta guía te mostrará cinco de nuestros favoritos en la zona de Granada.</p>
@@ -37,6 +41,8 @@ const blogPosts: BlogPost[] = [
     date: '2 de Noviembre, 2023',
     excerpt:
       "¿Son las Forclaz Trek 100 de Decathlon una buena opción para nuestras rutas por Andalucía? Las hemos puesto a prueba en una travesía de 3 días.",
+    image: 'https://placehold.co/1200x675.png',
+    imageHint: 'botas senderismo roca',
     content: `
       <h2>Primeras Impresiones</h2>
       <p>Las Forclaz Trek 100 tienen fama de ser duraderas y asequibles. El agarre de la suela CrossContact parece prometedor para los terrenos de nuestra sierra.</p>
@@ -55,6 +61,8 @@ const blogPosts: BlogPost[] = [
     date: '10 de Noviembre, 2023',
     excerpt:
       'El senderismo responsable significa proteger nuestros espacios naturales. Conoce las reglas básicas para minimizar tu impacto en la montaña.',
+    image: 'https://placehold.co/1200x675.png',
+    imageHint: 'montañero señal sendero',
     content: `
       <h2>Por Qué Es Importante</h2>
       <p>A medida que más gente descubre el placer de la naturaleza, nuestro impacto colectivo crece. Seguir unos principios básicos es crucial para preservar la naturaleza para futuras generaciones.</p>

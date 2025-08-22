@@ -1,8 +1,9 @@
 import { getBlogPost } from '@/lib/blog-data';
 import { notFound } from 'next/navigation';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Calendar, User } from 'lucide-react';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const t = useTranslations('BlogPostPage');
@@ -13,24 +14,46 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <article className="container mx-auto max-w-3xl px-4 py-8 md:py-12">
-      <Link
-        href="/blog"
-        className="mb-8 inline-flex items-center gap-2 text-primary hover:underline"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        {t('back_to_blog')}
-      </Link>
-      <header className="mb-8">
-        <h1 className="font-serif text-4xl font-extrabold tracking-tight lg:text-5xl">
+    <article className="container mx-auto max-w-4xl px-4 py-8 md:py-16">
+      <div className="mb-8">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          {t('back_to_blog')}
+        </Link>
+      </div>
+      <header className="mb-8 md:mb-12 text-center">
+        <h1 className="font-serif text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl !leading-tight">
           {post.title}
         </h1>
-        <p className="mt-2 text-lg text-muted-foreground">
-          {t('published_on', {date: post.date, author: post.author})}
-        </p>
+        <div className="mt-4 flex items-center justify-center gap-6 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+                <User className="h-4 w-4"/>
+                <span>{post.author}</span>
+            </div>
+            <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4"/>
+                <time dateTime={post.date}>{post.date}</time>
+            </div>
+        </div>
       </header>
+
+      <div className="relative mb-8 md:mb-12">
+        <Image
+          src={post.image}
+          alt={post.title}
+          width={1200}
+          height={675}
+          data-ai-hint={post.imageHint}
+          className="w-full h-auto aspect-video object-cover rounded-2xl shadow-lg"
+          priority
+        />
+      </div>
+
       <div
-        className="prose prose-lg dark:prose-invert max-w-none"
+        className="prose prose-lg dark:prose-invert max-w-none mx-auto"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </article>
