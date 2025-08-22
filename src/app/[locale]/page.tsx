@@ -225,8 +225,8 @@ export default function Home() {
                                 src={sponsor.src}
                                 alt={sponsor.alt}
                                 data-ai-hint="logo empresa"
-                                width={160}
-                                height={90}
+                                width={180}
+                                height={100}
                                 className="object-contain"
                             />
                         </div>
