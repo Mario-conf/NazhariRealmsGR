@@ -119,7 +119,7 @@ export default function Home() {
                    {t('subtitle')}
                 </p>
                 <div className="mt-8">
-                    <Button asChild size="lg">
+                    <Button asChild size="lg" variant="secondary">
                         <Link href="/routes">{t('explore_routes')}</Link>
                     </Button>
                 </div>
