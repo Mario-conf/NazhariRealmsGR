@@ -81,6 +81,7 @@ export default function Home() {
       "avatarHint": "icono de usuario"
     }
   ];
+  
   const galleryImages = [
     { src: 'https://placehold.co/600x800.png', hint: 'senderista cumbre', className: 'md:col-span-2 md:row-span-2' },
     { src: 'https://placehold.co/600x400.png', hint: 'lago montaña' },
