@@ -109,7 +109,7 @@
     "subtitle": "I nostri principi per avventure sicure, rispettose e indimenticabili. Si prega di leggere attentamente prima della prima uscita.",
     "safety_title": "La sicurezza prima di tutto: le tue responsabilità",
     "safety1_title": "Attrezzatura essenziale",
-    "safety1_content": "Porta sempre con te i 'dieci essenziali' adattati all'ambiente andaluso. Ciò include navigazione (mappa, bussola o GPS), illuminazione (lampada frontale e batterie di ricambio), un kit di primo soccorso di base, protezione solare (occhiali da sole, cappello e crema solare) e abbigliamento a strati appropriato (strati impermeabili e caldi) per improvvisi sbalzi di temperatura. Altri elementi vitali sono una riserva di acqua e cibo, un fischietto, un coltello multiuso e scarponi e calze da trekking robusti. In breve, prepara lo zaino con tutto il necessario per essere al sicuro e a proprio agio nella Sierra Nevada o su qualsiasi percorso andaluso.",
+    "safety1_content": "Porta sempre con te i 'dieci essenziali' adattati all'ambiente andaluso. Ciò include navigazione (mappa, bussola o GPS), illuminazione (lampada frontale e batterie di ricambio), un kit di primo soccorso di base, protezione solare (occhiali da sole, cappello e crema solare) e abbigliamento a strati appropriato (strati impermeabili e caldi) for improvvisi sbalzi di temperatura. Altri elementi vitali sono una riserva di acqua e cibo, un fischietto, un coltello multiuso e scarponi e calze da trekking robusti. In breve, prepara lo zaino con tutto il necessario per essere al sicuro e a proprio agio nella Sierra Nevada o su qualsiasi percorso andaluso.",
     "safety2_title": "Pianificazione e meteorologia",
     "safety2_content": "Consulta sempre le fonti ufficiali di previsioni meteorologiche (ad es. il sito web/l'app AEMET) prima di partire e posticipa il viaggio se il tempo cambia. In Andalusia e in alta montagna, il tempo può peggiorare rapidamente, quindi tieniti informato su rovesci, nebbia o tempeste. Pianifica il percorso in dettaglio (chilometri, dislivello, punti d'acqua, rifugi) e porta con te mappe o un'app per l'escursionismo. Si consiglia di informare un familiare o un amico del tuo piano di percorso e dell'orario di ritorno previsto in modo che possano allertare i servizi di emergenza se non torni. Per una maggiore sicurezza, puoi anche utilizzare app mobili per l'assistenza in montagna (ad es. Alpify, che invia la tua posizione alle squadre di soccorso).",
     "safety3_title": "Procedure di emergenza",
@@ -225,5 +225,19 @@
     "read_more": "Leggi di più",
     "no_posts_title": "Ancora nessun post",
     "no_posts_subtitle": "Torna presto per gli aggiornamenti!"
+  },
+  "PrivacyPage": {
+    "title": "Informativa sulla privacy",
+    "p1": "Questo è un segnaposto per l'Informativa sulla privacy. Questo testo dovrebbe essere sostituito con l'informativa sulla privacy effettiva del sito web.",
+    "p2": "Dovrebbe dettagliare i tipi di dati raccolti dagli utenti, come vengono utilizzati questi dati e con chi vengono condivisi.",
+    "p3": "Inoltre, dovrebbe spiegare i diritti che gli utenti hanno sui propri dati, come il diritto di accedere, correggere o cancellare le proprie informazioni personali.",
+    "p4": "Assicurati di rispettare tutte le normative sulla protezione dei dati pertinenti come GDPR, CCPA, ecc."
+  },
+  "TermsPage": {
+    "title": "Termini di servizio",
+    "p1": "Questo è un segnaposto per i Termini di servizio. Questo testo dovrebbe essere sostituito con i termini e le condizioni effettivi per l'utilizzo del sito web.",
+    "p2": "Questo documento dovrebbe delineare le regole e le linee guida per la condotta degli utenti, i diritti di proprietà intellettuale e le limitazioni di responsabilità.",
+    "p3": "Si tratta di un accordo legale tra il proprietario del sito web e gli utenti. È importante che sia definito chiaramente per proteggere entrambe le parti.",
+    "p4": "Consulta un professionista legale per redigere un documento di Termini di servizio completo e legalmente valido."
   }
 }

@@ -55,10 +55,10 @@ export function Footer() {
               <Link href="/blog" className="text-gray-400 hover:text-white text-sm">{t('blog_link')}</Link>
             </p>
             <p className="mb-2">
-              <a href="#!" className="text-gray-400 hover:text-white text-sm">{t('privacy')}</a>
+              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm">{t('privacy')}</Link>
             </p>
             <p>
-              <a href="#!" className="text-gray-400 hover:text-white text-sm">{t('terms')}</a>
+              <Link href="/terms" className="text-gray-400 hover:text-white text-sm">{t('terms')}</Link>
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export function Footer() {
               <Home className="mr-3 h-5 w-5 flex-shrink-0"/> Granada, España
             </p>
             <p className="flex items-center justify-center md:justify-start mb-2 text-gray-400 text-sm">
-              <Mail className="mr-3 h-5 w-5 flex-shrink-0"/> info@alpinehike.com
+              <Mail className="mr-3 h-5 w-5 flex-shrink-0"/> info@nazharirealms.com
             </p>
             <p className="flex items-center justify-center md:justify-start text-gray-400 text-sm">
               <Phone className="mr-3 h-5 w-5 flex-shrink-0"/> +34 123 456 789

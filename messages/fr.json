@@ -225,5 +225,19 @@
     "read_more": "Lire la suite",
     "no_posts_title": "Aucun article pour le moment",
     "no_posts_subtitle": "Revenez bientôt pour des mises à jour !"
+  },
+  "PrivacyPage": {
+    "title": "Politique de confidentialité",
+    "p1": "Ceci est un espace réservé pour la Politique de confidentialité. Ce texte doit être remplacé par la politique de confidentialité réelle du site Web.",
+    "p2": "Elle doit détailler les types de données collectées auprès des utilisateurs, la manière dont ces données sont utilisées et avec qui elles sont partagées.",
+    "p3": "De plus, elle doit expliquer les droits des utilisateurs sur leurs données, tels que le droit d'accès, de rectification ou de suppression de leurs informations personnelles.",
+    "p4": "Assurez-vous de vous conformer à toutes les réglementations de protection des données pertinentes telles que le RGPD, le CCPA, etc."
+  },
+  "TermsPage": {
+    "title": "Conditions d'utilisation",
+    "p1": "Ceci est un espace réservé pour les Conditions d'utilisation. Ce texte doit être remplacé par les conditions générales réelles d'utilisation du site Web.",
+    "p2": "Ce document doit décrire les règles et directives relatives à la conduite des utilisateurs, aux droits de propriété intellectuelle et aux limitations de responsabilité.",
+    "p3": "Il s'agit d'un accord juridique entre le propriétaire du site Web et les utilisateurs. Il est important que cela soit clairement défini pour protéger les deux parties.",
+    "p4": "Consultez un professionnel du droit pour rédiger un document de conditions d'utilisation complet et juridiquement solide."
   }
 }

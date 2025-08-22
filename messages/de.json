@@ -225,5 +225,19 @@
     "read_more": "Weiterlesen",
     "no_posts_title": "Noch keine Beiträge",
     "no_posts_subtitle": "Schauen Sie bald wieder vorbei für Updates!"
+  },
+  "PrivacyPage": {
+    "title": "Datenschutzrichtlinie",
+    "p1": "Dies ist ein Platzhalter für die Datenschutzrichtlinie. Dieser Text sollte durch die tatsächliche Datenschutzrichtlinie der Website ersetzt werden.",
+    "p2": "Sie sollte die Arten der von den Nutzern erhobenen Daten, deren Verwendung und Weitergabe detailliert beschreiben.",
+    "p3": "Darüber hinaus sollte sie die Rechte der Nutzer in Bezug auf ihre Daten erläutern, wie z. B. das Recht auf Zugang, Berichtigung oder Löschung ihrer persönlichen Daten.",
+    "p4": "Stellen Sie sicher, dass alle relevanten Datenschutzbestimmungen wie DSGVO, CCPA usw. eingehalten werden."
+  },
+  "TermsPage": {
+    "title": "Nutzungsbedingungen",
+    "p1": "Dies ist ein Platzhalter für die Nutzungsbedingungen. Dieser Text sollte durch die tatsächlichen Nutzungsbedingungen der Website ersetzt werden.",
+    "p2": "Dieses Dokument sollte die Regeln und Richtlinien für das Nutzerverhalten, die Rechte an geistigem Eigentum und die Haftungsbeschränkungen darlegen.",
+    "p3": "Es handelt sich um eine rechtliche Vereinbarung zwischen dem Website-Betreiber und den Nutzern. Es ist wichtig, dies klar zu definieren, um beide Parteien zu schützen.",
+    "p4": "Konsultieren Sie einen Rechtsexperten, um ein umfassendes und rechtssicheres Dokument mit den Nutzungsbedingungen zu erstellen."
   }
 }

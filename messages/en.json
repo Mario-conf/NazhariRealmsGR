@@ -225,5 +225,19 @@
     "read_more": "Read More",
     "no_posts_title": "No Posts Yet",
     "no_posts_subtitle": "Check back soon for updates!"
+  },
+  "PrivacyPage": {
+    "title": "Privacy Policy",
+    "p1": "This is a placeholder for the Privacy Policy. This text should be replaced with the actual privacy policy of the website.",
+    "p2": "It should detail the types of data collected from users, how this data is used, and with whom it is shared.",
+    "p3": "Furthermore, it should explain the rights users have over their data, such as the right to access, correct, or delete their personal information.",
+    "p4": "Make sure to comply with all relevant data protection regulations like GDPR, CCPA, etc."
+  },
+  "TermsPage": {
+    "title": "Terms of Service",
+    "p1": "This is a placeholder for the Terms of Service. This text should be replaced with the actual terms and conditions for using the website.",
+    "p2": "This document should outline the rules and guidelines for user conduct, intellectual property rights, and limitations of liability.",
+    "p3": "It's a legal agreement between the website owner and the users. It's important to have this clearly defined to protect both parties.",
+    "p4": "Consult with a legal professional to draft a comprehensive and legally sound Terms of Service document."
   }
 }

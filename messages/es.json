@@ -225,5 +225,19 @@
     "read_more": "Leer Más",
     "no_posts_title": "Aún no hay entradas",
     "no_posts_subtitle": "¡Vuelve pronto para ver las novedades!"
+  },
+  "PrivacyPage": {
+    "title": "Política de Privacidad",
+    "p1": "Este es un marcador de posición para la Política de Privacidad. Este texto debe ser reemplazado con la política de privacidad real del sitio web.",
+    "p2": "Debe detallar los tipos de datos recopilados de los usuarios, cómo se utilizan estos datos y con quién se comparten.",
+    "p3": "Además, debe explicar los derechos que los usuarios tienen sobre sus datos, como el derecho a acceder, corregir o eliminar su información personal.",
+    "p4": "Asegúrese de cumplir con todas las regulaciones de protección de datos pertinentes como GDPR, CCPA, etc."
+  },
+  "TermsPage": {
+    "title": "Términos de Servicio",
+    "p1": "Este es un marcador de posición para los Términos de Servicio. Este texto debe ser reemplazado con los términos y condiciones reales para usar el sitio web.",
+    "p2": "Este documento debe describir las reglas y directrices para la conducta del usuario, los derechos de propiedad intelectual y las limitaciones de responsabilidad.",
+    "p3": "Es un acuerdo legal entre el propietario del sitio web y los usuarios. Es importante tener esto claramente definido para proteger a ambas partes.",
+    "p4": "Consulte con un profesional legal para redactar un documento de Términos de Servicio completo y legalmente sólido."
   }
 }
