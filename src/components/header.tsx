@@ -1,4 +1,4 @@
-import { MountainIcon, Menu } from 'lucide-react';
+import { MountainIcon, Menu, Phone } from 'lucide-react';
 import { Button } from './ui/button';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
@@ -14,7 +14,7 @@ export function Header() {
         <MountainIcon className="h-6 w-6" />
         <span className="font-semibold hidden sm:inline-block">Alpine-Hike Club</span>
       </Link>
-      <nav className="ml-auto hidden md:flex items-center gap-4 sm:gap-6">
+      <nav className="ml-auto hidden md:flex items-center gap-4 lg:gap-6">
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
           href="/weather"
@@ -44,7 +44,13 @@ export function Header() {
         </Button>
         <LanguageSwitcher />
       </nav>
-      <div className="ml-auto flex items-center md:hidden">
+      <div className="ml-auto flex items-center md:hidden gap-2">
+         <Button asChild size="icon" variant="ghost">
+          <Link href="/#contact">
+            <Phone className="h-5 w-5" />
+            <span className="sr-only">{t('contact')}</span>
+          </Link>
+        </Button>
         <LanguageSwitcher />
       </div>
     </header>
