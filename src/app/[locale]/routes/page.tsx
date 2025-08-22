@@ -7,6 +7,7 @@ import { TrailFilters } from '@/components/trail-filters';
 import { TrailDetailsDialog } from '@/components/trail-details-dialog';
 import useFavorites from '@/hooks/use-favorites';
 import { useTranslations } from 'next-intl';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function RoutesPage() {
   const t = useTranslations('RoutesPage');
@@ -30,43 +31,48 @@ export default function RoutesPage() {
   return (
     <>
       <div className="container mx-auto px-4 py-8">
-        <header className="mb-12 text-center">
+        <header className="mb-8 text-center">
           <h1 className="font-serif text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl">
             {t('title')}
           </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
+          <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl">
             {t('subtitle')}
           </p>
         </header>
+        
+        <aside className="mb-12 sticky top-16 z-30 bg-background/80 backdrop-blur-sm -mx-4 px-4 py-4 border-b">
+          <div className="container mx-auto p-0">
+             <Card>
+                <CardContent className="p-4 md:p-6">
+                    <TrailFilters onFilterChange={setFilteredTrails} favorites={favorites} />
+                </CardContent>
+            </Card>
+          </div>
+        </aside>
 
-        <main className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12">
-          <aside className="sticky top-20 h-fit">
-            <TrailFilters onFilterChange={setFilteredTrails} favorites={favorites} />
-          </aside>
-          <section>
-            {filteredTrails.length > 0 ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                {filteredTrails.map((trail) => (
-                  <TrailCard
-                    key={trail.id}
-                    trail={trail}
-                    onSelect={() => handleSelectTrail(trail)}
-                    isFavorite={favorites.includes(trail.id)}
-                    onToggleFavorite={(e) => handleToggleFavorite(e, trail.id)}
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="flex flex-col items-center justify-center h-96 border-2 border-dashed rounded-lg">
-                <p className="text-xl font-semibold text-muted-foreground">
-                  {t('no_results_title')}
-                </p>
-                <p className="text-muted-foreground">
-                  {t('no_results_subtitle')}
-                </p>
-              </div>
-            )}
-          </section>
+        <main>
+          {filteredTrails.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              {filteredTrails.map((trail) => (
+                <TrailCard
+                  key={trail.id}
+                  trail={trail}
+                  onSelect={() => handleSelectTrail(trail)}
+                  isFavorite={favorites.includes(trail.id)}
+                  onToggleFavorite={(e) => handleToggleFavorite(e, trail.id)}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-col items-center justify-center h-96 border-2 border-dashed rounded-lg text-center p-4">
+              <p className="text-xl font-semibold text-muted-foreground">
+                {t('no_results_title')}
+              </p>
+              <p className="text-muted-foreground">
+                {t('no_results_subtitle')}
+              </p>
+            </div>
+          )}
         </main>
       </div>
       {selectedTrail && (

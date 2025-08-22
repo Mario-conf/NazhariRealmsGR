@@ -10,13 +10,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
 import { Button } from '@/components/ui/button';
-import { Slider } from '@/components/ui/slider';
 import { trails, Trail } from '@/lib/trail-data';
-import { ListRestart, Heart } from 'lucide-react';
+import { ListRestart, Heart, Search, SlidersHorizontal } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 import { useTranslations } from 'next-intl';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { Checkbox } from './ui/checkbox';
+import { Slider } from './ui/slider';
 
 interface TrailFiltersProps {
   onFilterChange: (filteredTrails: Trail[]) => void;
@@ -27,7 +33,7 @@ const DIFFICULTIES: Trail['difficulty'][] = ['Easy', 'Moderate', 'Hard'];
 const TERRAINS: Trail['terrain'][] = [
   'Mountain',
   'Forest',
-  'Coastal',
+ 'Coastal',
   'Desert',
 ];
 const MAX_DURATION = Math.ceil(Math.max(...trails.map((t) => t.duration)));
@@ -153,83 +159,19 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
   };
 
   return (
-    <div className="space-y-8">
-       <div className="flex items-center justify-between">
-        <Label htmlFor="favorites-only" className="flex items-center gap-2 text-base">
-          <Heart className="h-5 w-5 text-red-500" />
-          {t('favorites_label')}
-        </Label>
-        <Switch
-          id="favorites-only"
-          checked={showOnlyFavorites}
-          onCheckedChange={setShowOnlyFavorites}
-        />
-      </div>
-      <div>
-        <Label htmlFor="search">{t('search_label')}</Label>
-        <Input
-          id="search"
-          placeholder={t('search_placeholder')}
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
-
-      <div>
-        <Label>{t('difficulty_label')}</Label>
-        <div className="space-y-2 mt-2">
-          {DIFFICULTIES.map((d) => (
-            <div key={d} className="flex items-center space-x-2">
-              <Checkbox
-                id={`diff-${d}`}
-                checked={selectedDifficulties.includes(d)}
-                onCheckedChange={() => handleDifficultyToggle(d)}
-              />
-              <Label htmlFor={`diff-${d}`} className="font-normal">
-                {difficultyLabels[d]}
-              </Label>
-            </div>
-          ))}
+    <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4">
+         <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              id="search"
+              placeholder={t('search_placeholder')}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-9"
+            />
         </div>
-      </div>
-
-      <div>
-        <Label>{t('terrain_label')}</Label>
-        <div className="space-y-2 mt-2">
-          {TERRAINS.map((t) => (
-            <div key={t} className="flex items-center space-x-2">
-              <Checkbox
-                id={`terrain-${t}`}
-                checked={selectedTerrains.includes(t)}
-                onCheckedChange={() => handleTerrainToggle(t)}
-              />
-              <Label htmlFor={`terrain-${t}`} className="font-normal">
-                {terrainLabels[t]}
-              </Label>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <Label>{t('duration_label')}</Label>
-        <Slider
-          min={0}
-          max={MAX_DURATION}
-          step={1}
-          value={durationRange}
-          onValueChange={setDurationRange}
-          className="mt-4"
-        />
-        <div className="flex justify-between text-sm text-muted-foreground mt-2">
-          <span>{durationRange[0]}h</span>
-          <span>{durationRange[1]}h</span>
-        </div>
-      </div>
-
-      <div>
-        <Label htmlFor="sort">{t('sort_label')}</Label>
-        <Select value={sortOrder} onValueChange={setSortOrder}>
+         <Select value={sortOrder} onValueChange={setSortOrder}>
           <SelectTrigger id="sort">
             <SelectValue placeholder={t('sort_placeholder')} />
           </SelectTrigger>
@@ -243,11 +185,89 @@ export function TrailFilters({ onFilterChange, favorites }: TrailFiltersProps) {
           </SelectContent>
         </Select>
       </div>
-      
-      <Button variant="outline" className="w-full" onClick={handleResetFilters}>
-        <ListRestart className="mr-2 h-4 w-4" />
-        {t('reset_button')}
-      </Button>
+
+      <Accordion type="single" collapsible className="w-full">
+         <AccordionItem value="item-1">
+            <AccordionTrigger className="text-base">
+                <div className="flex items-center gap-2">
+                    <SlidersHorizontal className="h-5 w-5" />
+                    <span>Filtros Avanzados</span>
+                </div>
+            </AccordionTrigger>
+            <AccordionContent>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-4">
+                    <div>
+                        <Label className="text-base">{t('difficulty_label')}</Label>
+                        <div className="space-y-2 mt-2">
+                        {DIFFICULTIES.map((d) => (
+                            <div key={d} className="flex items-center space-x-2">
+                            <Checkbox
+                                id={`diff-${d}`}
+                                checked={selectedDifficulties.includes(d)}
+                                onCheckedChange={() => handleDifficultyToggle(d)}
+                            />
+                            <Label htmlFor={`diff-${d}`} className="font-normal">
+                                {difficultyLabels[d]}
+                            </Label>
+                            </div>
+                        ))}
+                        </div>
+                    </div>
+                     <div>
+                        <Label className="text-base">{t('terrain_label')}</Label>
+                        <div className="space-y-2 mt-2">
+                        {TERRAINS.map((t_item) => (
+                            <div key={t_item} className="flex items-center space-x-2">
+                            <Checkbox
+                                id={`terrain-${t_item}`}
+                                checked={selectedTerrains.includes(t_item)}
+                                onCheckedChange={() => handleTerrainToggle(t_item)}
+                            />
+                            <Label htmlFor={`terrain-${t_item}`} className="font-normal">
+                                {terrainLabels[t_item]}
+                            </Label>
+                            </div>
+                        ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <Label className="text-base">{t('duration_label')}</Label>
+                        <Slider
+                        min={0}
+                        max={MAX_DURATION}
+                        step={1}
+                        value={durationRange}
+                        onValueChange={setDurationRange}
+                        className="mt-4"
+                        />
+                        <div className="flex justify-between text-sm text-muted-foreground mt-2">
+                        <span>{durationRange[0]}h</span>
+                        <span>{durationRange[1]}h</span>
+                        </div>
+                    </div>
+                </div>
+            </AccordionContent>
+         </AccordionItem>
+      </Accordion>
+
+       <div className="flex flex-col sm:flex-row gap-4 justify-between items-center border-t pt-4">
+         <div className="flex items-center gap-2">
+            <Label htmlFor="favorites-only" className="flex items-center gap-2 text-base">
+            <Heart className="h-5 w-5 text-red-500" />
+            {t('favorites_label')}
+            </Label>
+            <Switch
+            id="favorites-only"
+            checked={showOnlyFavorites}
+            onCheckedChange={setShowOnlyFavorites}
+            />
+        </div>
+        <Button variant="ghost" className="text-sm" onClick={handleResetFilters}>
+            <ListRestart className="mr-2 h-4 w-4" />
+            {t('reset_button')}
+        </Button>
+      </div>
     </div>
   );
 }
