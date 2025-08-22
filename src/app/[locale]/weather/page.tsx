@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -7,7 +8,6 @@ import { Input } from '@/components/ui/input';
 import { getWeatherForLocation, WeatherData, WeatherResult } from '@/actions/weather';
 import { SunIcon, ThermometerIcon, WindIcon, Droplets } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
-import Image from 'next/image';
 
 export default function WeatherPage() {
   const t = useTranslations('WeatherPage');
@@ -58,11 +58,13 @@ export default function WeatherPage() {
     return new Date(dateString).toLocaleDateString(locale, { weekday: 'long' });
   }
 
-  // AEMET condition codes can be complex (e.g., '12_g' for cloudy with light rain).
-  // We extract the base code (e.g., '12') to get the main condition.
+  // AEMET condition codes can be complex.
+  // We extract the base code to get the main condition.
   const getConditionTranslation = (code: string) => {
     const baseCode = code.slice(0, 2);
-    return tConditions(baseCode);
+    // The key must be a string literal for useTranslations, so we check if it exists.
+    // Fallback to the code itself if no translation is found.
+    return tConditions.rich(baseCode, {}).toString() !== baseCode ? tConditions(baseCode) : code;
   }
 
   // Fetch weather for default location on initial render
