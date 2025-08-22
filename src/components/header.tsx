@@ -10,9 +10,9 @@ export function Header() {
 
   return (
     <header className="px-4 lg:px-6 h-16 flex items-center bg-background shadow-sm sticky top-0 z-40">
-      <Link className="flex items-center justify-center" href="/">
+      <Link className="flex items-center justify-center gap-2" href="/">
         <MountainIcon className="h-6 w-6" />
-        <span className="sr-only">Alpine-Hike Club</span>
+        <span className="font-semibold hidden sm:inline-block">Alpine-Hike Club</span>
       </Link>
       <nav className="ml-auto hidden md:flex items-center gap-4 sm:gap-6">
         <Link
@@ -45,60 +45,7 @@ export function Header() {
         <LanguageSwitcher />
       </nav>
       <div className="ml-auto flex items-center md:hidden">
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="outline" size="icon">
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Open navigation menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right">
-            <div className="grid gap-4 p-4">
-              <Link
-                href="/"
-                className="flex items-center gap-2 text-lg font-semibold"
-              >
-                <MountainIcon className="h-6 w-6" />
-                <span>Alpine-Hike Club</span>
-              </Link>
-              <nav className="grid gap-2 text-base">
-                <Link
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                  href="/weather"
-                >
-                  {t('weather')}
-                </Link>
-                <Link
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                  href="/blog"
-                >
-                  {t('blog')}
-                </Link>
-                <Link
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                  href="/routes"
-                >
-                  {t('routes')}
-                </Link>
-                <Link
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                  href="/rules"
-                >
-                  {t('rules')}
-                </Link>
-                 <Link
-                  className="flex w-full items-center py-2 text-lg font-semibold"
-                  href="/#contact"
-                >
-                  {t('contact')}
-                </Link>
-              </nav>
-              <div className="mt-4">
-                <LanguageSwitcher />
-              </div>
-            </div>
-          </SheetContent>
-        </Sheet>
+        <LanguageSwitcher />
       </div>
     </header>
   );
