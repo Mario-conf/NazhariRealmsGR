@@ -88,9 +88,6 @@ export default function Home() {
     { src: 'https://placehold.co/600x400.png', hint: 'bosque niebla' },
     { src: 'https://placehold.co/600x400.png', hint: 'mapa brújula' },
     { src: 'https://placehold.co/600x400.png', hint: 'grupo amigos sendero' },
-    { src: 'https://placehold.co/600x800.png', hint: 'cascada selva', className: 'md:col-span-2 md:row-span-2' },
-    { src: 'https://placehold.co/600x400.png', hint: 'tienda campaña noche' },
-    { src: 'https://placehold.co/600x400.png', hint: 'amanecer montañas' },
   ];
 
 
@@ -189,7 +186,7 @@ export default function Home() {
                 <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
                     {t('gallery_title')}
                 </h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4 h-[600px]">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px]">
                     {galleryImages.map((image, index) => (
                         <div key={index} className={`relative rounded-lg overflow-hidden shadow-lg group ${image.className || ''}`}>
                             <Image
