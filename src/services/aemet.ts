@@ -13,10 +13,12 @@ if (!API_KEY) {
 }
 
 // Zod Schemas for data validation
-const AemetMunicipalitySchema = z.object({
+export const AemetMunicipalitySchema = z.object({
   id: z.string(),
   nombre: z.string(),
 });
+export type AemetMunicipality = z.infer<typeof AemetMunicipalitySchema>;
+
 
 const AemetWeatherPredictionSchema = z.object({
   elaborado: z.string(),
@@ -41,8 +43,34 @@ const AemetWeatherPredictionSchema = z.object({
   }),
 });
 
+export const WeatherDataSchema = z.object({
+  location: z.object({
+    city: z.string().describe('The city name.'),
+    country: z.string().describe('The country code.'),
+  }),
+  current: z.object({
+    temperature: z.number().describe('The current temperature in Celsius.'),
+    condition: z.string().describe('The current weather condition.'),
+    windSpeed: z.number().describe('The wind speed in km/h.'),
+    humidity: z.number().describe('The humidity percentage.'),
+  }),
+  forecast: z.array(
+    z.object({
+      day: z.string().describe('The day of the week.'),
+      temperature: z.number().describe('The forecasted temperature in Celsius.'),
+      condition: z.string().describe('The forecasted weather condition.'),
+    })
+  ).describe('A weather forecast for the next few days.'),
+  maps: z.object({
+    cloud: z.string().describe("A URL to the cloud radar map from AEMET."),
+    heat: z.string().describe("A URL to the temperature map from AEMET."),
+  }),
+});
+export type WeatherData = z.infer<typeof WeatherDataSchema>;
+
+
 // Main function to get formatted weather data
-export async function getAemetWeatherData(municipality: z.infer<typeof AemetMunicipalitySchema>) {
+export async function getAemetWeatherData(municipality: AemetMunicipality): Promise<WeatherData> {
   try {
     const predictionUrl = `${API_URL}/prediccion/especifica/municipio/diaria/${municipality.id.substring(2)}`;
     const weatherData = await fetchData(predictionUrl);
@@ -85,10 +113,10 @@ export async function getAemetWeatherData(municipality: z.infer<typeof AemetMuni
 }
 
 // Helper function to fetch data from AEMET API
-async function fetchData(url: string) {
+export async function fetchData(url: string) {
   try {
     const initialResponse = await fetch(url, {
-      headers: { 'api_key': API_KEY },
+      headers: { 'api_key': API_KEY, 'Accept': 'application/json' },
     });
 
     if (initialResponse.status === 429) {
@@ -104,6 +132,9 @@ async function fetchData(url: string) {
     }
 
     const dataResponse = await fetch(initialData.datos);
+    if (!dataResponse.ok) {
+        throw new Error(`Failed to fetch data from ${initialData.datos}, status: ${dataResponse.status}`);
+    }
     return await dataResponse.json();
 
   } catch (error) {

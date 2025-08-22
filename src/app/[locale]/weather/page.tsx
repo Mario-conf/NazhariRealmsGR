@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { getWeather, WeatherData } from '@/ai/flows/weather';
+import { getWeatherForLocation, WeatherData } from '@/actions/weather';
 import { SunIcon, ThermometerIcon, WindIcon, Droplets } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -25,19 +25,25 @@ export default function WeatherPage() {
     setError(null);
     setWeatherData(null);
     try {
-      const data = await getWeather({ location: searchLocation });
-      setWeatherData(data);
+      const data = await getWeatherForLocation({ location: searchLocation });
+      if ('error' in data) {
+        setError(data.error);
+      } else {
+        setWeatherData(data);
+      }
     } catch (err) {
-      setError(t('error_fetch'));
+      const errorMessage = err instanceof Error ? err.message : t('error_fetch');
+      setError(errorMessage);
       console.error(err);
     } finally {
       setLoading(false);
     }
   };
-  
+
   // Fetch weather for default location on initial render
   useEffect(() => {
     handleSearch('Sierra Nevada');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 
