@@ -30,8 +30,9 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
 
     const dayOfWeek = (dateString: string, locale: string = 'es-ES') => new Date(dateString).toLocaleDateString(locale, { weekday: 'long' });
 
-    // Find the wind data for the whole day if available, otherwise take the first available period
-    const windToday = today.viento.find(v => !v.periodo || v.periodo.length === 0) || today.viento[0];
+    // Calculate average wind speed for the day
+    const windSpeeds = today.viento.map(v => v.velocidad);
+    const averageWindSpeed = windSpeeds.reduce((sum, speed) => sum + speed, 0) / windSpeeds.length;
     
     // Find the weather condition for the main part of the day, or fallback to the first available.
     const conditionToday = today.estadoCielo.find(e => e.periodo === "12-24") ?? today.estadoCielo.find(e => e.periodo === "00-24") ?? today.estadoCielo[0];
@@ -44,7 +45,7 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
       current: {
         temperature: Math.round((today.temperatura.maxima + today.temperatura.minima) / 2),
         condition: conditionToday.descripcion,
-        windSpeed: windToday.velocidad,
+        windSpeed: Math.round(averageWindSpeed),
         humidity: Math.round((today.humedadRelativa.maxima + today.humedadRelativa.minima) / 2),
       },
       forecast: forecastDays.map((day) => {
