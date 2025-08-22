@@ -161,7 +161,7 @@ export default function WeatherPage() {
                   <CardContent className="flex flex-col items-center gap-2">
                     <SunIcon className="h-8 w-8 text-amber-400" />
                     <p className="text-2xl font-bold">{day.temperature}°C</p>
-                    <p className="text-muted-foreground capitalize break-words">{getConditionTranslation(day.conditionCode)}</p>
+                    <p className="text-sm text-muted-foreground capitalize break-words">{getConditionTranslation(day.conditionCode)}</p>
                   </CardContent>
                 </Card>
               ))}
