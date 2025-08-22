@@ -19,9 +19,9 @@ export default function Home() {
     { id: 1, src: 'https://i0.wp.com/tc-waalwijk.nl/wp-content/uploads/2018/01/Strava-Logo.png?w=600&ssl=1', alt: 'Logo'},
     { id: 2, src: 'https://encuestas.juntadeandalucia.es/tmp/assets/5c167f18/logo-junta-nuevo.png', alt: 'Logo' },
     { id: 3, src: 'https://tse3.mm.bing.net/th/id/OIP.gitPYpYsWGJUecokH3jNDQHaCh?rs=1&pid=ImgDetMain&o=7&rm=3', alt: 'Logo' },
-    { id: 4, src: 'https://logos-world.net/wp-content/uploads/2020/01/Decathlon-Logo.png', alt: ' Logo' },
+    { id: 4, src: 'https://latestlogo.com/wp-content/uploads/2024/03/decathlon-logo.png', alt: ' Logo' },
     { id: 5, src: 'https://thinkmarketingmagazine.com/wp-content/uploads/2022/08/Amazon_logo.svg.png', alt: ' Logo' },
-    { id: 6, src: 'https://seekvectorlogo.com/wp-content/uploads/2022/01/alsa-vector-logo-2022.png', alt: ' Logo' },
+    { id: 6, src: 'https://www.underconsideration.com/brandnew/archives/alsa_logo.png', alt: ' Logo' },
     { id: 7, src: 'https://www.twice.com/wp-content/uploads/2021/11/Amazfit-Logo_1-726x182.png', alt: 'Logo' },
     { id: 8, src: 'https://ulefonepty.com/wp-content/uploads/2022/05/Ulefone%E6%96%B0logo-png-04-01.png', alt: 'Logo' },
     { id: 9, src: 'https://www.liblogo.com/img-logo/re1425r8db-renfe-logo-renfe-logo-download-vector.png', alt: 'Logo' }
