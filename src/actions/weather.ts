@@ -5,11 +5,10 @@
 import {
   getAemetWeatherData,
   fetchData,
-  AemetMunicipalitySchema,
-  WeatherDataSchema,
 } from '@/services/aemet';
 import { z } from 'zod';
-import type { WeatherData } from '@/services/aemet';
+import type { WeatherData, AemetMunicipality } from '@/lib/types';
+import { AemetMunicipalitySchema } from '@/lib/types';
 
 export type { WeatherData };
 
@@ -23,7 +22,7 @@ const SPECIAL_CASES: Record<string, string> = {
 
 async function findMunicipality(
   locationName: string
-): Promise<z.infer<typeof AemetMunicipalitySchema> | null> {
+): Promise<AemetMunicipality | null> {
   const normalizedLocation = locationName.toLowerCase().trim();
   const searchName = SPECIAL_CASES[normalizedLocation] || normalizedLocation;
 
