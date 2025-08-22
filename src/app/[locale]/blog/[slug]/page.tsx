@@ -17,11 +17,11 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPostPage({
-  params,
+  params: { slug, locale },
 }: {
   params: { slug: string; locale: string };
 }) {
-  const post = await getBlogPost(params.slug);
+  const post = await getBlogPost(slug);
 
   if (!post) {
     notFound();
@@ -29,7 +29,7 @@ export default async function BlogPostPage({
 
   const { translatedText } = await translateText({
     text: post.content,
-    targetLanguage: params.locale,
+    targetLanguage: locale,
   });
 
   return (
@@ -56,7 +56,7 @@ export default async function BlogPostPage({
             </span>
             <span className="flex items-center gap-1.5">
               <Calendar className="h-4 w-4" />
-              {new Date(post.date).toLocaleDateString(params.locale, {
+              {new Date(post.date).toLocaleDateString(locale, {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',

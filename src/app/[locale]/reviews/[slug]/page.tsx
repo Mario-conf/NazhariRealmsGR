@@ -17,20 +17,20 @@ export async function generateStaticParams() {
 }
 
 export default async function ReviewPostPage({
-  params,
+  params: { slug, locale },
 }: {
   params: { slug: string; locale: string };
 }) {
-  const review = await getReview(params.slug);
+  const review = await getReview(slug);
   if (!review) {
     notFound();
   }
   
-  const t = await getTranslations({locale: params.locale, namespace: 'ReviewDetailsPage'});
+  const t = await getTranslations({locale: locale, namespace: 'ReviewDetailsPage'});
 
   const { translatedText } = await translateText({
     text: review.content,
-    targetLanguage: params.locale,
+    targetLanguage: locale,
   });
 
   return (
@@ -94,7 +94,7 @@ export default async function ReviewPostPage({
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Calendar className="h-4 w-4" />
-                  {new Date(review.date).toLocaleDateString(params.locale, {
+                  {new Date(review.date).toLocaleDateString(locale, {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
