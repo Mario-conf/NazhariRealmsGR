@@ -12,9 +12,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import type { Trail } from '@/lib/trail-data';
 import { Star, Mountain, Trees, Waves, Sun, Clock, Milestone, Download, X, Heart, TrendingUp } from 'lucide-react';
-import useReviews from '@/hooks/use-reviews';
-import { ReviewForm } from './review-form';
-import { ReviewList } from './review-list';
 import { useTranslations } from 'next-intl';
 import { ElevationProfileChart } from './elevation-profile-chart';
 import { RouteMap } from './route-map';
@@ -40,7 +37,6 @@ export function TrailDetailsDialog({
   onToggleFavorite,
 }: TrailDetailsDialogProps) {
   const t = useTranslations('TrailDetailsDialog');
-  const { reviews, addReview } = useReviews(trail.id);
 
   const difficultyLabels = {
     'Easy': t('difficulties.Easy'),
@@ -66,7 +62,7 @@ export function TrailDetailsDialog({
 
   return (
     <Dialog open={true} onOpenChange={onClose}>
-      <DialogContent className="max-w-7xl max-h-[95vh] flex flex-col">
+      <DialogContent className="max-w-4xl max-h-[95vh] flex flex-col">
         <DialogHeader className="relative p-0 border-b">
            <div className="p-6 flex justify-between items-start">
              <div>
@@ -86,9 +82,9 @@ export function TrailDetailsDialog({
           </div>
         </DialogHeader>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 pb-6 overflow-y-auto flex-grow">
-          {/* Columna Izquierda - Datos Clave */}
-          <aside className="lg:col-span-1 space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 px-6 pb-6 overflow-y-auto flex-grow">
+          {/* Columna Izquierda */}
+          <aside className="lg:col-span-2 space-y-6">
              <div className="border rounded-lg p-4">
                 <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('stats_title')}</h3>
                 <div className="grid grid-cols-2 gap-y-4 text-sm">
@@ -138,32 +134,22 @@ export function TrailDetailsDialog({
               <h3 className="font-serif font-semibold text-lg mb-2 border-b pb-2">{t('description_title')}</h3>
               <p className="text-muted-foreground text-sm">{trail.description}</p>
             </div>
-            <div>
-              <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('reviews_title', {count: reviews.length})}</h3>
-              <ReviewList reviews={reviews} />
-            </div>
           </aside>
           
-          {/* Columna Central y Derecha */}
-          <main className="lg:col-span-2 space-y-6">
+          {/* Columna Derecha */}
+          <main className="lg:col-span-3 space-y-6">
               <div>
                  <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">Perfil de Elevación</h3>
                  <ElevationProfileChart data={trail.elevationProfile} />
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('map_title')}</h3>
-                  <RouteMap imageUrl={trail.routeMapImage} />
-                  <Button className="w-full mt-4">
-                      <Download className="mr-2 h-4 w-4" />
-                      {t('gpx_button')}
-                  </Button>
-                </div>
-                <div>
-                  <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('leave_review_title')}</h3>
-                  <ReviewForm onSubmit={addReview} />
-                </div>
-            </div>
+              <div>
+                <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('map_title')}</h3>
+                <RouteMap imageUrl={trail.routeMapImage} />
+                <Button className="w-full mt-4">
+                    <Download className="mr-2 h-4 w-4" />
+                    {t('gpx_button')}
+                </Button>
+              </div>
           </main>
 
         </div>

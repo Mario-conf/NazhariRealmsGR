@@ -52,9 +52,6 @@ export function Footer() {
               <Link href="/rules" className="text-gray-400 hover:text-white text-sm">{t('rules_link')}</Link>
             </p>
             <p className="mb-2">
-              <Link href="/blog" className="text-gray-400 hover:text-white text-sm">{t('blog_link')}</Link>
-            </p>
-            <p className="mb-2">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm">{t('privacy')}</Link>
             </p>
             <p>

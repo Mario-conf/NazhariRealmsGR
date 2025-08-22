@@ -2,7 +2,6 @@
 {
   "Header": {
     "weather": "Weather",
-    "blog": "Blog",
     "routes": "Routes",
     "rules": "Rules",
     "contact": "Contact",
@@ -17,7 +16,6 @@
     "useful_links_title": "Useful Links",
     "routes_link": "Routes",
     "rules_link": "Club Rules",
-    "blog_link": "Blog",
     "contact_title": "Contact"
   },
   "HomePage": {
@@ -161,10 +159,8 @@
     "duration": "Duration",
     "terrain": "Terrain",
     "description_title": "Description",
-    "reviews_title": "Reviews ({count})",
     "map_title": "Route Map",
     "gpx_button": "Download GPX File",
-    "leave_review_title": "Leave a Review",
     "map_alt": "A map of the trail.",
     "difficulties": {
       "Easy": "Easy",
@@ -205,26 +201,6 @@
       "Coastal": "Coastal",
       "Desert": "Desert"
     }
-  },
-  "ReviewForm": {
-    "name_label": "Your Name",
-    "name_placeholder": "E.g. John Smith",
-    "rating_label": "Rating",
-    "comment_label": "Comment",
-    "comment_placeholder": "Share your experience on the trail...",
-    "error_message": "Please fill all fields and select a rating.",
-    "submit_button": "Submit Review"
-  },
-  "ReviewList": {
-    "no_reviews_1": "No reviews yet.",
-    "no_reviews_2": "Be the first to share your experience!"
-  },
-   "BlogPage": {
-    "title": "Our Adventure Blog",
-    "subtitle": "Stories, tips, and inspiration from the world of hiking.",
-    "read_more": "Read More",
-    "no_posts_title": "No Posts Yet",
-    "no_posts_subtitle": "Check back soon for updates!"
   },
   "PrivacyPage": {
     "title": "Privacy Policy",

@@ -2,7 +2,6 @@
 {
   "Header": {
     "weather": "Météo",
-    "blog": "Blog",
     "routes": "Itinéraires",
     "rules": "Règles",
     "contact": "Contact",
@@ -17,7 +16,6 @@
     "useful_links_title": "Liens Utiles",
     "routes_link": "Itinéraires",
     "rules_link": "Règles du club",
-    "blog_link": "Blog",
     "contact_title": "Contact"
   },
   "HomePage": {
@@ -161,10 +159,8 @@
     "duration": "Durée",
     "terrain": "Terrain",
     "description_title": "Description",
-    "reviews_title": "Avis ({count})",
     "map_title": "Carte de l'itinéraire",
     "gpx_button": "Télécharger le fichier GPX",
-    "leave_review_title": "Laisser un avis",
     "map_alt": "Une carte du sentier.",
     "difficulties": {
       "Easy": "Facile",
@@ -205,26 +201,6 @@
       "Coastal": "Côte",
       "Desert": "Désert"
     }
-  },
-  "ReviewForm": {
-    "name_label": "Votre nom",
-    "name_placeholder": "Ex : Jean Dupont",
-    "rating_label": "Évaluation",
-    "comment_label": "Commentaire",
-    "comment_placeholder": "Partagez votre expérience sur le sentier...",
-    "error_message": "Veuillez remplir tous les champs et sélectionner une évaluation.",
-    "submit_button": "Envoyer l'avis"
-  },
-  "ReviewList": {
-    "no_reviews_1": "Aucun avis pour le moment.",
-    "no_reviews_2": "Soyez le premier à partager votre expérience !"
-  },
-   "BlogPage": {
-    "title": "Notre blog d'aventure",
-    "subtitle": "Histoires, conseils et inspiration du monde de la randonnée.",
-    "read_more": "Lire la suite",
-    "no_posts_title": "Aucun article pour le moment",
-    "no_posts_subtitle": "Revenez bientôt pour des mises à jour !"
   },
   "PrivacyPage": {
     "title": "Politique de confidentialité",

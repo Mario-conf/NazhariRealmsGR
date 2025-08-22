@@ -10,7 +10,6 @@ export function Header() {
 
   const navLinks = [
     { href: '/weather', label: t('weather') },
-    { href: '/blog', label: t('blog') },
     { href: '/routes', label: t('routes') },
     { href: '/rules', label: t('rules') },
   ];

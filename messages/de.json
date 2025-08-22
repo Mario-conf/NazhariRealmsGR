@@ -2,7 +2,6 @@
 {
   "Header": {
     "weather": "Wetter",
-    "blog": "Blog",
     "routes": "Routen",
     "rules": "Regeln",
     "contact": "Kontakt",
@@ -17,7 +16,6 @@
     "useful_links_title": "Nützliche Links",
     "routes_link": "Routen",
     "rules_link": "Clubregeln",
-    "blog_link": "Blog",
     "contact_title": "Kontakt"
   },
   "HomePage": {
@@ -161,10 +159,8 @@
     "duration": "Dauer",
     "terrain": "Gelände",
     "description_title": "Beschreibung",
-    "reviews_title": "Bewertungen ({count})",
     "map_title": "Routenkarte",
     "gpx_button": "GPX-Datei herunterladen",
-    "leave_review_title": "Eine Bewertung hinterlassen",
     "map_alt": "Eine Karte des Weges.",
     "difficulties": {
       "Easy": "Leicht",
@@ -205,26 +201,6 @@
       "Coastal": "Küste",
       "Desert": "Wüste"
     }
-  },
-  "ReviewForm": {
-    "name_label": "Ihr Name",
-    "name_placeholder": "Z.B. Max Mustermann",
-    "rating_label": "Bewertung",
-    "comment_label": "Kommentar",
-    "comment_placeholder": "Teilen Sie Ihre Erfahrungen auf dem Weg...",
-    "error_message": "Bitte füllen Sie alle Felder aus und wählen Sie eine Bewertung.",
-    "submit_button": "Bewertung abgeben"
-  },
-  "ReviewList": {
-    "no_reviews_1": "Noch keine Bewertungen.",
-    "no_reviews_2": "Seien Sie der Erste, der Ihre Erfahrungen teilt!"
-  },
-  "BlogPage": {
-    "title": "Unser Abenteuer-Blog",
-    "subtitle": "Geschichten, Tipps und Inspirationen aus der Welt des Wanderns.",
-    "read_more": "Weiterlesen",
-    "no_posts_title": "Noch keine Beiträge",
-    "no_posts_subtitle": "Schauen Sie bald wieder vorbei für Updates!"
   },
   "PrivacyPage": {
     "title": "Datenschutzrichtlinie",

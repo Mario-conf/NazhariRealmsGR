@@ -2,7 +2,6 @@
 {
   "Header": {
     "weather": "El Tiempo",
-    "blog": "Blog",
     "routes": "Rutas",
     "rules": "Reglas",
     "contact": "Contacto",
@@ -17,7 +16,6 @@
     "useful_links_title": "Enlaces Útiles",
     "routes_link": "Rutas",
     "rules_link": "Reglas del Club",
-    "blog_link": "Blog",
     "contact_title": "Contacto"
   },
   "HomePage": {
@@ -161,10 +159,8 @@
     "duration": "Duración",
     "terrain": "Terreno",
     "description_title": "Descripción",
-    "reviews_title": "Reseñas ({count})",
     "map_title": "Mapa de la Ruta",
     "gpx_button": "Descargar archivo GPX",
-    "leave_review_title": "Dejar una reseña",
     "map_alt": "Un mapa de la ruta.",
     "difficulties": {
       "Easy": "Fácil",
@@ -205,26 +201,6 @@
       "Coastal": "Costa",
       "Desert": "Desierto"
     }
-  },
-  "ReviewForm": {
-    "name_label": "Tu Nombre",
-    "name_placeholder": "Ej: Juan Pérez",
-    "rating_label": "Valoración",
-    "comment_label": "Comentario",
-    "comment_placeholder": "Comparte tu experiencia en la ruta...",
-    "error_message": "Por favor, rellena todos los campos y selecciona una valoración.",
-    "submit_button": "Enviar Reseña"
-  },
-  "ReviewList": {
-    "no_reviews_1": "Aún no hay reseñas.",
-    "no_reviews_2": "¡Sé el primero en compartir tu experiencia!"
-  },
-  "BlogPage": {
-    "title": "Nuestro Blog de Aventura",
-    "subtitle": "Historias, consejos e inspiración del mundo del senderismo.",
-    "read_more": "Leer Más",
-    "no_posts_title": "Aún no hay entradas",
-    "no_posts_subtitle": "¡Vuelve pronto para ver las novedades!"
   },
   "PrivacyPage": {
     "title": "Política de Privacidad",

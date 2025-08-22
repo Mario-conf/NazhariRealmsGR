@@ -2,7 +2,6 @@
 {
   "Header": {
     "weather": "Meteo",
-    "blog": "Blog",
     "routes": "Percorsi",
     "rules": "Regole",
     "contact": "Contatto",
@@ -17,7 +16,6 @@
     "useful_links_title": "Link Utili",
     "routes_link": "Percorsi",
     "rules_link": "Regole del club",
-    "blog_link": "Blog",
     "contact_title": "Contatto"
   },
   "HomePage": {
@@ -161,10 +159,8 @@
     "duration": "Durata",
     "terrain": "Terreno",
     "description_title": "Descrizione",
-    "reviews_title": "Recensioni ({count})",
     "map_title": "Mappa del percorso",
     "gpx_button": "Scarica file GPX",
-    "leave_review_title": "Lascia una recensione",
     "map_alt": "Una mappa del sentiero.",
     "difficulties": {
       "Easy": "Facile",
@@ -205,26 +201,6 @@
       "Coastal": "Costa",
       "Desert": "Deserto"
     }
-  },
-  "ReviewForm": {
-    "name_label": "Il tuo nome",
-    "name_placeholder": "Es. Mario Rossi",
-    "rating_label": "Valutazione",
-    "comment_label": "Commento",
-    "comment_placeholder": "Condividi la tua esperienza sul sentiero...",
-    "error_message": "Si prega di compilare tutti i campi e selezionare una valutazione.",
-    "submit_button": "Invia recensione"
-  },
-  "ReviewList": {
-    "no_reviews_1": "Nessuna recensione ancora.",
-    "no_reviews_2": "Sii il primo a condividere la tua esperienza!"
-  },
-  "BlogPage": {
-    "title": "Il nostro blog di avventura",
-    "subtitle": "Storie, consigli e ispirazione dal mondo dell'escursionismo.",
-    "read_more": "Leggi di più",
-    "no_posts_title": "Ancora nessun post",
-    "no_posts_subtitle": "Torna presto per gli aggiornamenti!"
   },
   "PrivacyPage": {
     "title": "Informativa sulla privacy",
