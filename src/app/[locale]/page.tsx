@@ -16,10 +16,10 @@ export default function Home() {
   const t = useTranslations('HomePage');
 
   const sponsors = [
-    { id: 1, src: 'https://www.actualidadiphone.com/wp-content/uploads/2013/03/strava-logo.png', alt: 'Logo'},
+    { id: 1, src: 'https://i0.wp.com/tc-waalwijk.nl/wp-content/uploads/2018/01/Strava-Logo.png?w=600&ssl=1', alt: 'Logo'},
     { id: 2, src: 'https://www.iessansebastian.com/web/wp-content/uploads/2021/07/ced_horizontal-300x75.png', alt: 'Logo' },
     { id: 3, src: 'https://tse3.mm.bing.net/th/id/OIP.gitPYpYsWGJUecokH3jNDQHaCh?rs=1&pid=ImgDetMain&o=7&rm=3', alt: 'Logo' },
-    { id: 4, src: 'https://static.actu.fr/uploads/2024/03/decathlon-960x640.png', alt: ' Logo' },
+    { id: 4, src: 'https://logos-world.net/wp-content/uploads/2020/01/Decathlon-Logo.png', alt: ' Logo' },
     { id: 5, src: 'https://thinkmarketingmagazine.com/wp-content/uploads/2022/08/Amazon_logo.svg.png', alt: ' Logo' },
     { id: 6, src: 'https://seekvectorlogo.com/wp-content/uploads/2022/01/alsa-vector-logo-2022.png', alt: ' Logo' },
     { id: 7, src: 'https://www.twice.com/wp-content/uploads/2021/11/Amazfit-Logo_1-726x182.png', alt: 'Logo' },
