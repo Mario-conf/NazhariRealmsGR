@@ -14,7 +14,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <article className="container mx-auto max-w-4xl px-4 py-8 md:py-16">
+    <article className="container mx-auto max-w-4xl px-4 py-12 md:py-20">
       <div className="mb-8">
         <Link
           href="/blog"
@@ -24,11 +24,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           {t('back_to_blog')}
         </Link>
       </div>
-      <header className="mb-8 md:mb-12 text-center">
+      <header className="mb-10 md:mb-16 text-center">
         <h1 className="font-serif text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl !leading-tight">
           {post.title}
         </h1>
-        <div className="mt-4 flex items-center justify-center gap-6 text-sm text-muted-foreground">
+        <div className="mt-6 flex items-center justify-center gap-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
                 <User className="h-4 w-4"/>
                 <span>{post.author}</span>
@@ -40,7 +40,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
       </header>
 
-      <div className="relative mb-8 md:mb-12">
+      <div className="relative mb-10 md:mb-16">
         <Image
           src={post.image}
           alt={post.title}
@@ -53,7 +53,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       </div>
 
       <div
-        className="prose prose-lg dark:prose-invert max-w-none mx-auto"
+        className="prose prose-lg dark:prose-invert max-w-none mx-auto prose-p:leading-relaxed prose-headings:font-serif"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </article>
