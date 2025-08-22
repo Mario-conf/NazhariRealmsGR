@@ -2,7 +2,7 @@ import { FaWhatsapp, FaSpotify, FaStrava, FaInstagram } from "react-icons/fa6";
 
 export const siteConfig = {
     name: "Nazhari Realms GR",
-    logo: "/images/logo.png", // Path in the public directory
+    logo: "/logo.png", // Path in the public directory
     logoHint: "logo club",
     socialLinks: [
         { name: 'WhatsApp', href: 'https://whatsapp.com/channel/0029Vb2kFn442Dcl8E0bUT2k', Icon: FaWhatsapp, colorClass: 'hover:text-[#25D366]' },
