@@ -152,7 +152,7 @@ export default function Home() {
       {/* Reviews Section */}
         <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 overflow-hidden bg-transparent">
             <div className="container px-4 md:px-6 text-center">
-                 <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground mb-12">
+                 <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white mb-12">
                     {t('reviews_title')}
                 </h2>
             </div>
@@ -207,7 +207,7 @@ export default function Home() {
       {/* Sponsors Section */}
       <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
-          <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
+          <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-white">
             {t('sponsors_title')}
           </h2>
           <div className="relative overflow-hidden w-full max-w-6xl mx-auto">
@@ -235,8 +235,8 @@ export default function Home() {
       <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl" style={{ color: 'black' }}>{t('contact.title')}</h2>
-            <p className="mt-4 max-w-3xl mx-auto md:text-xl" style={{ color: 'white' }}>{t('contact.subtitle')}</p>
+            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl" style={{ color: 'white' }}>{t('contact.title')}</h2>
+            <p className="mt-4 max-w-3xl mx-auto md:text-xl font-bold" style={{ color: 'white' }}>{t('contact.subtitle')}</p>
           </div>
 
           <div className="max-w-4xl mx-auto rounded-2xl border border-white/20 bg-white/10 p-6 shadow-lg backdrop-blur-sm">
@@ -254,7 +254,7 @@ export default function Home() {
 
                 {/* Formulario */}
                 <div className="flex flex-col justify-center h-full">
-                  <h3 className="mb-4 text-2xl font-semibold text-center text-black">
+                  <h3 className="mb-4 text-2xl font-semibold text-center text-white">
                     {t('contact.form_title')}
                   </h3>
 
@@ -265,14 +265,14 @@ export default function Home() {
                         name="fullname"
                         placeholder={t('form_name')}
                         required
-                        className="rounded-xl border-white/30 bg-black/20 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
+                        className="rounded-xl border-white/30 bg-black/20 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-white/80"
                       />
                       <Input
                         type="email"
                         name="email"
                         placeholder={t('form_email')}
                         required
-                        className="rounded-xl border-white/30 bg-black/20 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
+                        className="rounded-xl border-white/30 bg-black/20 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-white/80"
                       />
                     </div>
 
@@ -280,7 +280,7 @@ export default function Home() {
                       name="message"
                       placeholder={t('form_message')}
                       required
-                      className="h-28 w-full resize-none rounded-xl border-white/30 bg-black/20 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
+                      className="h-28 w-full resize-none rounded-xl border-white/30 bg-black/20 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-white/80"
                     ></Textarea>
 
                     <Button
@@ -300,3 +300,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
