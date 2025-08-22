@@ -15,11 +15,11 @@
     "privacy": "Confidentialité"
   },
   "HomePage": {
-    "title": "Rejoignez l'aventure avec le club Alpine-Hike",
-    "subtitle": "Découvrez des sentiers à couper le souffle, rencontrez d'autres aventuriers et créez des souvenirs inoubliables. Votre prochaine aventure à Grenade et en Andalousie commence ici.",
+    "title": "EXPLOREZ. RÊVEZ. DÉCOUVREZ.",
+    "subtitle": "Votre aventure dans les montagnes de Grenade et d'Andalousie commence ici. Rejoignez une communauté qui vit pour la nature.",
     "explore_routes": "Explorer les itinéraires",
     "join_now": "Rejoignez-nous",
-    "hero_alt": "Héros",
+    "hero_alt": "Paysage de montagne épique",
     "reviews_title": "Ce que nos membres en disent",
     "review1_text": "\"Le meilleur club de randonnée dont j'ai jamais fait partie ! La communauté est incroyable et les itinéraires prévus sont toujours spectaculaires.\"",
     "review1_author": "- Alejandro García",
@@ -33,7 +33,19 @@
     "form_name": "Nom",
     "form_email": "Email",
     "form_message": "Message",
-    "form_submit": "Envoyer le message"
+    "form_submit": "Envoyer le message",
+    "features": {
+      "feature1_title": "Des itinéraires pour tous",
+      "feature1_description": "Des promenades familiales faciles aux randonnées exigeantes en haute montagne pour les plus expérimentés. Une aventure vous attend toujours.",
+      "feature2_title": "Communauté d'aventuriers",
+      "feature2_description": "Connectez-vous avec des passionnés de la nature. Partagez des expériences, apprenez des autres et faites-vous des amis pour la vie.",
+      "feature3_title": "Sécurité et guides experts",
+      "feature3_description": "Nos guides certifiés garantissent votre sécurité à tout moment. Nous organisons chaque itinéraire en pensant au bien-être du groupe.",
+      "image_alt": "Randonneur regardant une carte"
+    },
+    "contact": {
+      "background_alt": "Texture de carte topographique"
+    }
   },
   "WeatherPage": {
     "title": "Centre Météo",
@@ -104,7 +116,7 @@
     "lnt1_trigger": "Réglementations générales en Espagne",
     "lnt1_content": "Le camping sauvage est très réglementé : selon la loi 42/2007, il n'est permis de dormir que dans des lieux désignés (campings, zones autorisées). En général, il est interdit d'installer une tente ou de passer la nuit sans autorisation en dehors de ces sites. Dans les parcs nationaux (comme la Sierra Nevada), le camping sans autorisation est interdit. L'utilisation de drones nécessite une licence et est interdite dans les zones naturelles protégées sans autorisation spécifique. De plus, les lois espagnoles protègent la flore et la faune sauvages : vous ne pouvez pas endommager ou cueillir des plantes indigènes ni déranger les animaux protégés. La chasse, la pêche ou l'extraction de minéraux et de roches sont interdites dans les parcs.",
     "lnt2_trigger": "Réglementations spécifiques en Andalousie",
-    "lnt2_content": "L'Andalousie applique des restrictions strictes contre les incendies de forêt. Un arrêté du gouvernement régional interdit totalement l'utilisation du feu (feux de camp, barbecues, brûlage agricole) du 1er juin au 15 octobre dans toutes les forêts andalouses. Pendant cette période, la circulation des véhicules hors des pistes asphaltées est également interdite. Dans les parcs naturels andalous, il est souligné de ne pas quitter les sentiers balisés pour protéger la végétation fragile (par exemple, la Sierra Nevada conseille de 'ne pas quitter les sentiers ni prendre de raccourcis'). La loi andalouse 8/2003 protège la flore et la faune : elle interdit d'arracher, de couper ou de détruire les plantes sauvages et leurs habitats. En résumé, en Andalousie, ne cueillez jamais de plantes, ne détruisez pas les écosystèmes et respectez tous les panneaux environnementaux locaux.",
+    "lnt2_content": "L'Andalousie applique des restrictions strictes contre les incendies de forêt. Un arrêté du gouvernement régional interdit totally l'utilisation du feu (feux de camp, barbecues, brûlage agricole) du 1er juin au 15 octobre dans toutes les forêts andalouses. Pendant cette période, la circulation des véhicules hors des pistes asphaltées est également interdite. Dans les parcs naturels andalous, il est souligné de ne pas quitter les sentiers balisés pour protéger la végétation fragile (par exemple, la Sierra Nevada conseille de 'ne pas quitter les sentiers ni prendre de raccourcis'). La loi andalouse 8/2003 protège la flore et la faune : elle interdit d'arracher, de couper ou de détruire les plantes sauvages et leurs habitats. En résumé, en Andalousie, ne cueillez jamais de plantes, ne détruisez pas les écosystèmes et respectez tous les panneaux environnementaux locaux.",
     "lnt3_trigger": "Règles du parc national de la Sierra Nevada",
     "lnt3_content": "Le camping sauvage n'est pas autorisé dans ce parc national. Le seul bivouac autorisé est la nuit avec notification écrite préalable au directeur du parc (maximum 15 personnes et 3 tentes). Il est interdit de passer la nuit dans des zones de réserve environnementale (par exemple, 'borreguiles' ou près des lagunes), ainsi qu'à moins de 500 m des refuges gardés, des routes ou des cours d'eau. De plus, entre le 1er juin et le 15 octobre, le camping ou le bivouac dans les zones boisées n'est pas autorisé en raison du risque élevé d'incendie. Dans tous les cas, à l'intérieur du parc, il est interdit d'allumer du feu ou de jeter des ordures dans les sources, les rivières ou l'environnement.",
     "lnt4_trigger": "Principes Sans Trace",

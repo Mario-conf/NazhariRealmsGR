@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { StarIcon, ShieldCheck, Mountain, Users } from 'lucide-react';
@@ -22,27 +22,48 @@ export default function Home() {
   const features = [
     {
       icon: <Mountain className="w-8 h-8 text-primary" />,
-      title: "Rutas para todos",
-      description: "Desde paseos sencillos para familias hasta desafíos de alta montaña para los más experimentados. Siempre hay una aventura esperándote."
+      title: t('features.feature1_title'),
+      description: t('features.feature1_description')
     },
     {
       icon: <Users className="w-8 h-8 text-primary" />,
-      title: "Comunidad de Aventureros",
-      description: "Conecta con personas apasionadas por la naturaleza. Comparte experiencias, aprende de otros y haz amigos para toda la vida."
+      title: t('features.feature2_title'),
+      description: t('features.feature2_description')
     },
     {
       icon: <ShieldCheck className="w-8 h-8 text-primary" />,
-      title: "Seguridad y Guías Expertos",
-      description: "Nuestros guías titulados garantizan tu seguridad en todo momento. Organizamos cada ruta pensando en el bienestar del grupo."
+      title: t('features.feature3_title'),
+      description: t('features.feature3_description')
     }
   ];
+
+  const reviews = [
+      {
+          text: t('review1_text'),
+          author: t('review1_author'),
+          avatar: 'https://placehold.co/100x100.png',
+          avatarHint: 'hombre sonriendo'
+      },
+      {
+          text: t('review2_text'),
+          author: t('review2_author'),
+          avatar: 'https://placehold.co/100x100.png',
+          avatarHint: 'mujer con mochila'
+      },
+      {
+          text: t('review3_text'),
+          author: t('review3_author'),
+          avatar: 'https://placehold.co/100x100.png',
+          avatarHint: 'hombre en una cumbre'
+      }
+  ]
 
   return (
     <div className="flex-1 bg-gradient-to-b from-papaya-start via-off-white to-footer-dark">
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
          <Image
-            alt="Paisaje de montaña épico"
+            alt={t('hero_alt')}
             src="https://placehold.co/1920x1080.png"
             data-ai-hint="paisaje montaña épico amanecer"
             fill
@@ -51,10 +72,10 @@ export default function Home() {
           <div className="container px-4 md:px-6 animate-in fade-in slide-in-from-bottom-12 duration-1000">
              <div className="max-w-3xl mx-auto">
                 <h1 className="font-serif text-4xl font-extrabold tracking-tighter sm:text-6xl md:text-7xl drop-shadow-lg">
-                    EXPLORA. SUEÑA. DESCUBRE.
+                    {t('title')}
                 </h1>
                 <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
-                   Tu aventura en las montañas de Granada y Andalucía empieza aquí. Únete a una comunidad que vive la naturaleza.
+                   {t('subtitle')}
                 </p>
                 <div className="mt-8">
                     <Button asChild size="lg">
@@ -74,7 +95,7 @@ export default function Home() {
                         <div key={index} className="flex items-start gap-4">
                             <div className="flex-shrink-0">{feature.icon}</div>
                             <div>
-                                <h3 className="text-xl font-bold font-serif">{feature.title}</h3>
+                                <h3 className="text-xl font-bold font-serif text-foreground">{feature.title}</h3>
                                 <p className="text-muted-foreground mt-1">{feature.description}</p>
                             </div>
                         </div>
@@ -82,7 +103,7 @@ export default function Home() {
                 </div>
                 <div className="relative aspect-square md:aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
                      <Image
-                        alt="Senderista mirando un mapa"
+                        alt={t('features.image_alt')}
                         src="https://placehold.co/600x800.png"
                         data-ai-hint="senderista mapa brújula"
                         fill
@@ -100,62 +121,31 @@ export default function Home() {
             {t('reviews_title')}
           </h2>
           <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12">
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-0.5">
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-muted stroke-muted-foreground" />
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{t('review1_text')}</p>
-                <p className="font-semibold mt-4">{t('review1_author')}</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-0.5">
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{t('review2_text')}</p>
-                <p className="font-semibold mt-4">{t('review2_author')}</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-0.5">
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                    <StarIcon className="w-5 h-5 fill-primary" />
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{t('review3_text')}</p>
-                <p className="font-semibold mt-4">{t('review3_author')}</p>
-              </CardContent>
-            </Card>
+            {reviews.map((review, index) => (
+              <Card key={index}>
+                <CardHeader className="flex flex-row items-center gap-4">
+                    <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
+                    <div>
+                        <p className="font-semibold text-foreground">{review.author}</p>
+                         <div className="flex items-center gap-0.5">
+                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                            <StarIcon className="w-5 h-5 fill-primary text-primary" />
+                        </div>
+                    </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground italic">"{review.text}"</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Sponsors Section (Unchanged) */}
+      {/* Sponsors Section */}
       <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
@@ -182,26 +172,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section (Unchanged) */}
-      <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
-          <div className="space-y-3">
-            <h2 className="font-serif text-3xl font-bold tracking-tighter md:text-4xl/tight text-foreground">
-              {t('contact_title')}
-            </h2>
-            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              {t('contact_subtitle')}
-            </p>
-          </div>
-          <div className="mx-auto w-full max-w-sm space-y-2">
-            <form className="grid gap-4">
-              <Input placeholder={t('form_name')} type="text" />
-              <Input placeholder={t('form_email')} type="email" />
-              <Textarea placeholder={t('form_message')} />
-              <Button type="submit">{t('form_submit')}</Button>
-            </form>
-          </div>
-        </div>
+      {/* Contact Section */}
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 relative">
+            <Image 
+                src="https://placehold.co/1920x1080.png"
+                alt={t('contact.background_alt')}
+                data-ai-hint="mapa topográfico textura"
+                fill
+                className="object-cover -z-10 brightness-50"
+            />
+            <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 relative">
+            <div className="space-y-3">
+                <h2 className="font-serif text-3xl font-bold tracking-tighter md:text-4xl/tight text-white">
+                {t('contact_title')}
+                </h2>
+                <p className="mx-auto max-w-[600px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                {t('contact_subtitle')}
+                </p>
+            </div>
+            <div className="mx-auto w-full max-w-sm space-y-2">
+                <form className="grid gap-4">
+                <Input placeholder={t('form_name')} type="text" className="bg-white/90 text-foreground" />
+                <Input placeholder={t('form_email')} type="email" className="bg-white/90 text-foreground" />
+                <Textarea placeholder={t('form_message')} className="bg-white/90 text-foreground" />
+                <Button type="submit">{t('form_submit')}</Button>
+                </form>
+            </div>
+            </div>
       </section>
     </div>
   );

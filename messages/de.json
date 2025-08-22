@@ -15,11 +15,11 @@
     "privacy": "Datenschutz"
   },
   "HomePage": {
-    "title": "Nehmen Sie am Abenteuer mit dem Alpine-Hike Club teil",
-    "subtitle": "Entdecken Sie atemberaubende Wege, vernetzen Sie sich mit anderen Abenteurern und schaffen Sie unvergessliche Erinnerungen. Ihr nächstes Abenteuer in Granada und Andalusien beginnt hier.",
+    "title": "ERKUNDEN. TRÄUMEN. ENTDECKEN.",
+    "subtitle": "Dein Abenteuer in den Bergen von Granada und Andalusien beginnt hier. Tritt einer Community bei, die für die Natur lebt.",
     "explore_routes": "Routen erkunden",
     "join_now": "Jetzt beitreten",
-    "hero_alt": "Held",
+    "hero_alt": "Epische Berglandschaft",
     "reviews_title": "Was unsere Mitglieder sagen",
     "review1_text": "\"Der beste Wanderclub, in dem ich je war! Die Gemeinschaft ist unglaublich und die geplanten Routen sind immer spektakulär.\"",
     "review1_author": "- Alejandro García",
@@ -33,7 +33,19 @@
     "form_name": "Name",
     "form_email": "E-Mail",
     "form_message": "Nachricht",
-    "form_submit": "Nachricht senden"
+    "form_submit": "Nachricht senden",
+    "features": {
+      "feature1_title": "Routen für alle",
+      "feature1_description": "Von einfachen Familienspaziergängen bis zu anspruchsvollen Hochgebirgstouren für die Erfahrensten. Es wartet immer ein Abenteuer auf dich.",
+      "feature2_title": "Gemeinschaft von Abenteurern",
+      "feature2_description": "Verbinde dich mit Menschen, die sich für die Natur begeistern. Teile Erfahrungen, lerne von anderen und finde Freunde fürs Leben.",
+      "feature3_title": "Sicherheit und Expertenführer",
+      "feature3_description": "Unsere zertifizierten Führer gewährleisten deine Sicherheit zu jeder Zeit. Wir organisieren jede Route mit dem Wohl der Gruppe im Auge.",
+      "image_alt": "Wanderer schaut auf eine Karte"
+    },
+    "contact": {
+      "background_alt": "Topografische Kartentextur"
+    }
   },
   "WeatherPage": {
     "title": "Wetterzentrum",

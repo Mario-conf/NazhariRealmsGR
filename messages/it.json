@@ -15,11 +15,11 @@
     "privacy": "Privacy"
   },
   "HomePage": {
-    "title": "Unisciti all'avventura con l'Alpine-Hike Club",
-    "subtitle": "Scopri sentieri mozzafiato, connettiti con altri avventurieri e crea ricordi indimenticabili. La tua prossima avventura a Granada e in Andalusia inizia qui.",
+    "title": "ESPLORA. SOGNA. SCOPRI.",
+    "subtitle": "La tua avventura sulle montagne di Granada e dell'Andalusia inizia qui. Unisciti a una community che vive per la natura.",
     "explore_routes": "Esplora i percorsi",
     "join_now": "Iscriviti ora",
-    "hero_alt": "Eroe",
+    "hero_alt": "Paesaggio montano epico",
     "reviews_title": "Cosa dicono i nostri membri",
     "review1_text": "\"Il miglior club di escursionismo di cui abbia mai fatto parte! La community è fantastica e i percorsi pianificati sono sempre spettacolari.\"",
     "review1_author": "- Alejandro García",
@@ -33,7 +33,19 @@
     "form_name": "Nome",
     "form_email": "Email",
     "form_message": "Messaggio",
-    "form_submit": "Invia messaggio"
+    "form_submit": "Invia messaggio",
+    "features": {
+      "feature1_title": "Percorsi per tutti",
+      "feature1_description": "Dalle facili passeggiate in famiglia alle impegnative escursioni in alta montagna per i più esperti. C'è sempre un'avventura che ti aspetta.",
+      "feature2_title": "Comunità di avventurieri",
+      "feature2_description": "Connettiti con persone appassionate di natura. Condividi esperienze, impara dagli altri e fai amicizia per la vita.",
+      "feature3_title": "Sicurezza e guide esperte",
+      "feature3_description": "Le nostre guide certificate garantiscono la tua sicurezza in ogni momento. Organizziamo ogni percorso pensando al benessere del gruppo.",
+      "image_alt": "Escursionista che guarda una mappa"
+    },
+    "contact": {
+      "background_alt": "Texture della mappa topografica"
+    }
   },
   "WeatherPage": {
     "title": "Centro Meteo",

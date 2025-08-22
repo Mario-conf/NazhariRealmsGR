@@ -15,11 +15,11 @@
     "privacy": "Privacidad"
   },
   "HomePage": {
-    "title": "Únete a la Aventura con Alpine-Hike Club",
-    "subtitle": "Descubre rutas impresionantes, conecta con otros aventureros y crea recuerdos inolvidables. Tu próxima aventura en Granada y Andalucía comienza aquí.",
+    "title": "EXPLORA. SUEÑA. DESCUBRE.",
+    "subtitle": "Tu aventura en las montañas de Granada y Andalucía empieza aquí. Únete a una comunidad que vive la naturaleza.",
     "explore_routes": "Explorar Rutas",
     "join_now": "Únete Ahora",
-    "hero_alt": "Héroe",
+    "hero_alt": "Paisaje de montaña épico",
     "reviews_title": "Lo que dicen nuestros miembros",
     "review1_text": "¡El mejor club de senderismo del que he formado parte! La comunidad es increíble y las rutas planificadas siempre son espectaculares.",
     "review1_author": "- Alejandro García",
@@ -33,7 +33,19 @@
     "form_name": "Nombre",
     "form_email": "Correo electrónico",
     "form_message": "Mensaje",
-    "form_submit": "Enviar mensaje"
+    "form_submit": "Enviar mensaje",
+    "features": {
+      "feature1_title": "Rutas para todos",
+      "feature1_description": "Desde paseos sencillos para familias hasta desafíos de alta montaña para los más experimentados. Siempre hay una aventura esperándote.",
+      "feature2_title": "Comunidad de Aventureros",
+      "feature2_description": "Conecta con personas apasionadas por la naturaleza. Comparte experiencias, aprende de otros y haz amigos para toda la vida.",
+      "feature3_title": "Seguridad y Guías Expertos",
+      "feature3_description": "Nuestros guías titulados garantizan tu seguridad en todo momento. Organizamos cada ruta pensando en el bienestar del grupo.",
+      "image_alt": "Senderista mirando un mapa"
+    },
+    "contact": {
+      "background_alt": "Textura de mapa topográfico"
+    }
   },
   "WeatherPage": {
     "title": "Centro Meteorológico",

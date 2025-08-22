@@ -15,11 +15,11 @@
     "privacy": "Privacy"
   },
   "HomePage": {
-    "title": "Join the Adventure with Alpine-Hike Club",
-    "subtitle": "Discover breathtaking trails, connect with fellow adventurers, and create unforgettable memories. Your next adventure in Granada and Andalusia starts here.",
+    "title": "EXPLORE. DREAM. DISCOVER.",
+    "subtitle": "Your adventure in the mountains of Granada and Andalusia starts here. Join a community that lives for nature.",
     "explore_routes": "Explore Routes",
     "join_now": "Join Now",
-    "hero_alt": "Hero",
+    "hero_alt": "Epic mountain landscape",
     "reviews_title": "What our members are saying",
     "review1_text": "\"The best hiking club I've ever been a part of! The community is amazing and the planned routes are always spectacular.\"",
     "review1_author": "- Alejandro García",
@@ -33,7 +33,19 @@
     "form_name": "Name",
     "form_email": "Email",
     "form_message": "Message",
-    "form_submit": "Send message"
+    "form_submit": "Send message",
+    "features": {
+      "feature1_title": "Routes for Everyone",
+      "feature1_description": "From easy family walks to challenging high-mountain treks for the most experienced. There's always an adventure waiting for you.",
+      "feature2_title": "Community of Adventurers",
+      "feature2_description": "Connect with people passionate about nature. Share experiences, learn from others, and make lifelong friends.",
+      "feature3_title": "Safety and Expert Guides",
+      "feature3_description": "Our certified guides ensure your safety at all times. We organize every route with the group's well-being in mind.",
+      "image_alt": "Hiker looking at a map"
+    },
+    "contact": {
+      "background_alt": "Topographic map texture"
+    }
   },
   "WeatherPage": {
     "title": "Weather Center",
@@ -225,4 +237,3 @@
     "cons_title": "Cons"
   }
 }
-
