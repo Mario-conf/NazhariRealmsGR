@@ -92,7 +92,7 @@ export default function Home() {
 
 
   return (
-    <div className="flex-1 bg-gradient-to-b from-white to-background">
+    <div className="flex-1" style={{ background: 'linear-gradient(to bottom, #f25c3a, #ffffff, #1f2630)' }}>
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
          <Image

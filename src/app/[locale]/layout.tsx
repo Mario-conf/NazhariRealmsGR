@@ -14,7 +14,7 @@ export default function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <div className="relative flex min-h-dvh flex-col">
+      <div className="relative flex min-h-dvh flex-col bg-background">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
