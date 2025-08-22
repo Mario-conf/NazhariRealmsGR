@@ -56,6 +56,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        'papaya-start': '#F04E30',
+        'off-white': '#fbfbfb',
+        'footer-dark': 'rgb(17 24 39)',
       },
       borderRadius: {
         lg: "var(--radius)",
