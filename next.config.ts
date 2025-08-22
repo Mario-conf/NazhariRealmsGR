@@ -129,6 +129,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.underconsideration.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'agqcvcudno.cloudimg.io',
       }
     ],
   },
