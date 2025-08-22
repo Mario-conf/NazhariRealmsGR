@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <div className="flex-1">
-      <section className="w-full py-12 md:py-20 lg:py-24">
+      <section className="w-full py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background to-orange-50">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-3">
             <div className="lg:col-span-2 relative">
@@ -86,7 +86,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+      <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-orange-50 to-orange-100">
         <div className="container px-4 md:px-6">
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
             {t('reviews_title')}
@@ -147,7 +147,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-orange-100 to-background">
         <div className="container px-4 md:px-6">
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12">
             {t('sponsors_title')}
@@ -156,7 +156,7 @@ export default function Home() {
              <div className="flex animate-scroll-infinite">
                 {[...sponsors, ...sponsors].map((sponsor, index) => (
                     <div key={index} className="flex-shrink-0 w-1/4 md:w-1/5 p-2">
-                         <div className="flex aspect-video items-center justify-center p-6 bg-muted rounded-lg">
+                         <div className="flex aspect-video items-center justify-center p-6 bg-white rounded-lg shadow-sm">
                             <Image
                                 src={sponsor.src}
                                 alt={sponsor.alt}
@@ -181,7 +181,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t">
+      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t bg-background">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
             <h2 className="font-serif text-3xl font-bold tracking-tighter md:text-4xl/tight">

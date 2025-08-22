@@ -50,10 +50,10 @@ export default async function ReviewsPage() {
                 </Link>
                 <div className="p-6">
                     <div className="flex justify-between items-center mb-2">
-                        <Badge variant="secondary">{review.category}</Badge>
+                        <Badge variant="default" className="bg-blue-100 text-blue-800">{review.category}</Badge>
                          <div className="flex items-center gap-1 text-amber-500">
                             <Star className="h-5 w-5 fill-current" />
-                            <span className="font-bold text-base">{review.rating.toFixed(1)}</span>
+                            <span className="font-bold text-base text-foreground">{review.rating.toFixed(1)}</span>
                         </div>
                     </div>
                     <CardTitle className="font-serif text-xl mb-1">
