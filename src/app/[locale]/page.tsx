@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -95,7 +96,7 @@ export default function Home() {
   return (
     <div className="flex-1" style={{background: 'linear-gradient(to bottom, #f25c3a, #ffffff, #374151)'}}>
       {/* Hero Section */}
-      <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
+      <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden bg-transparent">
          <Image
             alt={t('hero_alt')}
             src="https://placehold.co/1920x1080.png"
@@ -129,8 +130,8 @@ export default function Home() {
                         <div key={index} className="flex items-start gap-4">
                             <div className="flex-shrink-0">{feature.icon}</div>
                             <div>
-                                <h3 className="text-xl font-bold font-serif text-foreground">{feature.title}</h3>
-                                <p className="text-muted-foreground mt-1">{feature.description}</p>
+                                <h3 className="text-xl font-bold font-serif text-black">{feature.title}</h3>
+                                <p className="text-gray-800 mt-1">{feature.description}</p>
                             </div>
                         </div>
                     ))}
@@ -234,8 +235,8 @@ export default function Home() {
       <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">{t('contact.title')}</h2>
-            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl">{t('contact.subtitle')}</p>
+            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black">{t('contact.title')}</h2>
+            <p className="mt-4 max-w-3xl mx-auto text-white md:text-xl">{t('contact.subtitle')}</p>
           </div>
 
           <div className="max-w-4xl mx-auto rounded-2xl border border-border bg-card/80 p-6 shadow-lg backdrop-blur-sm">
@@ -299,3 +300,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
