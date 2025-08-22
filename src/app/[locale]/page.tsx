@@ -3,10 +3,17 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { MountainIcon, StarIcon } from 'lucide-react';
+import { StarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/navigation';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export default function Home() {
   const t = useTranslations('HomePage');
@@ -134,20 +141,40 @@ export default function Home() {
 
       <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
-          <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
+          <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12">
             {t('sponsors_title')}
           </h2>
-          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-            <div className="flex justify-center">
-              <MountainIcon className="h-12 w-12 text-muted-foreground" />
-            </div>
-            <div className="flex justify-center">
-              <MountainIcon className="h-12 w-12 text-muted-foreground" />
-            </div>
-            <div className="flex justify-center">
-              <MountainIcon className="h-12 w-12 text-muted-foreground" />
-            </div>
-          </div>
+          <Carousel
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            className="w-full max-w-4xl mx-auto"
+          >
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem
+                  key={index}
+                  className="md:basis-1/2 lg:basis-1/3"
+                >
+                  <div className="p-1">
+                    <div className="flex aspect-video items-center justify-center p-6 bg-muted rounded-lg">
+                      <Image
+                        src={`https://placehold.co/300x150.png`}
+                        alt={`Sponsor Logo ${index + 1}`}
+                        data-ai-hint="logo empresa"
+                        width={300}
+                        height={150}
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
