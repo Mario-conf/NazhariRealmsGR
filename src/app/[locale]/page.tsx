@@ -254,7 +254,7 @@ export default function Home() {
 
                 {/* Formulario */}
                 <div className="flex flex-col justify-center h-full">
-                  <h3 className="mb-4 text-2xl font-semibold text-center text-foreground">
+                  <h3 className="mb-4 text-2xl font-semibold text-center text-black">
                     {t('contact.form_title')}
                   </h3>
 
@@ -265,14 +265,14 @@ export default function Home() {
                         name="fullname"
                         placeholder={t('form_name')}
                         required
-                        className="rounded-xl border-gray-600 bg-background p-3 text-sm text-foreground shadow-sm focus:border-primary focus:ring-primary placeholder:text-muted-foreground"
+                        className="rounded-xl border-white/30 bg-black/20 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
                       />
                       <Input
                         type="email"
                         name="email"
                         placeholder={t('form_email')}
                         required
-                        className="rounded-xl border-gray-600 bg-background p-3 text-sm text-foreground shadow-sm focus:border-primary focus:ring-primary placeholder:text-muted-foreground"
+                        className="rounded-xl border-white/30 bg-black/20 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
                       />
                     </div>
 
@@ -280,7 +280,7 @@ export default function Home() {
                       name="message"
                       placeholder={t('form_message')}
                       required
-                      className="h-28 w-full resize-none rounded-xl border-gray-600 bg-background p-3 text-sm text-foreground shadow-sm focus:border-primary focus:ring-primary placeholder:text-muted-foreground"
+                      className="h-28 w-full resize-none rounded-xl border-white/30 bg-black/20 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
                     ></Textarea>
 
                     <Button
@@ -300,5 +300,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
