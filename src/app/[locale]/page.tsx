@@ -92,7 +92,7 @@ export default function Home() {
 
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 bg-gradient-to-b from-white to-background">
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
          <Image
@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="grid gap-8">
@@ -148,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* Reviews Section */}
-        <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 overflow-hidden bg-background">
+        <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 overflow-hidden bg-transparent">
             <div className="container px-4 md:px-6 text-center">
                  <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground mb-12">
                     {t('reviews_title')}
@@ -181,7 +181,7 @@ export default function Home() {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
             <div className="container px-4 md:px-6">
                 <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
                     {t('gallery_title')}
@@ -203,7 +203,7 @@ export default function Home() {
         </section>
 
       {/* Sponsors Section */}
-      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
             {t('sponsors_title')}
