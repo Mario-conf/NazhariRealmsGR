@@ -38,7 +38,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex-1 bg-gradient-to-b from-papaya-start/5 via-off-white to-footer-dark/20">
+    <div className="flex-1 bg-gradient-to-b from-papaya-start via-off-white to-footer-dark">
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
          <Image
@@ -206,3 +206,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
