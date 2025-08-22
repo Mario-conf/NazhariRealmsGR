@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="grid gap-8">
@@ -149,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* Reviews Section */}
-        <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 overflow-hidden bg-card">
+        <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 overflow-hidden bg-transparent">
             <div className="container px-4 md:px-6 text-center">
                  <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground mb-12">
                     {t('reviews_title')}
@@ -159,7 +159,7 @@ export default function Home() {
                  <div className="flex animate-scroll-infinite">
                     {[...reviews, ...reviews].map((review, index) => (
                          <div key={index} className="flex-shrink-0 w-full max-w-sm p-4">
-                            <Card className="h-full bg-background">
+                            <Card className="h-full bg-background/80 backdrop-blur-sm">
                                 <CardHeader className="flex flex-row items-center gap-4">
                                     <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
                                     <div>
@@ -182,7 +182,7 @@ export default function Home() {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+        <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
             <div className="container px-4 md:px-6">
                 <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
                     {t('gallery_title')}
@@ -204,7 +204,7 @@ export default function Home() {
         </section>
 
       {/* Sponsors Section */}
-      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
             {t('sponsors_title')}
@@ -213,7 +213,7 @@ export default function Home() {
              <div className="flex animate-scroll-infinite">
                 {[...sponsors, ...sponsors].map((sponsor, index) => (
                     <div key={index} className="flex-shrink-0 w-1/4 md:w-1/5 p-2">
-                         <div className="flex aspect-video items-center justify-center p-6 bg-white rounded-lg shadow-sm">
+                         <div className="flex aspect-video items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-lg shadow-sm">
                             <Image
                                 src={sponsor.src}
                                 alt={sponsor.alt}
