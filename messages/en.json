@@ -203,5 +203,12 @@
   "ReviewList": {
     "no_reviews_1": "No reviews yet.",
     "no_reviews_2": "Be the first to share your experience!"
+  },
+   "Blog": {
+    "title": "Our Adventure Blog",
+    "subtitle": "Stories, tips, and inspiration from the world of hiking.",
+    "read_more": "Read More",
+    "no_posts_title": "No Posts Yet",
+    "no_posts_subtitle": "Check back soon for updates!"
   }
 }

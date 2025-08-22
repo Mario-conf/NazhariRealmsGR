@@ -203,5 +203,12 @@
   "ReviewList": {
     "no_reviews_1": "Aún no hay reseñas.",
     "no_reviews_2": "¡Sé el primero en compartir tu experiencia!"
+  },
+  "Blog": {
+    "title": "Nuestro Blog de Aventura",
+    "subtitle": "Historias, consejos e inspiración del mundo del senderismo.",
+    "read_more": "Leer Más",
+    "no_posts_title": "Aún no hay entradas",
+    "no_posts_subtitle": "¡Vuelve pronto para ver las novedades!"
   }
 }

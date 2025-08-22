@@ -203,5 +203,12 @@
   "ReviewList": {
     "no_reviews_1": "Nessuna recensione ancora.",
     "no_reviews_2": "Sii il primo a condividere la tua esperienza!"
+  },
+  "Blog": {
+    "title": "Il nostro blog di avventura",
+    "subtitle": "Storie, consigli e ispirazione dal mondo dell'escursionismo.",
+    "read_more": "Leggi di più",
+    "no_posts_title": "Ancora nessun post",
+    "no_posts_subtitle": "Torna presto per gli aggiornamenti!"
   }
 }

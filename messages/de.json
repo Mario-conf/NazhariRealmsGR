@@ -203,5 +203,12 @@
   "ReviewList": {
     "no_reviews_1": "Noch keine Bewertungen.",
     "no_reviews_2": "Seien Sie der Erste, der Ihre Erfahrungen teilt!"
+  },
+  "Blog": {
+    "title": "Unser Abenteuer-Blog",
+    "subtitle": "Geschichten, Tipps und Inspirationen aus der Welt des Wanderns.",
+    "read_more": "Weiterlesen",
+    "no_posts_title": "Noch keine Beiträge",
+    "no_posts_subtitle": "Schauen Sie bald wieder vorbei für Updates!"
   }
 }
