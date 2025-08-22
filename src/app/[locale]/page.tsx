@@ -5,36 +5,67 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { MountainIcon, StarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { Link } from '@/navigation';
 
 export default function Home() {
   const t = useTranslations('HomePage');
 
   return (
     <div className="flex-1">
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-background">
+      <section className="w-full py-12 md:py-20 lg:py-24">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <img
-              alt={t('hero_alt')}
-              className="mx-auto aspect-[3/4] sm:aspect-video overflow-hidden rounded-xl object-cover lg:order-last"
-              data-ai-hint="senderismo montaña"
-              src="https://placehold.co/600x800.png"
-            />
-            <div className="flex flex-col justify-center space-y-4 text-center lg:text-left">
-              <div className="space-y-2">
-                <h1 className="font-serif text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="lg:col-span-2 relative">
+              <Image
+                alt={t('hero_alt')}
+                className="aspect-[4/3] w-full overflow-hidden rounded-xl object-cover"
+                data-ai-hint="senderismo montaña atardecer"
+                height="600"
+                src="https://placehold.co/800x600.png"
+                width="800"
+              />
+            </div>
+
+            <div className="flex flex-col justify-center space-y-4 rounded-lg bg-card p-8 shadow-lg">
+              <div className="space-y-3">
+                <h1 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none">
                   {t('title')}
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
+                <p className="text-muted-foreground md:text-lg">
                   {t('subtitle')}
                 </p>
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center lg:justify-start">
-                <Button size="lg">{t('explore_routes')}</Button>
-                <Button size="lg" variant="outline">
-                  {t('join_now')}
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Button asChild size="lg">
+                  <Link href="/routes">{t('explore_routes')}</Link>
+                </Button>
+                <Button asChild size="lg" variant="secondary">
+                  <Link href="/#contact">{t('join_now')}</Link>
                 </Button>
               </div>
+            </div>
+
+            <div className="relative">
+              <Image
+                alt="Senderista en un puente"
+                className="aspect-video w-full overflow-hidden rounded-xl object-cover"
+                data-ai-hint="senderista puente colgante"
+                height="337"
+                src="https://placehold.co/600x337.png"
+                width="600"
+              />
+            </div>
+
+            <div className="relative lg:col-span-2">
+              <Image
+                alt="Vista panorámica de la montaña"
+                className="aspect-[2/1] w-full overflow-hidden rounded-xl object-cover"
+                data-ai-hint="vista panorámica montaña"
+                height="400"
+                src="https://placehold.co/800x400.png"
+                width="800"
+              />
             </div>
           </div>
         </div>
