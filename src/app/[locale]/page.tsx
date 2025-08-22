@@ -95,8 +95,8 @@ export default function Home() {
                         <div key={index} className="flex items-start gap-4">
                             <div className="flex-shrink-0">{feature.icon}</div>
                             <div>
-                                <h3 className="text-xl font-bold font-serif text-foreground">{feature.title}</h3>
-                                <p className="text-muted-foreground mt-1">{feature.description}</p>
+                                <h3 className="text-xl font-bold font-serif text-white">{feature.title}</h3>
+                                <p className="text-gray-300 mt-1">{feature.description}</p>
                             </div>
                         </div>
                     ))}
@@ -206,14 +206,14 @@ export default function Home() {
                         name="fullname"
                         placeholder={t('form_name')}
                         required
-                        className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
+                        className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
                       />
                       <Input
                         type="email"
                         name="email"
                         placeholder={t('form_email')}
                         required
-                        className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
+                        className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
                       />
                     </div>
 
@@ -221,7 +221,7 @@ export default function Home() {
                       name="message"
                       placeholder={t('form_message')}
                       required
-                      className="h-28 w-full resize-none rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary"
+                      className="h-28 w-full resize-none rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
                     ></Textarea>
 
                     <Button
