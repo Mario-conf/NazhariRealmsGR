@@ -28,11 +28,9 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
     const today = validatedWeather.prediccion.dia[0];
     const forecastDays = validatedWeather.prediccion.dia.slice(1, 6);
 
-    const dayOfWeek = (dateString: string, locale: string = 'es-ES') => new Date(dateString).toLocaleDateString(locale, { weekday: 'long' });
-
     // Calculate average wind speed for the day
     const windSpeeds = today.viento.map(v => v.velocidad);
-    const averageWindSpeed = windSpeeds.reduce((sum, speed) => sum + speed, 0) / windSpeeds.length;
+    const averageWindSpeed = windSpeeds.length > 0 ? windSpeeds.reduce((sum, speed) => sum + speed, 0) / windSpeeds.length : 0;
     
     // Find the weather condition for the main part of the day, or fallback to the first available.
     const conditionToday = today.estadoCielo.find(e => e.periodo === "12-24") ?? today.estadoCielo.find(e => e.periodo === "00-24") ?? today.estadoCielo[0];
@@ -51,7 +49,7 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
       forecast: forecastDays.map((day) => {
         const conditionForecast = day.estadoCielo.find(e => e.periodo === "12-24") ?? day.estadoCielo.find(e => e.periodo === "00-24") ?? day.estadoCielo[0];
         return {
-         day: dayOfWeek(day.fecha),
+         day: day.fecha, // Return the full date string
          temperature: Math.round((day.temperatura.maxima + day.temperatura.minima) / 2),
          condition: conditionForecast.descripcion,
         }

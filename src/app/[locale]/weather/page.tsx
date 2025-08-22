@@ -6,11 +6,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { getWeatherForLocation, WeatherData, WeatherResult } from '@/actions/weather';
 import { SunIcon, ThermometerIcon, WindIcon, Droplets } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 
 export default function WeatherPage() {
   const t = useTranslations('WeatherPage');
+  const locale = useLocale();
   const [location, setLocation] = useState('Sierra Nevada');
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(false);
@@ -51,6 +52,10 @@ export default function WeatherPage() {
       setLoading(false);
     }
   };
+
+  const getDayOfWeek = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString(locale, { weekday: 'long' });
+  }
 
   // Fetch weather for default location on initial render
   useEffect(() => {
@@ -141,7 +146,7 @@ export default function WeatherPage() {
               {weatherData.forecast.map((day, index) => (
                 <Card key={index} className="text-center">
                   <CardHeader>
-                    <CardTitle className="text-lg capitalize">{day.day}</CardTitle>
+                    <CardTitle className="text-lg capitalize">{getDayOfWeek(day.day)}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col items-center gap-2">
                     <SunIcon className="h-8 w-8 text-amber-400" />
