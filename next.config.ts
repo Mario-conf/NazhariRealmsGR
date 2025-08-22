@@ -28,6 +28,30 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'placehold.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'elviajerofeliz.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.e-konomista.pt',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.pinimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 's1.it.atcdn.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.escapadarural.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.svgrepo.com',
       }
     ],
   },
