@@ -155,8 +155,8 @@ export default function Home() {
                 </h2>
             </div>
              <div className="relative w-full max-w-7xl mx-auto">
-                 <div className="flex animate-scroll-infinite-reverse">
-                    {[...reviews, ...reviews, ...reviews].map((review, index) => (
+                 <div className="flex animate-scroll-infinite">
+                    {[...reviews, ...reviews].map((review, index) => (
                          <div key={index} className="flex-shrink-0 w-full max-w-sm p-4">
                             <Card className="h-full">
                                 <CardHeader className="flex flex-row items-center gap-4">
