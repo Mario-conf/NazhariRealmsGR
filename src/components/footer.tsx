@@ -55,6 +55,9 @@ export function Footer() {
           <div>
             <h6 className="uppercase font-bold mb-4">{t('useful_links_title')}</h6>
             <p className="mb-2">
+              <Link href="/routes" className="text-gray-400 hover:text-white text-sm">{t('routes_link')}</Link>
+            </p>
+            <p className="mb-2">
               <Link href="/rules" className="text-gray-400 hover:text-white text-sm">{t('rules_link')}</Link>
             </p>
             <p className="mb-2">
@@ -80,7 +83,7 @@ export function Footer() {
 
       {/* Copyright section */}
       <div className="text-center p-4 text-gray-400 text-xs bg-black/40">
-        <div>© 2025 Creado por <a href='https://www.albaidex.com' className='hover:text-yellow-400 transition-colors'>Albaidex</a></div>
+        <div>© 2025 {siteConfig.name}. Todos los derechos reservados. Desarrollado por <a href='https://www.albaidex.com' className='hover:text-yellow-400 transition-colors'>Albaidex</a></div>
       </div>
     </footer>
   );
