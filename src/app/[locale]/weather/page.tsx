@@ -140,46 +140,6 @@ export default function WeatherPage() {
               ))}
             </div>
           </div>
-
-          <div className="mt-8">
-            <h2 className="font-serif text-2xl font-bold tracking-tighter text-center">
-              {t('radar_maps_title')}
-            </h2>
-            <div className="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="font-serif">{t('cloud_radar')}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted">
-                    <Image
-                      src={weatherData.maps.cloud}
-                      alt={t('cloud_radar_alt')}
-                      className="h-full w-full object-cover"
-                      width={600}
-                      height={400}
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="font-serif">{t('heat_map')}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted">
-                     <Image
-                      src={weatherData.maps.heat}
-                      alt={t('heat_map_alt')}
-                      className="h-full w-full object-cover"
-                      width={600}
-                      height={400}
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
         </div>
       )}
     </div>

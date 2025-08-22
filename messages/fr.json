@@ -36,7 +36,7 @@
   },
   "WeatherPage": {
     "title": "Centre Météo",
-    "subtitle": "Obtenez des prévisions météo en temps réel et des cartes radar pour n'importe quel endroit. Planifiez vos aventures en toute confiance.",
+    "subtitle": "Obtenez des prévisions météo en temps réel pour n'importe quel endroit. Planifiez vos aventures en toute confiance.",
     "search_placeholder": "Entrez une ville ou un code postal",
     "search_button": "Rechercher",
     "search_button_loading": "Recherche...",
@@ -49,11 +49,7 @@
     "wind": "Vent",
     "humidity": "Humidité",
     "forecast_title": "Prévisions à 5 jours",
-    "radar_maps_title": "Cartes Radar",
-    "cloud_radar": "Radar de nuages",
-    "cloud_radar_alt": "Carte radar des nuages",
-    "heat_map": "Carte de chaleur",
-    "heat_map_alt": "Carte de chaleur"
+    "radar_maps_title": "Cartes Radar"
   },
   "BlogIndexPage": {
     "title": "Le Blog Alpine-Hike",
@@ -186,5 +182,3 @@
     "no_reviews_2": "Soyez le premier à partager votre expérience !"
   }
 }
-
-    

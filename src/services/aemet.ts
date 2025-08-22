@@ -30,6 +30,9 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
 
     const dayOfWeek = (dateString: string) => new Date(dateString).toLocaleDateString('es-ES', { weekday: 'long' });
 
+    // Find the wind data for the whole day if available, otherwise take the first available period
+    const windToday = today.viento.find(v => !v.periodo || v.periodo.length === 0) || today.viento[0];
+
     return {
       location: {
         city: validatedWeather.nombre,
@@ -38,7 +41,7 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
       current: {
         temperature: Math.round((today.temperatura.maxima + today.temperatura.minima) / 2),
         condition: today.estadoCielo.find(e => e.periodo === "00-24")?.descripcion ?? today.estadoCielo[0].descripcion,
-        windSpeed: today.viento[0].velocidad,
+        windSpeed: windToday.velocidad,
         humidity: Math.round((today.humedadRelativa.maxima + today.humedadRelativa.minima) / 2),
       },
       forecast: forecastDays.map((day) => ({
@@ -46,10 +49,6 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
         temperature: Math.round((day.temperatura.maxima + day.temperatura.minima) / 2),
         condition: day.estadoCielo.find(e => e.periodo === "00-24")?.descripcion ?? day.estadoCielo[0].descripcion,
       })),
-      maps: {
-        cloud: 'https://www.aemet.es/imagenes_d/eltiempo/observacion/satelite/202407311200_s83g.gif', // Placeholder static URL
-        heat: 'https://www.aemet.es/imagenes_d/eltiempo/prediccion/mapa_temp/tmax_hoy.png', // Placeholder static URL
-      },
     };
   } catch (error) {
     console.error('Error processing AEMET data:', error);
@@ -80,7 +79,11 @@ export async function fetchData(url: string) {
     if (!dataResponse.ok) {
         throw new Error(`Failed to fetch data from ${initialData.datos}, status: ${dataResponse.status}`);
     }
-    return await dataResponse.json();
+    const responseText = await dataResponse.text();
+    // AEMET sometimes returns invalid characters at the start of the JSON
+    const cleanResponseText = responseText.trim().replace(/^[\u200B-\u200D\uFEFF]/, '');
+    return JSON.parse(cleanResponseText);
+
 
   } catch (error) {
     console.error(`Failed to fetch from AEMET URL: ${url}`, error);

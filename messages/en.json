@@ -36,7 +36,7 @@
   },
   "WeatherPage": {
     "title": "Weather Center",
-    "subtitle": "Get real-time weather forecasts and radar maps for any location. Plan your adventures with confidence.",
+    "subtitle": "Get real-time weather forecasts for any location. Plan your adventures with confidence.",
     "search_placeholder": "Enter a city or zip code",
     "search_button": "Search",
     "search_button_loading": "Searching...",
@@ -49,11 +49,7 @@
     "wind": "Wind",
     "humidity": "Humidity",
     "forecast_title": "5-Day Forecast",
-    "radar_maps_title": "Radar Maps",
-    "cloud_radar": "Cloud Radar",
-    "cloud_radar_alt": "Cloud Radar Map",
-    "heat_map": "Heat Map",
-    "heat_map_alt": "Heat Map"
+    "radar_maps_title": "Radar Maps"
   },
   "BlogIndexPage": {
     "title": "The Alpine-Hike Blog",
@@ -88,7 +84,7 @@
     "lnt3_trigger": "Sierra Nevada National Park Rules",
     "lnt3_content": "Wild camping is not permitted in this National Park. The only bivouacking allowed is overnight with prior written notification to the Park's director (maximum 15 people and 3 tents). It is forbidden to stay overnight in environmental reserve areas (e.g., 'borreguiles' or near lagoons), as well as within 500m of guarded refuges, roads, or streams. Furthermore, between June 1 and October 15, camping or bivouacking in wooded areas is not allowed due to high fire risk. In any case, within the park, it is forbidden to light fires or dump trash in springs, rivers, or the environment.",
     "lnt4_trigger": "Leave No Trace Principles",
-    "lnt4_content": "Adapt the seven international principles: (1) Plan ahead and minimize waste: carry your trash (including toilet paper) to a container, avoiding waste generation. (2) Travel and camp on durable surfaces: always stay on marked trails or hard rock; do not tread on sensitive meadows or 'borreguiles'. (3) Dispose of waste properly: bury organic waste (more than 60m from water sources) and use available services if any. (4) Leave what you find: do not leave new marks or signs; respect ruins, landscapes, and buildings. (5) Minimize campfire impacts: if fire is not strictly permitted, use them only in designated areas (fire pits) and never in summer; prefer portable stoves. (6) Respect wildlife: do not uproot plants or drive animals from their habitats. (7) Be considerate of other visitors: control noise and your passage to not disturb other hikers and the environment (e.g., speak softly and yield the way on narrow trails).",
+    "lnt4_content": "Adapt the seven international principles: (1) Plan ahead and minimize waste: carry your trash (including toilet paper) to a container, avoiding waste generation. (2) Travel and camp on durable surfaces: always stay on marked trails or on hard rock; do not tread on sensitive meadows or 'borreguiles'. (3) Dispose of waste properly: bury organic waste (more than 60m from water sources) and use available services if any. (4) Leave what you find: do not leave new marks or signs; respect ruins, landscapes, and buildings. (5) Minimize campfire impacts: if fire is not strictly permitted, use them only in designated areas (fire pits) and never in summer; prefer portable stoves. (6) Respect wildlife: do not uproot plants or drive animals from their habitats. (7) Be considerate of other visitors: control noise and your passage to not disturb other hikers and the environment (e.g., speak softly and yield the way on narrow trails).",
     "etiquette_title": "Group Etiquette and Club Conduct",
     "etiquette1_title": "Respect in the Group",
     "etiquette1_content": "Be punctual and well-equipped for every outing. During the hike, adapt your pace to the one set by the guide (neither rush ahead nor fall behind). Follow the leader's instructions at all times for everyone's safety. Every member should cooperate: for example, divide responsibilities (group leader, 'flag bearers,' etc.) and look out for each other. Respectful behavior among hikers includes helping those in need and maintaining a supportive attitude on difficult terrain.",

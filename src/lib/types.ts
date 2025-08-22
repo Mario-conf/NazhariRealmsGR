@@ -49,9 +49,5 @@ export const WeatherDataSchema = z.object({
       condition: z.string().describe('The forecasted weather condition.'),
     })
   ).describe('A weather forecast for the next few days.'),
-  maps: z.object({
-    cloud: z.string().describe("A URL to the cloud radar map from AEMET."),
-    heat: z.string().describe("A URL to the temperature map from AEMET."),
-  }),
 });
 export type WeatherData = z.infer<typeof WeatherDataSchema>;

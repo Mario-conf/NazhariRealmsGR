@@ -36,7 +36,7 @@
   },
   "WeatherPage": {
     "title": "Wetterzentrum",
-    "subtitle": "Erhalten Sie Echtzeit-Wettervorhersagen und Radarkarten für jeden Ort. Planen Sie Ihre Abenteuer mit Zuversicht.",
+    "subtitle": "Erhalten Sie Echtzeit-Wettervorhersagen für jeden Ort. Planen Sie Ihre Abenteuer mit Zuversicht.",
     "search_placeholder": "Geben Sie eine Stadt oder Postleitzahl ein",
     "search_button": "Suchen",
     "search_button_loading": "Suchen...",
@@ -49,11 +49,7 @@
     "wind": "Wind",
     "humidity": "Luftfeuchtigkeit",
     "forecast_title": "5-Tage-Vorhersage",
-    "radar_maps_title": "Radarkarten",
-    "cloud_radar": "Wolkenradar",
-    "cloud_radar_alt": "Wolkenradarkarte",
-    "heat_map": "Wärmekarte",
-    "heat_map_alt": "Wärmekarte"
+    "radar_maps_title": "Radarkarten"
   },
   "BlogIndexPage": {
     "title": "Der Alpine-Hike Blog",
@@ -186,5 +182,3 @@
     "no_reviews_2": "Seien Sie der Erste, der Ihre Erfahrungen teilt!"
   }
 }
-
-    
