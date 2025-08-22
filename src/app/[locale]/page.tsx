@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 bg-white/40">
+      <section id="reviews" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl text-foreground">
             {t('reviews_title')}
@@ -206,5 +206,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
