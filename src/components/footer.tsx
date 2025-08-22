@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
-import { Facebook, Twitter, Instagram, Linkedin, MountainIcon, Home, Mail, Phone } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Home, Mail, Phone } from 'lucide-react';
+import Image from 'next/image';
 
 export function Footer() {
   const t = useTranslations('Footer');
@@ -34,7 +35,14 @@ export function Footer() {
           {/* Company info */}
           <div className="md:col-span-1">
             <h6 className="uppercase font-bold mb-4 flex items-center justify-center md:justify-start gap-2">
-              <MountainIcon />
+              <Image 
+                src="https://placehold.co/100x100.png" 
+                alt="Club Logo"
+                width={24}
+                height={24}
+                className="h-6 w-6 rounded-full"
+                data-ai-hint="logo club"
+              />
               Nazhari Realms GR
             </h6>
             <p className="text-gray-400 text-sm">
