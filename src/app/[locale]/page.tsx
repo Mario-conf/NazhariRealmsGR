@@ -93,7 +93,7 @@ export default function Home() {
 
 
   return (
-    <div className="flex-1" style={{ background: 'linear-gradient(to bottom, #f25c3a, #ffffff, #374151)' }}>
+    <div className="flex-1 bg-gradient-to-b from-primary/10 via-background to-gray-800/20">
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
          <Image
@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
         <div className="container px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="grid gap-8">
@@ -129,8 +129,8 @@ export default function Home() {
                         <div key={index} className="flex items-start gap-4">
                             <div className="flex-shrink-0">{feature.icon}</div>
                             <div>
-                                <h3 className="text-xl font-bold font-serif text-black">{feature.title}</h3>
-                                <p className="text-[#121212] mt-1">{feature.description}</p>
+                                <h3 className="text-xl font-bold font-serif text-foreground">{feature.title}</h3>
+                                <p className="text-muted-foreground mt-1">{feature.description}</p>
                             </div>
                         </div>
                     ))}
@@ -149,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* Reviews Section */}
-        <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 overflow-hidden bg-transparent">
+        <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 overflow-hidden bg-card">
             <div className="container px-4 md:px-6 text-center">
                  <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground mb-12">
                     {t('reviews_title')}
@@ -159,7 +159,7 @@ export default function Home() {
                  <div className="flex animate-scroll-infinite">
                     {[...reviews, ...reviews].map((review, index) => (
                          <div key={index} className="flex-shrink-0 w-full max-w-sm p-4">
-                            <Card className="h-full">
+                            <Card className="h-full bg-background">
                                 <CardHeader className="flex flex-row items-center gap-4">
                                     <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
                                     <div>
@@ -182,7 +182,7 @@ export default function Home() {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
+        <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-background">
             <div className="container px-4 md:px-6">
                 <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
                     {t('gallery_title')}
@@ -204,7 +204,7 @@ export default function Home() {
         </section>
 
       {/* Sponsors Section */}
-      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
+      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-card">
         <div className="container px-4 md:px-6">
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
             {t('sponsors_title')}
@@ -234,11 +234,11 @@ export default function Home() {
       <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">{t('contact.title')}</h2>
-            <p className="mt-4 max-w-3xl mx-auto text-gray-300 md:text-xl">{t('contact.subtitle')}</p>
+            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">{t('contact.title')}</h2>
+            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl">{t('contact.subtitle')}</p>
           </div>
 
-          <div className="max-w-4xl mx-auto rounded-2xl border border-white/20 bg-black/30 p-6 shadow-lg backdrop-blur-sm">
+          <div className="max-w-4xl mx-auto rounded-2xl border border-border bg-card/80 p-6 shadow-lg backdrop-blur-sm">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Mapa */}
                 <div className="overflow-hidden rounded-2xl h-full w-full min-h-[400px]">
@@ -247,13 +247,13 @@ export default function Home() {
                     width="100%"
                     height="100%"
                     loading="lazy"
-                    className="w-full h-full rounded-xl filter grayscale invert transition-all duration-300"
+                    className="w-full h-full rounded-xl filter grayscale invert transition-all duration-300 hover:filter-none"
                   ></iframe>
                 </div>
 
                 {/* Formulario */}
                 <div className="flex flex-col justify-center h-full">
-                  <h3 className="mb-4 text-2xl font-semibold text-center text-white">
+                  <h3 className="mb-4 text-2xl font-semibold text-center text-foreground">
                     {t('contact.form_title')}
                   </h3>
 
@@ -264,14 +264,14 @@ export default function Home() {
                         name="fullname"
                         placeholder={t('form_name')}
                         required
-                        className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
+                        className="rounded-xl border-gray-600 bg-background p-3 text-sm text-foreground shadow-sm focus:border-primary focus:ring-primary placeholder:text-muted-foreground"
                       />
                       <Input
                         type="email"
                         name="email"
                         placeholder={t('form_email')}
                         required
-                        className="rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
+                        className="rounded-xl border-gray-600 bg-background p-3 text-sm text-foreground shadow-sm focus:border-primary focus:ring-primary placeholder:text-muted-foreground"
                       />
                     </div>
 
@@ -279,7 +279,7 @@ export default function Home() {
                       name="message"
                       placeholder={t('form_message')}
                       required
-                      className="h-28 w-full resize-none rounded-xl border-gray-600 bg-black/50 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-gray-300"
+                      className="h-28 w-full resize-none rounded-xl border-gray-600 bg-background p-3 text-sm text-foreground shadow-sm focus:border-primary focus:ring-primary placeholder:text-muted-foreground"
                     ></Textarea>
 
                     <Button
