@@ -40,7 +40,7 @@ export default function RoutesPage() {
           </p>
         </header>
         
-        <aside className="mb-12 sticky top-16 z-30 bg-background/80 backdrop-blur-sm -mx-4 px-4 py-4 border-b">
+        <aside className="mb-12">
           <div className="container mx-auto p-0">
              <Card>
                 <CardContent className="p-4 md:p-6">
