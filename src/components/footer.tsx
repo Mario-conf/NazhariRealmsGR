@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import { Home, Mail } from 'lucide-react';
 import Image from 'next/image';
-import { FaWhatsapp, FaSpotify, FaStrava, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaSpotify, FaStrava, FaInstagram } from "react-icons/fa6";
 
 export function Footer() {
   const t = useTranslations('Footer');
