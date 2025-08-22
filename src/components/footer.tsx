@@ -72,7 +72,7 @@ export function Footer() {
               <Home className="mr-3 h-5 w-5 flex-shrink-0"/> Granada, España
             </p>
             <p className="flex items-center justify-center md:justify-start mb-2 text-gray-400 text-sm">
-              <Mail className="mr-3 h-5 w-5 flex-shrink-0"/> info@nazharirealms.com
+              <Mail className="mr-3 h-5 w-5 flex-shrink-0"/> nazharirealmsgr@gmail.com
             </p>
           </div>
         </div>
