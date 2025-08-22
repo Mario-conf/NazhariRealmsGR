@@ -17,7 +17,7 @@ export default function Home() {
 
   const sponsors = [
     { id: 1, src: 'https://i0.wp.com/tc-waalwijk.nl/wp-content/uploads/2018/01/Strava-Logo.png?w=600&ssl=1', alt: 'Logo'},
-    { id: 2, src: 'https://encuestas.juntadeandalucia.es/tmp/assets/5c167f18/logo-junta-nuevo.png', alt: 'Logo' },
+    { id: 2, src: 'https://www.fundacionaccesible.org/wp-content/uploads/2021/05/logo-junta-andalucia-educacion-y-deporte-rectangulo.png', alt: 'Logo' },
     { id: 3, src: 'https://tse3.mm.bing.net/th/id/OIP.gitPYpYsWGJUecokH3jNDQHaCh?rs=1&pid=ImgDetMain&o=7&rm=3', alt: 'Logo' },
     { id: 4, src: 'https://latestlogo.com/wp-content/uploads/2024/03/decathlon-logo.png', alt: ' Logo' },
     { id: 5, src: 'https://thinkmarketingmagazine.com/wp-content/uploads/2022/08/Amazon_logo.svg.png', alt: ' Logo' },
@@ -219,7 +219,7 @@ export default function Home() {
           <div className="relative overflow-hidden w-full max-w-6xl mx-auto">
              <div className="flex animate-scroll-infinite">
                 {[...sponsors, ...sponsors].map((sponsor, index) => (
-                    <div key={index} className="flex-shrink-0 w-[160px] p-2">
+                    <div key={index} className="flex-shrink-0 w-[150px] p-2">
                          <div className="flex aspect-video items-center justify-center p-6 bg-white rounded-lg shadow-sm">
                             <Image
                                 src={sponsor.src}
@@ -264,7 +264,7 @@ export default function Home() {
                     {t('contact.form_title')}
                   </h3>
 
-                  <form className="space-y-4">
+                  <div className="space-y-4">
                     <div className="grid gap-4 sm:grid-cols-2">
                       <Input
                         type="text"
@@ -289,15 +289,13 @@ export default function Home() {
                       className="h-28 w-full resize-none rounded-xl border-white/30 bg-black/20 p-3 text-sm text-white shadow-sm focus:border-primary focus:ring-primary placeholder:text-white/80"
                     ></Textarea>
 
-                    <Button
-                      type="submit"
-                      className="w-full gap-2 rounded-xl"
-                      size="lg"
-                    >
-                      <Send className="h-4 w-4" />
-                      {t('form_submit')}
+                    <Button asChild size="lg" className="w-full gap-2 rounded-xl">
+                      <a href="mailto:nazharirealmsgr@gmail.com">
+                        <Send className="h-4 w-4" />
+                        {t('form_submit')}
+                      </a>
                     </Button>
-                  </form>
+                  </div>
                 </div>
               </div>
           </div>
@@ -306,3 +304,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
