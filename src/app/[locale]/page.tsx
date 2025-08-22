@@ -16,14 +16,15 @@ export default function Home() {
   const t = useTranslations('HomePage');
 
   const sponsors = [
-    { id: 1, src: 'https://cdn.worldvectorlogo.com/logos/the-north-face-1.svg', alt: 'The North Face Logo'},
-    { id: 2, src: 'https://cdn.worldvectorlogo.com/logos/salomon-1.svg', alt: 'Salomon Logo' },
-    { id: 3, src: 'https://cdn.worldvectorlogo.com/logos/garmin.svg', alt: 'Garmin Logo' },
-    { id: 4, src: 'https://logovector.net/wp-content/uploads/2023/07/decathlon-logo-logovector.png', alt: 'Decathlon Logo' },
-    { id: 5, src: 'https://cdn.worldvectorlogo.com/logos/deuter-sport.svg', alt: 'Deuter Logo' },
-    { id: 6, src: 'https://cdn.worldvectorlogo.com/logos/patagonia.svg', alt: 'Patagonia Logo' },
-    { id: 7, src: 'https://cdn.worldvectorlogo.com/logos/columbia-sportswear-company.svg', alt: 'Columbia Sportswear Logo' },
-    { id: 8, src: 'https://www.actualidadiphone.com/wp-content/uploads/2013/03/strava-logo.png', alt: 'Strava Logo' }
+    { id: 1, src: 'https://www.actualidadiphone.com/wp-content/uploads/2013/03/strava-logo.png', alt: 'Logo'},
+    { id: 2, src: 'https://www.iessansebastian.com/web/wp-content/uploads/2021/07/ced_horizontal-300x75.png', alt: 'Logo' },
+    { id: 3, src: 'https://tse3.mm.bing.net/th/id/OIP.gitPYpYsWGJUecokH3jNDQHaCh?rs=1&pid=ImgDetMain&o=7&rm=3', alt: 'Logo' },
+    { id: 4, src: 'https://static.actu.fr/uploads/2024/03/decathlon-960x640.png', alt: ' Logo' },
+    { id: 5, src: 'https://thinkmarketingmagazine.com/wp-content/uploads/2022/08/Amazon_logo.svg.png', alt: ' Logo' },
+    { id: 6, src: 'https://seekvectorlogo.com/wp-content/uploads/2022/01/alsa-vector-logo-2022.png', alt: ' Logo' },
+    { id: 7, src: 'https://www.twice.com/wp-content/uploads/2021/11/Amazfit-Logo_1-726x182.png', alt: 'Logo' },
+    { id: 8, src: 'https://ulefonepty.com/wp-content/uploads/2022/05/Ulefone%E6%96%B0logo-png-04-01.png', alt: 'Logo' },
+    { id: 9, src: 'https://www.liblogo.com/img-logo/re1425r8db-renfe-logo-renfe-logo-download-vector.png', alt: 'Logo' }
   ];
   
   const features = [
