@@ -130,8 +130,8 @@ export default function Home() {
                         <div key={index} className="flex items-start gap-4">
                             <div className="flex-shrink-0">{feature.icon}</div>
                             <div>
-                                <h3 className="text-xl font-bold font-serif text-black">{feature.title}</h3>
-                                <p className="text-gray-800 mt-1">{feature.description}</p>
+                                <h3 className="text-xl font-bold font-serif" style={{ color: 'black' }}>{feature.title}</h3>
+                                <p className="mt-1" style={{ color: '#121212' }}>{feature.description}</p>
                             </div>
                         </div>
                     ))}
@@ -235,8 +235,8 @@ export default function Home() {
       <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black">{t('contact.title')}</h2>
-            <p className="mt-4 max-w-3xl mx-auto text-white md:text-xl">{t('contact.subtitle')}</p>
+            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl" style={{ color: 'black' }}>{t('contact.title')}</h2>
+            <p className="mt-4 max-w-3xl mx-auto md:text-xl" style={{ color: 'white' }}>{t('contact.subtitle')}</p>
           </div>
 
           <div className="max-w-4xl mx-auto rounded-2xl border border-border bg-card/80 p-6 shadow-lg backdrop-blur-sm">
