@@ -1,7 +1,9 @@
+'use client';
+
+import * as React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { StarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -14,9 +16,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 export default function Home() {
   const t = useTranslations('HomePage');
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
 
   return (
     <div className="flex-1">
@@ -145,17 +151,20 @@ export default function Home() {
             {t('sponsors_title')}
           </h2>
           <Carousel
+            plugins={[plugin.current]}
             opts={{
               align: 'start',
               loop: true,
             }}
-            className="w-full max-w-4xl mx-auto"
+            className="w-full max-w-6xl mx-auto"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
           >
             <CarouselContent>
-              {Array.from({ length: 5 }).map((_, index) => (
+              {Array.from({ length: 8 }).map((_, index) => (
                 <CarouselItem
                   key={index}
-                  className="md:basis-1/2 lg:basis-1/3"
+                  className="basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
                 >
                   <div className="p-1">
                     <div className="flex aspect-video items-center justify-center p-6 bg-muted rounded-lg">
