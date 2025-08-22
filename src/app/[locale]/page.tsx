@@ -219,14 +219,14 @@ export default function Home() {
           <div className="relative overflow-hidden w-full max-w-6xl mx-auto">
              <div className="flex animate-scroll-infinite">
                 {[...sponsors, ...sponsors].map((sponsor, index) => (
-                    <div key={index} className="flex-shrink-0 w-1/4 md:w-1/5 p-2">
-                         <div className="flex items-center justify-center p-6 bg-white backdrop-blur-sm rounded-lg shadow-sm min-w-[200px] min-h-[150px]">
+                    <div key={index} className="flex-shrink-0 w-[150px] p-2">
+                         <div className="flex aspect-video items-center justify-center p-6 bg-white rounded-lg shadow-sm">
                             <Image
                                 src={sponsor.src}
                                 alt={sponsor.alt}
                                 data-ai-hint="logo empresa"
-                                width={180}
-                                height={100}
+                                width={120}
+                                height={60}
                                 className="object-contain"
                             />
                         </div>
@@ -306,5 +306,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
