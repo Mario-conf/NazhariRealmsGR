@@ -239,7 +239,7 @@ export default function Home() {
             <p className="mt-4 max-w-3xl mx-auto md:text-xl" style={{ color: 'white' }}>{t('contact.subtitle')}</p>
           </div>
 
-          <div className="max-w-4xl mx-auto rounded-2xl border border-border bg-card/80 p-6 shadow-lg backdrop-blur-sm">
+          <div className="max-w-4xl mx-auto rounded-2xl border border-white/20 bg-white/10 p-6 shadow-lg backdrop-blur-sm">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Mapa */}
                 <div className="overflow-hidden rounded-2xl h-full w-full min-h-[400px]">
