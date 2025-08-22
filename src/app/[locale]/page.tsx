@@ -173,10 +173,10 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 text-white">
+      <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t('contact.title')}</h2>
+            <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">{t('contact.title')}</h2>
             <p className="mt-4 max-w-3xl mx-auto text-gray-300 md:text-xl">{t('contact.subtitle')}</p>
           </div>
 
@@ -195,7 +195,7 @@ export default function Home() {
 
                 {/* Formulario */}
                 <div>
-                  <h3 className="mb-4 text-2xl font-semibold text-center">
+                  <h3 className="mb-4 text-2xl font-semibold text-center text-white">
                     {t('contact.form_title')}
                   </h3>
 
@@ -241,5 +241,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
