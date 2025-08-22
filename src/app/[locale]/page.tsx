@@ -220,7 +220,7 @@ export default function Home() {
              <div className="flex animate-scroll-infinite">
                 {[...sponsors, ...sponsors].map((sponsor, index) => (
                     <div key={index} className="flex-shrink-0 w-1/4 md:w-1/5 p-2">
-                         <div className="flex aspect-video items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-lg shadow-sm">
+                         <div className="flex aspect-video items-center justify-center p-6 backdrop-blur-sm rounded-lg shadow-sm">
                             <Image
                                 src={sponsor.src}
                                 alt={sponsor.alt}
