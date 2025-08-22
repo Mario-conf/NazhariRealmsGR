@@ -145,7 +145,7 @@ export default function Home() {
                 <div className="relative aspect-square md:aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
                      <Image
                         alt={t('features.image_alt')}
-                        src="https://images.ecestaticos.com/37BtC2qV7E7188eeiimvgqmNdrc=/0x139:2710x1667/1600x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F251%2Fa33%2Ffa4%2F251a33fa465096ed19fe8ba0d7719a77.jpg"
+                        src="beg.png"
                         data-ai-hint="senderista mapa brújula"
                         fill
                         className="object-cover"
