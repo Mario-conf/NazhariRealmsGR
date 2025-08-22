@@ -9,13 +9,6 @@ import { StarIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/navigation';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 
 export default function Home() {
   const t = useTranslations('HomePage');
@@ -27,8 +20,8 @@ export default function Home() {
   }));
 
   return (
-    <div className="flex-1">
-      <section className="w-full py-12 md:py-20 lg:py-24 bg-gradient-to-b from-background to-orange-50">
+    <div className="flex-1 bg-gradient-to-b from-orange-50 via-background to-gray-800">
+      <section className="w-full py-12 md:py-20 lg:py-24">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-3">
             <div className="lg:col-span-2 relative">
@@ -86,7 +79,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-orange-50 to-orange-100">
+      <section id="reviews" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
             {t('reviews_title')}
@@ -147,7 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-orange-100 to-background">
+      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12">
             {t('sponsors_title')}
@@ -169,25 +162,17 @@ export default function Home() {
                     </div>
                 ))}
              </div>
-             <div
-                className="absolute top-0 left-0 w-24 h-full"
-                style={{background: 'linear-gradient(to right, hsl(var(--background)), transparent)'}}
-             />
-             <div
-                className="absolute top-0 right-0 w-24 h-full"
-                style={{background: 'linear-gradient(to left, hsl(var(--background)), transparent)'}}
-             />
           </div>
         </div>
       </section>
 
-      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t bg-background">
+      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
-            <h2 className="font-serif text-3xl font-bold tracking-tighter md:text-4xl/tight">
+            <h2 className="font-serif text-3xl font-bold tracking-tighter md:text-4xl/tight text-primary-foreground">
               {t('contact_title')}
             </h2>
-            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="mx-auto max-w-[600px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               {t('contact_subtitle')}
             </p>
           </div>
