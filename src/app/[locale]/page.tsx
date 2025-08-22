@@ -24,7 +24,7 @@ export default function Home() {
     { id: 6, src: 'https://www.underconsideration.com/brandnew/archives/alsa_logo.png', alt: ' Logo' },
     { id: 7, src: 'https://www.twice.com/wp-content/uploads/2021/11/Amazfit-Logo_1-726x182.png', alt: 'Logo' },
     { id: 8, src: 'https://ulefonepty.com/wp-content/uploads/2022/05/Ulefone%E6%96%B0logo-png-04-01.png', alt: 'Logo' },
-    { id: 9, src: 'https://www.liblogo.com/img-logo/re1425r8db-renfe-logo-renfe-logo-download-vector.png', alt: 'Logo' }
+    { id: 9, src: 'https://agqcvcudno.cloudimg.io/v7/climatica.coop/wp-content/uploads/2025/06/detalle_logo_aemet.png', alt: 'Logo' }
   ];
   
   const features = [
