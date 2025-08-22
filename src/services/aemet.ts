@@ -68,9 +68,12 @@ export async function fetchData(url: string) {
       headers: { 'api_key': API_KEY, 'Accept': 'application/json' },
     });
 
-    if (initialResponse.status === 429) {
-      console.error("AEMET API rate limit exceeded.");
-      throw new Error("Rate limit exceeded. Please wait before trying again.");
+    if (!initialResponse.ok) {
+        if (initialResponse.status === 429) {
+          console.error("AEMET API rate limit exceeded.");
+          throw new Error("Rate limit exceeded. Please wait before trying again.");
+        }
+        throw new Error(`AEMET API initial request failed with status: ${initialResponse.status}`);
     }
     
     const initialData = await initialResponse.json() as any;
