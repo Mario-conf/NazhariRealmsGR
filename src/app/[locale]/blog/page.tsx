@@ -11,7 +11,6 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
 
 // This is now an async component because getBlogPosts is async
 export default async function BlogPage() {
