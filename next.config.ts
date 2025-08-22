@@ -105,6 +105,14 @@ const nextConfig: NextConfig = {
        {
         protocol: 'https',
         hostname: 'www.liblogo.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i0.wp.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'logos-world.net'
       }
     ],
   },
@@ -112,4 +120,5 @@ const nextConfig: NextConfig = {
 
 export default withNextIntl(nextConfig);
 
+    
     
