@@ -142,13 +142,14 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-                <div className="relative aspect-square md:aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+                <div className="relative rounded-xl overflow-hidden shadow-2xl">
                      <Image
                         alt={t('features.image_alt')}
                         src="/beg.png"
                         data-ai-hint="senderista mapa brújula"
-                        fill
-                        className="object-cover"
+                        width={600}
+                        height={750}
+                        className="w-full h-auto"
                     />
                 </div>
             </div>
