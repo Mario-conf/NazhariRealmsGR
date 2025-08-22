@@ -16,13 +16,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
 
 export default function Home() {
   const t = useTranslations('HomePage');
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
+
+  const sponsors = Array.from({ length: 8 }).map((_, index) => ({
+    id: index,
+    src: `https://placehold.co/300x150.png`,
+    alt: `Sponsor Logo ${index + 1}`,
+  }));
 
   return (
     <div className="flex-1">
@@ -150,40 +152,32 @@ export default function Home() {
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12">
             {t('sponsors_title')}
           </h2>
-          <Carousel
-            plugins={[plugin.current]}
-            opts={{
-              align: 'start',
-              loop: true,
-            }}
-            className="w-full max-w-6xl mx-auto"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
-          >
-            <CarouselContent>
-              {Array.from({ length: 8 }).map((_, index) => (
-                <CarouselItem
-                  key={index}
-                  className="basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-                >
-                  <div className="p-1">
-                    <div className="flex aspect-video items-center justify-center p-6 bg-muted rounded-lg">
-                      <Image
-                        src={`https://placehold.co/300x150.png`}
-                        alt={`Sponsor Logo ${index + 1}`}
-                        data-ai-hint="logo empresa"
-                        width={300}
-                        height={150}
-                        className="object-contain"
-                      />
+          <div className="relative overflow-hidden w-full max-w-6xl mx-auto">
+             <div className="flex animate-scroll-infinite">
+                {[...sponsors, ...sponsors].map((sponsor, index) => (
+                    <div key={index} className="flex-shrink-0 w-1/4 md:w-1/5 p-2">
+                         <div className="flex aspect-video items-center justify-center p-6 bg-muted rounded-lg">
+                            <Image
+                                src={sponsor.src}
+                                alt={sponsor.alt}
+                                data-ai-hint="logo empresa"
+                                width={300}
+                                height={150}
+                                className="object-contain"
+                            />
+                        </div>
                     </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                ))}
+             </div>
+             <div
+                className="absolute top-0 left-0 w-24 h-full"
+                style={{background: 'linear-gradient(to right, hsl(var(--background)), transparent)'}}
+             />
+             <div
+                className="absolute top-0 right-0 w-24 h-full"
+                style={{background: 'linear-gradient(to left, hsl(var(--background)), transparent)'}}
+             />
+          </div>
         </div>
       </section>
 
