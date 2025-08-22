@@ -219,7 +219,7 @@ export default function Home() {
           <div className="relative overflow-hidden w-full max-w-6xl mx-auto">
              <div className="flex animate-scroll-infinite">
                 {[...sponsors, ...sponsors].map((sponsor, index) => (
-                    <div key={index} className="flex-shrink-0 w-[150px] p-2">
+                    <div key={index} className="flex-shrink-0 w-[160px] p-2">
                          <div className="flex aspect-video items-center justify-center p-6 bg-white rounded-lg shadow-sm">
                             <Image
                                 src={sponsor.src}
