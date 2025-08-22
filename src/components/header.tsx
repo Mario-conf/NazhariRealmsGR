@@ -1,9 +1,10 @@
-import { MountainIcon, Menu, Phone } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from './ui/button';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import { LanguageSwitcher } from './language-switcher';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import Image from 'next/image';
 
 export function Header() {
   const t = useTranslations('Header');
@@ -20,7 +21,14 @@ export function Header() {
         className="flex items-center justify-center gap-2"
         href="/"
       >
-        <MountainIcon className="h-6 w-6" />
+        <Image 
+          src="https://placehold.co/100x100.png" 
+          alt="Club Logo"
+          width={40}
+          height={40}
+          className="h-10 w-10 rounded-full"
+          data-ai-hint="logo club"
+        />
         <span className="font-semibold hidden sm:inline-block">
           Nazhari Realms GR
         </span>
@@ -59,7 +67,14 @@ export function Header() {
                     href="/"
                     className="flex items-center gap-2 text-lg font-semibold mb-4"
                 >
-                    <MountainIcon className="h-6 w-6" />
+                    <Image 
+                      src="https://placehold.co/100x100.png" 
+                      alt="Club Logo"
+                      width={40}
+                      height={40}
+                      className="h-10 w-10 rounded-full"
+                      data-ai-hint="logo club"
+                    />
                     <span>Nazhari Realms GR</span>
                 </Link>
                 {navLinks.map((link) => (
