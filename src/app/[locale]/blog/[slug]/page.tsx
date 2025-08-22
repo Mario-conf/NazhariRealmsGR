@@ -5,9 +5,11 @@ import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+// This is now an async component because getBlogPost is async
+export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const t = useTranslations('BlogPostPage');
-  const post = getBlogPost(params.slug);
+  // We need to `await` the result of getBlogPost
+  const post = await getBlogPost(params.slug);
 
   if (!post) {
     notFound();

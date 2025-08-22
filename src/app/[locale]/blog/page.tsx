@@ -13,9 +13,11 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
-export default function BlogPage() {
+// This is now an async component because getBlogPosts is async
+export default async function BlogPage() {
   const t = useTranslations('BlogIndexPage');
-  const posts = getBlogPosts();
+  // We need to `await` the result of getBlogPosts
+  const posts = await getBlogPosts();
 
   return (
     <div className="container mx-auto px-4 py-8 md:py-16">
