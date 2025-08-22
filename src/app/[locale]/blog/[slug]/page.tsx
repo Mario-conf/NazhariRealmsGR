@@ -13,6 +13,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
   if (!post) {
     notFound();
+    return null; // Return null to prevent rendering the rest of the component
   }
 
   return (
