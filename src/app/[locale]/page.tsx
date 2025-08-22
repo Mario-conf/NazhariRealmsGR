@@ -230,7 +230,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-900">
+      <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">{t('contact.title')}</h2>
