@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "slug": "analisis-zapatillas-trekking-forclaz-trek-100",
+    "productName": "Zapatillas de Trekking Forclaz Trek 100",
+    "brand": "Forclaz (Decathlon)",
+    "category": "Calzado",
+    "author": "Juan Pérez",
+    "date": "2024-05-15",
+    "image": "https://placehold.co/800x400.png",
+    "imageHint": "zapatillas de trekking en roca",
+    "rating": 4.5,
+    "summary": "Unas zapatillas con una relación calidad-precio imbatible, ideales para senderistas que se inician o para rutas de dificultad media sin un gran desembolso.",
+    "pros": [
+      "Precio muy competitivo.",
+      "Buena durabilidad para su gama.",
+      "Cómodas desde el primer uso."
+    ],
+    "cons": [
+      "El agarre en mojado es mejorable.",
+      "No son completamente impermeables."
+    ],
+    "tags": ["Material", "Análisis", "Senderismo", "Calzado"],
+    "content": "<h3>Análisis Detallado</h3><p>Hoy analizamos a fondo las zapatillas de trekking Forclaz Trek 100 de Decathlon, un modelo que ha ganado popularidad por su excelente relación calidad-precio. Las hemos puesto a prueba en diferentes terrenos de la Sierra de Guadarrama durante varias semanas.</p><h3>Diseño y Comodidad</h3><p>Las zapatillas presentan un diseño robusto pero sorprendentemente ligero. El ajuste es cómodo y no hemos notado rozaduras, incluso en las primeras salidas. La amortiguación es suficiente para terrenos de dificultad media, aunque puede quedarse corta en rutas muy técnicas o con mucho peso en la mochila.</p><h3>Rendimiento y Durabilidad</h3><p>El punto fuerte de estas zapatillas es su suela Contagrip, que ofrece un agarre excepcional en terreno seco y rocoso. En condiciones de humedad o barro, el rendimiento es aceptable pero no sobresaliente. Tras 100km de uso, los signos de desgaste son mínimos, lo que augura una buena durabilidad.</p><h3>Veredicto Final</h3><p>Las Forclaz Trek 100 son una opción fantástica para quienes buscan un calzado de trekking fiable y asequible. Son perfectas para escapadas de fin de semana y rutas de senderismo de media montaña. Si bien los excursionistas más exigentes podrían necesitar un modelo de gama superior, para la gran mayoría de aficionados, estas zapatillas superarán sus expectativas.</p>"
+  },
+  {
+    "id": 2,
+    "slug": "review-mochila-quechua-mh500-40l",
+    "productName": "Mochila de Montaña Quechua MH500 40L",
+    "brand": "Quechua (Decathlon)",
+    "category": "Equipamiento",
+    "author": "Ana García",
+    "date": "2024-04-22",
+    "image": "https://placehold.co/800x400.png",
+    "imageHint": "mochila de senderismo en la montaña",
+    "rating": 4.8,
+    "summary": "Una mochila versátil, cómoda y muy bien pensada que se adapta perfectamente a salidas de un día o de fin de semana. Sus múltiples accesos y su espalda ventilada son sus grandes bazas.",
+    "pros": [
+      "Espalda ventilada muy cómoda.",
+      "Múltiples bolsillos y accesos rápidos.",
+      "Materiales resistentes y repelentes al agua.",
+      "Incluye funda para la lluvia."
+    ],
+    "cons": [
+      "Las cintas de compresión laterales podrían ser más robustas."
+    ],
+    "tags": ["Mochila", "Equipamiento", "Análisis", "Quechua"],
+    "content": "<h3>Introducción</h3><p>La mochila Quechua MH500 de 40 litros se ha convertido en una de las más populares entre los aficionados a la montaña, y no es para menos. Ofrece características de mochilas de gama alta a un precio muy contenido.</p><h3>Comodidad y Ajuste</h3><p>El sistema de espalda 'AirCooling' es, sin duda, su principal ventaja. Consiste en una malla tensada que mantiene la espalda separada del cuerpo de la mochila, permitiendo una ventilación excepcional. El cinturón lumbar y las hombreras son acolchados y se ajustan perfectamente, repartiendo el peso de manera muy eficiente.</p><h3>Funcionalidad y Almacenamiento</h3><p>Con 40 litros de capacidad, es ideal para rutas de fin de semana. El acceso principal es superior, pero cuenta con una cremallera frontal que permite abrirla como una maleta, facilitando enormemente el acceso a todo el contenido. Los bolsillos laterales elásticos, el bolsillo en la seta y los del cinturón lumbar son muy prácticos.</p><h3>Conclusión</h3><p>La Quechua MH500 es una compra maestra. Es difícil encontrar una mochila tan completa, cómoda y funcional en este rango de precios. Totalmente recomendada para cualquier senderista que busque versatilidad y confort.</p>"
+  }
+]

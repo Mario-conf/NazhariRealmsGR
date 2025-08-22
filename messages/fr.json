@@ -6,6 +6,7 @@
     "routes": "Itinéraires",
     "rules": "Règles",
     "contact": "Contact",
+    "reviews": "Avis",
     "selectLanguage": "Sélectionner la langue"
   },
   "Footer": {
@@ -51,7 +52,7 @@
     "radar_maps_title": "Cartes Radar",
     "errors": {
       "location_not_found": "Lieu '{location}' non trouvé. Veuillez essayer d'être plus précis.",
-      "service_unavailable": "Le service météo est actuellement indisponible. Veuillez réessayer plus tard.",
+      "service_unavailable": "Le service météo est currently indisponible. Veuillez réessayer plus tard.",
       "unknown_error": "Impossible de récupérer les données météo. Veuillez réessayer."
     }
   },
@@ -204,11 +205,23 @@
     "no_reviews_1": "Aucun avis pour le moment.",
     "no_reviews_2": "Soyez le premier à partager votre expérience !"
   },
-   "Blog": {
+   "BlogPage": {
     "title": "Notre blog d'aventure",
     "subtitle": "Histoires, conseils et inspiration du monde de la randonnée.",
     "read_more": "Lire la suite",
     "no_posts_title": "Aucun article pour le moment",
     "no_posts_subtitle": "Revenez bientôt pour des mises à jour !"
+  },
+  "ReviewsPage": {
+    "title": "Avis sur les produits",
+    "subtitle": "Analyses honnêtes de matériel et d'équipement par notre communauté.",
+    "read_more": "Lire l'avis complet",
+    "no_reviews_title": "Aucun avis pour le moment",
+    "no_reviews_subtitle": "Revenez bientôt pour des mises à jour !"
+  },
+  "ReviewDetailsPage": {
+    "summary_title": "Résumé",
+    "pros_title": "Avantages",
+    "cons_title": "Inconvénients"
   }
 }

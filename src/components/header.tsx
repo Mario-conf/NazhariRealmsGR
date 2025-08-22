@@ -21,11 +21,11 @@ export function Header() {
         >
           {t('weather')}
         </Link>
-        <Link
+         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="/blog"
+          href="/reviews"
         >
-          {t('blog')}
+          {t('reviews')}
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"

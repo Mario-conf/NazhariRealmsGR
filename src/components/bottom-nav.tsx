@@ -1,6 +1,6 @@
 'use client';
 
-import { Home, Map, CloudSun, ScrollText } from 'lucide-react';
+import { Home, Map, CloudSun, ScrollText, Star } from 'lucide-react';
 import { Link, usePathname } from '@/navigation';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 const navItems = [
   { href: '/', icon: Home, label: 'Home' },
   { href: '/routes', icon: Map, label: 'Routes' },
-  { href: '/weather', icon: CloudSun, label: 'Weather' },
+  { href: '/reviews', icon: Star, label: 'Reviews'},
   { href: '/rules', icon: ScrollText, label: 'Rules' },
 ];
 
@@ -22,6 +22,8 @@ export function BottomNav() {
         return 'Inicio'; // Or a key like t('nav.home')
       case 'Routes':
         return t('routes');
+      case 'Reviews':
+        return t('reviews');
       case 'Weather':
         return t('weather');
       case 'Rules':

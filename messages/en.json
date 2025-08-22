@@ -6,6 +6,7 @@
     "routes": "Routes",
     "rules": "Rules",
     "contact": "Contact",
+    "reviews": "Reviews",
     "selectLanguage": "Select language"
   },
   "Footer": {
@@ -204,11 +205,24 @@
     "no_reviews_1": "No reviews yet.",
     "no_reviews_2": "Be the first to share your experience!"
   },
-   "Blog": {
+   "BlogPage": {
     "title": "Our Adventure Blog",
     "subtitle": "Stories, tips, and inspiration from the world of hiking.",
     "read_more": "Read More",
     "no_posts_title": "No Posts Yet",
     "no_posts_subtitle": "Check back soon for updates!"
+  },
+  "ReviewsPage": {
+    "title": "Product Reviews",
+    "subtitle": "Honest analysis of gear and equipment from our community.",
+    "read_more": "Read Full Review",
+    "no_reviews_title": "No Reviews Yet",
+    "no_reviews_subtitle": "Check back soon for updates!"
+  },
+  "ReviewDetailsPage": {
+    "summary_title": "Summary",
+    "pros_title": "Pros",
+    "cons_title": "Cons"
   }
 }
+

@@ -6,6 +6,7 @@
     "routes": "Routen",
     "rules": "Regeln",
     "contact": "Kontakt",
+    "reviews": "Bewertungen",
     "selectLanguage": "Sprache auswählen"
   },
   "Footer": {
@@ -204,11 +205,23 @@
     "no_reviews_1": "Noch keine Bewertungen.",
     "no_reviews_2": "Seien Sie der Erste, der Ihre Erfahrungen teilt!"
   },
-  "Blog": {
+  "BlogPage": {
     "title": "Unser Abenteuer-Blog",
     "subtitle": "Geschichten, Tipps und Inspirationen aus der Welt des Wanderns.",
     "read_more": "Weiterlesen",
     "no_posts_title": "Noch keine Beiträge",
     "no_posts_subtitle": "Schauen Sie bald wieder vorbei für Updates!"
+  },
+  "ReviewsPage": {
+    "title": "Produktbewertungen",
+    "subtitle": "Ehrliche Analysen von Ausrüstung und Material aus unserer Community.",
+    "read_more": "Ganze Bewertung lesen",
+    "no_reviews_title": "Noch keine Bewertungen",
+    "no_reviews_subtitle": "Schauen Sie bald wieder vorbei für Updates!"
+  },
+  "ReviewDetailsPage": {
+    "summary_title": "Zusammenfassung",
+    "pros_title": "Vorteile",
+    "cons_title": "Nachteile"
   }
 }

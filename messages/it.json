@@ -6,6 +6,7 @@
     "routes": "Percorsi",
     "rules": "Regole",
     "contact": "Contatto",
+    "reviews": "Recensioni",
     "selectLanguage": "Seleziona la lingua"
   },
   "Footer": {
@@ -204,11 +205,23 @@
     "no_reviews_1": "Nessuna recensione ancora.",
     "no_reviews_2": "Sii il primo a condividere la tua esperienza!"
   },
-  "Blog": {
+  "BlogPage": {
     "title": "Il nostro blog di avventura",
     "subtitle": "Storie, consigli e ispirazione dal mondo dell'escursionismo.",
     "read_more": "Leggi di più",
     "no_posts_title": "Ancora nessun post",
     "no_posts_subtitle": "Torna presto per gli aggiornamenti!"
+  },
+  "ReviewsPage": {
+    "title": "Recensioni Prodotti",
+    "subtitle": "Analisi oneste di attrezzatura ed equipaggiamento dalla nostra comunità.",
+    "read_more": "Leggi Recensione Completa",
+    "no_reviews_title": "Ancora Nessuna Recensione",
+    "no_reviews_subtitle": "Torna presto per aggiornamenti!"
+  },
+  "ReviewDetailsPage": {
+    "summary_title": "Riepilogo",
+    "pros_title": "Pro",
+    "cons_title": "Contro"
   }
 }
