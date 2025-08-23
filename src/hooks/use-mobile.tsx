@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const MOBILE_BREAKPOINT = 420
+const MOBILE_BREAKPOINT = 418
 
 export function useIsMobile() {
   const [isMobile, setIsMobile] = React.useState<boolean | undefined>(undefined)
