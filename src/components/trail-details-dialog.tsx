@@ -74,7 +74,10 @@ export function TrailDetailsDialog({
                     <Heart className={`h-5 w-5 ${isFavorite ? 'text-red-500 fill-red-500' : 'text-primary'}`} />
                     <span className="sr-only">{t('add_favorite')}</span>
                 </Button>
-                {/* The default close button is in the top-right corner of DialogContent */}
+                 <Button variant="ghost" size="icon" className="bg-background/70 hover:bg-muted rounded-full h-10 w-10" onClick={onClose}>
+                    <X className="h-5 w-5 text-primary" />
+                    <span className="sr-only">{t('close')}</span>
+                </Button>
              </div>
           </div>
         </DialogHeader>
