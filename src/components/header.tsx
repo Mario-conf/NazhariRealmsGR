@@ -30,7 +30,7 @@ export function Header() {
           className="h-10 w-10 rounded-full"
           data-ai-hint={siteConfig.logoHint}
         />
-        <span className="font-semibold">
+        <span className="font-semibold sm:inline-block">
           {siteConfig.name}
         </span>
       </Link>
@@ -56,15 +56,15 @@ export function Header() {
       <div className="ml-auto md:hidden">
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="secondary" size="icon">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Toggle navigation menu</span>
                 </Button>
             </SheetTrigger>
-            <SheetContent side="left">
-                <nav className="grid gap-6 text-lg font-medium mt-8">
+            <SheetContent side="left" className="flex flex-col">
+                <nav className="grid gap-6 text-lg font-medium mt-8 flex-grow">
                     <SheetClose asChild>
-                         <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
+                         <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4">
                             <Image 
                               src={siteConfig.logo}
                               alt="Club Logo"
@@ -78,16 +78,30 @@ export function Header() {
                     </SheetClose>
                     {navLinks.map(link => (
                          <SheetClose asChild key={link.href}>
-                             <Link href={link.href} className="text-muted-foreground hover:text-foreground">{link.label}</Link>
+                             <Link href={link.href} className="text-muted-foreground hover:text-foreground py-2">{link.label}</Link>
                          </SheetClose>
                     ))}
                     <SheetClose asChild>
-                      <Link href="/#contact" className="text-muted-foreground hover:text-foreground">{t('contact')}</Link>
+                      <Link href="/#contact" className="text-muted-foreground hover:text-foreground py-2">{t('contact')}</Link>
                     </SheetClose>
                      <div className="pt-4 border-t">
                         <LanguageSwitcher />
                     </div>
                 </nav>
+                <div className="mt-auto p-6 -mx-6">
+                    <SheetClose asChild>
+                      <Link href="/">
+                        <Image 
+                            src="/logo.png"
+                            alt="Club Logo Large"
+                            width={200}
+                            height={200}
+                            className="w-full h-auto"
+                            data-ai-hint="logo club grande"
+                        />
+                      </Link>
+                    </SheetClose>
+                </div>
             </SheetContent>
         </Sheet>
       </div>
