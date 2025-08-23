@@ -247,14 +247,9 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Mapa */}
                 <div className="overflow-hidden rounded-2xl h-full w-full min-h-[400px]">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15901.6678030832!2d-3.603804679672174!3d37.17648795197474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fca43f5de6db%3A0x2c90f854d215b20!2sGranada%2C%20Spain!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-                    width="100%"
-                    height="100%"
-                    loading="lazy"
-                    className="w-full h-full rounded-xl filter grayscale invert transition-all duration-300 hover:filter-none"
-                  ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d50852.12391120581!2d-3.618215520230638!3d37.19410706548771!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c9870333c2e0649%3A0x27d300a9607188aa!2sNazhari%20Realms%20GR!5e0!3m2!1ses!2ses!4v1755942346702!5m2!1ses!2ses"width="100%"height="100%"loading="lazy"></iframe>
                 </div>
+
 
                 {/* Formulario */}
                 <div className="flex flex-col justify-center h-full">
