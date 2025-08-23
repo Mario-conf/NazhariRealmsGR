@@ -1,4 +1,3 @@
-
 {
   "trails": [
     {
@@ -13,223 +12,129 @@
       "duration": 8,
       "rating": 4.9,
       "description": "Una ruta exigente que te lleva a la cima más alta de la Península Ibérica. Vistas espectaculares de 360 grados de Sierra Nevada y, en días claros, del Mediterráneo y África. Requiere buena condición física.",
-      "gpxFile": "/gpx/mulhacen.gpx",
-      "elevationProfile": [
-        {"distance": 0, "elevation": 2500},
-        {"distance": 2000, "elevation": 2750},
-        {"distance": 4000, "elevation": 2980},
-        {"distance": 6000, "elevation": 3200},
-        {"distance": 8000, "elevation": 3400},
-        {"distance": 9250, "elevation": 3479},
-        {"distance": 11000, "elevation": 3200},
-        {"distance": 14000, "elevation": 2900},
-        {"distance": 18500, "elevation": 2500}
-      ],
-      "routeMapImage": "https://placehold.co/600x400.png"
+      "stravaEmbed": {
+        "type": "route",
+        "id": "3326141520730353078"
+      }
     },
     {
       "id": 2,
-      "name": "Ruta de los Cahorros",
+      "name": "Cahorros de Monachil",
       "location": "Monachil, Granada",
       "image": "https://placehold.co/600x400.png",
       "imageHint": "puentes colgantes Monachil",
       "difficulty": "Moderate",
-      "terrain": "Forest",
+      "terrain": "Mountain",
       "length": 8,
-      "duration": 4,
+      "duration": 3.5,
       "rating": 4.7,
-      "description": "Una de las rutas más famosas de Granada, perfecta para una excursión de medio día. Atraviesa un cañón espectacular, cruza puentes colgantes sobre el río Monachil y pasa por cascadas y túneles naturales.",
-      "gpxFile": "/gpx/cahorros.gpx",
-      "elevationProfile": [
-        {"distance": 0, "elevation": 800},
-        {"distance": 1000, "elevation": 850},
-        {"distance": 2000, "elevation": 900},
-        {"distance": 4000, "elevation": 950},
-        {"distance": 6000, "elevation": 900},
-        {"distance": 8000, "elevation": 800}
-      ],
-      "routeMapImage": "https://placehold.co/600x400.png"
+      "description": "Una espectacular ruta que combina puentes colgantes, cascadas y un estrecho cañón. Ideal para una aventura de medio día cerca de Granada. No apto para personas con vértigo.",
+      "stravaEmbed": {
+        "type": "route",
+        "id": "27958580"
+      }
     },
     {
       "id": 3,
-      "name": "Siete Lagunas",
-      "location": "Trevélez, Granada",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "lagunas alta montaña",
-      "difficulty": "Hard",
-      "terrain": "Mountain",
-      "length": 14,
-      "duration": 7,
-      "rating": 4.8,
-      "description": "Ruta de alta montaña que conduce a un impresionante circo glaciar con varias lagunas de aguas cristalinas. Es un lugar perfecto para el vivac en verano y disfrutar de un cielo estrellado sin igual.",
-      "gpxFile": "/gpx/siete_lagunas.gpx",
-      "elevationProfile": [
-        {"distance": 0, "elevation": 1476},
-        {"distance": 2000, "elevation": 1800},
-        {"distance": 4000, "elevation": 2200},
-        {"distance": 6000, "elevation": 2600},
-        {"distance": 7000, "elevation": 2900},
-        {"distance": 10000, "elevation": 2500},
-        {"distance": 14000, "elevation": 1476}
-      ],
-      "routeMapImage": "https://placehold.co/600x400.png"
-    },
-    {
-      "id": 4,
-      "name": "Paseo de los Tristes y Sacromonte",
-      "location": "Granada Capital",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "Alhambra vista Sacromonte",
-      "difficulty": "Easy",
-      "terrain": "Coastal",
-      "length": 5,
-      "duration": 2,
-      "rating": 4.5,
-      "description": "Un paseo urbano con encanto a los pies de la Alhambra. Recorre el Paseo de los Tristes junto al río Darro y sube al barrio del Sacromonte para disfrutar de sus casas-cueva y vistas privilegiadas.",
-      "gpxFile": "/gpx/paseo_tristes.gpx",
-       "elevationProfile": [
-        {"distance": 0, "elevation": 680},
-        {"distance": 1000, "elevation": 700},
-        {"distance": 2500, "elevation": 750},
-        {"distance": 4000, "elevation": 720},
-        {"distance": 5000, "elevation": 680}
-      ],
-      "routeMapImage": "https://placehold.co/600x400.png"
-    },
-    {
-      "id": 5,
-      "name": "Desierto de Gorafe",
-      "location": "Gorafe, Granada",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "badlands desierto",
-      "difficulty": "Moderate",
-      "terrain": "Desert",
-      "length": 12,
-      "duration": 5,
-      "rating": 4.6,
-      "description": "Explora un paisaje único de 'badlands' con cañones y formaciones rocosas de colores increíbles. La zona también es famosa por su alta concentración de dólmenes prehistóricos.",
-      "gpxFile": "/gpx/gorafe.gpx",
-      "elevationProfile": [
-        {"distance": 0, "elevation": 900},
-        {"distance": 3000, "elevation": 850},
-        {"distance": 6000, "elevation": 800},
-        {"distance": 9000, "elevation": 870},
-        {"distance": 12000, "elevation": 900}
-      ],
-      "routeMapImage": "https://placehold.co/600x400.png"
-    },
-    {
-      "id": 6,
       "name": "Vereda de la Estrella",
       "location": "Güejar Sierra, Granada",
       "image": "https://placehold.co/600x400.png",
-      "imageHint": "sendero bosque río",
+      "imageHint": "otoño vereda estrella",
       "difficulty": "Moderate",
       "terrain": "Forest",
       "length": 21,
       "duration": 6,
       "rating": 4.8,
-      "description": "Una de las rutas más emblemáticas y bonitas de Sierra Nevada. Sigue el curso del río Genil y ofrece vistas espectaculares de las caras norte del Mulhacén y Alcazaba. El paisaje otoñal es simplemente mágico.",
-      "gpxFile": "/gpx/vereda_estrella.gpx",
-      "elevationProfile": [
-        {"distance": 0, "elevation": 1100},
-        {"distance": 5000, "elevation": 1400},
-        {"distance": 10500, "elevation": 1650},
-        {"distance": 16000, "elevation": 1400},
-        {"distance": 21000, "elevation": 1100}
-      ],
-      "routeMapImage": "https://placehold.co/600x400.png"
+      "description": "Una de las rutas más famosas de Sierra Nevada. Sigue un antiguo camino minero con vistas impresionantes de las caras norte del Mulhacén y Alcazaba. Especialmente bonita en otoño.",
+      "stravaEmbed": {
+        "type": "route",
+        "id": "13425595"
+      }
     },
     {
-        "id": 7,
-        "name": "Pico Veleta desde Hoya de la Mora",
-        "location": "Sierra Nevada, Granada",
-        "image": "https://placehold.co/600x400.png",
-        "imageHint": "carretera pico Veleta",
-        "difficulty": "Moderate",
-        "terrain": "Mountain",
-        "length": 13,
-        "duration": 5,
-        "rating": 4.7,
-        "description": "La ascensión al tercer pico más alto de la península, el Veleta (3.396m). Es una ruta de alta montaña pero técnicamente sencilla en verano, siguiendo la antigua carretera. Las vistas desde la cima son inolvidables.",
-        "gpxFile": "/gpx/veleta.gpx",
-        "elevationProfile": [
-          {"distance": 0, "elevation": 2500},
-          {"distance": 2000, "elevation": 2800},
-          {"distance": 4000, "elevation": 3100},
-          {"distance": 6500, "elevation": 3396},
-          {"distance": 9000, "elevation": 3100},
-          {"distance": 11000, "elevation": 2800},
-          {"distance": 13000, "elevation": 2500}
-        ],
-        "routeMapImage": "https://placehold.co/600x400.png"
+      "id": 4,
+      "name": "Ruta del Gollizno",
+      "location": "Moclín, Granada",
+      "image": "https://placehold.co/600x400.png",
+      "imageHint": "pasarelas gollizno",
+      "difficulty": "Easy",
+      "terrain": "Mountain",
+      "length": 8.5,
+      "duration": 3,
+      "rating": 4.5,
+      "description": "Ruta circular que combina historia y naturaleza, pasando por el castillo de Moclín, pinturas rupestres y unas pasarelas sobre el río Velillos. Perfecta para hacer en familia.",
+      "stravaEmbed": {
+        "type": "route",
+        "id": "28109033"
+      }
     },
     {
-        "id": 8,
-        "name": "Río Verde",
-        "location": "Otívar, Granada",
-        "image": "https://placehold.co/600x400.png",
-        "imageHint": "barranquismo cascada",
-        "difficulty": "Hard",
-        "terrain": "Forest",
-        "length": 6,
-        "duration": 5,
-        "rating": 4.9,
-        "description": "Más que una ruta, es una aventura de barranquismo. Descenso por el cañón del Río Verde, con saltos a pozas de agua cristalina, rápeles en cascadas y toboganes naturales. Imprescindible ir con guía y equipo.",
-        "gpxFile": "/gpx/rio_verde.gpx",
-        "elevationProfile": [
-            {"distance": 0, "elevation": 700},
-            {"distance": 1000, "elevation": 650},
-            {"distance": 2000, "elevation": 600},
-            {"distance": 3000, "elevation": 550},
-            {"distance": 4000, "elevation": 500},
-            {"distance": 6000, "elevation": 450}
-        ],
-        "routeMapImage": "https://placehold.co/600x400.png"
+      "id": 5,
+      "name": "Pico del Veleta desde Hoya de la Mora",
+      "location": "Sierra Nevada, Granada",
+      "image": "https://placehold.co/600x400.png",
+      "imageHint": "carretera veleta",
+      "difficulty": "Hard",
+      "terrain": "Mountain",
+      "length": 14,
+      "duration": 5,
+      "rating": 4.9,
+      "description": "Asciende al tercer pico más alto de la Península por la carretera asfaltada más alta de Europa. Un paisaje lunar de alta montaña con vistas que quitan el aliento.",
+      "stravaEmbed": {
+        "type": "route",
+        "id": "31278770"
+      }
     },
     {
-        "id": 9,
-        "name": "Dehesa del Camarate (El Bosque Encantado)",
-        "location": "Lugros, Granada",
-        "image": "https://placehold.co/600x400.png",
-        "imageHint": "bosque colores otoño",
-        "difficulty": "Easy",
-        "terrain": "Forest",
-        "length": 9,
-        "duration": 3,
-        "rating": 4.6,
-        "description": "Conocido como 'El Bosque Encantado', este lugar es una explosión de color en otoño. Una ruta sencilla que recorre uno de los bosques caducifolios mejor conservados de Andalucía.",
-        "gpxFile": "/gpx/camarate.gpx",
-        "elevationProfile": [
-            {"distance": 0, "elevation": 1500},
-            {"distance": 2000, "elevation": 1600},
-            {"distance": 4500, "elevation": 1750},
-            {"distance": 7000, "elevation": 1600},
-            {"distance": 9000, "elevation": 1500}
-        ],
-        "routeMapImage": "https://placehold.co/600x400.png"
+      "id": 6,
+      "name": "Bosques del Marquesado",
+      "location": "Jerez del Marquesado, Granada",
+      "image": "https://placehold.co/600x400.png",
+      "imageHint": "bosque otoño",
+      "difficulty": "Easy",
+      "terrain": "Forest",
+      "length": 12,
+      "duration": 4,
+      "rating": 4.6,
+      "description": "Paseo tranquilo a través de impresionantes bosques de castaños y robles en la cara norte de Sierra Nevada. Un paraíso de colores en otoño y un refugio fresco en verano.",
+       "stravaEmbed": {
+        "type": "activity",
+        "id": "1137060373"
+      }
     },
     {
-        "id": 10,
-        "name": "Tajos de Alhama",
-        "location": "Alhama de Granada",
-        "image": "https://placehold.co/600x400.png",
-        "imageHint": "cañón río pasarelas",
-        "difficulty": "Easy",
-        "terrain": "Forest",
-        "length": 4,
-        "duration": 2,
-        "rating": 4.5,
-        "description": "Una ruta que desciende al fondo de un impresionante cañón excavado por el río Alhama. El sendero recorre antiguas pesquerías y molinos, ofreciendo una perspectiva única de la ciudad monumental.",
-        "gpxFile": "/gpx/tajos_alhama.gpx",
-        "elevationProfile": [
-            {"distance": 0, "elevation": 850},
-            {"distance": 1000, "elevation": 800},
-            {"distance": 2000, "elevation": 780},
-            {"distance": 3000, "elevation": 820},
-            {"distance": 4000, "elevation": 850}
-        ],
-        "routeMapImage": "https://placehold.co/600x400.png"
+      "id": 7,
+      "name": "Acantilados de Maro-Cerro Gordo",
+      "location": "Maro, Málaga",
+      "image": "https://placehold.co/600x400.png",
+      "imageHint": "acantilados maro",
+      "difficulty": "Moderate",
+      "terrain": "Coastal",
+      "length": 10,
+      "duration": 4,
+      "rating": 4.8,
+      "description": "Una ruta costera espectacular con vistas al Mediterráneo, calas escondidas y torres vigía. El sendero recorre el borde de los acantilados, ofreciendo un paisaje único.",
+       "stravaEmbed": {
+        "type": "route",
+        "id": "29795092"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Desierto de Gorafe",
+      "location": "Gorafe, Granada",
+      "image": "https://placehold.co/600x400.png",
+      "imageHint": "badlands gorafe",
+      "difficulty": "Moderate",
+      "terrain": "Desert",
+      "length": 15,
+      "duration": 4.5,
+      "rating": 4.7,
+      "description": "Explora un paisaje de otro planeta en las 'badlands' de la comarca de Guadix. Cárcavas, cañones y formaciones de arenisca de colores increíbles. Mejor evitar en pleno verano.",
+       "stravaEmbed": {
+        "type": "route",
+        "id": "22493393"
+      }
     }
   ]
 }

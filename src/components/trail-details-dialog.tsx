@@ -11,10 +11,9 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import type { Trail } from '@/lib/trail-data';
-import { Star, Mountain, Trees, Waves, Sun, Clock, Milestone, Download, X, Heart, TrendingUp } from 'lucide-react';
+import { Star, Mountain, Trees, Waves, Sun, Clock, Milestone, X, Heart } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { ElevationProfileChart } from './elevation-profile-chart';
-import { RouteMap } from './route-map';
+import StravaEmbedComponent from './strava-embed';
 
 interface TrailDetailsDialogProps {
   trail: Trail;
@@ -51,15 +50,6 @@ export function TrailDetailsDialog({
       'Desert': t('terrains.Desert')
   };
 
-  const totalElevationGain = trail.elevationProfile?.reduce((acc, point, index) => {
-    if (index === 0) return 0;
-    const prevPoint = trail.elevationProfile[index - 1];
-    if (point.elevation > prevPoint.elevation) {
-      acc += point.elevation - prevPoint.elevation;
-    }
-    return acc;
-  }, 0) || 0;
-
   return (
     <Dialog open={true} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[95vh] flex flex-col">
@@ -74,7 +64,7 @@ export function TrailDetailsDialog({
                     <Heart className={`h-5 w-5 ${isFavorite ? 'text-red-500 fill-red-500' : 'text-primary'}`} />
                     <span className="sr-only">{t('add_favorite')}</span>
                 </Button>
-                 <Button variant="ghost" size="icon" className="bg-background/70 hover:bg-muted rounded-full h-10 w-10" onClick={onClose}>
+                <Button variant="ghost" size="icon" className="bg-background/70 hover:bg-muted rounded-full h-10 w-10" onClick={onClose}>
                     <X className="h-5 w-5 text-primary" />
                     <span className="sr-only">{t('close')}</span>
                 </Button>
@@ -121,13 +111,6 @@ export function TrailDetailsDialog({
                             <p className="font-semibold">{terrainLabels[trail.terrain]}</p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                        <TrendingUp className="h-5 w-5 text-primary" />
-                        <div>
-                            <p className="text-muted-foreground">Desnivel Positivo</p>
-                            <p className="font-semibold">{Math.round(totalElevationGain)} m</p>
-                        </div>
-                    </div>
                 </div>
             </div>
              <div>
@@ -139,16 +122,12 @@ export function TrailDetailsDialog({
           {/* Columna Derecha */}
           <main className="lg:col-span-3 space-y-6">
               <div>
-                 <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">Perfil de Elevación</h3>
-                 <ElevationProfileChart data={trail.elevationProfile} />
-              </div>
-              <div>
                 <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('map_title')}</h3>
-                <RouteMap imageUrl={trail.routeMapImage} />
-                <Button className="w-full mt-4">
-                    <Download className="mr-2 h-4 w-4" />
-                    {t('gpx_button')}
-                </Button>
+                {trail.stravaEmbed ? (
+                  <StravaEmbedComponent embed={trail.stravaEmbed} />
+                ) : (
+                  <p>No hay mapa de ruta disponible.</p>
+                )}
               </div>
           </main>
 

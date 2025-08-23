@@ -1,6 +1,9 @@
-export type ElevationPoint = {
-  distance: number; // in meters
-  elevation: number; // in meters
+export type StravaEmbed = {
+  type: 'route' | 'activity';
+  id: string;
+  units?: 'metric' | 'imperial';
+  style?: 'standard' | 'satellite';
+  mapHash?: string;
 };
 
 export type Trail = {
@@ -15,9 +18,7 @@ export type Trail = {
   duration: number; // in hours
   rating: number; // 1-5
   description: string;
-  gpxFile: string; // mock path
-  elevationProfile: ElevationPoint[];
-  routeMapImage: string;
+  stravaEmbed?: StravaEmbed;
 };
 
 export type Review = {
