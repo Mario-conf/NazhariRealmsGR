@@ -30,7 +30,7 @@ export function Header() {
           className="h-10 w-10 rounded-full"
           data-ai-hint={siteConfig.logoHint}
         />
-        <span className="font-semibold hidden sm:inline-block">
+        <span className="font-semibold">
           {siteConfig.name}
         </span>
       </Link>
