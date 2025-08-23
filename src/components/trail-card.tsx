@@ -101,7 +101,9 @@ export function TrailCard({ trail, onSelect, isFavorite, onToggleFavorite }: Tra
                 }`}
                 />
             ))}
-            <span className="text-muted-foreground text-xs ml-1">({trail.rating.toFixed(1)})</span>
+            {typeof trail.rating === 'number' && (
+              <span className="text-muted-foreground text-xs ml-1">({trail.rating.toFixed(1)})</span>
+            )}
         </div>
       </CardContent>
       {/* Footer can be removed to make card clickable, or keep for explicit button */}
