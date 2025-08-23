@@ -1,3 +1,5 @@
+'use client';
+
 import { Menu } from 'lucide-react';
 import { Button } from './ui/button';
 import { useTranslations } from 'next-intl';
