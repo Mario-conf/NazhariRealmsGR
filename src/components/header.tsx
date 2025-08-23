@@ -81,9 +81,9 @@ export function Header() {
                      <Image
                         src={siteConfig.logo}
                         alt="Club Logo"
-                        width={80}
-                        height={80}
-                        className="h-20 w-20 rounded-full"
+                        width={96}
+                        height={96}
+                        className="h-24 w-24 rounded-full"
                         data-ai-hint={siteConfig.logoHint}
                     />
                     <span className="font-semibold text-xl">
