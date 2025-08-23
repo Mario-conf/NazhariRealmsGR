@@ -76,6 +76,7 @@ export function Header() {
             className="bg-primary text-primary-foreground flex flex-col p-0"
           >
             <SheetHeader className="p-6 pb-4 border-b border-primary-foreground/20">
+               <SheetTitle className="sr-only">Menú de Navegación</SheetTitle>
                 <div className="flex flex-col items-center justify-center gap-4 mb-4">
                      <Image
                         src={siteConfig.logo}
