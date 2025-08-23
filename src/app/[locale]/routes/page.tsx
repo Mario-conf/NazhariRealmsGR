@@ -6,7 +6,7 @@ import { TrailCard } from '@/components/trail-card';
 import { TrailFilters } from '@/components/trail-filters';
 import { TrailDetailsDialog } from '@/components/trail-details-dialog';
 import useFavorites from '@/hooks/use-favorites';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
 import type { Metadata } from 'next';
 
@@ -16,20 +16,31 @@ import type { Metadata } from 'next';
 
 export default function RoutesPage() {
   const t = useTranslations('RoutesPage');
+  const locale = useLocale();
   const [allTrails, setAllTrails] = React.useState<Trail[]>([]);
   const [filteredTrails, setFilteredTrails] = React.useState<Trail[]>([]);
   const [selectedTrail, setSelectedTrail] = React.useState<Trail | null>(null);
   const { favorites, toggleFavorite } = useFavorites();
 
   React.useEffect(() => {
-    fetch('/data/trails.json')
+    // Fetch trails based on the current locale
+    fetch(`/data/trails.${locale}.json`)
+      .then((res) => {
+        if (!res.ok) {
+          // Fallback to Spanish if the locale file is not found
+          console.warn(`Trail data for locale "${locale}" not found, falling back to "es".`);
+          return fetch(`/data/trails.es.json`);
+        }
+        return res;
+      })
       .then((res) => res.json())
       .then((data) => {
         // The json file has a root "trails" property
         setAllTrails(data.trails);
         setFilteredTrails(data.trails);
-      });
-  }, []);
+      })
+      .catch(error => console.error("Failed to load trail data:", error));
+  }, [locale]);
 
   const handleSelectTrail = (trail: Trail) => {
     setSelectedTrail(trail);

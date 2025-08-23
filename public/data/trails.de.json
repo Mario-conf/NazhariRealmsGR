@@ -1,0 +1,38 @@
+{
+  "trails": [
+    {
+      "id": 1,
+      "name": "Route Acequia Real - Llano de las Perdices",
+      "location": "Granada, Granada",
+      "image": "https://media-cdn.tripadvisor.com/media/photo-s/0a/e0/b4/76/llano-de-la-perdiz.jpg",
+      "imageHint": "Llano de las Perdices",
+      "difficulty": "Moderate",
+      "terrain": "Forest",
+      "length": 13.1,
+      "duration": 1.3,
+      "rating": 3.4,
+      "description": "Eine stadtnahe Rundwanderung, die Natur, Panoramablicke über Granada und nasridische Wasserbauwerke kombiniert: die Acequia Real, Tunnel, eine Sonnenuhr und das Llano de la Perdiz. Ideal für einen halben Tag in der Nähe der Stadt.",
+      "stravaEmbed": {
+        "type": "route",
+        "id": "3325255835628872104"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Route Los Cahorros",
+      "location": "Monachil, Granada",
+      "image": "https://www.escapadarural.com/blog/wp-content/uploads/AdobeStock_238780833-1920x1280.jpeg",
+      "imageHint": "Hängebrücken Cahorros",
+      "difficulty": "Moderate",
+      "terrain": "Mountain",
+      "length": 8.7,
+      "duration": 1.45,
+      "rating": 4.7,
+      "description": "Eine spektakuläre Route, die Hängebrücken, Wasserfälle und enge Schluchten kombiniert. Ideal für ein halbtägiges Abenteuer. Nicht für Personen mit Höhenangst geeignet.",
+      "stravaEmbed": {
+        "type": "route",
+        "id": "3326141520730353078"
+      }
+    }
+  ]
+}
