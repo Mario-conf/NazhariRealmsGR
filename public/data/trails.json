@@ -2,43 +2,37 @@
   "trails": [
     {
       "id": 1,
-      "name": "Cahorros de Monachil",
-      "location": "Monachil, Granada",
-      "image": "https://dgtzuqphqg23d.cloudfront.net/S6b0UQstUyJQ1HrO5pdooDHU4p_WlIrwP0nz98jp1RI-2048x1536.jpg",
-      "imageHint": "puentes colgantes Monachil",
+      "name": "Ascensión al Mulhacén",
+      "location": "Sierra Nevada, Granada",
+      "image": "https://images.ecestaticos.com/dAPVS4J5hNn23Swn5b7b9yT31dI=/0x0:2121x1414/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F8f5%2F3e3%2F961%2F8f53e3961ed4e3237d6582414757c66c.jpg",
+      "imageHint": "cumbre Mulhacén",
       "difficulty": "Hard",
-      "terrain": "Moderate",
-      "length": 8.7,
-      "duration": 1.30,
+      "terrain": "Mountain",
+      "length": 18.5,
+      "duration": 8,
       "rating": 4.9,
-      "description": "Una espectacular ruta que combina puentes colgantes, cascadas y un estrecho cañón. Ideal para una aventura de medio día cerca de Granada. No apto para personas con vértigo.",
+      "description": "Una ruta exigente que te lleva a la cima más alta de la Península Ibérica. Vistas espectaculares de 360 grados de Sierra Nevada y, en días claros, del Mediterráneo y África. Requiere buena condición física.",
       "stravaEmbed": {
         "type": "route",
         "id": "3326141520730353078"
       }
     },
     {
-      "trails": [
-        {
-          "id": 1,
-          "name": "Acequia Real – Llano de la Perdiz",
-          "location": "Granada, Andalucía",
-          "image": "https://dgtzuqphqg23d.cloudfront.net/S6b0UQstUyJQ1HrO5pdooDHU4p_WlIrwP0nz98jp1RI-2048x1536.jpg",
-          "imageHint": "bosque umbrío y vistas panorámicas del Valle del Darro",
-          "difficulty": "Moderate",
-          "terrain": "Forest trail with historical infrastructure",
-          "length": 13.1,
-          "duration": 1.45,
-          "rating": 3.6,
-          "description": "Ruta circular periurbana que combina naturaleza, panorámicas sobre Granada y vestigios hidráulicos nazaríes: la acequia Real, túneles, reloj de sol y el Llano de la Perdiz. Ideal para media jornada cerca de la ciudad.",
-          "stravaEmbed": {
-            "type": "route",
-            "id": "3325255835628872104"
-          }
-        }
-      ]
+      "id": 2,
+      "name": "Ruta de los Cahorros",
+      "location": "Monachil, Granada",
+      "image": "https://www.actualidadiphone.com/wp-content/uploads/2016/09/maps-rutas-830x467.jpg",
+      "imageHint": "puentes colgantes Cahorros",
+      "difficulty": "Moderate",
+      "terrain": "Forest",
+      "length": 8,
+      "duration": 4,
+      "rating": 4.7,
+      "description": "Una espectacular ruta que combina puentes colgantes, cascadas y desfiladeros estrechos. Ideal para una aventura de medio día. No apta para personas con vértigo.",
+      "stravaEmbed": {
+        "type": "route",
+        "id": "27599026"
+      }
     }
-    
-    
   ]
 }
