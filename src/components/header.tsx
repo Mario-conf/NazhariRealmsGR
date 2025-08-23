@@ -49,7 +49,7 @@ export function Header() {
       </Link>
 
       {/* Desktop Navigation */}
-      <nav className="ml-auto hidden max-[418px]:hidden md:flex items-center gap-4 lg:gap-6">
+      <nav className="ml-auto hidden md:flex items-center gap-4 lg:gap-6">
         {navLinks.map((link) => (
           <Link
             key={link.href}
@@ -63,7 +63,7 @@ export function Header() {
       </nav>
 
       {/* Mobile Menu Button */}
-      <div className="ml-auto block min-[419px]:hidden">
+      <div className="ml-auto md:hidden">
         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
           <SheetTrigger asChild>
             <Button variant="secondary" size="icon">
