@@ -2,139 +2,43 @@
   "trails": [
     {
       "id": 1,
-      "name": "Ascensión al Mulhacén",
-      "location": "Sierra Nevada, Granada",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "cumbre Mulhacén",
+      "name": "Cahorros de Monachil",
+      "location": "Monachil, Granada",
+      "image": "https://dgtzuqphqg23d.cloudfront.net/S6b0UQstUyJQ1HrO5pdooDHU4p_WlIrwP0nz98jp1RI-2048x1536.jpg",
+      "imageHint": "puentes colgantes Monachil",
       "difficulty": "Hard",
-      "terrain": "Mountain",
-      "length": 18.5,
-      "duration": 8,
+      "terrain": "Moderate",
+      "length": 8.7,
+      "duration": 1.30,
       "rating": 4.9,
-      "description": "Una ruta exigente que te lleva a la cima más alta de la Península Ibérica. Vistas espectaculares de 360 grados de Sierra Nevada y, en días claros, del Mediterráneo y África. Requiere buena condición física.",
+      "description": "Una espectacular ruta que combina puentes colgantes, cascadas y un estrecho cañón. Ideal para una aventura de medio día cerca de Granada. No apto para personas con vértigo.",
       "stravaEmbed": {
         "type": "route",
         "id": "3326141520730353078"
       }
     },
     {
-      "id": 2,
-      "name": "Cahorros de Monachil",
-      "location": "Monachil, Granada",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "puentes colgantes Monachil",
-      "difficulty": "Moderate",
-      "terrain": "Mountain",
-      "length": 8,
-      "duration": 3.5,
-      "rating": 4.7,
-      "description": "Una espectacular ruta que combina puentes colgantes, cascadas y un estrecho cañón. Ideal para una aventura de medio día cerca de Granada. No apto para personas con vértigo.",
-      "stravaEmbed": {
-        "type": "route",
-        "id": "27958580"
-      }
-    },
-    {
-      "id": 3,
-      "name": "Vereda de la Estrella",
-      "location": "Güejar Sierra, Granada",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "otoño vereda estrella",
-      "difficulty": "Moderate",
-      "terrain": "Forest",
-      "length": 21,
-      "duration": 6,
-      "rating": 4.8,
-      "description": "Una de las rutas más famosas de Sierra Nevada. Sigue un antiguo camino minero con vistas impresionantes de las caras norte del Mulhacén y Alcazaba. Especialmente bonita en otoño.",
-      "stravaEmbed": {
-        "type": "route",
-        "id": "13425595"
-      }
-    },
-    {
-      "id": 4,
-      "name": "Ruta del Gollizno",
-      "location": "Moclín, Granada",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "pasarelas gollizno",
-      "difficulty": "Easy",
-      "terrain": "Mountain",
-      "length": 8.5,
-      "duration": 3,
-      "rating": 4.5,
-      "description": "Ruta circular que combina historia y naturaleza, pasando por el castillo de Moclín, pinturas rupestres y unas pasarelas sobre el río Velillos. Perfecta para hacer en familia.",
-      "stravaEmbed": {
-        "type": "route",
-        "id": "28109033"
-      }
-    },
-    {
-      "id": 5,
-      "name": "Pico del Veleta desde Hoya de la Mora",
-      "location": "Sierra Nevada, Granada",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "carretera veleta",
-      "difficulty": "Hard",
-      "terrain": "Mountain",
-      "length": 14,
-      "duration": 5,
-      "rating": 4.9,
-      "description": "Asciende al tercer pico más alto de la Península por la carretera asfaltada más alta de Europa. Un paisaje lunar de alta montaña con vistas que quitan el aliento.",
-      "stravaEmbed": {
-        "type": "route",
-        "id": "31278770"
-      }
-    },
-    {
-      "id": 6,
-      "name": "Bosques del Marquesado",
-      "location": "Jerez del Marquesado, Granada",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "bosque otoño",
-      "difficulty": "Easy",
-      "terrain": "Forest",
-      "length": 12,
-      "duration": 4,
-      "rating": 4.6,
-      "description": "Paseo tranquilo a través de impresionantes bosques de castaños y robles en la cara norte de Sierra Nevada. Un paraíso de colores en otoño y un refugio fresco en verano.",
-       "stravaEmbed": {
-        "type": "activity",
-        "id": "1137060373"
-      }
-    },
-    {
-      "id": 7,
-      "name": "Acantilados de Maro-Cerro Gordo",
-      "location": "Maro, Málaga",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "acantilados maro",
-      "difficulty": "Moderate",
-      "terrain": "Coastal",
-      "length": 10,
-      "duration": 4,
-      "rating": 4.8,
-      "description": "Una ruta costera espectacular con vistas al Mediterráneo, calas escondidas y torres vigía. El sendero recorre el borde de los acantilados, ofreciendo un paisaje único.",
-       "stravaEmbed": {
-        "type": "route",
-        "id": "29795092"
-      }
-    },
-    {
-      "id": 8,
-      "name": "Desierto de Gorafe",
-      "location": "Gorafe, Granada",
-      "image": "https://placehold.co/600x400.png",
-      "imageHint": "badlands gorafe",
-      "difficulty": "Moderate",
-      "terrain": "Desert",
-      "length": 15,
-      "duration": 4.5,
-      "rating": 4.7,
-      "description": "Explora un paisaje de otro planeta en las 'badlands' de la comarca de Guadix. Cárcavas, cañones y formaciones de arenisca de colores increíbles. Mejor evitar en pleno verano.",
-       "stravaEmbed": {
-        "type": "route",
-        "id": "22493393"
-      }
+      "trails": [
+        {
+          "id": 1,
+          "name": "Acequia Real – Llano de la Perdiz",
+          "location": "Granada, Andalucía",
+          "image": "https://dgtzuqphqg23d.cloudfront.net/S6b0UQstUyJQ1HrO5pdooDHU4p_WlIrwP0nz98jp1RI-2048x1536.jpg",
+          "imageHint": "bosque umbrío y vistas panorámicas del Valle del Darro",
+          "difficulty": "Moderate",
+          "terrain": "Forest trail with historical infrastructure",
+          "length": 13.1,
+          "duration": 1.45,
+          "rating": 3.6,
+          "description": "Ruta circular periurbana que combina naturaleza, panorámicas sobre Granada y vestigios hidráulicos nazaríes: la acequia Real, túneles, reloj de sol y el Llano de la Perdiz. Ideal para media jornada cerca de la ciudad.",
+          "stravaEmbed": {
+            "type": "route",
+            "id": "3325255835628872104"
+          }
+        }
+      ]
     }
+    
+    
   ]
 }
