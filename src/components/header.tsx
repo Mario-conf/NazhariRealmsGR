@@ -8,10 +8,10 @@ import { Link } from '@/navigation';
 import { LanguageSwitcher } from './language-switcher';
 import Image from 'next/image';
 import { siteConfig } from '@/lib/site-config';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
 
 export function Header() {
   const t = useTranslations('Header');
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const navLinks = [
     { href: '/weather', label: t('weather') },
@@ -33,13 +33,13 @@ export function Header() {
           className="h-10 w-10 rounded-full"
           data-ai-hint={siteConfig.logoHint}
         />
-        <span className="font-semibold sm:inline-block">
+        <span className="font-semibold inline-block">
           {siteConfig.name}
         </span>
       </Link>
       
-      {/* Desktop Navigation - Hidden on screens < 416px */}
-      <nav className="ml-auto hidden min-[416px]:flex items-center gap-4 lg:gap-6">
+      {/* Desktop Navigation */}
+      <nav className="ml-auto hidden max-[415px]:hidden md:flex items-center gap-4 lg:gap-6">
         {navLinks.map(link => (
            <Link
             key={link.href}
@@ -49,41 +49,65 @@ export function Header() {
             {link.label}
           </Link>
         ))}
-        <Button asChild variant="secondary">
-          <Link href="/#contact">{t('contact')}</Link>
-        </Button>
         <LanguageSwitcher />
       </nav>
 
-      {/* Mobile Menu Button - Only visible on screens <= 415px */}
+      {/* Mobile Menu Button */}
       <div className="ml-auto block min-[416px]:hidden">
-          <Button onClick={() => setIsMenuOpen(!isMenuOpen)} variant="secondary" size="icon">
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-      </div>
-      
-      {/* Mobile Navigation Menu - Full width, appears below header */}
-      {isMenuOpen && (
-          <div className="w-full flex flex-col items-center gap-4 py-4 min-[416px]:hidden animate-in fade-in-20 slide-in-from-top-4 duration-300">
-                {navLinks.map(link => (
-                    <Link
-                        key={link.href}
-                        href={link.href}
-                        className="text-lg font-medium text-primary-foreground hover:underline"
-                        onClick={() => setIsMenuOpen(false)}
-                    >
-                        {link.label}
-                    </Link>
-                ))}
-                 <Button asChild variant="secondary" className="w-full max-w-xs" onClick={() => setIsMenuOpen(false)}>
-                    <Link href="/#contact">{t('contact')}</Link>
+        <Sheet>
+            <SheetTrigger asChild>
+                <Button variant="secondary" size="icon">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Toggle navigation menu</span>
                 </Button>
-                <div className="mt-2">
-                    <LanguageSwitcher />
+            </SheetTrigger>
+            <SheetContent side="left" className="bg-primary text-primary-foreground flex flex-col">
+                <SheetHeader>
+                    <SheetTitle className="sr-only">Menú de Navegación</SheetTitle>
+                     <Link
+                        className="flex items-center justify-center gap-2 mb-8"
+                        href="/"
+                    >
+                        <Image 
+                        src={siteConfig.logo}
+                        alt="Club Logo"
+                        width={40}
+                        height={40}
+                        className="h-10 w-10 rounded-full"
+                        data-ai-hint={siteConfig.logoHint}
+                        />
+                        <span className="font-semibold text-xl">
+                          {siteConfig.name}
+                        </span>
+                    </Link>
+                </SheetHeader>
+                <nav className="grid gap-6 text-lg font-medium flex-grow">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className="hover:underline"
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
+                    <div className="pt-4 border-t">
+                      <LanguageSwitcher />
+                    </div>
+                </nav>
+                <div className="mt-auto p-6 -mx-6">
+                   <Image 
+                    src="/logo.png"
+                    alt="Club logo in menu"
+                    width={150}
+                    height={150}
+                    className="mx-auto"
+                    data-ai-hint="logo club grande"
+                   />
                 </div>
-          </div>
-      )}
+            </SheetContent>
+        </Sheet>
+      </div>
     </header>
   );
 }
