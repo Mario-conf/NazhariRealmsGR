@@ -36,7 +36,7 @@ export function Header() {
       </Link>
       
       {/* Desktop Navigation */}
-      <nav className="ml-auto hidden md:flex items-center gap-4 lg:gap-6">
+      <nav className="ml-auto hidden max-[415px]:hidden md:flex items-center gap-4 lg:gap-6">
         {navLinks.map(link => (
            <Link
             key={link.href}
@@ -53,7 +53,7 @@ export function Header() {
       </nav>
 
       {/* Mobile Navigation */}
-      <div className="ml-auto md:hidden">
+      <div className="ml-auto min-[416px]:hidden">
         <Sheet>
             <SheetTrigger asChild>
                 <Button variant="secondary" size="icon">
@@ -61,13 +61,13 @@ export function Header() {
                     <span className="sr-only">Toggle navigation menu</span>
                 </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="flex flex-col">
+            <SheetContent side="left" className="flex flex-col bg-primary text-primary-foreground border-r-secondary">
               <SheetHeader>
                   <SheetTitle className="sr-only">Menú de Navegación</SheetTitle>
               </SheetHeader>
               <nav className="grid gap-6 text-lg font-medium mt-8 flex-grow">
                   <SheetClose asChild>
-                        <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4">
+                        <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 text-primary-foreground">
                           <Image 
                             src={siteConfig.logo}
                             alt="Club Logo"
@@ -81,13 +81,13 @@ export function Header() {
                   </SheetClose>
                   {navLinks.map(link => (
                         <SheetClose asChild key={link.href}>
-                            <Link href={link.href} className="text-muted-foreground hover:text-foreground py-2">{link.label}</Link>
+                            <Link href={link.href} className="text-primary-foreground hover:underline py-2">{link.label}</Link>
                         </SheetClose>
                   ))}
                   <SheetClose asChild>
-                    <Link href="/#contact" className="text-muted-foreground hover:text-foreground py-2">{t('contact')}</Link>
+                    <Link href="/#contact" className="text-primary-foreground hover:underline py-2">{t('contact')}</Link>
                   </SheetClose>
-                    <div className="pt-4 border-t">
+                    <div className="pt-4 border-t border-t-secondary">
                       <LanguageSwitcher />
                   </div>
               </nav>
