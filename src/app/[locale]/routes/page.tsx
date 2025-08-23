@@ -75,13 +75,14 @@ export default function RoutesPage() {
           {filteredTrails.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {filteredTrails.map((trail) => (
-                <TrailCard
-                  key={trail.id}
-                  trail={trail}
-                  onSelect={() => handleSelectTrail(trail)}
-                  isFavorite={favorites.includes(trail.id)}
-                  onToggleFavorite={(e) => handleToggleFavorite(e, trail.id)}
-                />
+                <div key={trail.id}>
+                  <TrailCard
+                    trail={trail}
+                    onSelect={() => handleSelectTrail(trail)}
+                    isFavorite={favorites.includes(trail.id)}
+                    onToggleFavorite={(e) => handleToggleFavorite(e, trail.id)}
+                  />
+                </div>
               ))}
             </div>
           ) : (
