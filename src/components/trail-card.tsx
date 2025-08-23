@@ -97,7 +97,7 @@ export function TrailCard({ trail, onSelect, isFavorite, onToggleFavorite }: Tra
                 <Star
                 key={i}
                 className={`h-4 w-4 ${
-                    i < Math.round(trail.rating) ? 'fill-current' : 'text-muted-foreground/30'
+                    i < trail.rating ? 'fill-current' : 'text-muted-foreground/30'
                 }`}
                 />
             ))}
@@ -106,7 +106,6 @@ export function TrailCard({ trail, onSelect, isFavorite, onToggleFavorite }: Tra
             )}
         </div>
       </CardContent>
-      {/* Footer can be removed to make card clickable, or keep for explicit button */}
        <CardFooter className="p-4 pt-0">
         <Button onClick={onSelect} className="w-full" variant="secondary">
           {t('view_details')}
