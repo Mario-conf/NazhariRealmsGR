@@ -23,8 +23,7 @@ export function LanguageSwitcher() {
 
   return (
     <Select defaultValue={locale} onValueChange={onSelectChange}>
-      <SelectTrigger className="w-auto h-10 bg-transparent border-0 border-b-2 border-b-transparent focus:border-b-primary-foreground focus:ring-0 focus:ring-offset-0 gap-2 text-base md:text-sm text-primary-foreground">
-        <Globe className="h-5 w-5" />
+      <SelectTrigger className="w-auto h-10 bg-transparent border-0 border-b-2 border-b-transparent focus:border-b-primary-foreground focus:ring-0 focus:ring-offset-0 gap-2 text-base md:text-sm text-primary-foreground p-0">
         <SelectValue placeholder={t('selectLanguage')} />
       </SelectTrigger>
       <SelectContent>
