@@ -14,19 +14,6 @@ import type { Trail } from '@/lib/trail-data';
 import { Star, Mountain, Trees, Waves, Sun, Clock, Milestone, X, Heart } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-// Strava Embeds need to be handled carefully with React's lifecycle.
-// By giving the container a `key`, we force React to re-mount it,
-// which along with the init script, ensures the embed reloads.
-declare global {
-    interface Window {
-        Strava?: {
-            Embeds: {
-                init: () => void;
-            }
-        }
-    }
-}
-
 interface TrailDetailsDialogProps {
   trail: Trail;
   onClose: () => void;
@@ -62,34 +49,6 @@ export function TrailDetailsDialog({
       'Coastal': t('terrains.Coastal'),
       'Desert': t('terrains.Desert')
   };
-
-  React.useEffect(() => {
-    // Ensure the Strava script is loaded
-    const script = document.createElement('script');
-    script.src = 'https://strava-embeds.com/embed.js';
-    script.async = true;
-    
-    // When the script loads, initialize the embeds
-    script.onload = () => {
-      if (window.Strava && window.Strava.Embeds) {
-        window.Strava.Embeds.init();
-      }
-    };
-
-    // If script is not already present, add it
-    if (!document.querySelector('script[src="https://strava-embeds.com/embed.js"]')) {
-      document.body.appendChild(script);
-    } else {
-      // If script is already there, just init embeds
-      if (window.Strava && window.Strava.Embeds) {
-        window.Strava.Embeds.init();
-      }
-    }
-  }, [trail.id]); // Re-run effect if a different trail is opened
-
-  const stravaHtml = trail.stravaEmbed
-    ? `<div class="strava-embed-placeholder" data-embed-type="${trail.stravaEmbed.type}" data-embed-id="${trail.stravaEmbed.id}" data-units="metric"></div>`
-    : '';
 
   return (
     <Dialog open={true} onOpenChange={onClose}>
@@ -165,8 +124,17 @@ export function TrailDetailsDialog({
               <div>
                 <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('map_title')}</h3>
                  <div className="flex justify-center">
-                    {trail.stravaEmbed ? (
-                       <div key={trail.id} dangerouslySetInnerHTML={{ __html: stravaHtml }} />
+                    {trail.stravaIframeUrl ? (
+                      <iframe
+                        key={trail.id}
+                        height='405'
+                        width='100%'
+                        title={`Strava map for ${trail.name}`}
+                        allowTransparency={true}
+                        frameBorder='0'
+                        scrolling='no'
+                        src={trail.stravaIframeUrl}
+                      ></iframe>
                     ) : (
                         <p>No hay mapa de ruta disponible.</p>
                     )}

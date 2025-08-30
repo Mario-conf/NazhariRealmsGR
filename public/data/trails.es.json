@@ -2,37 +2,31 @@
   "trails": [
     {
       "id": 1,
-      "name": "Ruta Acequia Real - Llano de las Perdices",
-      "location": "Granada, Granada",
-      "image": "https://media-cdn.tripadvisor.com/media/photo-s/0a/e0/b4/76/llano-de-la-perdiz.jpg",
-      "imageHint": "Llano de las Perdices",
+      "name": "Ruta Acequia Real",
+      "location": "Sierra Nevada, Granada",
+      "image": "https://images.ecestaticos.com/5QdC4pkgSVEW6c5j1Gyu-sAq0yE=/0x0:2272x1515/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F8a6%2Ff87%2Ff55%2F8a6f87f55e09e1e24741639d2554763c.jpg",
+      "imageHint": "sendero montaña acequia",
       "difficulty": "Moderate",
-      "terrain": "Forest",
-      "length": 13.1,
+      "terrain": "Mountain",
+      "length": 12.5,
       "duration": 1.3,
-      "rating": 3.4,
-      "description": "Una Ruta circular periurbana que combina naturaleza, panorámicas sobre Granada y vestigios hidráulicos nazaríes: la acequia Real, túneles, reloj de sol y el Llano de la Perdiz. Ideal para media jornada cerca de la ciudad.",
-      "stravaEmbed": {
-        "type": "route",
-        "id": "3325255835628872104"
-      }
+      "rating": 4.7,
+      "description": "Un precioso sendero que sigue el recorrido de una antigua acequia, ofreciendo vistas espectaculares de las cumbres de Sierra Nevada. Ideal para el verano al discurrir a gran altitud.",
+      "stravaIframeUrl": "https://www.strava.com/routes/3246473087216690858/embed"
     },
     {
       "id": 2,
       "name": "Ruta de los Cahorros",
       "location": "Monachil, Granada",
-      "image": "https://www.escapadarural.com/blog/wp-content/uploads/AdobeStock_238780833-1920x1280.jpeg",
-      "imageHint": "puentes colgantes Cahorros",
+      "image": "https://www.actualidadiphone.com/wp-content/uploads/2015/05/mapa-cahorros.jpg",
+      "imageHint": "puente colgante cañon",
       "difficulty": "Moderate",
       "terrain": "Mountain",
       "length": 8.7,
       "duration": 1.45,
       "rating": 4.7,
-      "description": "Una espectacular ruta que combina puentes colgantes, cascadas y desfiladeros estrechos. Ideal para una aventura de medio día. No apta para personas con vértigo.",
-      "stravaEmbed": {
-        "type": "route",
-        "id": "3326141520730353078"
-      }
+      "description": "Una ruta espectacular que combina puentes colgantes, cascadas y desfiladeros estrechos. Ideal para una aventura de medio día. No apta para personas con vértigo.",
+      "stravaIframeUrl": "https://www.strava.com/routes/3246473523555232426/embed"
     }
   ]
 }

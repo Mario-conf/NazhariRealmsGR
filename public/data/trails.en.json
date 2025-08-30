@@ -2,37 +2,31 @@
   "trails": [
     {
       "id": 1,
-      "name": "Acequia Real Route - Llano de las Perdices",
-      "location": "Granada, Granada",
-      "image": "https://media-cdn.tripadvisor.com/media/photo-s/0a/e0/b4/76/llano-de-la-perdiz.jpg",
-      "imageHint": "Llano de las Perdices",
+      "name": "Acequia Real Route",
+      "location": "Sierra Nevada, Granada",
+      "image": "https://images.ecestaticos.com/5QdC4pkgSVEW6c5j1Gyu-sAq0yE=/0x0:2272x1515/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F8a6%2Ff87%2Ff55%2F8a6f87f55e09e1e24741639d2554763c.jpg",
+      "imageHint": "mountain path irrigation canal",
       "difficulty": "Moderate",
-      "terrain": "Forest",
-      "length": 13.1,
+      "terrain": "Mountain",
+      "length": 12.5,
       "duration": 1.3,
-      "rating": 3.4,
-      "description": "A circular peri-urban route that combines nature, panoramic views over Granada, and Nasrid hydraulic remains: the Acequia Real, tunnels, a sundial, and the Llano de la Perdiz. Ideal for a half-day trip near the city.",
-      "stravaEmbed": {
-        "type": "route",
-        "id": "3325255835628872104"
-      }
+      "rating": 4.7,
+      "description": "A beautiful trail that follows an old irrigation channel, offering spectacular views of the Sierra Nevada peaks. Ideal for summer as it runs at high altitude.",
+      "stravaIframeUrl": "https://www.strava.com/routes/3246473087216690858/embed"
     },
     {
       "id": 2,
-      "name": "Los Cahorros Route",
+      "name": "Route of the Cahorros",
       "location": "Monachil, Granada",
-      "image": "https://www.escapadarural.com/blog/wp-content/uploads/AdobeStock_238780833-1920x1280.jpeg",
-      "imageHint": "hanging bridges Cahorros",
+      "image": "https://www.actualidadiphone.com/wp-content/uploads/2015/05/mapa-cahorros.jpg",
+      "imageHint": "hanging bridge canyon",
       "difficulty": "Moderate",
       "terrain": "Mountain",
       "length": 8.7,
       "duration": 1.45,
       "rating": 4.7,
-      "description": "A spectacular route that combines hanging bridges, waterfalls, and narrow gorges. Ideal for a half-day adventure. Not suitable for people with a fear of heights.",
-      "stravaEmbed": {
-        "type": "route",
-        "id": "3326141520730353078"
-      }
+      "description": "A spectacular route that combines suspension bridges, waterfalls, and narrow gorges. Ideal for a half-day adventure. Not suitable for people with a fear of heights.",
+      "stravaIframeUrl": "https://www.strava.com/routes/3246473523555232426/embed"
     }
   ]
 }
