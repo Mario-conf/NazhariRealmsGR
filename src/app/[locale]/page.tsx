@@ -152,44 +152,27 @@ export default function Home() {
         </section>
 
       {/* Sponsors Section */}
-      <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
-        <div className="container px-4 md:px-6">
-          <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-white">
-            {t('sponsors_title')}
-          </h2>
-           <Carousel
-                className="w-full max-w-6xl mx-auto"
-                plugins={[
-                    Autoplay({
-                      delay: 3000,
-                      stopOnInteraction: true,
-                    }),
-                ]}
-                opts={{
-                    align: "start",
-                    loop: true,
-                }}
-           >
-             <CarouselContent>
-                {sponsors.map((sponsor) => (
-                     <CarouselItem key={sponsor.id} className="basis-1/5">
-                        <div className="p-1 h-full">
-                           <div className="relative flex items-center justify-center p-2 bg-white rounded-lg shadow-sm aspect-[2/1]">
-                                <Image
-                                    src={sponsor.src}
-                                    alt={sponsor.alt}
-                                    data-ai-hint="logo empresa"
-                                    fill
-                                    className="object-contain p-2"
-                                />
-                            </div>
+        <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-white/70 backdrop-blur-sm">
+            <div className="container px-4 md:px-6">
+                <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-gray-800">
+                    {t('sponsors_title')}
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                    {sponsors.map((sponsor) => (
+                        <div key={sponsor.id} className="flex justify-center items-center p-2">
+                             <Image
+                                src={sponsor.src}
+                                alt={sponsor.alt}
+                                data-ai-hint="logo empresa"
+                                width={150}
+                                height={75}
+                                className="object-contain"
+                            />
                         </div>
-                    </CarouselItem>
-                ))}
-             </CarouselContent>
-          </Carousel>
-        </div>
-      </section>
+                    ))}
+                </div>
+            </div>
+        </section>
 
       {/* Contact Section */}
       <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
