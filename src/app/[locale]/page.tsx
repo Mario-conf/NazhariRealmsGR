@@ -18,15 +18,6 @@ import Autoplay from "embla-carousel-autoplay"
 export default function Home() {
   const t = useTranslations('HomePage');
 
-  const sponsors = [
-    { id: 1, src: 'https://i0.wp.com/tc-waalwijk.nl/wp-content/uploads/2018/01/Strava-Logo.png?w=600&ssl=1', alt: 'Strava Logo'},
-    { id: 2, src: 'https://tse3.mm.bing.net/th/id/OIP.gitPYpYsWGJUecokH3jNDQHaCh?rs=1&pid=ImgDetMain&o=7&rm=3', alt: 'Amazon Logo' },
-    { id: 3, src: 'https://latestlogo.com/wp-content/uploads/2024/03/decathlon-logo.png', alt: 'Decathlon Logo' },
-    { id: 4, src: 'https://seekvectorlogo.com/wp-content/uploads/2019/10/diputacion-de-granada-vector-logo.png', alt: 'Diputación de Granada Logo' },
-    { id: 5, src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Alsa-logo.svg/1280px-Alsa-logo.svg.png', alt: 'Alsa Logo' },
-    { id: 6, src: 'https://agqcvcudno.cloudimg.io/v7/climatica.coop/wp-content/uploads/2025/06/detalle_logo_aemet.png', alt: 'AEMET Logo' }
-  ];
-  
   const features = [
     {
       icon: <Mountain className="w-8 h-8 text-black" />,
@@ -157,20 +148,15 @@ export default function Home() {
                 <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-gray-800">
                     {t('sponsors_title')}
                 </h2>
-                <div className="rounded-2xl bg-white/40 backdrop-blur-sm py-12">
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-                      {sponsors.map((sponsor) => (
-                          <div key={sponsor.id} className="relative h-16 w-full p-4">
-                              <Image
-                                  src={sponsor.src}
-                                  alt={sponsor.alt}
-                                  data-ai-hint="logo empresa"
-                                  fill
-                                  className="object-contain"
-                              />
-                          </div>
-                      ))}
-                  </div>
+                <div className="rounded-2xl bg-white/40 backdrop-blur-sm p-6">
+                    <Image
+                        src="/patreon.png"
+                        alt="Logos de los patrocinadores"
+                        width={1200}
+                        height={200}
+                        className="w-full h-auto object-contain"
+                        data-ai-hint="logos patrocinadores"
+                    />
                 </div>
             </div>
         </section>
@@ -260,3 +246,4 @@ export default function Home() {
 
 
     
+
