@@ -6,9 +6,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle2, Shield, Mountain, Heart } from 'lucide-react';
+import { CheckCircle2, Shield, Mountain, Heart, Wifi } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -162,6 +161,18 @@ export default async function RulesPage({ params: { locale } }: { params: { loca
               <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
                <p><strong>{t.etiquette3_title}:</strong> {t.etiquette3_content}</p>
             </div>
+          </CardContent>
+        </Card>
+        
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3 font-serif">
+              <Wifi className="h-6 w-6 text-primary" />
+              {t.internet_title}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 text-muted-foreground">
+             <p>{t.internet_content}</p>
           </CardContent>
         </Card>
       </div>
