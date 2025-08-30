@@ -126,7 +126,7 @@ export function TrailDetailsDialog({
               <div>
                 <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('map_title')}</h3>
                  <div className="flex justify-center">
-                    <RouteMap imageUrl={trail.image} />
+                    <RouteMap imageUrl={trail.mapUrl} />
                 </div>
               </div>
           </main>

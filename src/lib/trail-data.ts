@@ -16,6 +16,7 @@ export type Trail = {
   duration: number; // in hours
   rating: number; // 1-5
   description: string;
+  mapUrl?: string; // Optional static map image URL
 };
 
 export type Review = {
