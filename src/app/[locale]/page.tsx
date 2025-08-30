@@ -179,7 +179,7 @@ export default function Home() {
                  <CarouselContent>
                     {reviews.map((review, index) => (
                          <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
-                            <div className="p-1">
+                            <div className="p-1 h-full">
                                 <Card className="h-full bg-background/80 backdrop-blur-sm">
                                     <CardHeader className="flex flex-row items-center gap-4">
                                         <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
@@ -352,3 +352,6 @@ export default function Home() {
     
 
 
+
+
+    
