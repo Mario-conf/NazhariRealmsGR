@@ -130,7 +130,7 @@ export function TrailDetailsDialog({
                         height='405'
                         width='100%'
                         title={`Strava map for ${trail.name}`}
-                        allowTransparency={true}
+                        allowtransparency="true"
                         frameBorder='0'
                         scrolling='no'
                         src={trail.stravaIframeUrl}
