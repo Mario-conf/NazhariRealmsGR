@@ -180,7 +180,7 @@ export default function Home() {
                                     alt={sponsor.alt}
                                     data-ai-hint="logo empresa"
                                     fill
-                                    className="object-contain p-2"
+                                    className="object-contain"
                                 />
                             </div>
                         </div>
@@ -260,6 +260,8 @@ export default function Home() {
 
 
 
+
+    
 
     
 
