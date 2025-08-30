@@ -1,0 +1,32 @@
+{
+  "trails": [
+    {
+      "id": 1,
+      "name": "Acequia Real Route",
+      "location": "Sierra Nevada, Granada",
+      "image": "https://www.exploradorcurioso.com/media/20151018_103625-1170x550.jpg",
+      "imageHint": "irrigation channel in the mountain",
+      "difficulty": "Moderate",
+      "terrain": "Mountain",
+      "length": 12.5,
+      "duration": 1.3,
+      "rating": 4.7,
+      "description": "A beautiful trail that follows the course of an old irrigation channel, offering spectacular views of the Sierra Nevada peaks. Ideal for summer as it runs at a high altitude.",
+      "mapUrl": "https://cdn.pacer.cc/route/screenshot/osm_11944228.png"
+    },
+    {
+      "id": 2,
+      "name": "Route of the Cahorros",
+      "location": "Monachil, Granada",
+      "image": "https://www.apartamentos3000.com/blog/wp-content/uploads/2023/05/Los-cahorros-de-Monachil1.jpg",
+      "imageHint": "hanging bridge in a gorge",
+      "difficulty": "Moderate",
+      "terrain": "Mountain",
+      "length": 8.7,
+      "duration": 1.45,
+      "rating": 4.7,
+      "description": "A spectacular route that combines hanging bridges, waterfalls, and narrow gorges. Ideal for a half-day adventure. Not suitable for people with vertigo.",
+      "mapUrl": "https://lh4.googleusercontent.com/-r9lJ_Wc87Cs/T5LTjGd19XI/AAAAAAAAKz0/bfgxO1pfxJA/s1600/PLANO%2520CAHORROS.jpg"
+    }
+  ]
+}

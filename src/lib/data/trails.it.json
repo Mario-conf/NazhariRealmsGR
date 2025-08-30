@@ -1,0 +1,32 @@
+{
+  "trails": [
+    {
+      "id": 1,
+      "name": "Percorso dell'Acequia Real",
+      "location": "Sierra Nevada, Granada",
+      "image": "https://www.exploradorcurioso.com/media/20151018_103625-1170x550.jpg",
+      "imageHint": "canale di irrigazione in montagna",
+      "difficulty": "Moderate",
+      "terrain": "Montagna",
+      "length": 12.5,
+      "duration": 1.3,
+      "rating": 4.7,
+      "description": "Un bellissimo sentiero che segue il corso di un antico canale di irrigazione, offrendo viste spettacolari sulle cime della Sierra Nevada. Ideale per l'estate poiché si snoda ad alta quota.",
+      "mapUrl": "https://cdn.pacer.cc/route/screenshot/osm_11944228.png"
+    },
+    {
+      "id": 2,
+      "name": "Percorso dei Cahorros",
+      "location": "Monachil, Granada",
+      "image": "https://www.apartamentos3000.com/blog/wp-content/uploads/2023/05/Los-cahorros-de-Monachil1.jpg",
+      "imageHint": "ponte sospeso in una gola",
+      "difficulty": "Moderate",
+      "terrain": "Montagna",
+      "length": 8.7,
+      "duration": 1.45,
+      "rating": 4.7,
+      "description": "Un percorso spettacolare che combina ponti sospesi, cascate e gole strette. Ideale per un'avventura di mezza giornata. Non adatto a persone che soffrono di vertigini.",
+      "mapUrl": "https://lh4.googleusercontent.com/-r9lJ_Wc87Cs/T5LTjGd19XI/AAAAAAAAKz0/bfgxO1pfxJA/s1600/PLANO%2520CAHORROS.jpg"
+    }
+  ]
+}

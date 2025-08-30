@@ -1,0 +1,32 @@
+{
+  "trails": [
+    {
+      "id": 1,
+      "name": "Route de l'Acequia Real",
+      "location": "Sierra Nevada, Grenade",
+      "image": "https://www.exploradorcurioso.com/media/20151018_103625-1170x550.jpg",
+      "imageHint": "canal d'irrigation dans la montagne",
+      "difficulty": "Moderate",
+      "terrain": "Montagne",
+      "length": 12.5,
+      "duration": 1.3,
+      "rating": 4.7,
+      "description": "Un magnifique sentier qui suit le cours d'un ancien canal d'irrigation, offrant des vues spectaculaires sur les sommets de la Sierra Nevada. Idéal pour l'été car il se déroule à haute altitude.",
+      "mapUrl": "https://cdn.pacer.cc/route/screenshot/osm_11944228.png"
+    },
+    {
+      "id": 2,
+      "name": "Route des Cahorros",
+      "location": "Monachil, Grenade",
+      "image": "https://www.apartamentos3000.com/blog/wp-content/uploads/2023/05/Los-cahorros-de-Monachil1.jpg",
+      "imageHint": "pont suspendu dans une gorge",
+      "difficulty": "Moderate",
+      "terrain": "Montagne",
+      "length": 8.7,
+      "duration": 1.45,
+      "rating": 4.7,
+      "description": "Un itinéraire spectaculaire qui combine ponts suspendus, cascades et gorges étroites. Idéal pour une aventure d'une demi-journée. Ne convient pas aux personnes ayant le vertige.",
+      "mapUrl": "https://lh4.googleusercontent.com/-r9lJ_Wc87Cs/T5LTjGd19XI/AAAAAAAAKz0/bfgxO1pfxJA/s1600/PLANO%2520CAHORROS.jpg"
+    }
+  ]
+}

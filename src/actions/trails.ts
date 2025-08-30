@@ -1,18 +1,25 @@
 'use server';
 /**
  * @fileOverview Server action for fetching trail data.
+ * This version uses dynamic imports to ensure JSON files are correctly
+ * bundled with the application for serverless environments.
  */
 import type { Trail } from '@/lib/trail-data';
-import fs from 'fs/promises';
-import path from 'path';
 import { z } from 'zod';
 
 const GetTrailsInputSchema = z.object({
   locale: z.string(),
 });
 
+type TrailDataModule = {
+  default: {
+    trails: Trail[];
+  };
+};
+
 /**
- * Fetches trail data from the corresponding JSON file based on locale.
+ * Fetches trail data from the corresponding JSON file based on locale
+ * using dynamic imports.
  * Falls back to Spanish ('es') if the JSON for the requested locale doesn't exist.
  * @param {object} input - The input object.
  * @param {string} input.locale - The desired locale for the trail data.
@@ -27,33 +34,38 @@ export async function getTrails(
   }
 
   const { locale } = parsedInput.data;
-  // Correctly join the path starting from the project root
-  const dataDirectory = path.join(process.cwd(), 'public', 'data');
-  
-  let filePath = path.join(dataDirectory, `trails.${locale}.json`);
+  let trailDataModule: TrailDataModule;
 
   try {
-    // Check if the locale-specific file exists
-    await fs.access(filePath);
-  } catch (error) {
-    // If it doesn't exist and it's not 'es', fallback to 'es'
-    if (locale !== 'es') {
-      console.warn(`Trail data for locale "${locale}" not found, falling back to "es".`);
-      filePath = path.join(dataDirectory, `trails.es.json`);
-    } else {
-      // If even the 'es' file doesn't exist, throw an error
-      console.error(`Default trail data file (trails.es.json) not found.`);
-      throw new Error('Could not load trail data.');
+    // Use a switch to handle dynamic imports, which is more robust
+    // for bundlers like Next.js/Webpack.
+    switch (locale) {
+      case 'en':
+        trailDataModule = await import('@/lib/data/trails.en.json');
+        break;
+      case 'de':
+        trailDataModule = await import('@/lib/data/trails.de.json');
+        break;
+      case 'fr':
+        trailDataModule = await import('@/lib/data/trails.fr.json');
+        break;
+      case 'it':
+        trailDataModule = await import('@/lib/data/trails.it.json');
+        break;
+      case 'es':
+      default:
+        trailDataModule = await import('@/lib/data/trails.es.json');
+        break;
     }
-  }
-
-  try {
-    const fileContents = await fs.readFile(filePath, 'utf8');
-    const data = JSON.parse(fileContents);
-    // The JSON file has a root "trails" property
-    return data.trails as Trail[];
+    return trailDataModule.default.trails;
   } catch (error) {
-    console.error(`Failed to read or parse trail data from ${filePath}:`, error);
-    throw new Error('Failed to process trail data.');
+     console.error(`Failed to dynamically import trail data for locale "${locale}". Falling back to 'es'.`, error);
+     try {
+        trailDataModule = await import('@/lib/data/trails.es.json');
+        return trailDataModule.default.trails;
+     } catch (fallbackError) {
+        console.error(`FATAL: Could not load fallback trail data (trails.es.json).`, fallbackError);
+        throw new Error('Could not load any trail data.');
+     }
   }
 }

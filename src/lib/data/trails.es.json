@@ -1,0 +1,32 @@
+{
+  "trails": [
+    {
+      "id": 1,
+      "name": "Ruta Acequia Real",
+      "location": "Sierra Nevada, Granada",
+      "image": "https://www.exploradorcurioso.com/media/20151018_103625-1170x550.jpg",
+      "imageHint": "acequia en la montaña",
+      "difficulty": "Moderate",
+      "terrain": "Montaña",
+      "length": 12.5,
+      "duration": 1.3,
+      "rating": 4.7,
+      "description": "Un precioso sendero que sigue el recorrido de una antigua acequia, ofreciendo vistas espectaculares de las cumbres de Sierra Nevada. Ideal para el verano al discurrir a gran altitud.",
+      "mapUrl": "https://cdn.pacer.cc/route/screenshot/osm_11944228.png"
+    },
+    {
+      "id": 2,
+      "name": "Ruta de los Cahorros",
+      "location": "Monachil, Granada",
+      "image": "https://www.apartamentos3000.com/blog/wp-content/uploads/2023/05/Los-cahorros-de-Monachil1.jpg",
+      "imageHint": "puente colgante en desfiladero",
+      "difficulty": "Moderate",
+      "terrain": "Montaña",
+      "length": 8.7,
+      "duration": 1.45,
+      "rating": 4.7,
+      "description": "Una ruta espectacular que combina puentes colgantes, cascadas y desfiladeros estrechos. Ideal para una aventura de medio día. No apta para personas con vértigo.",
+      "mapUrl": "https://lh4.googleusercontent.com/-r9lJ_Wc87Cs/T5LTjGd19XI/AAAAAAAAKz0/bfgxO1pfxJA/s1600/PLANO%2520CAHORROS.jpg"
+    }
+  ]
+}
