@@ -172,7 +172,7 @@ export default function Home() {
            >
              <CarouselContent>
                 {sponsors.map((sponsor) => (
-                     <CarouselItem key={sponsor.id} className="basis-1/3 md:basis-1/5">
+                     <CarouselItem key={sponsor.id} className="basis-1/5">
                         <div className="p-1 h-full">
                            <div className="relative flex items-center justify-center p-4 bg-white rounded-lg shadow-sm aspect-[2/1]">
                                 <Image
@@ -260,6 +260,8 @@ export default function Home() {
 
 
 
+
+    
 
     
 
