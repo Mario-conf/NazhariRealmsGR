@@ -145,6 +145,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'latestlogo.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
       }
     ],
   },

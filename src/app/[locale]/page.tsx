@@ -22,8 +22,8 @@ export default function Home() {
     { id: 1, src: 'https://i0.wp.com/tc-waalwijk.nl/wp-content/uploads/2018/01/Strava-Logo.png?w=600&ssl=1', alt: 'Logo'},
     { id: 2, src: 'https://tse3.mm.bing.net/th/id/OIP.gitPYpYsWGJUecokH3jNDQHaCh?rs=1&pid=ImgDetMain&o=7&rm=3', alt: 'Logo' },
     { id: 3, src: 'https://latestlogo.com/wp-content/uploads/2024/03/decathlon-logo.png', alt: ' Logo' },
-    { id: 4, src: 'https://thinkmarketingmagazine.com/wp-content/uploads/2022/08/Amazon_logo.svg.png', alt: ' Logo' },
-    { id: 5, src: 'https://www.underconsideration.com/brandnew/archives/alsa_logo.png', alt: ' Logo' },
+    { id: 4, src: 'https://seekvectorlogo.com/wp-content/uploads/2019/10/diputacion-de-granada-vector-logo.png', alt: 'Diputación de Granada Logo' },
+    { id: 5, src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Alsa-logo.svg/1280px-Alsa-logo.svg.png', alt: 'Alsa Logo' },
     { id: 6, src: 'https://agqcvcudno.cloudimg.io/v7/climatica.coop/wp-content/uploads/2025/06/detalle_logo_aemet.png', alt: 'Logo' }
   ];
   
@@ -256,3 +256,4 @@ export default function Home() {
     
 
     
+
