@@ -21,7 +21,7 @@ export default function Home() {
   const sponsors = [
     { id: 1, src: 'https://i0.wp.com/tc-waalwijk.nl/wp-content/uploads/2018/01/Strava-Logo.png?w=600&ssl=1', alt: 'Logo'},
     { id: 2, src: 'https://tse3.mm.bing.net/th/id/OIP.gitPYpYsWGJUecokH3jNDQHaCh?rs=1&pid=ImgDetMain&o=7&rm=3', alt: 'Logo' },
-    { id: 3, src: 'https://logos-world.net/wp-content/uploads/2024/04/Decathlon-Logo-New.png', alt: ' Logo' },
+    { id: 3, src: 'https://latestlogo.com/wp-content/uploads/2024/03/decathlon-logo.png', alt: ' Logo' },
     { id: 4, src: 'https://thinkmarketingmagazine.com/wp-content/uploads/2022/08/Amazon_logo.svg.png', alt: ' Logo' },
     { id: 5, src: 'https://www.underconsideration.com/brandnew/archives/alsa_logo.png', alt: ' Logo' },
     { id: 6, src: 'https://agqcvcudno.cloudimg.io/v7/climatica.coop/wp-content/uploads/2025/06/detalle_logo_aemet.png', alt: 'Logo' }
@@ -264,7 +264,7 @@ export default function Home() {
            >
              <CarouselContent>
                 {sponsors.map((sponsor) => (
-                    <CarouselItem key={sponsor.id} className="basis-1/3 md:basis-1/5">
+                     <CarouselItem key={sponsor.id} className="basis-1/3 md:basis-1/5">
                         <div className="p-1 h-full">
                             <div className="relative flex items-center justify-center p-4 bg-white rounded-lg shadow-sm h-24">
                                 <Image

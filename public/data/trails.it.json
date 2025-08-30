@@ -1,32 +1,139 @@
+
 {
   "trails": [
     {
       "id": 1,
-      "name": "Percorso Acequia Real",
-      "location": "Sierra Nevada, Granada",
-      "image": "https://images.ecestaticos.com/5QdC4pkgSVEW6c5j1Gyu-sAq0yE=/0x0:2272x1515/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F8a6%2Ff87%2Ff55%2F8a6f87f55e09e1e24741639d2554763c.jpg",
-      "imageHint": "sentiero montagna canale irrigazione",
+      "name": "Percorso dei Cahorros",
+      "location": "Monachil, Granada",
+      "image": "https://images.ecestaticos.com/5Qd-2T20eWlKiB69a2eA_LhYm8c=/0x0:1920x1080/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F069%2F219%2F8a1%2F0692198a18df7b065355655a6d59518d.jpg",
+      "imageHint": "Ponte sospeso in un canyon",
       "difficulty": "Moderate",
       "terrain": "Mountain",
-      "length": 12.5,
-      "duration": 1.3,
-      "rating": 4.7,
-      "description": "Un bellissimo sentiero che segue un vecchio canale di irrigazione, offrendo viste spettacolari sulle cime della Sierra Nevada. Ideale per l'estate poiché si snoda ad alta quota.",
-      "stravaIframeUrl": "https://www.strava.com/routes/3246473087216690858/embed"
+      "length": 8,
+      "duration": 4,
+      "rating": 4.5,
+      "description": "Un percorso spettacolare che combina ponti sospesi, cascate e gole strette. Ideale per un'avventura di mezza giornata. Non adatto a persone con vertigini.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Mappa+Cahorros",
+      "reviews": [
+        {
+          "id": "it-1-1",
+          "author": "Laura Gómez",
+          "rating": 5,
+          "comment": "Un'esperienza incredibile, le guide trasmettono molta sicurezza e l'atmosfera del gruppo è molto accogliente. Ideale per iniziare a fare trekking e conoscere nuove persone.",
+          "date": "2024-05-10"
+        },
+        {
+          "id": "it-1-2",
+          "author": "Carlos Martín",
+          "rating": 3,
+          "comment": "I percorsi sono ben organizzati, anche se a volte diventano un po' lunghi per i principianti. Avrei gradito più pause per riposare.",
+          "date": "2024-05-12"
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Percorso dei Cahorros",
-      "location": "Monachil, Granada",
-      "image": "https://www.actualidadiphone.com/wp-content/uploads/2015/05/mapa-cahorros.jpg",
-      "imageHint": "ponte sospeso canyon",
+      "name": "Vereda de la Estrella",
+      "location": "Güejar Sierra, Granada",
+      "image": "https://www.actualidadiphone.com/wp-content/uploads/2016/01/IMG_0096.jpg",
+      "imageHint": "Sentiero accanto a un fiume in montagna",
+      "difficulty": "Hard",
+      "terrain": "Mountain",
+      "length": 22,
+      "duration": 8,
+      "rating": 4.8,
+      "description": "Uno dei percorsi più emblematici della Sierra Nevada. Segue antichi sentieri minerari, offrendo viste spettacolari sulle pareti nord del Mulhacén e del Veleta.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Mappa+Vereda+Estrella",
+      "reviews": [
+        {
+          "id": "it-2-1",
+          "author": "Ana Rodríguez",
+          "rating": 5,
+          "comment": "Club eccellente, molto responsabile per la sicurezza in montagna. Si percepisce la passione per la natura. Ripeterò sicuramente alla prossima uscita.",
+          "date": "2024-04-20"
+        },
+        {
+          "id": "it-2-2",
+          "author": "Miguel Torres",
+          "rating": 2,
+          "comment": "Il percorso era bello ma c'erano troppe persone nell'escursione e questo ha reso il ritmo difficile. Sarebbe meglio limitare un po' i gruppi.",
+          "date": "2024-04-21"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Salita al Veleta da Hoya de la Mora",
+      "location": "Sierra Nevada, Granada",
+      "image": "https://granadanatural.com/imagenes/senderismo_fichas/subida_al_veleta_desde_la_hoya_de_la_mora_ndsc_3226.jpg",
+      "imageHint": "Escursionista su una cima con la neve",
+      "difficulty": "Hard",
+      "terrain": "Mountain",
+      "length": 14,
+      "duration": 6,
+      "rating": 4.9,
+      "description": "La salita classica a una delle cime più alte della penisola iberica. Il percorso si snoda su strada e sentiero, offrendo viste panoramiche indimenticabili.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Mappa+Veleta",
+      "reviews": [
+         {
+          "id": "it-3-1",
+          "author": "Sofía Hernández",
+          "rating": 4,
+          "comment": "Grande varietà di percorsi, da facili a alta montagna. Gli organizzatori sono sempre attenti a tutti i dettagli. Altamente raccomandato per chiunque voglia imparare e divertirsi.",
+          "date": "2024-03-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Gola del Río Verde",
+      "location": "Otívar, Granada",
+      "image": "https://www.escapadarural.com/blog/wp-content/uploads/2021/05/descenso-barranco-rio-verde-otivar-granada-1.jpg",
+      "imageHint": "Persona che fa canyoning in un fiume",
+      "difficulty": "Hard",
+      "terrain": "Coastal",
+      "length": 7,
+      "duration": 5,
+      "rating": 4.7,
+      "description": "Un'avventura acquatica che combina salti in pozze, scivoli e calate in un ambiente naturale mozzafiato. Perfetto per sfuggire al caldo estivo. Richiede attrezzatura specifica.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Mappa+Rio+Verde"
+    },
+    {
+      "id": 5,
+      "name": "Lavaderos de la Reina",
+      "location": "Güejar Sierra, Granada",
+      "image": "https://i.ytimg.com/vi/h24UIoMMB3Y/maxresdefault.jpg",
+      "imageHint": "Cascate e torrenti in una valle glaciale",
       "difficulty": "Moderate",
       "terrain": "Mountain",
-      "length": 8.7,
-      "duration": 1.45,
-      "rating": 4.7,
-      "description": "Un percorso spettacolare che combina ponti sospesi, cascate e strette gole. Ideale per un'avventura di mezza giornata. Non adatto a persone che soffrono di vertigini.",
-      "stravaIframeUrl": "https://www.strava.com/routes/3246473523555232426/embed"
+      "length": 16,
+      "duration": 7,
+      "rating": 4.6,
+      "description": "Un bellissimo percorso che attraversa una valle glaciale dove nascono cascate e torrenti dal disgelo, creando un paesaggio unico. Particolarmente consigliato all'inizio dell'estate.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Mappa+Lavaderos",
+      "reviews": [
+        {
+          "id": "it-5-1",
+          "author": "David López",
+          "rating": 4,
+          "comment": "Mi è piaciuta la passeggiata, anche se mi aspettavo qualche informazione culturale in più sulla zona. Comunque, il gruppo era molto piacevole e i paesaggi spettacolari.",
+          "date": "2024-02-28"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Dehesa del Camarate",
+      "location": "Lugros, Granada",
+      "image": "https://www.trevenque.es/wp-content/uploads/2018/11/19-10-24-Dehesa-Camarate-14-1024x768.jpg",
+      "imageHint": "Bosco autunnale con alberi colorati",
+      "difficulty": "Easy",
+      "terrain": "Forest",
+      "length": 12,
+      "duration": 4,
+      "rating": 4.4,
+      "description": "Conosciuto come il 'Bosco Incantato' dell'Andalusia, questo luogo è uno spettacolo di colori in autunno. Un percorso facile, ideale per famiglie e amanti della fotografia.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Mappa+Camarate"
     }
   ]
 }

@@ -1,32 +1,139 @@
+
 {
   "trails": [
     {
       "id": 1,
-      "name": "Route de l'Acequia Real",
-      "location": "Sierra Nevada, Grenade",
-      "image": "https://images.ecestaticos.com/5QdC4pkgSVEW6c5j1Gyu-sAq0yE=/0x0:2272x1515/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F8a6%2Ff87%2Ff55%2F8a6f87f55e09e1e24741639d2554763c.jpg",
-      "imageHint": "sentier montagne canal irrigation",
+      "name": "Route des Cahorros",
+      "location": "Monachil, Grenade",
+      "image": "https://images.ecestaticos.com/5Qd-2T20eWlKiB69a2eA_LhYm8c=/0x0:1920x1080/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F069%2F219%2F8a1%2F0692198a18df7b065355655a6d59518d.jpg",
+      "imageHint": "Pont suspendu dans un canyon",
       "difficulty": "Moderate",
       "terrain": "Mountain",
-      "length": 12.5,
-      "duration": 1.3,
-      "rating": 4.7,
-      "description": "Un magnifique sentier qui suit un ancien canal d'irrigation, offrant des vues spectaculaires sur les sommets de la Sierra Nevada. Idéal pour l'été car il se déroule en haute altitude.",
-      "stravaIframeUrl": "https://www.strava.com/routes/3246473087216690858/embed"
+      "length": 8,
+      "duration": 4,
+      "rating": 4.5,
+      "description": "Un itinéraire spectaculaire qui combine ponts suspendus, cascades et gorges étroites. Idéal pour une aventure d'une demi-journée. Ne convient pas aux personnes ayant le vertige.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Carte+Cahorros",
+      "reviews": [
+        {
+          "id": "fr-1-1",
+          "author": "Laura Gómez",
+          "rating": 5,
+          "comment": "Une expérience incroyable, les guides transmettent beaucoup de sécurité et l'ambiance du groupe est très accueillante. Idéal pour s'initier à la randonnée et rencontrer de nouvelles personnes.",
+          "date": "2024-05-10"
+        },
+        {
+          "id": "fr-1-2",
+          "author": "Carlos Martín",
+          "rating": 3,
+          "comment": "Les itinéraires sont bien organisés, bien que parfois un peu longs pour les débutants. J'aurais aimé plus de pauses pour me reposer.",
+          "date": "2024-05-12"
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Route des Cahorros",
-      "location": "Monachil, Grenade",
-      "image": "https://www.actualidadiphone.com/wp-content/uploads/2015/05/mapa-cahorros.jpg",
-      "imageHint": "pont suspendu canyon",
+      "name": "Vereda de la Estrella",
+      "location": "Güejar Sierra, Grenade",
+      "image": "https://www.actualidadiphone.com/wp-content/uploads/2016/01/IMG_0096.jpg",
+      "imageHint": "Sentier à côté d'une rivière en montagne",
+      "difficulty": "Hard",
+      "terrain": "Mountain",
+      "length": 22,
+      "duration": 8,
+      "rating": 4.8,
+      "description": "L'un des itinéraires les plus emblématiques de la Sierra Nevada. Il suit d'anciens sentiers miniers, offrant des vues spectaculaires sur les faces nord du Mulhacén et du Veleta.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Carte+Vereda+Estrella",
+      "reviews": [
+        {
+          "id": "fr-2-1",
+          "author": "Ana Rodríguez",
+          "rating": 5,
+          "comment": "Excellent club, très responsable en matière de sécurité en montagne. On sent la passion pour la nature. Je reviendrai sans hésiter pour la prochaine sortie.",
+          "date": "2024-04-20"
+        },
+        {
+          "id": "fr-2-2",
+          "author": "Miguel Torres",
+          "rating": 2,
+          "comment": "Le parcours était beau mais il y avait trop de monde lors de l'excursion et cela a rendu le rythme difficile. Il serait préférable de limiter un peu les groupes.",
+          "date": "2024-04-21"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Ascension du Veleta depuis Hoya de la Mora",
+      "location": "Sierra Nevada, Grenade",
+      "image": "https://granadanatural.com/imagenes/senderismo_fichas/subida_al_veleta_desde_la_hoya_de_la_mora_ndsc_3226.jpg",
+      "imageHint": "Randonneur sur un sommet enneigé",
+      "difficulty": "Hard",
+      "terrain": "Mountain",
+      "length": 14,
+      "duration": 6,
+      "rating": 4.9,
+      "description": "L'ascension classique vers l'un des plus hauts sommets de la péninsule ibérique. L'itinéraire se déroule sur une route et un sentier, offrant des vues panoramiques inoubliables.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Carte+Veleta",
+      "reviews": [
+        {
+          "id": "fr-3-1",
+          "author": "Sofía Hernández",
+          "rating": 4,
+          "comment": "Grande variété d'itinéraires, du plus facile au plus difficile en haute montagne. Les organisateurs sont toujours attentifs à tous les détails. Fortement recommandé pour tous ceux qui cherchent à apprendre et à profiter.",
+          "date": "2024-03-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Canyon du Río Verde",
+      "location": "Otívar, Grenade",
+      "image": "https://www.escapadarural.com/blog/wp-content/uploads/2021/05/descenso-barranco-rio-verde-otivar-granada-1.jpg",
+      "imageHint": "Personne faisant du canyoning dans une rivière",
+      "difficulty": "Hard",
+      "terrain": "Coastal",
+      "length": 7,
+      "duration": 5,
+      "rating": 4.7,
+      "description": "Une aventure aquatique qui combine des sauts dans des bassins, des toboggans et des descentes en rappel dans un environnement naturel magnifique. Parfait pour échapper à la chaleur estivale. Nécessite un équipement spécifique.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Carte+Rio+Verde"
+    },
+    {
+      "id": 5,
+      "name": "Lavaderos de la Reina",
+      "location": "Güejar Sierra, Grenade",
+      "image": "https://i.ytimg.com/vi/h24UIoMMB3Y/maxresdefault.jpg",
+      "imageHint": "Cascades et ruisseaux dans une vallée glaciaire",
       "difficulty": "Moderate",
       "terrain": "Mountain",
-      "length": 8.7,
-      "duration": 1.45,
-      "rating": 4.7,
-      "description": "Un itinéraire spectaculaire qui combine ponts suspendus, cascades et gorges étroites. Idéal pour une aventure d'une demi-journée. Ne convient pas aux personnes ayant le vertige.",
-      "stravaIframeUrl": "https://www.strava.com/routes/3246473523555232426/embed"
+      "length": 16,
+      "duration": 7,
+      "rating": 4.6,
+      "description": "Un magnifique itinéraire qui traverse une vallée glaciaire où naissent des cascades et des ruisseaux issus de la fonte des neiges, créant un paysage unique. Particulièrement recommandé au début de l'été.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Carte+Lavaderos",
+      "reviews": [
+        {
+          "id": "fr-5-1",
+          "author": "David López",
+          "rating": 4,
+          "comment": "J'ai aimé la promenade, même si je m'attendais à un peu plus d'informations culturelles sur la région. Malgré tout, le groupe était très agréable et les paysages spectaculaires.",
+          "date": "2024-02-28"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Dehesa del Camarate",
+      "location": "Lugros, Grenade",
+      "image": "https://www.trevenque.es/wp-content/uploads/2018/11/19-10-24-Dehesa-Camarate-14-1024x768.jpg",
+      "imageHint": "Forêt d'automne avec des arbres colorés",
+      "difficulty": "Easy",
+      "terrain": "Forest",
+      "length": 12,
+      "duration": 4,
+      "rating": 4.4,
+      "description": "Connu comme la 'Forêt Enchantée' d'Andalousie, cet endroit est un spectacle de couleurs en automne. Un itinéraire facile, idéal pour les familles et les amateurs de photographie.",
+      "mapUrl": "https://placehold.co/600x400.png?text=Carte+Camarate"
     }
   ]
 }
