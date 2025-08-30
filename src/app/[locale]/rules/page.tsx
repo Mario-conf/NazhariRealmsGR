@@ -5,77 +5,24 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle2, Shield, Mountain, Heart, Wifi } from 'lucide-react';
+import { CheckCircle2, Shield, Mountain, Heart, Scale } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
-import { translateText } from '@/ai/flows/translate-flow';
-import type { TranslateInput, TranslateOutput } from '@/ai/schemas/translate-schema';
-import { z } from 'zod';
-
-type RuleContent = {
-  title: string;
-  subtitle: string;
-  safety_title: string;
-  safety1_title: string;
-  safety1_content: string;
-  safety2_title: string;
-  safety2_content: string;
-  safety3_title: string;
-  safety3_content: string;
-  lnt_title: string;
-  lnt1_trigger: string;
-  lnt1_content: string;
-  lnt2_trigger: string;
-  lnt2_content: string;
-  lnt3_trigger: string;
-  lnt3_content: string;
-  lnt4_trigger: string;
-  lnt4_content: string;
-  etiquette_title: string;
-  etiquette1_title: string;
-  etiquette1_content: string;
-  etiquette2_title: string;
-  etiquette2_content: string;
-  etiquette3_title: string;
-  etiquette3_content: string;
-  internet_title: string;
-  internet_content: string;
-};
-
-// Zod schema for validation
-const RuleContentSchema = z.object({
-  title: z.string(),
-  subtitle: z.string(),
-  safety_title: z.string(),
-  safety1_title: z.string(),
-  safety1_content: z.string(),
-  safety2_title: z.string(),
-  safety2_content: z.string(),
-  safety3_title: z.string(),
-  safety3_content: z.string(),
-  lnt_title: z.string(),
-  lnt1_trigger: z.string(),
-  lnt1_content: z.string(),
-  lnt2_trigger: z.string(),
-  lnt2_content: z.string(),
-  lnt3_trigger: z.string(),
-  lnt3_content: z.string(),
-  lnt4_trigger: z.string(),
-  lnt4_content: z.string(),
-  etiquette_title: z.string(),
-  etiquette1_title: z.string(),
-  etiquette1_content: z.string(),
-  etiquette2_title: z.string(),
-  etiquette2_content: z.string(),
-  etiquette3_title: z.string(),
-  etiquette3_content: z.string(),
-  internet_title: z.string(),
-  internet_content: z.string(),
-});
+import { translateRules } from '@/ai/flows/translate-flow';
+import type { RuleContent } from '@/ai/schemas/translate-schema';
+import { RuleContentSchema } from '@/ai/schemas/translate-schema';
 
 
 async function getRulesContent(locale: string): Promise<RuleContent> {
@@ -83,33 +30,29 @@ async function getRulesContent(locale: string): Promise<RuleContent> {
   
   try {
     const fileContents = await fs.readFile(filePath, 'utf8');
-    const baseContent: RuleContent = JSON.parse(fileContents);
+    const baseContent = JSON.parse(fileContents);
+
+    // Validate the base content just in case
+    const parsedBaseContent = RuleContentSchema.safeParse(baseContent);
+    if (!parsedBaseContent.success) {
+        console.error("Failed to validate base rules content (rules.es.json):", parsedBaseContent.error);
+        throw new Error("Base rules file is invalid.");
+    }
 
     if (locale === 'es') {
-      return baseContent;
+      return parsedBaseContent.data;
     }
 
-    // Translate all values in parallel
-    const translationPromises = Object.entries(baseContent).map(async ([key, value]) => {
-      const { translatedText } = await translateText({ text: value, targetLanguage: locale });
-      return [key, translatedText];
+    // For other languages, translate the entire object
+    const translatedContent = await translateRules({ 
+        jsonContent: parsedBaseContent.data, 
+        targetLanguage: locale 
     });
-
-    const translatedEntries = await Promise.all(translationPromises);
-    const translatedContent = Object.fromEntries(translatedEntries);
     
-    // Validate the structure of the translated object
-    const parsedContent = RuleContentSchema.safeParse(translatedContent);
-    if (!parsedContent.success) {
-      console.error("Failed to validate translated rules content:", parsedContent.error);
-      // Fallback to Spanish content on translation/validation failure
-      return baseContent;
-    }
-    
-    return parsedContent.data;
+    return translatedContent;
 
   } catch (error) {
-    console.error(`Failed to read or process rules data from ${filePath}:`, error);
+    console.error(`Failed to read, parse, or translate rules data:`, error);
     notFound();
   }
 }
@@ -147,19 +90,15 @@ export default async function RulesPage({ params: { locale } }: { params: { loca
               {t.safety_title}
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4 text-muted-foreground">
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
-              <p><strong>{t.safety1_title}:</strong> {t.safety1_content}</p>
-            </div>
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
-               <p><strong>{t.safety2_title}:</strong> {t.safety2_content}</p>
-            </div>
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="h-5 w-5 mt-1 text-green-500 flex-shrink-0" />
-              <p><strong>{t.safety3_title}:</strong> {t.safety3_content}</p>
-            </div>
+          <CardContent className="space-y-4 text-muted-foreground prose prose-sm max-w-none">
+            <h4>{t.safety1_title}</h4>
+            <p>{t.safety1_content}</p>
+            
+            <h4>{t.safety2_title}</h4>
+            <p className="whitespace-pre-line">{t.safety2_content}</p>
+
+            <h4>{t.safety3_title}</h4>
+            <p className="whitespace-pre-line">{t.safety3_content}</p>
           </CardContent>
         </Card>
 
@@ -218,12 +157,31 @@ export default async function RulesPage({ params: { locale } }: { params: { loca
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-3 font-serif">
-              <Wifi className="h-6 w-6 text-primary" />
-              {t.internet_title}
+              <Scale className="h-6 w-6 text-primary" />
+              {t.spaces_title}
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4 text-muted-foreground">
-             <p>{t.internet_content}</p>
+          <CardContent>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="font-bold">Espacio Natural</TableHead>
+                  <TableHead className="font-bold">Fuego</TableHead>
+                  <TableHead className="font-bold">Acampada</TableHead>
+                  <TableHead className="font-bold">Pernocta</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {t.spaces_list.map((space, index) => (
+                  <TableRow key={index}>
+                    <TableCell className="font-medium">{space.name}</TableCell>
+                    <TableCell>{space.fuego}</TableCell>
+                    <TableCell>{space.acampada}</TableCell>
+                    <TableCell>{space.pernocta}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
           </CardContent>
         </Card>
       </div>
