@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -111,7 +112,7 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-primary-foreground/20">
+              <div className="pt-4 mt-auto border-t border-primary-foreground/20">
                 <div className="flex items-center gap-4 rounded-md px-3 py-3 text-base">
                   <Globe className="h-5 w-5" />
                   <LanguageSwitcher />
