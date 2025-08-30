@@ -1,0 +1,91 @@
+
+{
+  "title": "Club Rules and Safety Guides",
+  "subtitle": "Our principles for safe, respectful, and unforgettable adventures. Please read carefully before your first outing.",
+  "safety_title": "Mountain Safety: Your Responsibilities",
+  "safety1_title": "Personal and Group Responsibility",
+  "safety1_content": "Each hiker must take responsibility for their own safety and that of the group: plan the activity well, equip everyone correctly, and act prudently. Carry maps, a compass (and/or GPS), and know the route, elevation gain, and risks. Inform someone of your route and expected return time. At any sign of fatigue or discomfort, stop, assess the situation, and if there are injuries or danger, turn back or call for help.",
+  "safety2_title": "Essential Equipment",
+  "safety2_content": "Each participant must carry the “ten essentials” adapted to the Andalusian terrain:\n- Navigation: Topographic map and compass; GPS optional.\n- Illumination: Headlamp with spare batteries.\n- Emergencies: Complete first-aid kit.\n- Emergency shelter: Bivy sack or thermal blanket.\n- Sun protection: Sunscreen SPF ≥30, sunglasses with UV filter, hat.\n- Hydration and energy: Sufficient water (1–2 liters per person) and reserve food.\n- Other useful items: Whistle, multi-tool knife, and lighter/waterproof matches.\n- Appropriate clothing: Layered (thermal clothing, waterproof windbreaker) and sturdy hiking boots; avoid cotton.",
+  "safety3_title": "Planning, Weather, and Emergencies",
+  "safety3_content": "Always check the official weather forecast before heading out, especially in high mountains. Plan the route considering:\n- Detailed route: Kilometers, elevation gain, water sources, shelters, and escape routes.\n- Communications: Inform a family member or friend of your itinerary and return time. Carry a charged phone and/or emergency GPS devices.\n- Safety apps: Use apps that send your location to rescue services in an emergency.\nIf there are bad weather alerts, postpone the outing until conditions are safe.\n\nFollow the PAS protocol:\n1. Protect: Signal dangers and avoid additional risks.\n2. Alert: Call 112; provide your details, number of injured, type of injuries, and exact location.\n3. Support: Apply basic first aid without moving serious fractures.\nIf you get lost, stay in a visible place, make signals with a whistle or light, and communicate your position if there is coverage.\n\nEnvironmental Regulations and Ethics:\nOur routes comply with Law 42/2007 on Natural Heritage and the specific regulations of Andalusia, including rules on camping, overnight stays, and fire according to each type of protected area.",
+  "lnt_title": "“Leave No Trace” Principles",
+  "lnt1_trigger": "Planning and Impact Minimization",
+  "lnt1_content": "Plan to minimize waste and environmental impact.",
+  "lnt2_trigger": "Responsible Camping and Mobility",
+  "lnt2_content": "Travel and camp on durable surfaces. Do not disturb fauna or flora; respect other hikers.",
+  "lnt3_trigger": "Waste Management",
+  "lnt3_content": "Do not litter: carry it with you to authorized containers.",
+  "lnt4_trigger": "Use of Fire and Resources",
+  "lnt4_content": "Minimize or avoid campfires; extinguish them completely if you make them. Respect signs, panels, and mountain furniture. Enjoy the environment without leaving a trace and preserve the mountains for future generations.",
+  "etiquette_title": "Club Conduct and Etiquette",
+  "etiquette1_title": "Respect and Collaboration",
+  "etiquette1_content": "Be punctual, well-equipped, and keep pace with the group. Help comrades and share responsibilities.",
+  "etiquette2_title": "Coexistence with Other Mountaineers",
+  "etiquette2_content": "Yield on narrow trails, keep your volume low, respect turns in shelters and rest areas. Clean up after yourself.",
+  "etiquette3_title": "Inclusion and Commitment",
+  "etiquette3_content": "We welcome all people, regardless of gender, race, religion, or orientation. We promote cooperation, mutual support, and sustainable care for the environment.",
+  "spaces_title": "Regulations by type of natural area",
+  "spaces_list": [
+    {
+      "name": "National Parks",
+      "fuego": "Prohibited except in authorized zones; gas stoves allowed",
+      "acampada": "Prohibited unless authorized",
+      "pernocta": "Only in shelters or designated areas; bivouacking allowed with regulation"
+    },
+    {
+      "name": "Natural Parks",
+      "fuego": "Prohibited outside designated areas; recreational areas closed in summer",
+      "acampada": "Only in designated zones; consult park regulations",
+      "pernocta": "Bivouacking allowed in some cases, without structures"
+    },
+    {
+      "name": "Nature Reserves",
+      "fuego": "Completely prohibited",
+      "acampada": "Only with scientific or educational permits",
+      "pernocta": "Generally prohibited; only authorized activities"
+    },
+    {
+      "name": "Natural Monuments",
+      "fuego": "Prohibited",
+      "acampada": "Not allowed",
+      "pernocta": "Not allowed"
+    },
+    {
+      "name": "Protected Landscapes",
+      "fuego": "Allowed in recreational areas",
+      "acampada": "Only in authorized zones",
+      "pernocta": "Allowed in shelters or bivouac under conditions"
+    },
+    {
+      "name": "Biosphere Reserves (UNESCO)",
+      "fuego": "Prohibited in core zones; allowed in transition zones with local regulation",
+      "acampada": "Only in authorized zones and with permission",
+      "pernocta": "Allowed in shelters or bivouac in buffer zones"
+    },
+    {
+      "name": "Special Protection Areas (Natura 2000)",
+      "fuego": "Prohibited",
+      "acampada": "Not allowed except in designated areas",
+      "pernocta": "Highly restricted; only scientific/educational purposes"
+    },
+    {
+      "name": "Special Areas of Conservation (Natura 2000)",
+      "fuego": "Prohibited",
+      "acampada": "Only in authorized zones",
+      "pernocta": "Requires specific authorization"
+    },
+    {
+      "name": "Natura 2000 Network Sites",
+      "fuego": "Prohibited except in recreational areas",
+      "acampada": "Allowed in specific zones",
+      "pernocta": "Allowed in shelters or bivouac under local conditions"
+    },
+    {
+      "name": "Ramsar Wetlands",
+      "fuego": "Prohibited",
+      "acampada": "Not allowed",
+      "pernocta": "Only scientific or educational activities with authorization"
+    }
+  ]
+}

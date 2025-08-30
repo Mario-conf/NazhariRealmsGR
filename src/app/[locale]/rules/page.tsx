@@ -26,34 +26,54 @@ import { RuleContentSchema } from '@/ai/schemas/translate-schema';
 
 
 async function getRulesContent(locale: string): Promise<RuleContent> {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'rules', 'rules.es.json');
-  
+  const baseLang = 'es';
+  const fallbackFilePath = path.join(process.cwd(), 'public', 'data', 'rules', `rules.${baseLang}.json`);
+  let filePath = path.join(process.cwd(), 'public', 'data', 'rules', `rules.${locale}.json`);
+
+  try {
+    // Try to access the locale-specific file first
+    await fs.access(filePath);
+  } catch (error) {
+    // If it doesn't exist, use the Spanish one and translate it
+    console.warn(`Rules file for locale "${locale}" not found. Falling back to translating from "${baseLang}".`);
+    
+    try {
+        const fileContents = await fs.readFile(fallbackFilePath, 'utf8');
+        const baseContent = JSON.parse(fileContents);
+
+        const parsedBaseContent = RuleContentSchema.safeParse(baseContent);
+        if (!parsedBaseContent.success) {
+            console.error(`Failed to validate base rules content (rules.${baseLang}.json):`, parsedBaseContent.error);
+            throw new Error("Base rules file is invalid.");
+        }
+        
+        // Translate using the AI flow
+        const translatedContent = await translateRules({ 
+            jsonContent: parsedBaseContent.data, 
+            targetLanguage: locale 
+        });
+        
+        return translatedContent;
+
+    } catch (translationError) {
+       console.error(`Failed to read or translate base rules file for locale ${locale}:`, translationError);
+       notFound();
+    }
+  }
+
+  // If the locale-specific file exists, read and return it
   try {
     const fileContents = await fs.readFile(filePath, 'utf8');
-    const baseContent = JSON.parse(fileContents);
-
-    // Validate the base content just in case
-    const parsedBaseContent = RuleContentSchema.safeParse(baseContent);
-    if (!parsedBaseContent.success) {
-        console.error("Failed to validate base rules content (rules.es.json):", parsedBaseContent.error);
-        throw new Error("Base rules file is invalid.");
+    const content = JSON.parse(fileContents);
+    const parsedContent = RuleContentSchema.safeParse(content);
+     if (!parsedContent.success) {
+        console.error(`Failed to validate rules content for locale "${locale}":`, parsedContent.error);
+        throw new Error(`Rules file for ${locale} is invalid.`);
     }
-
-    if (locale === 'es') {
-      return parsedBaseContent.data;
-    }
-
-    // For other languages, translate the entire object
-    const translatedContent = await translateRules({ 
-        jsonContent: parsedBaseContent.data, 
-        targetLanguage: locale 
-    });
-    
-    return translatedContent;
-
-  } catch (error) {
-    console.error(`Failed to read, parse, or translate rules data:`, error);
-    notFound();
+    return parsedContent.data;
+  } catch (readError) {
+     console.error(`Failed to read or parse rules file for locale ${locale}:`, readError);
+     notFound();
   }
 }
 

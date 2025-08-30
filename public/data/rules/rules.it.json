@@ -1,0 +1,91 @@
+
+{
+  "title": "Regole del Club e Guide di Sicurezza",
+  "subtitle": "I nostri principi per avventure sicure, rispettose e indimenticabili. Si prega di leggere attentamente prima della prima escursione.",
+  "safety_title": "Sicurezza in Montagna: Le Tue Responsabilità",
+  "safety1_title": "Responsabilità Personale e di Gruppo",
+  "safety1_content": "Ogni escursionista deve assumersi la responsabilità della propria sicurezza e di quella del gruppo: pianificare bene l'attività, equipaggiare correttamente tutti e agire con prudenza. Portare mappe, bussola (e/o GPS) e conoscere il percorso, il dislivello e i rischi. Informare qualcuno del proprio itinerario e dell'orario di ritorno previsto. A qualsiasi segno di stanchezza o malessere, fermarsi, valutare la situazione e, in caso di feriti o pericolo, tornare indietro o chiedere aiuto.",
+  "safety2_title": "Attrezzatura Essenziale",
+  "safety2_content": "Ogni partecipante deve portare i “dieci essenziali” adattati al terreno andaluso:\n- Navigazione: Mappa topografica e bussola; GPS opzionale.\n- Illuminazione: Lampada frontale con batterie di ricambio.\n- Emergenze: Kit di primo soccorso completo.\n- Riparo d'emergenza: Sacco da bivacco o coperta termica.\n- Protezione solare: Crema solare SPF ≥30, occhiali da sole con filtro UV, cappello.\n- Idratazione ed energia: Acqua a sufficienza (1–2 litri a persona) e cibo di riserva.\n- Altri utili: Fischietto, coltello multiuso e accendino/fiammiferi impermeabili.\n- Abbigliamento adeguato: A strati (abbigliamento termico, giacca a vento impermeabile) e scarponi da montagna robusti; evitare il cotone.",
+  "safety3_title": "Pianificazione, Meteo ed Emergenze",
+  "safety3_content": "Consultare sempre le previsioni meteorologiche ufficiali prima di partire, specialmente in alta montagna. Pianificare il percorso considerando:\n- Percorso dettagliato: Chilometri, dislivello, fonti d'acqua, rifugi e vie di fuga.\n- Comunicazioni: Informare un familiare o un amico del proprio itinerario e orario di ritorno. Portare un telefono carico e/o dispositivi GPS di emergenza.\n- App di sicurezza: Usare app che inviano la propria posizione ai servizi di soccorso in caso di emergenza.\nIn caso di allerta meteo, posticipare l'escursione finché le condizioni non sono sicure.\n\nSeguire il protocollo PAS:\n1. Proteggere: Segnalare i pericoli ed evitare rischi aggiuntivi.\n2. Avvisare: Chiamare il 112; fornire i propri dati, numero di feriti, tipo di lesioni e posizione esatta.\n3. Soccorrere: Applicare il primo soccorso di base senza muovere fratture gravi.\nSe ci si perde, rimanere in un luogo visibile, fare segnali con fischietto o luce e comunicare la propria posizione se c'è copertura.\n\nNormativa Ambientale ed Etica:\nI nostri percorsi rispettano la Legge 42/2007 sul Patrimonio Naturale e la normativa specifica dell'Andalusia, incluse le regole su campeggio, pernottamento e fuoco a seconda del tipo di area protetta.",
+  "lnt_title": "Principi “Non Lasciare Traccia”",
+  "lnt1_trigger": "Pianificazione e Minimizzazione dell'Impatto",
+  "lnt1_content": "Pianificare per minimizzare i rifiuti e l'impatto ambientale.",
+  "lnt2_trigger": "Campeggio e Mobilità Responsabile",
+  "lnt2_content": "Viaggiare e campeggiare su superfici durevoli. Non disturbare fauna o flora; rispettare gli altri escursionisti.",
+  "lnt3_trigger": "Gestione dei Rifiuti",
+  "lnt3_content": "Non gettare rifiuti: portali con te fino a contenitori autorizzati.",
+  "lnt4_trigger": "Uso del Fuoco e delle Risorse",
+  "lnt4_content": "Minimizzare o evitare i falò; spegnerli completamente se li si accende. Rispettare pannelli, cartelli e arredi di montagna. Godersi l'ambiente senza lasciare traccia e preservare la montagna per le generazioni future.",
+  "etiquette_title": "Condotta ed Etichetta del Club",
+  "etiquette1_title": "Rispetto e Collaborazione",
+  "etiquette1_content": "Sii puntuale, ben equipaggiato e segui il ritmo del gruppo. Aiuta i compagni e condividi le responsabilità.",
+  "etiquette2_title": "Convivenza con Altri Escursionisti",
+  "etiquette2_content": "Cedi il passo sui sentieri stretti, mantieni un volume basso, rispetta i turni nei rifugi e nelle aree di sosta. Pulisci al tuo passaggio.",
+  "etiquette3_title": "Inclusione e Impegno",
+  "etiquette3_content": "Diamo il benvenuto a tutte le persone, indipendentemente da genere, razza, religione o orientamento. Promuoviamo la cooperazione, il sostegno reciproco e la cura sostenibile dell'ambiente.",
+  "spaces_title": "Normativa per tipo di area naturale",
+  "spaces_list": [
+    {
+      "name": "Parchi Nazionali",
+      "fuego": "Proibito tranne in zone autorizzate; fornelli a gas permessi",
+      "acampada": "Proibito salvo autorizzazione",
+      "pernocta": "Solo in rifugi o aree designate; bivacco permesso con regolamentazione"
+    },
+    {
+      "name": "Parchi Naturali",
+      "fuego": "Proibito al di fuori delle aree designate; aree ricreative chiuse in estate",
+      "acampada": "Solo in zone designate; consultare il regolamento del parco",
+      "pernocta": "Bivacco permesso in alcuni casi, senza strutture"
+    },
+    {
+      "name": "Riserve Naturali",
+      "fuego": "Totalmente proibito",
+      "acampada": "Solo con permessi scientifici o educativi",
+      "pernocta": "Generalmente proibito; solo attività autorizzate"
+    },
+    {
+      "name": "Monumenti Naturali",
+      "fuego": "Proibito",
+      "acampada": "Non permesso",
+      "pernocta": "Non permesso"
+    },
+    {
+      "name": "Paesaggi Protetti",
+      "fuego": "Permesso in aree ricreative",
+      "acampada": "Solo in zone autorizzate",
+      "pernocta": "Permesso in rifugi o bivacco a determinate condizioni"
+    },
+    {
+      "name": "Riserve della Biosfera (UNESCO)",
+      "fuego": "Proibito nelle zone centrali; permesso nelle zone di transizione con regolamentazione locale",
+      "acampada": "Solo in zone autorizzate e con permesso",
+      "pernocta": "Permesso in rifugi o bivacco nelle zone cuscinetto"
+    },
+    {
+      "name": "Zone di Protezione Speciale (Natura 2000)",
+      "fuego": "Proibito",
+      "acampada": "Non permesso salvo aree designate",
+      "pernocta": "Molto limitato; solo scopi scientifici/educativi"
+    },
+    {
+      "name": "Zone Speciali di Conservazione (Natura 2000)",
+      "fuego": "Proibito",
+      "acampada": "Solo in zone autorizzate",
+      "pernocta": "Richiede autorizzazione specifica"
+    },
+    {
+      "name": "Siti della Rete Natura 2000",
+      "fuego": "Proibito tranne in aree ricreative",
+      "acampada": "Permesso in zone specifiche",
+      "pernocta": "Permesso in rifugi o bivacco secondo le condizioni locali"
+    },
+    {
+      "name": "Zone Umide di Ramsar",
+      "fuego": "Proibito",
+      "acampada": "Non permesso",
+      "pernocta": "Solo attività scientifiche o educative con autorizzazione"
+    }
+  ]
+}

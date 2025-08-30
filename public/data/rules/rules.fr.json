@@ -1,0 +1,91 @@
+
+{
+  "title": "Règles du Club et Guides de Sécurité",
+  "subtitle": "Nos principes pour des aventures sûres, respectueuses et inoubliables. Veuillez lire attentivement avant votre première sortie.",
+  "safety_title": "Sécurité en Montagne : Vos Responsabilités",
+  "safety1_title": "Responsabilité Personnelle et de Groupe",
+  "safety1_content": "Chaque randonneur doit assumer la responsabilité de sa propre sécurité et de celle du groupe : bien planifier l'activité, équiper correctement tout le monde et agir avec prudence. Emportez des cartes, une boussole (et/ou un GPS), et connaissez l'itinéraire, le dénivelé et les risques. Informez quelqu'un de votre itinéraire et de votre heure de retour prévue. Au moindre signe de fatigue ou de malaise, arrêtez-vous, évaluez la situation et, en cas de blessures ou de danger, faites demi-tour ou appelez à l'aide.",
+  "safety2_title": "Équipement Essentiel",
+  "safety2_content": "Chaque participant doit emporter les « dix essentiels » adaptés au terrain andalou :\n- Navigation : Carte topographique et boussole ; GPS en option.\n- Éclairage : Lampe frontale avec piles/batterie de rechange.\n- Urgences : Trousse de premiers secours complète.\n- Abri d'urgence : Sac de bivouac ou couverture de survie.\n- Protection solaire : Crème solaire SPF ≥30, lunettes de soleil avec filtre UV, chapeau.\n- Hydratation et énergie : Assez d'eau (1–2 litres par personne) et nourriture de réserve.\n- Autres utiles : Sifflet, couteau multifonction et briquet/allumettes étanches.\n- Vêtements appropriés : En couches (vêtements thermiques, coupe-vent imperméable) et chaussures de randonnée robustes ; éviter le coton.",
+  "safety3_title": "Planification, Météo et Urgences",
+  "safety3_content": "Consultez toujours les prévisions météorologiques officielles avant de partir, surtout en haute montagne. Planifiez l'itinéraire en tenant compte de :\n- Itinéraire détaillé : Kilomètres, dénivelé, sources d'eau, refuges et issues de secours.\n- Communications : Informez un membre de votre famille ou un ami de votre itinéraire et de votre heure de retour. Emportez un téléphone chargé et/ou des dispositifs GPS d'urgence.\n- Applications de sécurité : Utilisez des applications qui envoient votre position aux services de secours en cas d'urgence.\nEn cas d'alerte météo, reportez la sortie jusqu'à ce que les conditions soient sûres.\n\nSuivez le protocole PAS :\n1. Protéger : Signaler les dangers et éviter les risques supplémentaires.\n2. Alerter : Appelez le 112 ; donnez vos informations, le nombre de blessés, le type de blessures et l'emplacement exact.\n3. Secourir : Appliquez les premiers secours de base sans déplacer les fractures graves.\nSi vous vous perdez, restez dans un endroit visible, faites des signaux avec un sifflet ou une lumière et communiquez votre position si vous avez du réseau.\n\nRéglementation Environnementale et Éthique :\nNos parcours respectent la loi 42/2007 sur le Patrimoine Naturel et la réglementation spécifique de l'Andalousie, y compris les règles sur le camping, le bivouac et le feu selon chaque type d'espace protégé.",
+  "lnt_title": "Principes « Sans Laisser de Traces »",
+  "lnt1_trigger": "Planification et Minimisation de l'Impact",
+  "lnt1_content": "Planifiez pour minimiser les déchets et l'impact environnemental.",
+  "lnt2_trigger": "Camping et Mobilité Responsables",
+  "lnt2_content": "Voyagez et campez sur des surfaces durables. Ne dérangez ni la faune ni la flore ; respectez les autres randonneurs.",
+  "lnt3_trigger": "Gestion des Déchets",
+  "lnt3_content": "Ne jetez pas de déchets : emportez-les jusqu'à des conteneurs autorisés.",
+  "lnt4_trigger": "Utilisation du Feu et des Ressources",
+  "lnt4_content": "Minimisez ou évitez les feux de camp ; éteignez-les complètement si vous en faites. Respectez les panneaux, les affiches et le mobilier de montagne. Profitez de l'environnement sans laisser de traces et préservez la montagne pour les générations futures.",
+  "etiquette_title": "Conduite et Étiquette du Club",
+  "etiquette1_title": "Respect et Collaboration",
+  "etiquette1_content": "Soyez ponctuel, bien équipé et suivez le rythme du groupe. Aidez vos camarades et partagez les responsabilités.",
+  "etiquette2_title": "Coexistence avec les Autres Montagnards",
+  "etiquette2_content": "Cédez le passage sur les sentiers étroits, parlez à voix basse, respectez votre tour dans les refuges et les aires de repos. Nettoyez après votre passage.",
+  "etiquette3_title": "Inclusion et Engagement",
+  "etiquette3_content": "Nous accueillons tout le monde, sans distinction de genre, de race, de religion ou d'orientation. Nous promouvons la coopération, le soutien mutuel et le soin durable de l'environnement.",
+  "spaces_title": "Réglementation par type d'espace naturel",
+  "spaces_list": [
+    {
+      "name": "Parcs Nationaux",
+      "fuego": "Interdit sauf dans les zones autorisées ; réchauds à gaz autorisés",
+      "acampada": "Interdit sauf autorisation",
+      "pernocta": "Uniquement dans les refuges ou zones désignées ; bivouac autorisé avec réglementation"
+    },
+    {
+      "name": "Parcs Naturels",
+      "fuego": "Interdit en dehors des zones désignées ; aires de loisirs fermées en été",
+      "acampada": "Uniquement dans les zones désignées ; consulter la réglementation du parc",
+      "pernocta": "Bivouac autorisé dans certains cas, sans structures"
+    },
+    {
+      "name": "Réserves Naturelles",
+      "fuego": "Totalement interdit",
+      "acampada": "Uniquement avec des permis scientifiques ou éducatifs",
+      "pernocta": "Généralement interdit ; uniquement activités autorisées"
+    },
+    {
+      "name": "Monuments Naturels",
+      "fuego": "Interdit",
+      "acampada": "Non autorisé",
+      "pernocta": "Non autorisé"
+    },
+    {
+      "name": "Paysages Protégés",
+      "fuego": "Autorisé dans les aires de loisirs",
+      "acampada": "Uniquement dans les zones autorisées",
+      "pernocta": "Autorisé dans les refuges ou en bivouac sous conditions"
+    },
+    {
+      "name": "Réserves de biosphère (UNESCO)",
+      "fuego": "Interdit dans les zones centrales ; autorisé dans les zones de transition avec réglementation locale",
+      "acampada": "Uniquement dans les zones autorisées et avec permission",
+      "pernocta": "Autorisé dans les refuges ou en bivouac dans les zones tampons"
+    },
+    {
+      "name": "Zones de Protection Spéciale (Natura 2000)",
+      "fuego": "Interdit",
+      "acampada": "Non autorisé sauf dans les zones désignées",
+      "pernocta": "Très restreint ; uniquement à des fins scientifiques/éducatives"
+    },
+    {
+      "name": "Zones Spéciales de Conservation (Natura 2000)",
+      "fuego": "Interdit",
+      "acampada": "Uniquement dans les zones autorisées",
+      "pernocta": "Nécessite une autorisation spécifique"
+    },
+    {
+      "name": "Sites du réseau Natura 2000",
+      "fuego": "Interdit sauf dans les aires de loisirs",
+      "acampada": "Autorisé dans des zones spécifiques",
+      "pernocta": "Autorisé dans les refuges ou en bivouac sous conditions locales"
+    },
+    {
+      "name": "Zones humides Ramsar",
+      "fuego": "Interdit",
+      "acampada": "Non autorisé",
+      "pernocta": "Uniquement activités scientifiques ou éducatives avec autorisation"
+    }
+  ]
+}

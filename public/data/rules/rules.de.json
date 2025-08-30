@@ -1,0 +1,91 @@
+
+{
+  "title": "Clubregeln und Sicherheitsleitfäden",
+  "subtitle": "Unsere Grundsätze für sichere, respektvolle und unvergessliche Abenteuer. Bitte vor dem ersten Ausflug sorgfältig lesen.",
+  "safety_title": "Sicherheit in den Bergen: Deine Verantwortung",
+  "safety1_title": "Persönliche und Gruppenverantwortung",
+  "safety1_content": "Jeder Wanderer muss die Verantwortung für seine eigene Sicherheit und die der Gruppe übernehmen: die Aktivität gut planen, alle richtig ausrüsten und umsichtig handeln. Karten, Kompass (und/oder GPS) mitführen und die Route, Höhenunterschiede und Risiken kennen. Jemanden über die geplante Route und die voraussichtliche Rückkehrzeit informieren. Bei Anzeichen von Müdigkeit oder Unwohlsein anhalten, die Situation bewerten und bei Verletzungen oder Gefahr umkehren oder Hilfe anfordern.",
+  "safety2_title": "Wesentliche Ausrüstung",
+  "safety2_content": "Jeder Teilnehmer sollte die „zehn wesentlichen Dinge“ mitführen, angepasst an das andalusische Gelände:\n- Navigation: Topografische Karte und Kompass; GPS optional.\n- Beleuchtung: Stirnlampe mit Ersatzbatterien.\n- Notfälle: Vollständiger Erste-Hilfe-Kasten.\n- Notunterkunft: Biwaksack oder Rettungsdecke.\n- Sonnenschutz: Sonnencreme LSF ≥30, Sonnenbrille mit UV-Filter, Hut.\n- Flüssigkeitszufuhr und Energie: Ausreichend Wasser (1–2 Liter pro Person) und Notproviant.\n- Weitere nützliche Dinge: Pfeife, Multifunktionsmesser und Feuerzeug/wasserdichte Streichhölzer.\n- Geeignete Kleidung: Zwiebelprinzip (Funktionsunterwäsche, wind- und wasserdichte Jacke) und feste Bergschuhe; Baumwolle vermeiden.",
+  "safety3_title": "Planung, Wetter und Notfälle",
+  "safety3_content": "Vor dem Start immer die offizielle Wettervorhersage prüfen, besonders im Hochgebirge. Die Route unter Berücksichtigung folgender Punkte planen:\n- Detaillierte Route: Kilometer, Höhenunterschied, Wasserquellen, Schutzhütten und Fluchtwege.\n- Kommunikation: Familie oder Freunde über die Route und Rückkehrzeit informieren. Aufgeladenes Telefon und/oder GPS-Notfallgeräte mitführen.\n- Sicherheits-Apps: Apps verwenden, die im Notfall den Standort an Rettungsdienste senden.\nBei Unwetterwarnungen die Tour verschieben, bis die Bedingungen sicher sind.\n\nBefolge das PAS-Protokoll:\n1. Schützen: Gefahrenstellen absichern und weitere Risiken vermeiden.\n2. Alarmieren: 112 anrufen; persönliche Daten, Anzahl der Verletzten, Art der Verletzungen und genauen Standort mitteilen.\n3. Sofortmaßnahmen: Erste Hilfe leisten, ohne schwere Brüche zu bewegen.\nWenn du dich verirrst, an einem gut sichtbaren Ort bleiben, mit Pfeife oder Licht Signale geben und die Position mitteilen, wenn Netzabdeckung besteht.\n\nUmweltvorschriften und Ethik:\nUnsere Touren entsprechen dem Gesetz 42/2007 über das Naturerbe und den spezifischen Vorschriften Andalusiens, einschließlich der Regeln für Camping, Übernachtung und Feuer je nach Schutzgebietstyp.",
+  "lnt_title": "„Hinterlasse keine Spuren“-Prinzipien",
+  "lnt1_trigger": "Planung und Minimierung der Auswirkungen",
+  "lnt1_content": "Plane, um Abfall zu minimieren und die Umweltauswirkungen zu reduzieren.",
+  "lnt2_trigger": "Verantwortungsbewusstes Campen und Bewegen",
+  "lnt2_content": "Reise und campe auf widerstandsfähigen Oberflächen. Störe weder Fauna noch Flora; respektiere andere Wanderer.",
+  "lnt3_trigger": "Abfallentsorgung",
+  "lnt3_content": "Wirf keinen Müll weg: nimm ihn bis zu autorisierten Containern mit.",
+  "lnt4_trigger": "Umgang mit Feuer und Ressourcen",
+  "lnt4_content": "Minimiere oder vermeide Lagerfeuer; lösche sie vollständig, wenn du welche machst. Respektiere Schilder, Tafeln und Bergausstattung. Genieße die Umgebung, ohne Spuren zu hinterlassen und bewahre die Berge für zukünftige Generationen.",
+  "etiquette_title": "Verhaltensregeln und Club-Etikette",
+  "etiquette1_title": "Respekt und Zusammenarbeit",
+  "etiquette1_content": "Sei pünktlich, gut ausgerüstet und halte das Tempo der Gruppe. Hilf Kameraden und teile Verantwortlichkeiten.",
+  "etiquette2_title": "Umgang mit anderen Bergsteigern",
+  "etiquette2_content": "Mache auf schmalen Wegen Platz, sei leise, respektiere die Reihenfolge in Hütten und Rastplätzen. Räume hinter dir auf.",
+  "etiquette3_title": "Inklusion und Engagement",
+  "etiquette3_content": "Wir heißen alle Menschen willkommen, unabhängig von Geschlecht, Rasse, Religion oder Orientierung. Wir fördern Zusammenarbeit, gegenseitige Unterstützung und den nachhaltigen Umgang mit der Umwelt.",
+  "spaces_title": "Vorschriften nach Art des Naturraums",
+  "spaces_list": [
+    {
+      "name": "Nationalparks",
+      "fuego": "Verboten außer in genehmigten Zonen; Gaskocher erlaubt",
+      "acampada": "Verboten außer mit Genehmigung",
+      "pernocta": "Nur in Schutzhütten oder ausgewiesenen Bereichen; Biwakieren mit Regulierung erlaubt"
+    },
+    {
+      "name": "Naturparks",
+      "fuego": "Verboten außerhalb ausgewiesener Bereiche; Erholungsgebiete im Sommer geschlossen",
+      "acampada": "Nur in ausgewiesenen Zonen; PORN konsultieren",
+      "pernocta": "Biwakieren in einigen Fällen ohne Strukturen erlaubt"
+    },
+    {
+      "name": "Naturreservate",
+      "fuego": "Vollständig verboten",
+      "acampada": "Nur mit wissenschaftlicher oder pädagogischer Genehmigung",
+      "pernocta": "Generell verboten; nur genehmigte Aktivitäten"
+    },
+    {
+      "name": "Naturdenkmäler",
+      "fuego": "Verboten",
+      "acampada": "Nicht erlaubt",
+      "pernocta": "Nicht erlaubt"
+    },
+    {
+      "name": "Geschützte Landschaften",
+      "fuego": "Erlaubt in Erholungsgebieten",
+      "acampada": "Nur in genehmigten Zonen",
+      "pernocta": "Erlaubt in Schutzhütten oder Biwak unter Bedingungen"
+    },
+    {
+      "name": "Biosphärenreservate (UNESCO)",
+      "fuego": "Verboten in Kernzonen; erlaubt in Übergangszonen mit lokaler Regelung",
+      "acampada": "Nur in genehmigten Zonen und mit Erlaubnis",
+      "pernocta": "Erlaubt in Schutzhütten oder Biwak in Pufferzonen"
+    },
+    {
+      "name": "Vogelschutzgebiete (Natura 2000)",
+      "fuego": "Verboten",
+      "acampada": "Nicht erlaubt außer in ausgewiesenen Bereichen",
+      "pernocta": "Stark eingeschränkt; nur wissenschaftliche/pädagogische Zwecke"
+    },
+    {
+      "name": "Besondere Schutzgebiete (Natura 2000)",
+      "fuego": "Verboten",
+      "acampada": "Nur in genehmigten Zonen",
+      "pernocta": "Erfordert spezifische Genehmigung"
+    },
+    {
+      "name": "Natura-2000-Gebiete",
+      "fuego": "Verboten außer in Erholungsgebieten",
+      "acampada": "Erlaubt in spezifischen Zonen",
+      "pernocta": "Erlaubt in Schutzhütten oder Biwak unter lokalen Bedingungen"
+    },
+    {
+      "name": "Ramsar-Feuchtgebiete",
+      "fuego": "Verboten",
+      "acampada": "Nicht erlaubt",
+      "pernocta": "Nur wissenschaftliche oder pädagogische Aktivitäten mit Genehmigung"
+    }
+  ]
+}
