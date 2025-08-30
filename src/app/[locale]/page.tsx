@@ -91,7 +91,7 @@ export default function Home() {
   ];
   
   const galleryImages = [
-    { src: 'https://elviajerofeliz.com/wp-content/uploads/2020/12/sierra-nevada-y-sus-encantos-0.jpg', hint: 'senderista cumbre', className: 'md:col-span-2 md:row-span-2' },
+    { src: 'https://elviajerofeliz.com/wp-content/uploads/2020/12/sierra-nevada-y-sus-encantos-0.jpg', hint: 'senderista cumbre' },
     { src: 'https://cdn.e-konomista.pt/uploads/2023/03/nervion1.jpg', hint: 'lago montaña' },
     { src: 'https://i.pinimg.com/originals/b9/b1/96/b9b196ec42dc8cc8cf5fe2a9c70ae7f1.jpg', hint: 'bosque niebla' },
     { src: 'https://s1.it.atcdn.net/wp-content/uploads/2014/09/shutterstock_1405952592.jpg', hint: 'mapa brújula' },
@@ -209,19 +209,37 @@ export default function Home() {
                 <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-foreground">
                     {t('gallery_title')}
                 </h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px]">
-                    {galleryImages.map((image, index) => (
-                        <div key={index} className={`relative rounded-lg overflow-hidden shadow-lg group ${image.className || ''}`}>
-                            <Image
-                                src={image.src}
-                                alt={image.hint}
-                                data-ai-hint={image.hint}
-                                fill
-                                className="object-cover transform transition-transform duration-300 group-hover:scale-110"
-                            />
-                        </div>
-                    ))}
-                </div>
+                <Carousel
+                    className="w-full max-w-5xl mx-auto"
+                    plugins={[
+                        Autoplay({
+                          delay: 4000,
+                          stopOnInteraction: true,
+                        }),
+                    ]}
+                     opts={{
+                        align: "start",
+                        loop: true,
+                    }}
+                >
+                    <CarouselContent>
+                         {galleryImages.map((image, index) => (
+                             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                                <div className="p-1">
+                                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg group">
+                                        <Image
+                                            src={image.src}
+                                            alt={image.hint}
+                                            data-ai-hint={image.hint}
+                                            fill
+                                            className="object-cover transform transition-transform duration-300 group-hover:scale-110"
+                                        />
+                                    </div>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                </Carousel>
             </div>
         </section>
 
@@ -332,3 +350,4 @@ export default function Home() {
     
 
     
+
