@@ -1,23 +1,23 @@
 "use client";
 
 import type { StravaEmbed } from '@/lib/trail-data';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 
 interface StravaEmbedProps {
   embed: StravaEmbed;
 }
 
 const StravaEmbedComponent: React.FC<StravaEmbedProps> = ({ embed }) => {
-  const embedRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const initStravaEmbed = () => {
+      // The Strava script looks for and processes elements with the class 'strava-embed-placeholder'.
+      // Calling init() re-scans the DOM for any new placeholders.
       if (window.Strava && window.Strava.Embeds) {
         window.Strava.Embeds.init();
       }
     };
     
-    // Check if the Strava script is already loaded
+    // Check if the Strava script is already on the page
     if (!document.querySelector('script[src="https://strava-embeds.com/embed.js"]')) {
       const script = document.createElement('script');
       script.src = 'https://strava-embeds.com/embed.js';
@@ -25,15 +25,14 @@ const StravaEmbedComponent: React.FC<StravaEmbedProps> = ({ embed }) => {
       script.onload = initStravaEmbed;
       document.body.appendChild(script);
     } else {
-        // If script is already there, Strava's embed script might need a nudge
-        // to process new placeholders, especially on component remount.
-        initStravaEmbed();
+      // If the script is already there, just run the init function
+      // to process the new placeholder rendered by this component.
+      initStravaEmbed();
     }
-  }, [embed]); // Re-run effect if the embed data changes
+  }, []); // The empty dependency array ensures this effect runs once when the component mounts.
 
   return (
     <div
-      ref={embedRef}
       className="strava-embed-placeholder"
       data-embed-type={embed.type}
       data-embed-id={embed.id}
@@ -55,6 +54,5 @@ declare global {
         }
     }
 }
-
 
 export default StravaEmbedComponent;

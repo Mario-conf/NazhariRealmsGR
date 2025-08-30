@@ -125,9 +125,9 @@ export function TrailDetailsDialog({
                 <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('map_title')}</h3>
                  <div className="flex justify-center">
                     {trail.stravaEmbed ? (
-                    <StravaEmbedComponent embed={trail.stravaEmbed} />
+                        <StravaEmbedComponent key={trail.id} embed={trail.stravaEmbed} />
                     ) : (
-                    <p>No hay mapa de ruta disponible.</p>
+                        <p>No hay mapa de ruta disponible.</p>
                     )}
                 </div>
               </div>
