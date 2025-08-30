@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <div className="flex-1" style={{background: 'linear-gradient(to bottom, #f25c3a, #ffffff, #374151)'}}>
       {/* Hero Section */}
-      <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden bg-transparent">
+      <section className="relative h-[500px] md:h-[600px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-transparent">
          <Image
             alt={t('hero_alt')}
             src="https://granadanatural.com/imagenes/paisajes_fichas/sierra-lujar-desde-la-contraviesa-wl1dsc_1047.jpg"
