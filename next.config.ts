@@ -2,7 +2,7 @@
 import type {NextConfig} from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
  
-const withNextIntl = createNextIntlPlugin();
+const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -59,7 +59,7 @@ const nextConfig: NextConfig = {
         hostname: 'cdn.e-konomista.pt',
       },
       {
-        protocol: 'httpshttps',
+        protocol: 'https',
         hostname: 'www.exploradorcurioso.com',
       },
       {
@@ -127,7 +127,7 @@ const nextConfig: NextConfig = {
         hostname: 'www.liblogo.com',
       },
       {
-        protocol: 'https|http',
+        protocol: 'https',
         hostname: 'lh4.googleusercontent.com',
       },
        {
