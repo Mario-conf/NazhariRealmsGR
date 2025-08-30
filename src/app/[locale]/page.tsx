@@ -148,7 +148,7 @@ export default function Home() {
                 <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-gray-800">
                     {t('sponsors_title')}
                 </h2>
-                <div className="rounded-2xl bg-white/40 backdrop-blur-sm p-6">
+                <div className="rounded-2xl bg-white/40 backdrop-blur-sm p-2">
                     <Image
                         src="/patreon.png"
                         alt="Logos de los patrocinadores"
@@ -246,4 +246,5 @@ export default function Home() {
 
 
     
+
 
