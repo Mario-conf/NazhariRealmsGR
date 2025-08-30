@@ -8,11 +8,7 @@ import { TrailDetailsDialog } from '@/components/trail-details-dialog';
 import useFavorites from '@/hooks/use-favorites';
 import { useLocale, useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
-import type { Metadata } from 'next';
-
-// No se puede exportar Metadata en un client component
-// Esto debe hacerse en el layout o en un server component padre si fuera necesario.
-// Por ahora, el SEO se manejará globalmente en el layout.tsx principal.
+import { getTrails } from '@/actions/trails';
 
 export default function RoutesPage() {
   const t = useTranslations('RoutesPage');
@@ -21,25 +17,24 @@ export default function RoutesPage() {
   const [filteredTrails, setFilteredTrails] = React.useState<Trail[]>([]);
   const [selectedTrail, setSelectedTrail] = React.useState<Trail | null>(null);
   const { favorites, toggleFavorite } = useFavorites();
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    // Fetch trails based on the current locale
-    fetch(`/data/trails.${locale}.json`)
-      .then((res) => {
-        if (!res.ok) {
-          // Fallback to Spanish if the locale file is not found
-          console.warn(`Trail data for locale "${locale}" not found, falling back to "es".`);
-          return fetch(`/data/trails.es.json`);
-        }
-        return res;
-      })
-      .then((res) => res.json())
-      .then((data) => {
-        // The json file has a root "trails" property
-        setAllTrails(data.trails);
-        setFilteredTrails(data.trails);
-      })
-      .catch(error => console.error("Failed to load trail data:", error));
+    async function loadTrails() {
+      setLoading(true);
+      try {
+        const trailsData = await getTrails({ locale });
+        setAllTrails(trailsData);
+        setFilteredTrails(trailsData);
+      } catch (error) {
+        console.error("Failed to load trail data:", error);
+        setAllTrails([]);
+        setFilteredTrails([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadTrails();
   }, [locale]);
 
   const handleSelectTrail = (trail: Trail) => {
@@ -55,8 +50,7 @@ export default function RoutesPage() {
     toggleFavorite(trailId);
   }
 
-  if (allTrails.length === 0) {
-    // Optional: add a loading skeleton here
+  if (loading) {
     return <div className="container mx-auto px-4 py-8 text-center">Cargando rutas...</div>
   }
 

@@ -105,7 +105,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className="flex items-center gap-4 rounded-md px-3 py-3 text-base hover:bg-secondary"
-                  onClick={() => setIsMenuOpe(false)}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {link.icon}
                   {link.label}
