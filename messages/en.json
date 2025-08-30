@@ -1,6 +1,7 @@
 
 {
   "Header": {
+    "home": "Home",
     "weather": "Weather",
     "routes": "Routes",
     "rules": "Rules",

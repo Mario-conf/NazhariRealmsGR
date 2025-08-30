@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { Menu, Clock, Mountain, MapPin, Globe } from 'lucide-react';
+import { Menu, Clock, Mountain, MapPin, Globe, Home } from 'lucide-react';
 import { Button } from './ui/button';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
@@ -92,12 +92,20 @@ export function Header() {
                 </div>
             </SheetHeader>
             <nav className="grid gap-2 text-lg font-medium flex-grow p-6">
+              <Link
+                  href="/"
+                  className="flex items-center gap-4 rounded-md px-3 py-3 text-base hover:bg-secondary"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Home className="h-5 w-5" />
+                  {t('home')}
+              </Link>
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className="flex items-center gap-4 rounded-md px-3 py-3 text-base hover:bg-secondary"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => setIsMenuOpe(false)}
                 >
                   {link.icon}
                   {link.label}

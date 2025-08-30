@@ -1,6 +1,7 @@
 
 {
   "Header": {
+    "home": "Accueil",
     "weather": "Météo",
     "routes": "Itinéraires",
     "rules": "Règles",

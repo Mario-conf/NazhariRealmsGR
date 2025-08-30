@@ -1,6 +1,7 @@
 
 {
   "Header": {
+    "home": "Startseite",
     "weather": "Wetter",
     "routes": "Routen",
     "rules": "Regeln",
