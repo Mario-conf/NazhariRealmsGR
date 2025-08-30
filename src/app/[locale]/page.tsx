@@ -265,15 +265,14 @@ export default function Home() {
              <CarouselContent>
                 {sponsors.map((sponsor) => (
                     <CarouselItem key={sponsor.id} className={sponsor.id === 3 ? "basis-1/2 md:basis-1/3" : "basis-1/3 md:basis-1/5"}>
-                        <div className="p-1">
-                            <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm h-24">
+                        <div className="p-1 h-full">
+                            <div className="relative flex items-center justify-center p-4 bg-white rounded-lg shadow-sm h-24">
                                 <Image
                                     src={sponsor.src}
                                     alt={sponsor.alt}
                                     data-ai-hint="logo empresa"
-                                    width={120}
-                                    height={60}
-                                    className="object-contain"
+                                    fill
+                                    className="object-contain p-2"
                                 />
                             </div>
                         </div>
