@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path((?!_next/|_proxy/|_vercel|public|api|.*\\..*).*)*",
+      "destination": "/es/:path*"
+    }
+  ]
+}
