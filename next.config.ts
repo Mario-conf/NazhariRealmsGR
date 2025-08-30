@@ -14,21 +14,41 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [
-      {
+       {
         protocol: 'https',
-        hostname: 'www.aemet.es',
-        port: '',
-        pathname: '/**',
+        hostname: 'granadanatural.com',
       },
       {
         protocol: 'https',
-        hostname: 'cdn.simpleicons.org',
-        port: '',
-        pathname: '/**',
+        hostname: 'images.ecestaticos.com',
       },
       {
         protocol: 'https',
-        hostname: 'placehold.co',
+        hostname: 'www.actualidadiphone.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i0.wp.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse3.mm.bing.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'logos-world.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'thinkmarketingmagazine.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.underconsideration.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'agqcvcudno.cloudimg.io',
       },
       {
         protocol: 'https',
@@ -50,21 +70,21 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.escapadarural.com',
       },
-      {
+       {
         protocol: 'https',
         hostname: 'www.svgrepo.com',
       },
       {
         protocol: 'https',
-        hostname: 'granadanatural.com',
+        hostname: 'www.aemet.es',
       },
       {
         protocol: 'https',
-        hostname: 'images.ecestaticos.com',
+        hostname: 'cdn.simpleicons.org',
       },
       {
         protocol: 'https',
-        hostname: 'www.actualidadiphone.com',
+        hostname: 'placehold.co',
       },
       {
         protocol: 'https',
@@ -80,15 +100,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'tse3.mm.bing.net',
-      },
-      {
-        protocol: 'https',
         hostname: 'static.actu.fr',
-      },
-      {
-        protocol: 'https',
-        hostname: 'thinkmarketingmagazine.com',
       },
       {
         protocol: 'https',
@@ -108,14 +120,6 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'i0.wp.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'logos-world.net'
-      },
-      {
-        protocol: 'https',
         hostname: 'www.fundacionaccesible.org',
       },
       {
@@ -125,20 +129,9 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'latestlogo.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.underconsideration.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'agqcvcudno.cloudimg.io',
       }
     ],
   },
 };
 
 export default withNextIntl(nextConfig);
-
-    
-    

@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -13,6 +14,7 @@ import { Badge } from '@/components/ui/badge';
 import type { Trail } from '@/lib/trail-data';
 import { Star, Mountain, Trees, Waves, Sun, Clock, Milestone, X, Heart } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { RouteMap } from './route-map';
 
 interface TrailDetailsDialogProps {
   trail: Trail;
@@ -124,20 +126,7 @@ export function TrailDetailsDialog({
               <div>
                 <h3 className="font-serif font-semibold text-lg mb-4 border-b pb-2">{t('map_title')}</h3>
                  <div className="flex justify-center">
-                    {trail.stravaIframeUrl ? (
-                      <iframe
-                        key={trail.id}
-                        height='405'
-                        width='100%'
-                        title={`Strava map for ${trail.name}`}
-                        allowtransparency="true"
-                        frameBorder='0'
-                        scrolling='no'
-                        src={trail.stravaIframeUrl}
-                      ></iframe>
-                    ) : (
-                        <p>No hay mapa de ruta disponible.</p>
-                    )}
+                    <RouteMap imageUrl={trail.image} />
                 </div>
               </div>
           </main>

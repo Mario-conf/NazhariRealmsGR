@@ -1,3 +1,4 @@
+
 export type StravaEmbed = {
   type: 'route' | 'activity';
   id: string;
@@ -15,7 +16,6 @@ export type Trail = {
   duration: number; // in hours
   rating: number; // 1-5
   description: string;
-  stravaIframeUrl?: string;
 };
 
 export type Review = {
