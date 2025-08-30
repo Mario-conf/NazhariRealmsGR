@@ -1,4 +1,5 @@
 
+
 export type StravaEmbed = {
   type: 'route' | 'activity';
   id: string;
@@ -17,6 +18,7 @@ export type Trail = {
   rating: number; // 1-5
   description: string;
   mapUrl?: string; // Optional static map image URL
+  reviews?: Review[];
 };
 
 export type Review = {
