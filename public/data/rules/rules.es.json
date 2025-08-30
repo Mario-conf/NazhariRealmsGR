@@ -1,30 +1,90 @@
-
 {
   "title": "Reglas del Club y Guías de Seguridad",
   "subtitle": "Nuestros principios para aventuras seguras, respetuosas e inolvidables. Por favor, lee con atención antes de tu primera salida.",
   "safety_title": "Seguridad en la Montaña: Tus Responsabilidades",
-  "safety1_title": "Equipamiento Esencial",
-  "safety1_content": "Llevar siempre los “diez esenciales” adaptados al entorno andaluz. Por ejemplo, navegación (mapa, brújula o GPS) y iluminación (linterna frontal y pilas de repuesto), así como un botiquín básico. También es imprescindible la protección solar (gafas de sol, gorra y crema) y ropa adecuada por capas (impermeable y abrigos) ante cambios bruscos de temperatura. Otros elementos vitales son agua y comida de reserva, un silbato o navaja multiusos, y calzado y calcetines de montaña resistentes. En resumen, prepara la mochila con todo lo necesario para salir a salvo y cómodo en Sierra Nevada o cualquier ruta andaluza.",
-  "safety2_title": "Planificación y Meteorología",
-  "safety2_content": "Consulta siempre las fuentes oficiales de predicción (por ejemplo, la web/app de AEMET) antes de salir y pospón la marcha si cambia el tiempo. En Andalucía y alta montaña el tiempo puede empeorar rápidamente, así que infórmate de chubascos, nieblas o temporales. Planifica la ruta detalladamente (kilómetros, desnivel, puntos de agua, refugios) y lleva mapas o APP de senderismo. Es aconsejable avisar a un familiar o amigo sobre tu plan de ruta y hora de regreso, de modo que pueda alertar a emergencias si no regresas. Para mayor seguridad también se pueden usar aplicaciones móviles de ayuda en montaña (por ejemplo, Alpify, que envía tu posición a los equipos de rescate).",
-  "safety3_title": "Actuación en Emergencias",
-  "safety3_content": "En caso de accidente o pérdida, marca inmediatamente el 112 (teléfono único de emergencias). El operador te pedirá tu nombre, la descripción del accidente (tipo de lesión y número de heridos) y la localización exacta (ruta, referencias y coordenadas si es posible). Emplea el protocolo PAS (Proteger, Avisar, Socorrer): primero asegura la zona para evitar más accidentes, luego da el aviso al 112. Si hay heridos, aplica primeros auxilios básicos sin mover fracturas graves. En caso de pérdida, es mejor quedarse en un lugar visible, señalizar con silbatos o luces y avisar de nuevo a rescate si se puede.",
-  "lnt_title": "Normativa Ambiental y Ética (Principios 'No Dejes Rastro')",
-  "lnt1_trigger": "Regulaciones Generales en España",
-  "lnt1_content": "La acampada libre está muy restringida: según la Ley 42/2007 solo se permite dormir en lugares señalizados (campings, áreas autorizadas). En general, fuera de estos sitios está prohibido montar tienda o pernoctar sin permiso. En los Parques Nacionales (como Sierra Nevada) no está permitida la acampada sin autorización. El uso de drones requiere licencia y está prohibido en espacios naturales protegidos sin permiso específico. Además, las leyes españolas protegen la flora y fauna silvestres: no se puede dañar ni recoger plantas autóctonas, ni molestar animales protegidos. En los parques está prohibido cazar, pescar o extraer minerales y rocas.",
-  "lnt2_trigger": "Normativa Específica de Andalucía",
-  "lnt2_content": "Andalucía aplica restricciones estrictas contra incendios forestales. Una Orden de la Junta prohíbe totalmente el uso del fuego (hogueras, barbacoas, quemas) del 1 de junio al 15 de octubre en todo monte andaluz. Durante ese periodo queda también vetada la circulación de vehículos fuera de pistas asfaltadas. En los parques naturales andaluces se insiste en no salirse de los senderos señalizados para proteger la vegetación frágil (por ejemplo, Sierra Nevada aconseja “no abandone los senderos, ni tome atajos”). La Ley 8/2003 andaluza protege la flora y fauna: prohíbe arrancar, cortar o destruir plantas silvestres y sus hábitats. En resumen, en Andalucía jamás recojas plantas o destrucciones ecosistemas, y respeta todas las señalizaciones ambientales locales.",
-  "lnt3_trigger": "Reglas del Parque Nacional Sierra Nevada",
-  "lnt3_content": "En este Parque Nacional no se permite la acampada libre. El único vivac permitido es el nocturno previa notificación escrita al director del Parque (máximo 15 personas y 3 tiendas de campaña). Se prohíbe hacer pernoctas en zonas de reserva ambiental (por ejemplo, borreguiles o cercanías de lagunas), así como a menos de 500 m de refugios guardados, carreteras o arroyos. Además, entre el 1 de junio y el 15 de octubre no está permitido acampar ni vivaquear en zonas arboladas por el alto riesgo de incendio. En cualquier caso, dentro del parque está prohibido encender fuego o arrojar basura en fuentes, ríos o el entorno.",
-  "lnt4_trigger": "Principios 'No Dejes Rastro'",
-  "lnt4_content": "Adapta los siete principios internacionales: (1) Planifica y minimiza residuos: lleva tu basura (incluyendo papel higiénico) hasta un contenedor, evitando generar desechos. (2) Camina y acampa sobre superficies duraderas: permanece siempre en senderos señalizados o sobre roca dura; no pises praderas sensibles ni borreguiles. (3) Desecha los excrementos correctamente: entierra los desperdicios orgánicos (a más de 60 m de fuentes de agua) y usa servicios habilitados si los hay. (4) Deja los sitios como los encontraste: no dejes marcas ni señales nuevas; respeta ruinas, paisajes y construcciones. (5) Minimiza las fogatas: si el fuego no está estrictamente permitido, úsalas solo en las áreas acondicionadas (fogones) y jamás en verano; prefiere cocinillas portátiles. (6) Respeta flora y fauna: no arranques plantas ni alejes animales de sus hábitats. (7) Considera a los demás visitantes: controla el ruido y el paso para no molestar a otros senderistas y al medio ambiente (por ejemplo, habla bajito y cede el paso en senderos estrechos).",
-  "etiquette_title": "Etiqueta y Conducta del Club (Normas de Grupo)",
-  "etiquette1_title": "Respeto en el Grupo",
-  "etiquette1_content": "Sé puntal y bien equipado cada salida. Durante la marcha, adapta el ritmo al indicado por el guía (ni avances ni te quedes atrás). Atiende en todo momento las indicaciones del líder por seguridad de todos. Cada miembro debe colaborar: por ejemplo, dividan responsabilidades (líder de grupo, “portabanderas”, etc.) y cuídense mutuamente. El comportamiento respetuoso entre senderistas incluye ayudar a quien lo necesite y mantener una actitud solidaria en terrenos difíciles.",
+  "safety1_title": "Responsabilidad Personal y del Grupo",
+  "safety1_content": "Cada excursionista debe asumir la responsabilidad de su propia seguridad y la del grupo: planifica bien la actividad, equipa correctamente a todos y actúa con prudencia. Lleva mapas, brújula (y/o GPS), y conoce el recorrido, desnivel y riesgos. Informa a alguien de tu ruta y hora prevista de regreso. Ante cualquier síntoma de fatiga o malestar, detente, evalúa la situación y, si hay más heridos o peligro, retrocede o solicita ayuda.",
+  "safety2_title": "Equipamiento Esencial",
+  "safety2_content": "Cada participante debe llevar los “diez esenciales” adaptados al terreno andaluz:\n- Navegación: Mapa topográfico y brújula; GPS opcional.\n- Iluminación: Linterna frontal con pilas/batería de repuesto.\n- Emergencias: Botiquín de primeros auxilios completo.\n- Refugio de emergencia: Funda de vivac o manta térmica.\n- Protección solar: Crema solar factor ≥30, gafas de sol con filtro UV, gorra.\n- Hidratación y energía: Agua suficiente (1–2 litros por persona) y alimentos de reserva.\n- Otros útiles: Silbato, navaja multiusos y mechero/cerillas estancas.\n- Ropa adecuada: Por capas (ropa térmica, cortavientos impermeable) y calzado de montaña resistente; evita algodón.",
+  "safety3_title": "Planificación, Meteorología y Emergencias",
+  "safety3_content": "Consulta siempre la previsión oficial antes de salir, especialmente en alta montaña. Planifica la ruta considerando:\n- Ruta detallada: Kilómetros, desnivel, fuentes de agua, refugios y vías de escape.\n- Comunicaciones: Informa a un familiar o amigo de tu itinerario y hora de regreso. Lleva teléfono cargado y/o dispositivos GPS de emergencia.\n- Apps de seguridad: Usa aplicaciones que envíen tu ubicación a servicios de rescate en caso de emergencia.\nSi hay alertas por mal tiempo, pospone la salida hasta que las condiciones sean seguras.\n\nSigue el protocolo PAS:\n1. Protege: Señaliza peligros y evita riesgos adicionales.\n2. Avisa: Llama al 112; comunica tus datos, número de heridos, tipo de lesiones y ubicación exacta.\n3. Socorre: Aplica primeros auxilios básicos sin mover fracturas graves.\nSi te pierdes, permanece en un lugar visible, haz señales con silbato o luz y comunica tu posición si hay cobertura.\n\nNormativa Ambiental y Ética:\nNuestros recorridos cumplen con la Ley 42/2007 del Patrimonio Natural y la normativa específica de Andalucía, incluyendo reglas sobre acampada, pernocta y fuego según cada tipo de espacio protegido.",
+  "lnt_title": "Principios “No Dejar Rastro”",
+  "lnt1_trigger": "Planificación y Minimización de Impacto",
+  "lnt1_content": "Planifica para minimizar residuos y el impacto ambiental.",
+  "lnt2_trigger": "Acampada y Movilidad Responsable",
+  "lnt2_content": "Viaja y acampa sobre superficies duraderas. No alteres fauna ni flora; respeta a otros excursionistas.",
+  "lnt3_trigger": "Gestión de Residuos",
+  "lnt3_content": "No arrojes basura: llévatela hasta contenedores autorizados.",
+  "lnt4_trigger": "Uso de Fuego y Recursos",
+  "lnt4_content": "Minimiza o evita fogatas; apágalas completamente si las haces. Respeta paneles, carteles y mobiliario de montaña. Disfruta del entorno sin dejar huella y preserva la montaña para futuras generaciones.",
+  "etiquette_title": "Conducta y Etiqueta del Club",
+  "etiquette1_title": "Respeto y Colaboración",
+  "etiquette1_content": "Sé puntual, bien equipado y sigue el ritmo del grupo. Ayuda a compañeros y comparte responsabilidades.",
   "etiquette2_title": "Convivencia con Otros Montañeros",
-  "etiquette2_content": "En las sendas estrechas, cede el paso a quienes ascienden y camina siempre por la derecha en caminos concurridos. Mantén el ruido al mínimo (charla suave, silencio en áreas sensibles) y deja espacio en refugios y miradores. En alojamientos o áreas de descanso, respeta el turno para usar instalaciones (cocina, duchas) y limpia bien antes de irte. En general, sé amable con todos: comparte la ruta con cortesía y preserva la buena relación con otros montañeros y el entorno local.",
-  "etiquette3_title": "Compromiso del Club",
-  "etiquette3_content": "Nuestro club promueve un ambiente inclusivo, seguro y respetuoso. Damos la bienvenida a todas las personas sin distinción de género, raza, religión u orientación. Fomentamos la cooperación y el apoyo mutuo en cada salida. Además, asumimos el compromiso de cuidar la montaña: nuestras actividades buscan la integración sostenible con la naturaleza, priorizando siempre la seguridad y el respeto ambiental para que todos disfruten de los senderos en igualdad de condiciones.",
-  "internet_title": "Recursos de Internet",
-  "internet_content": "Recomendamos utilizar recursos en línea para consultar las condiciones del sendero y las previsiones meteorológicas antes de cada viaje. Sitios web como AEMET y foros locales de senderismo son de gran valor."
+  "etiquette2_content": "Cede el paso en senderos estrechos, mantén bajo volumen, respeta turnos en refugios y áreas de descanso. Limpia a tu paso.",
+  "etiquette3_title": "Inclusión y Compromiso",
+  "etiquette3_content": "Damos la bienvenida a todas las personas, sin distinción de género, raza, religión u orientación. Promovemos cooperación, apoyo mutuo y cuidado sostenible del entorno.",
+  "spaces_title": "Normativa según tipo de espacio natural",
+  "spaces_list": [
+    {
+      "name": "Parques Nacionales",
+      "fuego": "Prohibido salvo zonas autorizadas; cocinas de gas permitidas",
+      "acampada": "Prohibida salvo autorización",
+      "pernocta": "Solo en refugios o zonas señaladas; vivac permitido con regulación"
+    },
+    {
+      "name": "Parques Naturales",
+      "fuego": "Prohibido fuera de áreas habilitadas; zonas recreativas cerradas en verano",
+      "acampada": "Solo en zonas designadas; consultar PRUG",
+      "pernocta": "Vivac permitido en algunos casos, sin estructuras"
+    },
+    {
+      "name": "Reservas Naturales",
+      "fuego": "Totalmente prohibido",
+      "acampada": "Solo con permisos científicos o educativos",
+      "pernocta": "Generalmente prohibida; solo actividades autorizadas"
+    },
+    {
+      "name": "Monumentos Naturales",
+      "fuego": "Prohibido",
+      "acampada": "No permitida",
+      "pernocta": "No permitida"
+    },
+    {
+      "name": "Paisajes Protegidos",
+      "fuego": "Permitido en zonas recreativas",
+      "acampada": "Solo en zonas autorizadas",
+      "pernocta": "Permitida en refugios o vivac con condiciones"
+    },
+    {
+      "name": "Reservas de la Biosfera (UNESCO)",
+      "fuego": "Prohibido en zonas núcleo; permitido en transición con normativa local",
+      "acampada": "Solo en zonas autorizadas y con permiso",
+      "pernocta": "Permitida en refugios o vivac en zonas tampón"
+    },
+    {
+      "name": "Zonas ZEPA (Red Natura 2000)",
+      "fuego": "Prohibido",
+      "acampada": "No permitida salvo áreas habilitadas",
+      "pernocta": "Muy restringida; solo científicas/educativas"
+    },
+    {
+      "name": "Zonas ZEC (Red Natura 2000)",
+      "fuego": "Prohibido",
+      "acampada": "Solo en zonas autorizadas",
+      "pernocta": "Requiere autorización específica"
+    },
+    {
+      "name": "Espacios Red Natura 2000",
+      "fuego": "Prohibido salvo áreas recreativas",
+      "acampada": "Permitida en zonas específicas",
+      "pernocta": "Permitida en refugios o vivac bajo condiciones locales"
+    },
+    {
+      "name": "Humedales Ramsar",
+      "fuego": "Prohibido",
+      "acampada": "No permitida",
+      "pernocta": "Solo actividades científicas o educativas con autorización"
+    }
+  ]
 }
