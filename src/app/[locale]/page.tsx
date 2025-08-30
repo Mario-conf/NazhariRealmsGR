@@ -174,13 +174,13 @@ export default function Home() {
                 {sponsors.map((sponsor) => (
                      <CarouselItem key={sponsor.id} className="basis-1/5">
                         <div className="p-1 h-full">
-                           <div className="relative flex items-center justify-center p-4 bg-white rounded-lg shadow-sm aspect-[2/1]">
+                           <div className="relative flex items-center justify-center p-2 bg-white rounded-lg shadow-sm aspect-[2/1]">
                                 <Image
                                     src={sponsor.src}
                                     alt={sponsor.alt}
                                     data-ai-hint="logo empresa"
                                     fill
-                                    className="object-contain"
+                                    className="object-contain p-2"
                                 />
                             </div>
                         </div>
