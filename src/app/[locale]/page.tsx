@@ -160,13 +160,12 @@ export default function Home() {
                 <div className="rounded-2xl bg-white/40 backdrop-blur-sm py-12">
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
                       {sponsors.map((sponsor) => (
-                          <div key={sponsor.id} className="flex justify-center items-center p-2">
+                          <div key={sponsor.id} className="relative h-16 w-full p-4">
                               <Image
                                   src={sponsor.src}
                                   alt={sponsor.alt}
                                   data-ai-hint="logo empresa"
-                                  width={150}
-                                  height={75}
+                                  fill
                                   className="object-contain"
                               />
                           </div>
