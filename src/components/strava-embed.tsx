@@ -11,20 +11,25 @@ const StravaEmbedComponent: React.FC<StravaEmbedProps> = ({ embed }) => {
   const embedRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const initStravaEmbed = () => {
+      if (window.Strava && window.Strava.Embeds) {
+        window.Strava.Embeds.init();
+      }
+    };
+    
     // Check if the Strava script is already loaded
     if (!document.querySelector('script[src="https://strava-embeds.com/embed.js"]')) {
       const script = document.createElement('script');
       script.src = 'https://strava-embeds.com/embed.js';
       script.async = true;
+      script.onload = initStravaEmbed;
       document.body.appendChild(script);
     } else {
         // If script is already there, Strava's embed script might need a nudge
-        // to process new placeholders. This is a bit of a hack.
-        if (window.Strava) {
-            window.Strava.Embeds.init();
-        }
+        // to process new placeholders, especially on component remount.
+        initStravaEmbed();
     }
-  }, []);
+  }, [embed]); // Re-run effect if the embed data changes
 
   return (
     <div
