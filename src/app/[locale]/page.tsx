@@ -152,24 +152,26 @@ export default function Home() {
         </section>
 
       {/* Sponsors Section */}
-        <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-white/70 backdrop-blur-sm">
+        <section id="sponsors" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
             <div className="container px-4 md:px-6">
                 <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-gray-800">
                     {t('sponsors_title')}
                 </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-                    {sponsors.map((sponsor) => (
-                        <div key={sponsor.id} className="flex justify-center items-center p-2">
-                             <Image
-                                src={sponsor.src}
-                                alt={sponsor.alt}
-                                data-ai-hint="logo empresa"
-                                width={150}
-                                height={75}
-                                className="object-contain"
-                            />
-                        </div>
-                    ))}
+                <div className="rounded-2xl bg-white/40 backdrop-blur-sm py-12">
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                      {sponsors.map((sponsor) => (
+                          <div key={sponsor.id} className="flex justify-center items-center p-2">
+                              <Image
+                                  src={sponsor.src}
+                                  alt={sponsor.alt}
+                                  data-ai-hint="logo empresa"
+                                  width={150}
+                                  height={75}
+                                  className="object-contain"
+                              />
+                          </div>
+                      ))}
+                  </div>
                 </div>
             </div>
         </section>
@@ -243,6 +245,8 @@ export default function Home() {
 
 
 
+
+    
 
     
 
