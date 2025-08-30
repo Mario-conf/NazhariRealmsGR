@@ -48,7 +48,6 @@ export async function getAemetWeatherData(municipality: AemetMunicipality): Prom
         humidity: Math.round((today.humedadRelativa.maxima + today.humedadRelativa.minima) / 2),
       },
       forecast: forecastDays.map((day) => {
-        const conditionForecast = day.estadoCielo.find(e => e.periodo === "12-24") ?? day.estadoCielo.find(e => e.periodo === "00-24") ?? day.estadoCielo[0];
         return {
          day: day.fecha,
          temperature: Math.round((day.temperatura.maxima + day.temperatura.minima) / 2),
@@ -85,33 +84,22 @@ async function fetchAemet(url: string) {
 
 // --- OpenWeatherMap Fallback ---
 
-const aemetToOpenWeatherConditionMap: { [key: string]: string } = {
-  '11': 'Clear', '11n': 'Clear', // Despejado
-  '12': 'Clouds', '12n': 'Clouds', // Poco nuboso
-  '13': 'Clouds', '13n': 'Clouds', // Intervalos nubosos
-  '14': 'Clouds', '14n': 'Clouds', // Nuboso
-  '15': 'Clouds', '15n': 'Clouds', // Muy nuboso
-  '16': 'Clouds', '16n': 'Clouds', // Cubierto
-  '17': 'Clouds', '17n': 'Clouds', // Nubes altas
-  '43': 'Rain', '43n': 'Rain', // Lluvia escasa
-  '44': 'Rain', '44n': 'Rain', // Lluvia
-  '45': 'Rain', '45n': 'Rain', // Lluvia fuerte
-  '23': 'Rain', '23n': 'Rain',
-  '24': 'Rain', '24n': 'Rain',
-  '25': 'Rain', '25n': 'Rain',
-  '51': 'Mist', '51n': 'Mist', // Bruma/Niebla
-  '52': 'Fog', '52n': 'Fog',
-  '53': 'Fog', '53n': 'Fog',
-  '54': 'Fog', '54n': 'Fog',
-  '33': 'Snow', '33n': 'Snow', // Nieve
-  '34': 'Snow', '34n': 'Snow',
-  '35': 'Snow', '35n': 'Snow',
-  '61': 'Thunderstorm', '61n': 'Thunderstorm', // Tormenta
-  '62': 'Thunderstorm', '62n': 'Thunderstorm',
-  '63': 'Thunderstorm', '63n': 'Thunderstorm',
-  '71': 'Snow', '71n': 'Snow', // Aguanieve (Treat as snow)
-  '72': 'Snow', '72n': 'Snow',
-  '73': 'Snow', '73n': 'Snow',
+// Maps OpenWeather 'id' to AEMET 'value'
+const openWeatherToAemetCodeMap: { [key: number]: string } = {
+  // Thunderstorm
+  200: '61', 201: '61', 202: '63', 210: '61', 211: '62', 212: '63', 221: '63', 230: '61', 231: '61', 232: '63',
+  // Drizzle
+  300: '43', 301: '43', 302: '44', 310: '43', 311: '43', 312: '44', 313: '44', 314: '45', 321: '44',
+  // Rain
+  500: '23', 501: '24', 502: '25', 503: '25', 504: '25', 511: '71', 520: '43', 521: '44', 522: '45', 531: '45',
+  // Snow
+  600: '33', 601: '34', 602: '35', 611: '71', 612: '71', 613: '71', 615: '71', 616: '71', 620: '33', 621: '34', 622: '35',
+  // Atmosphere (Mist, Fog, etc.)
+  701: '51', 711: '51', 721: '51', 731: '51', 741: '52', 751: '51', 761: '51', 762: '51', 771: '51', 781: '51',
+  // Clear
+  800: '11',
+  // Clouds
+  801: '12', 802: '13', 803: '14', 804: '16',
 };
 
 // Main function to get and format data from OpenWeatherMap
@@ -136,13 +124,24 @@ export async function getOpenWeatherData(location: string): Promise<WeatherData>
   const dailyForecasts = new Map<string, any>();
   forecast.list.forEach((item: any) => {
     const date = item.dt_txt.split(' ')[0]; // Get 'YYYY-MM-DD'
+    // Get forecast for midday
+    if (!dailyForecasts.has(date) && item.dt_txt.includes('12:00:00')) {
+        dailyForecasts.set(date, item);
+    }
+  });
+  // If no midday forecast, take the first available for each day
+  forecast.list.forEach((item: any) => {
+    const date = item.dt_txt.split(' ')[0]; // Get 'YYYY-MM-DD'
     if (!dailyForecasts.has(date)) {
         dailyForecasts.set(date, item);
     }
   });
+  
   // Remove today from forecast
   const todayKey = new Date(current.dt * 1000).toISOString().split('T')[0];
   dailyForecasts.delete(todayKey);
+
+  const getAemetCode = (owmId: number) => openWeatherToAemetCodeMap[owmId] || '11'; // Default to clear sky
 
 
   return {
@@ -152,14 +151,14 @@ export async function getOpenWeatherData(location: string): Promise<WeatherData>
     },
     current: {
       temperature: Math.round(current.main.temp),
-      conditionCode: aemetToOpenWeatherConditionMap[current.weather[0].id] || current.weather[0].main,
+      conditionCode: getAemetCode(current.weather[0].id),
       windSpeed: Math.round(current.wind.speed * 3.6), // m/s to km/h
       humidity: current.main.humidity,
     },
     forecast: Array.from(dailyForecasts.values()).slice(0, 5).map((day: any) => ({
       day: day.dt_txt.split(' ')[0],
       temperature: Math.round(day.main.temp),
-      conditionCode: aemetToOpenWeatherConditionMap[day.weather[0].id] || day.weather[0].main,
+      conditionCode: getAemetCode(day.weather[0].id),
     })),
   };
 }

@@ -59,16 +59,15 @@ export default function WeatherPage() {
   };
 
   const getDayOfWeek = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString(locale, { weekday: 'long' });
+    // Adding time to avoid timezone issues with new Date()
+    return new Date(`${dateString}T12:00:00Z`).toLocaleDateString(locale, { weekday: 'long', timeZone: 'UTC' });
   }
 
-  // AEMET condition codes can be complex.
-  // We extract the base code to get the main condition.
+  // AEMET condition codes are now the standard, so we can translate directly.
   const getConditionTranslation = (code: string) => {
-    const baseCode = code.slice(0, 2);
     // The key must be a string literal for useTranslations, so we check if it exists.
     // Fallback to the code itself if no translation is found.
-    return tConditions.rich(baseCode, {}).toString() !== baseCode ? tConditions(baseCode) : code;
+    return tConditions.rich(code, {}).toString() !== code ? tConditions(code) : code;
   }
 
   // Fetch weather for default location on initial render
