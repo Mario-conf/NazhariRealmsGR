@@ -3,63 +3,31 @@
   "trails": [
     {
       "id": 1,
-      "name": "Route of the Cahorros",
-      "location": "Monachil, Granada",
-      "image": "https://images.ecestaticos.com/5Qd-2T20eWlKiB69a2eA_LhYm8c=/0x0:1920x1080/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F069%2F219%2F8a1%2F0692198a18df7b065355655a6d59518d.jpg",
-      "imageHint": "Hanging bridge in a canyon",
+      "name": "Acequia Real Route",
+      "location": "Sierra Nevada, Granada",
+      "image": "https://www.exploradorcurioso.com/media/20151018_103625-1170x550.jpg",
+      "imageHint": "acequia in the mountains",
       "difficulty": "Moderate",
       "terrain": "Mountain",
-      "length": 8,
-      "duration": 4,
-      "rating": 4.5,
-      "description": "A spectacular route that combines hanging bridges, waterfalls, and narrow gorges. Ideal for a half-day adventure. Not suitable for people with vertigo.",
-      "mapUrl": "https://placehold.co/600x400.png?text=Map+Cahorros",
-      "reviews": [
-        {
-          "id": "en-1-1",
-          "author": "Laura Gómez",
-          "rating": 5,
-          "comment": "An incredible experience, the guides convey a lot of security and the group atmosphere is very welcoming. Ideal for getting started in hiking and meeting new people.",
-          "date": "2024-05-10"
-        },
-        {
-          "id": "en-1-2",
-          "author": "Carlos Martín",
-          "rating": 3,
-          "comment": "The routes are well organized, although sometimes they get a bit long for beginners. I would have liked more breaks to rest.",
-          "date": "2024-05-12"
-        }
-      ]
+      "length": 12.5,
+      "duration": 1.3,
+      "rating": 4.7,
+      "description": "A beautiful trail that follows the course of an old irrigation channel, offering spectacular views of the Sierra Nevada peaks. Ideal for summer as it runs at high altitude.",
+      "mapUrl": "https://cdn.pacer.cc/route/screenshot/osm_11944228.png"
     },
     {
       "id": 2,
-      "name": "Vereda de la Estrella",
-      "location": "Güejar Sierra, Granada",
-      "image": "https://www.actualidadiphone.com/wp-content/uploads/2016/01/IMG_0096.jpg",
-      "imageHint": "Path next to a river in the mountains",
-      "difficulty": "Hard",
+      "name": "Los Cahorros Route",
+      "location": "Monachil, Granada",
+      "image": "https://www.apartamentos3000.com/blog/wp-content/uploads/2023/05/Los-cahorros-de-Monachil1.jpg",
+      "imageHint": "suspension bridge in gorge",
+      "difficulty": "Moderate",
       "terrain": "Mountain",
-      "length": 22,
-      "duration": 8,
-      "rating": 4.8,
-      "description": "One of the most emblematic routes of the Sierra Nevada. It follows old mining trails, offering spectacular views of the north faces of Mulhacén and Veleta.",
-      "mapUrl": "https://placehold.co/600x400.png?text=Map+Vereda+Estrella",
-      "reviews": [
-         {
-          "id": "en-2-1",
-          "author": "Ana Rodríguez",
-          "rating": 5,
-          "comment": "Excellent club, very responsible with mountain safety. You can feel the passion for nature. I will definitely repeat on the next outing.",
-          "date": "2024-04-20"
-        },
-        {
-          "id": "en-2-2",
-          "author": "Miguel Torres",
-          "rating": 2,
-          "comment": "The route was beautiful but there were too many people on the excursion and that made the pace difficult. It would be better to limit the groups a bit.",
-          "date": "2024-04-21"
-        }
-      ]
+      "length": 8.7,
+      "duration": 1.45,
+      "rating": 4.7,
+      "description": "A spectacular route that combines suspension bridges, waterfalls, and narrow gorges. Ideal for a half-day adventure. Not suitable for people with vertigo.",
+      "mapUrl": "https://lh4.googleusercontent.com/-r9lJ_Wc87Cs/T5LTjGd19XI/AAAAAAAAKz0/bfgxO1pfxJA/s1600/PLANO%2520CAHORROS.jpg"
     }
   ]
 }

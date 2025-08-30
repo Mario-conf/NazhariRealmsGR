@@ -24,6 +24,18 @@ const terrainIcons = {
   Forest: <Trees className="h-4 w-4" />,
   Coastal: <Waves className="h-4 w-4" />,
   Desert: <Sun className="h-4 w-4" />,
+  Montaña: <Mountain className="h-4 w-4" />,
+  Bosque: <Trees className="h-4 w-4" />,
+  Costa: <Waves className="h-4 w-4" />,
+  Desierto: <Sun className="h-4 w-4" />,
+  Berg: <Mountain className="h-4 w-4" />,
+  Wald: <Trees className="h-4 w-4" />,
+  Küste: <Waves className="h-4 w-4" />,
+  Wüste: <Sun className="h-4 w-4" />,
+  Montagne: <Mountain className="h-4 w-4" />,
+  Forêt: <Trees className="h-4 w-4" />,
+  Côte: <Waves className="h-4 w-4" />,
+  Désert: <Sun className="h-4 w-4" />,
 };
 
 export function TrailCard({ trail, onSelect, isFavorite, onToggleFavorite }: TrailCardProps) {
@@ -33,13 +45,6 @@ export function TrailCard({ trail, onSelect, isFavorite, onToggleFavorite }: Tra
     'Easy': t('difficulties.Easy'),
     'Moderate': t('difficulties.Moderate'),
     'Hard': t('difficulties.Hard')
-  };
-  
-  const terrainLabels = {
-      'Mountain': t('terrains.Mountain'),
-      'Forest': t('terrains.Forest'),
-      'Coastal': t('terrains.Coastal'),
-      'Desert': t('terrains.Desert')
   };
 
   return (
@@ -89,7 +94,7 @@ export function TrailCard({ trail, onSelect, isFavorite, onToggleFavorite }: Tra
           </div>
            <div className="flex items-center gap-1.5" title={t('terrain_title')}>
             {terrainIcons[trail.terrain]}
-            <span className="hidden sm:inline">{terrainLabels[trail.terrain]}</span>
+            <span className="hidden sm:inline">{trail.terrain}</span>
           </div>
         </div>
         <div className="flex items-center gap-1 text-amber-500" title={t('rating_title')}>

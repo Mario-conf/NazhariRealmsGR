@@ -59,6 +59,14 @@ const nextConfig: NextConfig = {
         hostname: 'cdn.e-konomista.pt',
       },
       {
+        protocol: 'httpshttps',
+        hostname: 'www.exploradorcurioso.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.apartamentos3000.com',
+      },
+      {
         protocol: 'https',
         hostname: 'i.pinimg.com',
       },
@@ -117,6 +125,14 @@ const nextConfig: NextConfig = {
        {
         protocol: 'https',
         hostname: 'www.liblogo.com',
+      },
+      {
+        protocol: 'https|http',
+        hostname: 'lh4.googleusercontent.com',
+      },
+       {
+        protocol: 'https',
+        hostname: 'cdn.pacer.cc',
       },
       {
         protocol: 'https',

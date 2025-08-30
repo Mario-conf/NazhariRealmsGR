@@ -1,5 +1,6 @@
 
 
+
 export type StravaEmbed = {
   type: 'route' | 'activity';
   id: string;
@@ -12,13 +13,12 @@ export type Trail = {
   image: string;
   imageHint: string;
   difficulty: 'Easy' | 'Moderate' | 'Hard';
-  terrain: 'Mountain' | 'Forest' | 'Coastal' | 'Desert';
+  terrain: 'Mountain' | 'Forest' | 'Coastal' | 'Desert' | 'Montaña' | 'Bosque' | 'Costa' | 'Desierto' | 'Berg' | 'Wald' | 'Küste' | 'Wüste' | 'Montagne' | 'Forêt' | 'Côte' | 'Désert';
   length: number; // in km
   duration: number; // in hours
   rating: number; // 1-5
   description: string;
   mapUrl?: string; // Optional static map image URL
-  reviews?: Review[];
 };
 
 export type Review = {

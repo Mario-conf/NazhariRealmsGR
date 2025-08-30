@@ -44,51 +44,6 @@ export default function Home() {
       description: t('features.feature3_description')
     }
   ];
-
-  const reviews = [
-    {
-      "nombre": "Laura Gómez",
-      "estrellas": 5,
-      "texto": "Una experiencia increíble, los guías transmiten mucha seguridad y el ambiente del grupo es muy acogedor. Ideal para iniciarse en el senderismo y conocer gente nueva.",
-      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",
-      "avatarHint": "mujer sonriendo"
-    },
-    {
-      "nombre": "Carlos Martín",
-      "estrellas": 3,
-      "texto": "Las rutas están bien organizadas, aunque a veces se hacen un poco largas para principiantes. Me hubiera gustado más pausas para descansar.",
-      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",
-      "avatarHint": "hombre con barba"
-    },
-    {
-      "nombre": "Ana Rodríguez",
-      "estrellas": 5,
-      "texto": "Excelente club, muy responsables con la seguridad en montaña. Se nota la pasión por la naturaleza. Repetiré sin duda en la próxima salida.",
-      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",
-      "avatarHint": "mujer con gafas"
-    },
-    {
-      "nombre": "Miguel Torres",
-      "estrellas": 2,
-      "texto": "El recorrido fue bonito pero había demasiada gente en la excursión y eso dificultó el ritmo. Sería mejor limitar un poco los grupos.",
-      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",
-      "avatarHint": "hombre joven"
-    },
-    {
-      "nombre": "Sofía Hernández",
-      "estrellas": 4,
-      "texto": "Gran variedad de rutas, desde fáciles hasta de alta montaña. Los organizadores siempre están atentos a todos los detalles. Muy recomendable para quien busque aprender y disfrutar.",
-      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",
-      "avatarHint": "mujer pelo rizado"
-    },
-    {
-      "nombre": "David López",
-      "estrellas": 4,
-      "texto": "Me gustó la caminata, aunque esperaba algo más de información cultural sobre la zona. Aun así, el grupo fue muy agradable y los paisajes espectaculares.",
-      "avatar": "https://www.svgrepo.com/show/452030/avatar-default.svg",  
-      "avatarHint": "hombre con gorra"
-    }
-  ];
   
   const galleryImages = [
     { src: 'https://elviajerofeliz.com/wp-content/uploads/2020/12/sierra-nevada-y-sus-encantos-0.jpg', hint: 'senderista cumbre' },
@@ -155,53 +110,6 @@ export default function Home() {
             </div>
         </div>
       </section>
-
-      {/* Reviews Section */}
-        <section id="reviews" className="w-full py-12 md:py-24 lg:py-32 overflow-hidden bg-transparent">
-            <div className="container px-4 md:px-6 text-center">
-                 <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white mb-12">
-                    {t('reviews_title')}
-                </h2>
-            </div>
-             <Carousel 
-                className="w-full max-w-7xl mx-auto"
-                plugins={[
-                    Autoplay({
-                      delay: 5000,
-                      stopOnInteraction: true,
-                    }),
-                ]}
-                opts={{
-                    align: "start",
-                    loop: true,
-                }}
-             >
-                 <CarouselContent>
-                    {reviews.map((review, index) => (
-                         <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
-                            <div className="p-1 h-full">
-                                <Card className="h-full bg-background/80 backdrop-blur-sm">
-                                    <CardHeader className="flex flex-row items-center gap-4">
-                                        <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
-                                        <div>
-                                            <p className="font-semibold text-foreground">{review.nombre}</p>
-                                            <div className="flex items-center gap-0.5">
-                                                {[...Array(5)].map((_, i) => (
-                                                  <StarIcon key={i} className={`h-5 w-5 ${i < review.estrellas ? 'fill-primary text-primary' : 'fill-muted text-muted-foreground'}`} />
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent>
-                                    <p className="text-muted-foreground italic">"{review.texto}"</p>
-                                    </CardContent>
-                                </Card>
-                            </div>
-                        </CarouselItem>
-                    ))}
-                 </CarouselContent>
-             </Carousel>
-        </section>
 
         {/* Gallery Section */}
         <section id="gallery" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
@@ -358,4 +266,3 @@ export default function Home() {
     
 
     
-

@@ -28,6 +28,18 @@ const terrainIcons = {
   Forest: <Trees className="h-5 w-5" />,
   Coastal: <Waves className="h-5 w-5" />,
   Desert: <Sun className="h-5 w-5" />,
+  Montaña: <Mountain className="h-5 w-5" />,
+  Bosque: <Trees className="h-5 w-5" />,
+  Costa: <Waves className="h-5 w-5" />,
+  Desierto: <Sun className="h-5 w-5" />,
+  Berg: <Mountain className="h-5 w-5" />,
+  Wald: <Trees className="h-5 w-5" />,
+  Küste: <Waves className="h-5 w-5" />,
+  Wüste: <Sun className="h-5 w-5" />,
+  Montagne: <Mountain className="h-5 w-5" />,
+  Forêt: <Trees className="h-5 w-5" />,
+  Côte: <Waves className="h-5 w-5" />,
+  Désert: <Sun className="h-5 w-5" />,
 };
 
 export function TrailDetailsDialog({
@@ -45,13 +57,6 @@ export function TrailDetailsDialog({
     'Hard': t('difficulties.Hard')
   };
   
-  const terrainLabels = {
-      'Mountain': t('terrains.Mountain'),
-      'Forest': t('terrains.Forest'),
-      'Coastal': t('terrains.Coastal'),
-      'Desert': t('terrains.Desert')
-  };
-
   return (
     <Dialog open={true} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[95vh] flex flex-col">
@@ -110,7 +115,7 @@ export function TrailDetailsDialog({
                         {terrainIcons[trail.terrain]}
                         <div>
                             <p className="text-muted-foreground">{t('terrain')}</p>
-                            <p className="font-semibold">{terrainLabels[trail.terrain]}</p>
+                            <p className="font-semibold">{trail.terrain}</p>
                         </div>
                     </div>
                 </div>
