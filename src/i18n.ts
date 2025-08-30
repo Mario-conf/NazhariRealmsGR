@@ -1,3 +1,4 @@
+
 import {notFound} from 'next/navigation';
 import {getRequestConfig} from 'next-intl/server';
  
@@ -30,6 +31,7 @@ export default getRequestConfig(async ({locale}) => {
   }
 
   return {
+    locale,
     messages
   };
 });
