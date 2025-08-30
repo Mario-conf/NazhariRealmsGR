@@ -23,7 +23,7 @@ export async function getTrails(
 ): Promise<Trail[]> {
   const parsedInput = GetTrailsInputSchema.safeParse(input);
   if (!parsedInput.success) {
-    throw new Error('Invalid input for getTrails';
+    throw new Error('Invalid input for getTrails');
   }
 
   const { locale } = parsedInput.data;
