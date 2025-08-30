@@ -12,7 +12,8 @@ import type { Metadata } from 'next';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
-
+import { translateText, TranslateInputSchema } from '@/ai/flows/translate-flow';
+import { z } from 'zod';
 
 type RuleContent = {
   title: string;
@@ -42,27 +43,76 @@ type RuleContent = {
   etiquette3_content: string;
   internet_title: string;
   internet_content: string;
-}
+};
+
+// Zod schema for validation
+const RuleContentSchema = z.object({
+  title: z.string(),
+  subtitle: z.string(),
+  safety_title: z.string(),
+  safety1_title: z.string(),
+  safety1_content: z.string(),
+  safety2_title: z.string(),
+  safety2_content: z.string(),
+  safety3_title: z.string(),
+  safety3_content: z.string(),
+  lnt_title: z.string(),
+  lnt1_trigger: z.string(),
+  lnt1_content: z.string(),
+  lnt2_trigger: z.string(),
+  lnt2_content: z.string(),
+  lnt3_trigger: z.string(),
+  lnt3_content: z.string(),
+  lnt4_trigger: z.string(),
+  lnt4_content: z.string(),
+  etiquette_title: z.string(),
+  etiquette1_title: z.string(),
+  etiquette1_content: z.string(),
+  etiquette2_title: z.string(),
+  etiquette2_content: z.string(),
+  etiquette3_title: z.string(),
+  etiquette3_content: z.string(),
+  internet_title: z.string(),
+  internet_content: z.string(),
+});
+
 
 async function getRulesContent(locale: string): Promise<RuleContent> {
-  const dataDirectory = path.join(process.cwd(), 'public', 'data', 'rules');
-  let filePath = path.join(dataDirectory, `rules.${locale}.json`);
+  const filePath = path.join(process.cwd(), 'public', 'data', 'rules', 'rules.es.json');
   
   try {
-    await fs.access(filePath);
-  } catch (error) {
-    console.warn(`Rules data for locale "${locale}" not found, falling back to "es".`);
-    filePath = path.join(dataDirectory, `rules.es.json`);
-  }
-
-  try {
     const fileContents = await fs.readFile(filePath, 'utf8');
-    return JSON.parse(fileContents);
+    const baseContent: RuleContent = JSON.parse(fileContents);
+
+    if (locale === 'es') {
+      return baseContent;
+    }
+
+    // Translate all values in parallel
+    const translationPromises = Object.entries(baseContent).map(async ([key, value]) => {
+      const { translatedText } = await translateText({ text: value, targetLanguage: locale });
+      return [key, translatedText];
+    });
+
+    const translatedEntries = await Promise.all(translationPromises);
+    const translatedContent = Object.fromEntries(translatedEntries);
+    
+    // Validate the structure of the translated object
+    const parsedContent = RuleContentSchema.safeParse(translatedContent);
+    if (!parsedContent.success) {
+      console.error("Failed to validate translated rules content:", parsedContent.error);
+      // Fallback to Spanish content on translation/validation failure
+      return baseContent;
+    }
+    
+    return parsedContent.data;
+
   } catch (error) {
-    console.error(`Failed to read or parse rules data from ${filePath}:`, error);
+    console.error(`Failed to read or process rules data from ${filePath}:`, error);
     notFound();
   }
 }
+
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'RulesPage' });
