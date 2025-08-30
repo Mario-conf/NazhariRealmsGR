@@ -23,7 +23,7 @@ export default function Home() {
     { id: 2, src: 'https://tse3.mm.bing.net/th/id/OIP.gitPYpYsWGJUecokH3jNDQHaCh?rs=1&pid=ImgDetMain&o=7&rm=3', alt: 'Logo' },
     { id: 3, src: 'https://latestlogo.com/wp-content/uploads/2024/03/decathlon-logo.png', alt: ' Logo' },
     { id: 4, src: 'https://thinkmarketingmagazine.com/wp-content/uploads/2022/08/Amazon_logo.svg.png', alt: ' Logo' },
-    { id: 5, src: 'https://www.underconsideration.com/brandnew/archives/alsa_logo.png', alt: ' Logo' },
+    { id: 5, src: 'https://upload.wikimedia.org/wikipedia/commons/5/52/ALSA_2019_logo.svg', alt: ' Logo' },
     { id: 6, src: 'https://agqcvcudno.cloudimg.io/v7/climatica.coop/wp-content/uploads/2025/06/detalle_logo_aemet.png', alt: 'Logo' }
   ];
   
