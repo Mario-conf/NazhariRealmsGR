@@ -12,7 +12,8 @@ import type { Metadata } from 'next';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
-import { translateText, TranslateInputSchema } from '@/ai/flows/translate-flow';
+import { translateText } from '@/ai/flows/translate-flow';
+import type { TranslateInput, TranslateOutput } from '@/ai/schemas/translate-schema';
 import { z } from 'zod';
 
 type RuleContent = {

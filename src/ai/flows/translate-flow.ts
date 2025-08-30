@@ -3,29 +3,18 @@
  * @fileOverview A Genkit flow for translating text.
  *
  * - translateText - A function that translates text to a target language.
- * - TranslateInput - The input type for the translateText function.
- * - TranslateOutput - The return type for the translateText function.
  */
 
 import { ai } from '@/ai/genkit';
-import { z } from 'zod';
-
-export const TranslateInputSchema = z.object({
-  text: z.string().describe('The text to translate.'),
-  targetLanguage: z
-    .string()
-    .describe('The target language code (e.g., "en", "es", "fr").'),
-});
-export type TranslateInput = z.infer<typeof TranslateInputSchema>;
-
-export const TranslateOutputSchema = z.object({
-  translatedText: z.string().describe('The translated text.'),
-});
-export type TranslateOutput = z.infer<typeof TranslateOutputSchema>;
+import {
+  TranslateInputSchema,
+  TranslateOutputSchema,
+  type TranslateInput,
+} from '@/ai/schemas/translate-schema';
 
 export async function translateText(
   input: TranslateInput
-): Promise<TranslateOutput> {
+): Promise<z.infer<typeof TranslateOutputSchema>> {
   // Don't translate if the target language is the same as the source (Spanish)
   if (input.targetLanguage === 'es') {
     return { translatedText: input.text };
