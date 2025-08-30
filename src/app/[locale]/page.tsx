@@ -11,6 +11,9 @@ import Image from 'next/image';
 import { Link } from '@/navigation';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { siteConfig } from '@/lib/site-config';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Autoplay from "embla-carousel-autoplay"
+
 
 export default function Home() {
   const t = useTranslations('HomePage');
@@ -160,30 +163,44 @@ export default function Home() {
                     {t('reviews_title')}
                 </h2>
             </div>
-             <div className="relative w-full max-w-7xl mx-auto">
-                 <div className="flex animate-scroll-infinite">
-                    {[...reviews, ...reviews].map((review, index) => (
-                         <div key={index} className="flex-shrink-0 w-full max-w-sm p-4">
-                            <Card className="h-full bg-background/80 backdrop-blur-sm">
-                                <CardHeader className="flex flex-row items-center gap-4">
-                                    <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
-                                    <div>
-                                        <p className="font-semibold text-foreground">{review.nombre}</p>
-                                        <div className="flex items-center gap-0.5">
-                                            {[...Array(5)].map((_, i) => (
-                                              <StarIcon key={i} className={`h-5 w-5 ${i < review.estrellas ? 'fill-primary text-primary' : 'fill-muted text-muted-foreground'}`} />
-                                            ))}
+             <Carousel 
+                className="w-full max-w-7xl mx-auto"
+                plugins={[
+                    Autoplay({
+                      delay: 5000,
+                      stopOnInteraction: true,
+                    }),
+                ]}
+                opts={{
+                    align: "start",
+                    loop: true,
+                }}
+             >
+                 <CarouselContent>
+                    {reviews.map((review, index) => (
+                         <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
+                            <div className="p-1">
+                                <Card className="h-full bg-background/80 backdrop-blur-sm">
+                                    <CardHeader className="flex flex-row items-center gap-4">
+                                        <Image src={review.avatar} alt={review.avatarHint} width={56} height={56} className="rounded-full" data-ai-hint={review.avatarHint} />
+                                        <div>
+                                            <p className="font-semibold text-foreground">{review.nombre}</p>
+                                            <div className="flex items-center gap-0.5">
+                                                {[...Array(5)].map((_, i) => (
+                                                  <StarIcon key={i} className={`h-5 w-5 ${i < review.estrellas ? 'fill-primary text-primary' : 'fill-muted text-muted-foreground'}`} />
+                                                ))}
+                                            </div>
                                         </div>
-                                    </div>
-                                </CardHeader>
-                                <CardContent>
-                                <p className="text-muted-foreground italic">"{review.texto}"</p>
-                                </CardContent>
-                            </Card>
-                        </div>
+                                    </CardHeader>
+                                    <CardContent>
+                                    <p className="text-muted-foreground italic">"{review.texto}"</p>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </CarouselItem>
                     ))}
-                 </div>
-             </div>
+                 </CarouselContent>
+             </Carousel>
         </section>
 
         {/* Gallery Section */}
@@ -214,24 +231,38 @@ export default function Home() {
           <h2 className="font-serif text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 text-white">
             {t('sponsors_title')}
           </h2>
-          <div className="relative overflow-hidden w-full max-w-6xl mx-auto">
-             <div className="flex animate-scroll-infinite">
-                {[...sponsors, ...sponsors].map((sponsor, index) => (
-                    <div key={index} className="flex-shrink-0 w-[150px] p-2">
-                         <div className="flex aspect-video items-center justify-center p-6 bg-white rounded-lg shadow-sm">
-                            <Image
-                                src={sponsor.src}
-                                alt={sponsor.alt}
-                                data-ai-hint="logo empresa"
-                                width={120}
-                                height={60}
-                                className="object-contain"
-                            />
+           <Carousel
+                className="w-full max-w-6xl mx-auto"
+                plugins={[
+                    Autoplay({
+                      delay: 3000,
+                      stopOnInteraction: true,
+                    }),
+                ]}
+                opts={{
+                    align: "start",
+                    loop: true,
+                }}
+           >
+             <CarouselContent>
+                {sponsors.map((sponsor) => (
+                    <CarouselItem key={sponsor.id} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+                        <div className="p-1">
+                            <div className="flex aspect-video items-center justify-center p-4 bg-white rounded-lg shadow-sm h-full">
+                                <Image
+                                    src={sponsor.src}
+                                    alt={sponsor.alt}
+                                    data-ai-hint="logo empresa"
+                                    width={120}
+                                    height={60}
+                                    className="object-contain"
+                                />
+                            </div>
                         </div>
-                    </div>
+                    </CarouselItem>
                 ))}
-             </div>
-          </div>
+             </CarouselContent>
+          </Carousel>
         </div>
       </section>
 
