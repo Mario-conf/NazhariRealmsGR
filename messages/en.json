@@ -218,5 +218,8 @@
     "p2": "This document should outline the rules and guidelines for user conduct, intellectual property rights, and limitations of liability.",
     "p3": "It's a legal agreement between the website owner and the users. It's important to have this clearly defined to protect both parties.",
     "p4": "Consult with a legal professional to draft a comprehensive and legally sound Terms of Service document."
+  },
+  "Units": {
+    "hours": "hours"
   }
 }

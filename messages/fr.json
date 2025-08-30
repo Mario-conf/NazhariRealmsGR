@@ -218,5 +218,8 @@
     "p2": "Ce document doit décrire les règles et directives relatives à la conduite des utilisateurs, aux droits de propriété intellectuelle et aux limitations de responsabilité.",
     "p3": "Il s'agit d'un accord juridique entre le propriétaire du site Web et les utilisateurs. Il est important que cela soit clairement défini pour protéger les deux parties.",
     "p4": "Consultez un professionnel du droit pour rédiger un document de conditions d'utilisation complet et juridiquement solide."
+  },
+  "Units": {
+    "hours": "heures"
   }
 }

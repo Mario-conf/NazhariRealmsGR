@@ -218,5 +218,8 @@
     "p2": "Dieses Dokument sollte die Regeln und Richtlinien für das Nutzerverhalten, die Rechte an geistigem Eigentum und die Haftungsbeschränkungen darlegen.",
     "p3": "Es handelt sich um eine rechtliche Vereinbarung zwischen dem Website-Betreiber und den Nutzern. Es ist wichtig, dies klar zu definieren, um beide Parteien zu schützen.",
     "p4": "Konsultieren Sie einen Rechtsexperten, um ein umfassendes und rechtssicheres Dokument mit den Nutzungsbedingungen zu erstellen."
+  },
+  "Units": {
+    "hours": "Stunden"
   }
 }

@@ -151,7 +151,7 @@
       "Coastal": "Costa",
       "Desert": "Desierto"
     }
-  },
+},
   "TrailDetailsDialog": {
     "close": "Cerrar",
     "add_favorite": "Añadir a favoritos",
@@ -218,5 +218,8 @@
     "p2": "Este documento debe describir las reglas y directrices para la conducta del usuario, los derechos de propiedad intelectual y las limitaciones de responsabilidad.",
     "p3": "Es un acuerdo legal entre el propietario del sitio web y los usuarios. Es importante tener esto claramente definido para proteger a ambas partes.",
     "p4": "Consulte con un profesional legal para redactar un documento de Términos de Servicio completo y legalmente sólido."
+  },
+  "Units": {
+    "hours": "horas"
   }
 }
