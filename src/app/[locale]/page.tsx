@@ -226,7 +226,7 @@ export default function Home() {
                          {galleryImages.map((image, index) => (
                              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                                 <div className="p-1">
-                                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg group">
+                                    <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg group">
                                         <Image
                                             src={image.src}
                                             alt={image.hint}
@@ -350,4 +350,5 @@ export default function Home() {
     
 
     
+
 
