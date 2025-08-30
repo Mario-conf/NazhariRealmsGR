@@ -9,27 +9,34 @@ interface StravaEmbedProps {
 
 const StravaEmbedComponent: React.FC<StravaEmbedProps> = ({ embed }) => {
   useEffect(() => {
-    const initStravaEmbed = () => {
-      // The Strava script looks for and processes elements with the class 'strava-embed-placeholder'.
-      // Calling init() re-scans the DOM for any new placeholders.
+    // This function will handle loading the script and initializing the embeds
+    const loadStravaEmbed = () => {
       if (window.Strava && window.Strava.Embeds) {
+        // If the script is already loaded, just initialize new embeds
         window.Strava.Embeds.init();
+      } else if (!document.querySelector('script[src="https://strava-embeds.com/embed.js"]')) {
+        // If the script is not loaded, create and append it
+        const script = document.createElement('script');
+        script.src = 'https://strava-embeds.com/embed.js';
+        script.async = true;
+        // The script will automatically call its init function once loaded
+        document.body.appendChild(script);
       }
     };
     
-    // Check if the Strava script is already on the page
-    if (!document.querySelector('script[src="https://strava-embeds.com/embed.js"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://strava-embeds.com/embed.js';
-      script.async = true;
-      script.onload = initStravaEmbed;
-      document.body.appendChild(script);
-    } else {
-      // If the script is already there, just run the init function
-      // to process the new placeholder rendered by this component.
-      initStravaEmbed();
-    }
-  }, []); // The empty dependency array ensures this effect runs once when the component mounts.
+    // Call the function to ensure the widget is loaded
+    loadStravaEmbed();
+    
+    // Cleanup function: This is important for single-page applications.
+    // It will run when the component unmounts (e.g., when the dialog is closed).
+    return () => {
+        const stravaIframe = document.querySelector(`.strava-embed-placeholder[data-embed-id='${embed.id}'] iframe`);
+        if (stravaIframe) {
+             stravaIframe.remove();
+        }
+    };
+
+  }, [embed.id]); // The effect re-runs if the embed ID changes.
 
   return (
     <div
