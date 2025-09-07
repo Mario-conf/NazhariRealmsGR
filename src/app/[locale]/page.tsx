@@ -150,7 +150,7 @@ export default function Home() {
                 </h2>
                 <div className="rounded-2xl bg-white/40 backdrop-blur-sm p-2">
                     <Image
-                        src="/patreon.png"
+                        src="/1000121392-removebg-preview%20(1).png"
                         alt="Logos de los patrocinadores"
                         width={1200}
                         height={200}
@@ -246,6 +246,7 @@ export default function Home() {
 
 
     
+
 
 
 
