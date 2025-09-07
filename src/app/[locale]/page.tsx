@@ -91,7 +91,7 @@ export default function Home() {
                 <div className="relative rounded-xl overflow-hidden shadow-2xl">
                      <Image
                         alt={t('features.image_alt')}
-                        src="/beg.png"
+                        src="/1000121392-removebg-preview%20(1).png"
                         data-ai-hint="senderista mapa brújula"
                         width={600}
                         height={750}
@@ -246,6 +246,7 @@ export default function Home() {
 
 
     
+
 
 
 
