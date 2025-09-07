@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { PT_Sans, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/lib/site-config';
+import Script from 'next/script';
 
 const ptSans = PT_Sans({
   subsets: ['latin'],
@@ -77,6 +78,16 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${ptSans.variable} ${playfair.variable} font-sans`}>
         {children}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NBBVPTRE90" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-NBBVPTRE90');
+          `}
+        </Script>
       </body>
     </html>
   );
